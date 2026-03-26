@@ -4,7 +4,7 @@
   "al_west": [
     {
       "team": "Los Angeles Angels",
-      "abbrev": "",
+      "abbrev": "LAA",
       "w": 0,
       "l": 0,
       "pct": 0.0,
@@ -18,7 +18,7 @@
     },
     {
       "team": "Houston Astros",
-      "abbrev": "",
+      "abbrev": "HOU",
       "w": 0,
       "l": 0,
       "pct": 0.0,
@@ -32,7 +32,7 @@
     },
     {
       "team": "Athletics",
-      "abbrev": "",
+      "abbrev": "OAK",
       "w": 0,
       "l": 0,
       "pct": 0.0,
@@ -46,7 +46,7 @@
     },
     {
       "team": "Seattle Mariners",
-      "abbrev": "",
+      "abbrev": "SEA",
       "w": 0,
       "l": 0,
       "pct": 0.0,
@@ -60,7 +60,7 @@
     },
     {
       "team": "Texas Rangers",
-      "abbrev": "",
+      "abbrev": "TEX",
       "w": 0,
       "l": 0,
       "pct": 0.0,
@@ -215,5 +215,5 @@
       "div_name": "American League Central"
     }
   ],
-  "sea_rank": null
+  "sea_rank": 4
 }

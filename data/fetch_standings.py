@@ -11,22 +11,18 @@ import sys
 from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from config import SEASON, DATA_DIR, AL_WEST
+from config import SEASON, DATA_DIR
 
 import statsapi
 
 
 def fetch_standings() -> dict:
-    """Return AL West standings plus full AL wild card race."""
-
     print("📊 Fetching standings...")
 
-    # StatsAPI returns standings by league division
-    # leagueId 103 = AL, 104 = NL
     raw = statsapi.standings_data(leagueId="103", season=SEASON)
 
-    al_west_data   = []
-    wildcard_data  = []
+    al_west_data  = []
+    wildcard_data = []
 
     for div_id, div in raw.items():
         for team in div["teams"]:
@@ -36,7 +32,7 @@ def fetch_standings() -> dict:
                 "w":        team["w"],
                 "l":        team["l"],
                 "pct":      round(team["w"] / max(team["w"] + team["l"], 1), 3),
-                "gb":       team["gb"],
+                "gb":       team.get("gb", "-"),
                 "streak":   team.get("streak", ""),
                 "l10":      team.get("lastTen", ""),
                 "rs":       team.get("runsScored", 0),
@@ -49,21 +45,35 @@ def fetch_standings() -> dict:
             if "American" in div["div_name"]:
                 wildcard_data.append(record)
 
-    # Sort by wins desc
     al_west_data.sort(key=lambda x: (-x["w"], x["l"]))
     wildcard_data.sort(key=lambda x: (-x["w"], x["l"]))
 
-    # Mariners rank in AL West
+    # Match Mariners by name — abbrev field unreliable on opening day
     sea_rank = next(
-        (i + 1 for i, t in enumerate(al_west_data) if t["abbrev"] == "SEA"), None
+        (i + 1 for i, t in enumerate(al_west_data)
+         if "seattle" in t["team"].lower()),
+        None
     )
 
+    # Also backfill abbreviation if missing
+    abbrev_map = {
+        "seattle mariners":    "SEA",
+        "houston astros":      "HOU",
+        "texas rangers":       "TEX",
+        "los angeles angels":  "LAA",
+        "athletics":           "OAK",
+        "oakland athletics":   "OAK",
+    }
+    for t in al_west_data:
+        if not t["abbrev"]:
+            t["abbrev"] = abbrev_map.get(t["team"].lower(), "")
+
     output = {
-        "updated":   date.today().isoformat(),
-        "season":    SEASON,
-        "al_west":   al_west_data,
-        "al_wildcard": wildcard_data[:10],  # top 10 AL teams for WC context
-        "sea_rank":  sea_rank,
+        "updated":     date.today().isoformat(),
+        "season":      SEASON,
+        "al_west":     al_west_data,
+        "al_wildcard": wildcard_data[:10],
+        "sea_rank":    sea_rank,
     }
 
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -73,6 +83,7 @@ def fetch_standings() -> dict:
 
     print(f"  ✅ Saved → {out_path}")
     print(f"  🧢 Mariners rank in AL West: #{sea_rank}")
+    print(f"  📋 Teams: {[t['team'] + ' (' + t['abbrev'] + ') ' + str(t['w']) + '-' + str(t['l']) for t in al_west_data]}")
 
     return output
 
