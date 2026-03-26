@@ -1,5 +1,17 @@
+<div align="center">
+
+![EDGAR](docs/assets/edgar_flag.png)
+
 # EDGAR
 ### *Early Data & Game Analytics Report*
+
+**🌐 Live Dashboard → [bdgroves.github.io/EDGAR](https://bdgroves.github.io/EDGAR)**
+
+![GitHub Actions](https://github.com/bdgroves/EDGAR/actions/workflows/daily_update.yml/badge.svg)
+
+*Rooted in Seattle. Powered by data.*
+
+</div>
 
 ---
 
@@ -71,10 +83,10 @@ The most underrated pitching stat you're not talking about. Every pitch either b
 
 ```
 EDGAR
-├── AL West Standings       ← Where are we? Where are they?
-├── Statcast Intelligence   ← Exit velo · barrels · sprint · luck index
-├── Pitcher Breakdown       ← FIP · CSW% · pitch arsenal · SwStr%
-└── Tacoma Rainiers         ← Who's coming? Who's ready?
+├── 📊 AL West Standings       ← Where are we? Where are they?
+├── 🔥 Statcast Intelligence   ← Exit velo · barrels · sprint · luck index
+├── ⚾ Pitcher Breakdown       ← FIP · CSW% · pitch arsenal · SwStr%
+└── 🌧️  Tacoma Rainiers        ← Who's coming? Who's ready?
 ```
 
 The Tacoma module isn't an afterthought. The 2026 Mariners will be built, in part, by players who are in Cheney Stadium right now. **EDGAR watches them.**
@@ -101,8 +113,8 @@ The pipeline runs. The numbers update. You come back tomorrow and it's different
 ## Get Started
 
 ```bash
-git clone https://github.com/bdgroves/edgar
-cd edgar
+git clone https://github.com/bdgroves/EDGAR
+cd EDGAR
 pixi install
 
 # Pull today's data
@@ -111,7 +123,7 @@ pixi run fetch
 # Build the site
 pixi run build
 
-# Push to GitHub → live at bdgroves.github.io/edgar
+# Push to GitHub → live at bdgroves.github.io/EDGAR
 git push
 ```
 
@@ -174,8 +186,12 @@ MIT. Use it, fork it, build on it. Just root for the right team.
 
 <div align="center">
 
-**EDGAR** · bdgroves.github.io/edgar  
-*Powered by `pybaseball` · `mlb-statsapi` · GitHub Actions*  
+**[🌐 bdgroves.github.io/EDGAR](https://bdgroves.github.io/EDGAR)**
+
+*Powered by `pybaseball` · `mlb-statsapi` · GitHub Actions*
+
 *Data: Baseball Savant · FanGraphs · Baseball Reference · MLB StatsAPI*
+
+![GitHub Actions](https://github.com/bdgroves/EDGAR/actions/workflows/daily_update.yml/badge.svg)
 
 </div>
