@@ -9,164 +9,104 @@
   },
   "pcl_standings": [
     {
-      "team": "Buffalo Bisons",
+      "team": "El Paso Chihuahuas",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League East",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Durham Bulls",
+      "team": "Oklahoma City Comets",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League East",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Lehigh Valley IronPigs",
+      "team": "Round Rock Express",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League East",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Jacksonville Jumbo Shrimp",
+      "team": "Albuquerque Isotopes",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League East",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Charlotte Knights",
+      "team": "Sugar Land Space Cowboys",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League East",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Syracuse Mets",
+      "team": "Reno Aces",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Scranton/Wilkes-Barre RailRiders",
+      "team": "Las Vegas Aviators",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Worcester Red Sox",
+      "team": "Salt Lake Bees",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Rochester Red Wings",
+      "team": "Tacoma Rainiers",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
+      "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
     },
     {
-      "team": "Norfolk Tides",
+      "team": "Sacramento River Cats",
       "w": 0,
       "l": 0,
       "pct": 0.0,
       "gb": "-",
-      "div": "International League East"
-    },
-    {
-      "team": "Louisville Bats",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Columbus Clippers",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Iowa Cubs",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Indianapolis Indians",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Toledo Mud Hens",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Memphis Redbirds",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "St. Paul Saints",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Nashville Sounds",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Omaha Storm Chasers",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
-    },
-    {
-      "team": "Gwinnett Stripers",
-      "w": 0,
-      "l": 0,
-      "pct": 0.0,
-      "gb": "-",
-      "div": "International League West"
+      "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
     }
   ],
   "prospect_watch": [

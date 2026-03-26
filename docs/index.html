@@ -375,7 +375,8 @@
     <!-- ══ RAINIERS ══════════════════════════════════════════════ -->
     <div class="panel" id="panel-rainiers">
       <div class="section-title">Tacoma Rainiers</div>
-      <div class="section-subtitle">Triple-A affiliate · Pacific Coast League</div>
+      <div class="section-subtitle">Triple-A affiliate · Pacific Coast League · Who's coming up?</div>
+
       <div class="grid-2">
         <div class="card">
           <div class="card-title">Recent Results</div>
@@ -385,15 +386,57 @@
         <div class="card">
           <div class="card-title">Pacific Coast League Standings</div>
           <table class="data-table">
-            <thead><tr><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th></tr></thead>
-            <tbody id="pcl-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
+            <thead><tr><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th>Streak</th></tr></thead>
+            <tbody id="pcl-tbody"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
-        <div class="card" style="grid-column:span 2">
-          <div class="card-title">⭐ Prospect Watch</div>
-          <div id="prospect-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem"><div class="loading">Loading...</div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">⭐ Prospect Watch — Players to Know</div>
+        <div id="prospect-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem">
+          <div class="loading">Loading...</div>
         </div>
       </div>
+
+      <div class="card">
+        <div class="card-title">🏏 Rainiers Batting — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Player</th><th>Pos</th>
+                <th class="num">PA</th><th class="num">AB</th>
+                <th class="num">AVG</th><th class="num">OBP</th><th class="num">SLG</th><th class="num">OPS</th>
+                <th class="num">H</th><th class="num">2B</th><th class="num">3B</th>
+                <th class="num">HR</th><th class="num">RBI</th><th class="num">R</th>
+                <th class="num">SB</th><th class="num">BB</th><th class="num">SO</th>
+              </tr>
+            </thead>
+            <tbody id="rain-bat-tbody"><tr><td colspan="17" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">⚾ Rainiers Pitching — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Player</th><th>Role</th>
+                <th class="num">W</th><th class="num">L</th><th class="num">ERA</th>
+                <th class="num">G</th><th class="num">GS</th><th class="num">SV</th>
+                <th class="num">IP</th><th class="num">H</th><th class="num">ER</th>
+                <th class="num">BB</th><th class="num">SO</th><th class="num">HR</th>
+                <th class="num">WHIP</th><th class="num">K/9</th>
+              </tr>
+            </thead>
+            <tbody id="rain-pitch-tbody"><tr><td colspan="16" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
 
     <div class="updated-ts" id="footer-ts"></div>
@@ -721,6 +764,7 @@
 
       document.getElementById('recent-record').textContent = data.recent_record||'—';
 
+      // Recent games
       const gamesEl = document.getElementById('recent-games');
       if (data.recent_games && data.recent_games.length) {
         gamesEl.innerHTML = data.recent_games.map(g=>{
@@ -736,26 +780,123 @@
           </div>`;
         }).join('');
       } else {
-        gamesEl.innerHTML = '<div class="loading">No recent game data — Rainiers open March 27</div>';
+        gamesEl.innerHTML = '<div class="loading">No games yet — Rainiers open March 27</div>';
       }
 
+      // PCL standings
       const pclTbody = document.getElementById('pcl-tbody');
       if (data.pcl_standings && data.pcl_standings.length) {
         pclTbody.innerHTML = data.pcl_standings.map(t=>`
           <tr class="${t.team.includes('Tacoma')?'highlight':''}">
             <td class="name-col">${t.team.includes('Tacoma')?'★ ':''}${t.team}</td>
             <td class="num">${t.w}</td><td class="num">${t.l}</td>
-            <td class="num">${fmt(t.pct)}</td><td class="num">${t.gb||'—'}</td>
+            <td class="num">${fmt(t.pct)}</td>
+            <td class="num">${t.gb||'—'}</td>
+            <td>${t.streak?`<span class="streak ${t.streak.startsWith('W')?'w':'l'}">${t.streak}</span>`:'—'}</td>
           </tr>`).join('');
       }
 
+      // Prospect watch cards with live stats
+      const batters  = data.roster?.batters  || [];
+      const pitchers = data.roster?.pitchers || [];
+      const allPlayers = [...batters, ...pitchers];
       const pgEl = document.getElementById('prospect-grid');
+
       if (data.prospect_watch && data.prospect_watch.length) {
-        pgEl.innerHTML = data.prospect_watch.map(name=>`
-          <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:3px;padding:0.85rem 1rem">
-            <div style="font-weight:600;font-size:13px;margin-bottom:4px">${name} <span class="prospect-tag">watch</span></div>
-            <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim)">Tacoma Rainiers</div>
-          </div>`).join('');
+        pgEl.innerHTML = data.prospect_watch.map(name => {
+          const lastName = name.toLowerCase().split(' ').slice(-1)[0];
+          const player = allPlayers.find(p => p.name && p.name.toLowerCase().includes(lastName));
+          let statsLine = '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:6px">Stats load after opening day</div>';
+
+          if (player && player.avg != null) {
+            statsLine = `<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-top:8px;font-family:var(--font-mono)">
+              <div><div style="color:var(--teal-bright);font-size:14px">${fmt(player.avg)}</div><div style="color:var(--text-muted);font-size:9px">AVG</div></div>
+              <div><div style="color:var(--text);font-size:14px">${player.hr??0}</div><div style="color:var(--text-muted);font-size:9px">HR</div></div>
+              <div><div style="color:var(--text);font-size:14px">${player.rbi??0}</div><div style="color:var(--text-muted);font-size:9px">RBI</div></div>
+              <div><div style="color:var(--text);font-size:14px">${fmt(player.obp)}</div><div style="color:var(--text-muted);font-size:9px">OBP</div></div>
+              <div><div style="color:var(--gold);font-size:14px">${fmt(player.ops)}</div><div style="color:var(--text-muted);font-size:9px">OPS</div></div>
+              <div><div style="color:var(--text);font-size:14px">${player.sb??0}</div><div style="color:var(--text-muted);font-size:9px">SB</div></div>
+            </div>`;
+          } else if (player && player.era != null) {
+            statsLine = `<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-top:8px;font-family:var(--font-mono)">
+              <div><div style="color:var(--teal-bright);font-size:14px">${fmt(player.era,2)}</div><div style="color:var(--text-muted);font-size:9px">ERA</div></div>
+              <div><div style="color:var(--text);font-size:14px">${fmt(player.ip,1)}</div><div style="color:var(--text-muted);font-size:9px">IP</div></div>
+              <div><div style="color:var(--text);font-size:14px">${player.so??0}</div><div style="color:var(--text-muted);font-size:9px">K</div></div>
+              <div><div style="color:var(--text);font-size:14px">${fmt(player.whip)}</div><div style="color:var(--text-muted);font-size:9px">WHIP</div></div>
+              <div><div style="color:var(--text);font-size:14px">${player.w??0}-${player.l??0}</div><div style="color:var(--text-muted);font-size:9px">W-L</div></div>
+              <div><div style="color:var(--gold);font-size:14px">${fmt(player.k9,1)}</div><div style="color:var(--text-muted);font-size:9px">K/9</div></div>
+            </div>`;
+          }
+
+          return `<div style="background:var(--bg-card2);border:1px solid var(--border);border-top:2px solid var(--gold);border-radius:3px;padding:0.9rem 1rem">
+            <div style="font-weight:600;font-size:13px">${name} <span class="prospect-tag">watch</span></div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);margin-top:2px">Tacoma Rainiers · Triple-A</div>
+            ${statsLine}
+          </div>`;
+        }).join('');
+      }
+
+      // Rainiers batting table
+      const rainBatTbody = document.getElementById('rain-bat-tbody');
+      if (batters.length) {
+        rainBatTbody.innerHTML = batters.map(p => {
+          const star = p.prospect ? `<span class="prospect-tag">★</span>` : '';
+          return `<tr class="${p.prospect?'highlight':''}">
+            <td class="name-col">${p.name}${star}</td>
+            <td>${posBadge(p.pos)}</td>
+            <td class="num">${num(p.pa)}</td>
+            <td class="num">${num(p.ab)}</td>
+            <td class="num">${colorAVG(p.avg)}</td>
+            <td class="num">${fmt(p.obp)}</td>
+            <td class="num">${fmt(p.slg)}</td>
+            <td class="num">${colorOPS(p.ops)}</td>
+            <td class="num">${num(p.h)}</td>
+            <td class="num">${num(p.doubles)}</td>
+            <td class="num">${num(p.triples)}</td>
+            <td class="num" style="${p.hr>=3?'color:var(--gold);font-weight:600':''}">${num(p.hr)}</td>
+            <td class="num">${num(p.rbi)}</td>
+            <td class="num">${num(p.r)}</td>
+            <td class="num">${num(p.sb)}</td>
+            <td class="num">${num(p.bb)}</td>
+            <td class="num" style="${p.so>=20?'color:#e57373':''}">${num(p.so)}</td>
+          </tr>`;
+        }).join('');
+      } else {
+        rainBatTbody.innerHTML = '<tr><td colspan="17" class="loading">Stats load after Rainiers opening day — March 27</td></tr>';
+      }
+
+      // Rainiers pitching table
+      const rainPitchTbody = document.getElementById('rain-pitch-tbody');
+      if (pitchers.length) {
+        let lastRole = '';
+        rainPitchTbody.innerHTML = pitchers.map(p => {
+          let divider = '';
+          if (p.role !== lastRole) {
+            lastRole = p.role;
+            divider = `<tr class="role-divider"><td colspan="16">${p.role==='SP'?'— Starting Rotation —':'— Bullpen —'}</td></tr>`;
+          }
+          const star = p.prospect ? `<span class="prospect-tag">★</span>` : '';
+          return divider + `<tr class="${p.prospect?'highlight':''}">
+            <td class="name-col">${p.name}${star}</td>
+            <td>${posBadge(p.pos, p.role)}</td>
+            <td class="num">${num(p.w)}</td>
+            <td class="num">${num(p.l)}</td>
+            <td class="num">${colorERA(p.era)}</td>
+            <td class="num">${num(p.g)}</td>
+            <td class="num">${num(p.gs)}</td>
+            <td class="num" style="${p.sv>=3?'color:var(--gold)':''}">${num(p.sv)}</td>
+            <td class="num">${fmt(p.ip,1)}</td>
+            <td class="num">${num(p.h)}</td>
+            <td class="num">${num(p.er)}</td>
+            <td class="num">${num(p.bb)}</td>
+            <td class="num" style="${p.so>=15?'color:var(--teal-bright)':''}">${num(p.so)}</td>
+            <td class="num">${num(p.hr)}</td>
+            <td class="num">${fmt(p.whip)}</td>
+            <td class="num">${fmt(p.k9,1)}</td>
+          </tr>`;
+        }).join('');
+      } else {
+        rainPitchTbody.innerHTML = '<tr><td colspan="16" class="loading">Stats load after Rainiers opening day — March 27</td></tr>';
       }
     }
 
