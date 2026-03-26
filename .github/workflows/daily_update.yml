@@ -26,24 +26,22 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-edgar-v1
 
       - name: Install dependencies
         run: |
           pip install pybaseball mlb-statsapi pandas matplotlib jinja2 requests
 
       - name: Run data fetch
-        run: |
-          cd data
-          python fetch_all.py
+        run: python data/fetch_all.py
 
       - name: Build site
         run: python build_site.py
 
-      - name: Commit & push data + site
+      - name: Commit & push site output
         run: |
           git config user.name  "edgar-bot"
           git config user.email "edgar-bot@users.noreply.github.com"
-          git add data/cache/ docs/
-          git diff --staged --quiet || git commit -m "chore: daily update $(date -u +'%Y-%m-%d')"
+          git add docs/assets/data/
+          git diff --staged --quiet || git commit -m "data: daily update $(date -u +'%Y-%m-%d')"
           git push

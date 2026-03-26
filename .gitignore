@@ -4,5 +4,9 @@ __pycache__/
 .venv/
 *.egg-info/
 pybaseball_cache/
+
+# Raw data cache — NOT committed to repo
+# The built output in docs/assets/data/ IS committed (that's what GitHub Pages serves)
 data/cache/
+
 *.DS_Store
