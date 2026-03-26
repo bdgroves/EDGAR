@@ -10,3 +10,5 @@ pybaseball_cache/
 data/cache/
 
 *.DS_Store
+
+docs/assets/data/manifest.json
