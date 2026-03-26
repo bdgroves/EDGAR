@@ -1,0 +1,181 @@
+{
+  "updated": "2026-03-26",
+  "season": 2026,
+  "recent_record": "0-0 (last 0 games)",
+  "recent_games": [],
+  "roster": {
+    "batters": [],
+    "pitchers": []
+  },
+  "pcl_standings": [
+    {
+      "team": "Buffalo Bisons",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Durham Bulls",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Lehigh Valley IronPigs",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Jacksonville Jumbo Shrimp",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Charlotte Knights",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Syracuse Mets",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Scranton/Wilkes-Barre RailRiders",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Worcester Red Sox",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Rochester Red Wings",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Norfolk Tides",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League East"
+    },
+    {
+      "team": "Louisville Bats",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Columbus Clippers",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Iowa Cubs",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Indianapolis Indians",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Toledo Mud Hens",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Memphis Redbirds",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "St. Paul Saints",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Nashville Sounds",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Omaha Storm Chasers",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    },
+    {
+      "team": "Gwinnett Stripers",
+      "w": 0,
+      "l": 0,
+      "pct": 0.0,
+      "gb": "-",
+      "div": "International League West"
+    }
+  ],
+  "prospect_watch": [
+    "Cole Young",
+    "Harry Ford",
+    "Jonah Bride",
+    "Colt Emerson",
+    "Lazaro Montes",
+    "Bryce Miller",
+    "Bryan Woo"
+  ]
+}
