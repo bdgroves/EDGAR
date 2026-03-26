@@ -1,10 +1,15 @@
 # edgar/config.py
 # Central config for the EDGAR project
 
+import os
+
+# ── Paths resolve correctly whether run from project root or data/ ──
+_HERE = os.path.dirname(os.path.abspath(__file__))  # always the edgar/ root
+
 # ── Team identifiers ──────────────────────────────────────────────
-MARINERS_ID       = 136          # MLB StatsAPI team ID
-MARINERS_ABBREV   = "SEA"        # pybaseball / Statcast abbreviation
-TACOMA_ID         = 6047         # MiLB team ID (Tacoma Rainiers, Triple-A West/PCL)
+MARINERS_ID       = 136
+MARINERS_ABBREV   = "SEA"
+TACOMA_ID         = 6047
 TACOMA_ABBREV     = "TAC"
 
 # ── AL West competitors ───────────────────────────────────────────
@@ -22,7 +27,7 @@ COLORS = {
     "teal":      "#005C5C",
     "silver":    "#C4CED4",
     "white":     "#FFFFFF",
-    "gold":      "#C0922B",   # subtle accent
+    "gold":      "#C0922B",
     "bg_dark":   "#080F1A",
     "bg_card":   "#0D1E30",
     "text_dim":  "#7A94A8",
@@ -31,7 +36,7 @@ COLORS = {
 # ── Season ────────────────────────────────────────────────────────
 SEASON = 2026
 
-# ── Output paths ─────────────────────────────────────────────────
-DATA_DIR  = "data/cache"
-DOCS_DIR  = "docs"
-ASSET_DIR = "docs/assets"
+# ── Output paths (always relative to project root) ───────────────
+DATA_DIR  = os.path.join(_HERE, "data", "cache")
+DOCS_DIR  = os.path.join(_HERE, "docs")
+ASSET_DIR = os.path.join(_HERE, "docs", "assets", "data")

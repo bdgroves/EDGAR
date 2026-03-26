@@ -3,17 +3,17 @@ edgar/build_site.py
 ────────────────────
 Copies data cache JSON files into docs/assets/data/
 so GitHub Pages can serve them to the frontend.
-
-Run after fetch_all.py to complete a full update cycle.
 """
 
 import os
 import shutil
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 
-DATA_DIR  = "data/cache"
-ASSET_DIR = "docs/assets/data"
+# Import absolute paths from config
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from config import DATA_DIR, ASSET_DIR
 
 
 def build():
@@ -22,28 +22,31 @@ def build():
     files = ["standings.json", "statcast.json", "pitchers.json", "rainiers.json"]
     copied = 0
 
+    print(f"\n🏗️  Building site...")
+    print(f"   Source:  {DATA_DIR}")
+    print(f"   Output:  {ASSET_DIR}\n")
+
     for fname in files:
         src = os.path.join(DATA_DIR, fname)
         dst = os.path.join(ASSET_DIR, fname)
         if os.path.exists(src):
             shutil.copy2(src, dst)
             size = os.path.getsize(dst)
-            print(f"  ✅ {fname} → {dst}  ({size:,} bytes)")
+            print(f"  ✅ {fname} ({size:,} bytes)")
             copied += 1
         else:
             print(f"  ⚠️  {fname} not found in cache — skipping")
 
-    # Write a build manifest
     manifest = {
-        "built_at": datetime.utcnow().isoformat() + "Z",
+        "built_at": datetime.now(timezone.utc).isoformat(),
         "files":    files,
         "copied":   copied,
     }
     with open(os.path.join(ASSET_DIR, "manifest.json"), "w") as f:
         json.dump(manifest, f, indent=2)
 
-    print(f"\n🏗️  Site built — {copied}/{len(files)} data files ready")
-    print(f"   → Push to GitHub to deploy: git push")
+    print(f"\n  {copied}/{len(files)} data files deployed to docs/assets/data/")
+    print(f"  → git add . && git commit -m 'data: update' && git push\n")
 
 
 if __name__ == "__main__":
