@@ -1,0 +1,25 @@
+[project]
+name = "edgar"
+version = "0.1.0"
+description = "EDGAR — Seattle Mariners Stats Tracker"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-arm64"]
+
+[tasks]
+fetch = "python data/fetch_all.py"
+standings = "python data/fetch_standings.py"
+statcast = "python data/fetch_statcast.py"
+pitchers = "python data/fetch_pitchers.py"
+rainiers = "python data/fetch_rainiers.py"
+build = "python build_site.py"
+
+[dependencies]
+python = ">=3.11"
+pandas = "*"
+matplotlib = "*"
+requests = "*"
+jinja2 = "*"
+
+[pypi-dependencies]
+pybaseball = "*"
+mlb-statsapi = "*"

@@ -1,0 +1,49 @@
+name: EDGAR Daily Update
+
+on:
+  schedule:
+    # 6:00 AM UTC = 10 PM PT (night before's games fully processed)
+    - cron: '0 6 * * *'
+  workflow_dispatch:   # allow manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+
+      - name: Install dependencies
+        run: |
+          pip install pybaseball mlb-statsapi pandas matplotlib jinja2 requests
+
+      - name: Run data fetch
+        run: |
+          cd data
+          python fetch_all.py
+
+      - name: Build site
+        run: python build_site.py
+
+      - name: Commit & push data + site
+        run: |
+          git config user.name  "edgar-bot"
+          git config user.email "edgar-bot@users.noreply.github.com"
+          git add data/cache/ docs/
+          git diff --staged --quiet || git commit -m "chore: daily update $(date -u +'%Y-%m-%d')"
+          git push
