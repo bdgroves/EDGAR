@@ -9,23 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── Reset & Base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:      #0C2340;
-      --teal:      #005C5C;
+      --navy:        #0C2340;
+      --teal:        #005C5C;
       --teal-bright: #00A5A5;
-      --silver:    #C4CED4;
-      --gold:      #C0922B;
-      --bg:        #060D18;
-      --bg-card:   #0B1927;
-      --bg-card2:  #0F2236;
-      --border:    rgba(0, 92, 92, 0.35);
-      --border-bright: rgba(0, 165, 165, 0.6);
-      --text:      #D6E4EF;
-      --text-dim:  #5F8099;
-      --text-muted: #3A566A;
+      --silver:      #C4CED4;
+      --gold:        #C0922B;
+      --bg:          #060D18;
+      --bg-card:     #0B1927;
+      --bg-card2:    #0F2236;
+      --border:      rgba(0,92,92,0.35);
+      --text:        #D6E4EF;
+      --text-dim:    #5F8099;
+      --text-muted:  #3A566A;
       --font-display: 'Bebas Neue', sans-serif;
       --font-mono:    'IBM Plex Mono', monospace;
       --font-body:    'IBM Plex Sans', sans-serif;
@@ -43,19 +41,8 @@
       overflow-x: hidden;
     }
 
-    /* ── Noise texture overlay ───────────────────────────────── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.4;
-    }
-
     /* ── Header ──────────────────────────────────────────────── */
     header {
-      position: relative;
       padding: 2.5rem 2rem 2rem;
       border-bottom: 1px solid var(--border);
       background: linear-gradient(180deg, rgba(12,35,64,0.95) 0%, transparent 100%);
@@ -65,68 +52,29 @@
       flex-wrap: wrap;
     }
 
-    .header-logo {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .logo-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.25em;
-      color: var(--teal-bright);
-      text-transform: uppercase;
-    }
+    .header-logo { display: flex; flex-direction: column; }
+    .logo-eyebrow { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--teal-bright); text-transform: uppercase; }
 
     h1 {
       font-family: var(--font-display);
       font-size: clamp(3.5rem, 8vw, 6rem);
       line-height: 0.9;
       letter-spacing: 0.04em;
-      color: var(--text);
       background: linear-gradient(135deg, #fff 30%, var(--teal-bright) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .logo-sub {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      margin-top: 0.25rem;
-    }
+    .logo-sub { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase; margin-top: 0.25rem; }
 
-    .header-meta {
-      margin-left: auto;
-      text-align: right;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-dim);
-      line-height: 1.8;
-    }
+    .header-meta { margin-left: auto; text-align: right; font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); line-height: 1.8; }
+    .header-meta .season-badge { display: inline-block; background: var(--teal); color: #fff; padding: 2px 10px; font-size: 10px; letter-spacing: 0.15em; border-radius: 2px; margin-bottom: 4px; }
 
-    .header-meta .season-badge {
-      display: inline-block;
-      background: var(--teal);
-      color: #fff;
-      padding: 2px 10px;
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      border-radius: 2px;
-      margin-bottom: 4px;
-    }
-
-    /* ── Nav tabs ─────────────────────────────────────────────── */
+    /* ── Nav ─────────────────────────────────────────────────── */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       display: flex;
-      gap: 0;
       background: rgba(6,13,24,0.97);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(8px);
@@ -135,270 +83,100 @@
     }
 
     nav button {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      background: none;
-      border: none;
-      border-bottom: 2px solid transparent;
-      padding: 0.85rem 1.2rem;
-      cursor: pointer;
-      white-space: nowrap;
+      font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--text-dim);
+      background: none; border: none; border-bottom: 2px solid transparent;
+      padding: 0.85rem 1.2rem; cursor: pointer; white-space: nowrap;
       transition: color 0.2s, border-color 0.2s;
     }
-
     nav button:hover { color: var(--silver); }
-    nav button.active {
-      color: var(--teal-bright);
-      border-bottom-color: var(--teal-bright);
-    }
+    nav button.active { color: var(--teal-bright); border-bottom-color: var(--teal-bright); }
 
-    /* ── Main layout ─────────────────────────────────────────── */
-    main {
-      position: relative;
-      z-index: 1;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
+    /* ── Main ────────────────────────────────────────────────── */
+    main { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; padding: 2rem; }
 
     .panel { display: none; }
     .panel.active { display: block; }
 
-    /* ── Section title ───────────────────────────────────────── */
-    .section-title {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      letter-spacing: 0.06em;
-      color: var(--teal-bright);
-      margin-bottom: 0.25rem;
-    }
-
-    .section-subtitle {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      margin-bottom: 1.75rem;
-    }
-
-    /* ── Cards ───────────────────────────────────────────────── */
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.25rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--teal), transparent);
-    }
-
-    .card-title {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 1rem;
-    }
-
-    /* ── Grid layouts ─────────────────────────────────────────── */
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-
-    @media (max-width: 900px) {
-      .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
-    }
-
-    /* ── Stat number displays ────────────────────────────────── */
-    .big-stat {
-      font-family: var(--font-display);
-      font-size: 3.5rem;
-      line-height: 1;
-      color: var(--text);
-    }
-    .big-stat.teal { color: var(--teal-bright); }
-    .big-stat.gold { color: var(--gold); }
-
-    .stat-label {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-top: 0.3rem;
-    }
-
-    /* ── Tables ──────────────────────────────────────────────── */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: var(--font-mono);
-      font-size: 12px;
-    }
-
-    .data-table th {
-      text-align: left;
-      font-size: 9px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      padding: 0.5rem 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .data-table td {
-      padding: 0.55rem 0.75rem;
-      border-bottom: 1px solid rgba(0,92,92,0.15);
-      color: var(--text);
-    }
-
-    .data-table tr:hover td {
-      background: rgba(0, 92, 92, 0.1);
-    }
-
-    .data-table tr.highlight td {
-      background: rgba(0, 165, 165, 0.08);
-      color: #fff;
-    }
-
-    .data-table tr.highlight td:first-child {
-      border-left: 2px solid var(--teal-bright);
-    }
-
-    .data-table .num {
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-    }
-
-    /* ── AL West race bar ─────────────────────────────────────── */
-    .race-bar-wrap { margin: 0.5rem 0; }
-    .race-bar-label {
-      display: flex;
-      justify-content: space-between;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      margin-bottom: 4px;
-      color: var(--text);
-    }
-    .race-bar-track {
-      height: 6px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    .race-bar-fill {
-      height: 100%;
-      border-radius: 3px;
-      transition: width 1s cubic-bezier(.4,0,.2,1);
-    }
-
-    /* ── Streak badge ────────────────────────────────────────── */
-    .streak {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 10px;
-      padding: 1px 6px;
-      border-radius: 2px;
-      letter-spacing: 0.05em;
-    }
-    .streak.w { background: rgba(0,165,165,0.2); color: var(--teal-bright); }
-    .streak.l { background: rgba(192,146,43,0.2); color: var(--gold); }
-
-    /* ── Pitch type badge ────────────────────────────────────── */
-    .pitch-badge {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 9px;
-      padding: 2px 6px;
-      border-radius: 2px;
-      background: rgba(0,92,92,0.3);
-      border: 1px solid var(--border);
-      color: var(--teal-bright);
-      margin-right: 3px;
-    }
-
-    /* ── Prospect tag ─────────────────────────────────────────── */
-    .prospect-tag {
-      font-family: var(--font-mono);
-      font-size: 8px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid var(--gold);
-      padding: 1px 5px;
-      border-radius: 2px;
-      margin-left: 6px;
-      opacity: 0.85;
-    }
-
-    /* ── Delta indicator ─────────────────────────────────────── */
-    .delta-pos { color: var(--teal-bright); }
-    .delta-neg { color: #e57373; }
-
-    /* ── Win/loss dot ─────────────────────────────────────────── */
-    .wl-dot {
-      display: inline-block;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      margin-right: 4px;
-    }
-    .wl-dot.w { background: var(--teal-bright); }
-    .wl-dot.l { background: #3A566A; }
-
-    /* ── Updated timestamp ────────────────────────────────────── */
-    .updated-ts {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-    }
-
-    /* ── Loading state ────────────────────────────────────────── */
-    .loading {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-dim);
-      padding: 2rem;
-      text-align: center;
-      letter-spacing: 0.2em;
-    }
-
-    /* ── Animations ───────────────────────────────────────────── */
     @keyframes fadeSlideUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
-    .panel.active > * {
-      animation: fadeSlideUp 0.35s ease both;
-    }
-
+    .panel.active > * { animation: fadeSlideUp 0.35s ease both; }
     .panel.active > *:nth-child(2) { animation-delay: 0.05s; }
     .panel.active > *:nth-child(3) { animation-delay: 0.10s; }
     .panel.active > *:nth-child(4) { animation-delay: 0.15s; }
+
+    /* ── Section titles ──────────────────────────────────────── */
+    .section-title { font-family: var(--font-display); font-size: 2.2rem; letter-spacing: 0.06em; color: var(--teal-bright); margin-bottom: 0.25rem; }
+    .section-subtitle { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 1.75rem; }
+
+    /* ── Cards ───────────────────────────────────────────────── */
+    .card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 4px; padding: 1.25rem 1.5rem;
+      position: relative; overflow: hidden; margin-bottom: 1rem;
+    }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--teal), transparent); }
+    .card-title { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1rem; }
+
+    /* ── Grids ───────────────────────────────────────────────── */
+    .grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin-bottom: 1rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-bottom: 1rem; }
+    @media(max-width:900px) { .grid-4 { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:600px) { .grid-4,.grid-2 { grid-template-columns: 1fr; } }
+
+    /* ── Stat displays ───────────────────────────────────────── */
+    .big-stat { font-family: var(--font-display); font-size: 3rem; line-height: 1; color: var(--text); }
+    .big-stat.teal { color: var(--teal-bright); }
+    .big-stat.gold { color: var(--gold); }
+    .stat-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-top: 0.3rem; }
+
+    /* ── Tables ──────────────────────────────────────────────── */
+    .data-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 12px; }
+    .data-table th { text-align: left; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .data-table td { padding: 0.5rem 0.6rem; border-bottom: 1px solid rgba(0,92,92,0.12); color: var(--text); white-space: nowrap; }
+    .data-table tr:hover td { background: rgba(0,92,92,0.1); }
+    .data-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .data-table .name-col { font-family: var(--font-body); font-weight: 600; }
+
+    /* highlight standout values */
+    .hot  { color: var(--teal-bright) !important; font-weight: 600; }
+    .cold { color: #e57373 !important; }
+    .gold-val { color: var(--gold) !important; font-weight: 600; }
+
+    /* pos badge */
+    .pos-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; padding: 1px 5px; border-radius: 2px; background: rgba(0,92,92,0.25); color: var(--teal-bright); border: 1px solid var(--border); margin-left: 5px; }
+    .pos-sp { background: rgba(192,146,43,0.15); color: var(--gold); border-color: rgba(192,146,43,0.3); }
+    .pos-rp { background: rgba(0,92,92,0.2); color: var(--teal-bright); }
+
+    /* role divider */
+    .role-divider td { background: rgba(0,92,92,0.08) !important; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); padding: 0.3rem 0.6rem; }
+
+    /* ── Standings extras ────────────────────────────────────── */
+    .race-bar-wrap { margin: 0.4rem 0; }
+    .race-bar-label { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; margin-bottom: 3px; }
+    .race-bar-track { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+    .race-bar-fill  { height: 100%; border-radius: 3px; transition: width 1s cubic-bezier(.4,0,.2,1); }
+
+    .streak { display: inline-block; font-family: var(--font-mono); font-size: 10px; padding: 1px 6px; border-radius: 2px; }
+    .streak.w { background: rgba(0,165,165,0.2); color: var(--teal-bright); }
+    .streak.l { background: rgba(192,146,43,0.2); color: var(--gold); }
+
+    /* ── Misc ────────────────────────────────────────────────── */
+    .loading { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); padding: 2rem; text-align: center; letter-spacing: 0.2em; }
+    .updated-ts { font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .wl-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }
+    .wl-dot.w { background: var(--teal-bright); }
+    .wl-dot.l { background: #3A566A; }
+    .prospect-tag { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold); padding: 1px 5px; border-radius: 2px; margin-left: 6px; opacity: 0.85; }
+    .delta-pos { color: var(--teal-bright); }
+    .delta-neg { color: #e57373; }
+    .pitch-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; padding: 2px 5px; border-radius: 2px; background: rgba(0,92,92,0.3); border: 1px solid var(--border); color: var(--teal-bright); margin-right: 3px; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="header-logo">
       <span class="logo-eyebrow">Seattle Mariners Intelligence</span>
@@ -408,282 +186,269 @@
     <div class="header-meta">
       <div><span class="season-badge">2026 SEASON</span></div>
       <div id="last-updated">Loading...</div>
-      <div>bdgroves.github.io/edgar</div>
+      <div>bdgroves.github.io/EDGAR</div>
     </div>
   </header>
 
-  <!-- Nav -->
   <nav>
-    <button class="active" onclick="showPanel('standings')">AL West</button>
-    <button onclick="showPanel('statcast')">Statcast</button>
-    <button onclick="showPanel('pitchers')">Pitchers</button>
-    <button onclick="showPanel('rainiers')">Rainiers</button>
+    <button class="active" onclick="showPanel('standings',this)">AL West</button>
+    <button onclick="showPanel('batting',this)">Batting</button>
+    <button onclick="showPanel('pitching',this)">Pitching</button>
+    <button onclick="showPanel('statcast',this)">Statcast</button>
+    <button onclick="showPanel('pitchers',this)">Advanced P</button>
+    <button onclick="showPanel('rainiers',this)">Rainiers</button>
   </nav>
 
   <main>
 
-    <!-- ══════════════════════════════════════════════════════════
-         PANEL 1 — AL WEST STANDINGS
-    ══════════════════════════════════════════════════════════ -->
+    <!-- ══ AL WEST ══════════════════════════════════════════════ -->
     <div class="panel active" id="panel-standings">
       <div class="section-title">AL West</div>
       <div class="section-subtitle">Division standings · 2026 season</div>
 
-      <div class="grid-2" style="margin-bottom:1rem;">
+      <div class="card" style="grid-column:span 2">
+        <div class="card-title">Division Standings</div>
+        <table class="data-table">
+          <thead><tr><th>#</th><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th class="num">L10</th><th>Streak</th></tr></thead>
+          <tbody id="standings-tbody"><tr><td colspan="8" class="loading">⌛ Loading...</td></tr></tbody>
+        </table>
+      </div>
 
-        <!-- Standings table -->
-        <div class="card" style="grid-column: span 2;">
-          <div class="card-title">Division Standings</div>
-          <table class="data-table" id="standings-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Team</th>
-                <th class="num">W</th>
-                <th class="num">L</th>
-                <th class="num">PCT</th>
-                <th class="num">GB</th>
-                <th class="num">L10</th>
-                <th>Streak</th>
-              </tr>
-            </thead>
-            <tbody id="standings-tbody">
-              <tr><td colspan="8" class="loading">⌛ Loading standings...</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Win % race bars -->
+      <div class="grid-2">
         <div class="card">
           <div class="card-title">Win % Race</div>
-          <div id="race-bars">
-            <div class="loading">Loading...</div>
-          </div>
+          <div id="race-bars"><div class="loading">Loading...</div></div>
         </div>
-
-        <!-- Mariners summary card -->
         <div class="card">
           <div class="card-title">Mariners at a glance</div>
-          <div id="sea-summary" style="display:flex;gap:2rem;flex-wrap:wrap;">
-            <div class="loading">Loading...</div>
-          </div>
+          <div id="sea-summary" style="display:flex;gap:2rem;flex-wrap:wrap"><div class="loading">Loading...</div></div>
         </div>
-
       </div>
     </div>
 
-    <!-- ══════════════════════════════════════════════════════════
-         PANEL 2 — STATCAST FUN STATS
-    ══════════════════════════════════════════════════════════ -->
+    <!-- ══ BATTING ═══════════════════════════════════════════════ -->
+    <div class="panel" id="panel-batting">
+      <div class="section-title">Batting</div>
+      <div class="section-subtitle">AVG · OBP · SLG · OPS · HR · RBI · R · SB · and more</div>
+
+      <!-- Team totals -->
+      <div class="grid-4" id="team-bat-cards">
+        <div class="loading" style="grid-column:span 4">Loading team totals...</div>
+      </div>
+
+      <!-- Full roster batting table -->
+      <div class="card">
+        <div class="card-title">Roster Batting — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="batting-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Pos</th>
+                <th class="num">PA</th>
+                <th class="num">AB</th>
+                <th class="num">AVG</th>
+                <th class="num">OBP</th>
+                <th class="num">SLG</th>
+                <th class="num">OPS</th>
+                <th class="num">H</th>
+                <th class="num">2B</th>
+                <th class="num">3B</th>
+                <th class="num">HR</th>
+                <th class="num">RBI</th>
+                <th class="num">R</th>
+                <th class="num">SB</th>
+                <th class="num">BB</th>
+                <th class="num">SO</th>
+              </tr>
+            </thead>
+            <tbody id="batting-tbody"><tr><td colspan="17" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PITCHING ══════════════════════════════════════════════ -->
+    <div class="panel" id="panel-pitching">
+      <div class="section-title">Pitching</div>
+      <div class="section-subtitle">ERA · WHIP · W-L · K · BB · HR · SV · HLD</div>
+
+      <!-- Team pitching totals -->
+      <div class="grid-4" id="team-pitch-cards">
+        <div class="loading" style="grid-column:span 4">Loading team totals...</div>
+      </div>
+
+      <!-- Full roster pitching table -->
+      <div class="card">
+        <div class="card-title">Roster Pitching — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table" id="pitching-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Role</th>
+                <th class="num">W</th>
+                <th class="num">L</th>
+                <th class="num">ERA</th>
+                <th class="num">G</th>
+                <th class="num">GS</th>
+                <th class="num">SV</th>
+                <th class="num">HLD</th>
+                <th class="num">IP</th>
+                <th class="num">H</th>
+                <th class="num">ER</th>
+                <th class="num">BB</th>
+                <th class="num">SO</th>
+                <th class="num">HR</th>
+                <th class="num">WHIP</th>
+                <th class="num">K/9</th>
+                <th class="num">OPP AVG</th>
+              </tr>
+            </thead>
+            <tbody id="pitching-tbody"><tr><td colspan="18" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ STATCAST ══════════════════════════════════════════════ -->
     <div class="panel" id="panel-statcast">
       <div class="section-title">Statcast</div>
       <div class="section-subtitle">Exit velocity · barrels · sprint speed · xBA vs BA</div>
-
-      <div class="grid-2" style="margin-bottom:1rem;">
-
-        <!-- Barrel leaders -->
+      <div class="grid-2">
         <div class="card">
           <div class="card-title">🛢️ Barrel Leaderboard</div>
-          <table class="data-table" id="barrel-table">
-            <thead>
-              <tr>
-                <th>Batter</th>
-                <th class="num">Barrel%</th>
-                <th class="num">Barrels</th>
-                <th class="num">Avg EV</th>
-                <th class="num">Hard Hit%</th>
-              </tr>
-            </thead>
-            <tbody id="barrel-tbody">
-              <tr><td colspan="5" class="loading">Loading...</td></tr>
-            </tbody>
+          <table class="data-table">
+            <thead><tr><th>Batter</th><th class="num">Barrel%</th><th class="num">Barrels</th><th class="num">Avg EV</th><th class="num">Hard Hit%</th></tr></thead>
+            <tbody id="barrel-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
-
-        <!-- xBA vs BA lucky/unlucky -->
         <div class="card">
           <div class="card-title">🎲 xBA vs BA — luck index</div>
-          <table class="data-table" id="xba-table">
-            <thead>
-              <tr>
-                <th>Batter</th>
-                <th class="num">BA</th>
-                <th class="num">xBA</th>
-                <th class="num">Δ</th>
-                <th>Verdict</th>
-              </tr>
-            </thead>
-            <tbody id="xba-tbody">
-              <tr><td colspan="5" class="loading">Loading...</td></tr>
-            </tbody>
+          <table class="data-table">
+            <thead><tr><th>Batter</th><th class="num">BA</th><th class="num">xBA</th><th class="num">Δ</th><th>Verdict</th></tr></thead>
+            <tbody id="xba-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
-
-        <!-- Sprint speed -->
         <div class="card">
           <div class="card-title">💨 Sprint Speed — ft/sec</div>
-          <div id="sprint-bars">
-            <div class="loading">Loading...</div>
-          </div>
+          <div id="sprint-bars"><div class="loading">Loading...</div></div>
         </div>
-
-        <!-- Sweet spot leaderboard -->
         <div class="card">
           <div class="card-title">🎯 Sweet Spot % (8°–32° launch angle)</div>
-          <table class="data-table" id="sweet-table">
-            <thead>
-              <tr>
-                <th>Batter</th>
-                <th class="num">Sweet%</th>
-                <th class="num">Avg LA</th>
-                <th class="num">Max EV</th>
-              </tr>
-            </thead>
-            <tbody id="sweet-tbody">
-              <tr><td colspan="4" class="loading">Loading...</td></tr>
-            </tbody>
+          <table class="data-table">
+            <thead><tr><th>Batter</th><th class="num">Sweet%</th><th class="num">Avg LA</th><th class="num">Max EV</th></tr></thead>
+            <tbody id="sweet-tbody"><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
-
       </div>
     </div>
 
-    <!-- ══════════════════════════════════════════════════════════
-         PANEL 3 — PITCHERS
-    ══════════════════════════════════════════════════════════ -->
+    <!-- ══ ADVANCED PITCHERS ═════════════════════════════════════ -->
     <div class="panel" id="panel-pitchers">
-      <div class="section-title">Pitchers</div>
-      <div class="section-subtitle">Starters · Bullpen · FIP · CSW% · Stuff</div>
-
-      <!-- Starters -->
-      <div class="card" style="margin-bottom:1rem;">
-        <div class="card-title">Starting Rotation</div>
-        <table class="data-table" id="sp-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th class="num">IP</th>
-              <th class="num">ERA</th>
-              <th class="num">FIP</th>
-              <th class="num">WHIP</th>
-              <th class="num">K/9</th>
-              <th class="num">BB/9</th>
-              <th class="num">SwStr%</th>
-              <th class="num">WAR</th>
-            </tr>
-          </thead>
-          <tbody id="sp-tbody">
-            <tr><td colspan="9" class="loading">Loading...</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Bullpen -->
-      <div class="card" style="margin-bottom:1rem;">
-        <div class="card-title">Bullpen</div>
-        <table class="data-table" id="rp-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th class="num">IP</th>
-              <th class="num">ERA</th>
-              <th class="num">FIP</th>
-              <th class="num">WHIP</th>
-              <th class="num">K%</th>
-              <th class="num">BB%</th>
-              <th class="num">SV</th>
-            </tr>
-          </thead>
-          <tbody id="rp-tbody">
-            <tr><td colspan="8" class="loading">Loading...</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Pitch mix -->
+      <div class="section-title">Advanced Pitching</div>
+      <div class="section-subtitle">FIP · xFIP · CSW% · SwStr% · Pitch Arsenal</div>
       <div class="card">
-        <div class="card-title">Starter Pitch Arsenal</div>
-        <div id="pitch-mix-grid" style="display:grid;gap:1rem;">
-          <div class="loading">Loading pitch mix data...</div>
+        <div class="card-title">Starting Rotation</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K/9</th><th class="num">BB/9</th><th class="num">SwStr%</th><th class="num">WAR</th></tr></thead>
+            <tbody id="sp-tbody"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody>
+          </table>
         </div>
       </div>
+      <div class="card">
+        <div class="card-title">Bullpen</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K%</th><th class="num">BB%</th><th class="num">SV</th></tr></thead>
+            <tbody id="rp-tbody"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Starter Pitch Arsenal</div>
+        <div id="pitch-mix-grid" style="display:grid;gap:1rem"><div class="loading">Loading pitch mix...</div></div>
+      </div>
     </div>
 
-    <!-- ══════════════════════════════════════════════════════════
-         PANEL 4 — TACOMA RAINIERS
-    ══════════════════════════════════════════════════════════ -->
+    <!-- ══ RAINIERS ══════════════════════════════════════════════ -->
     <div class="panel" id="panel-rainiers">
       <div class="section-title">Tacoma Rainiers</div>
       <div class="section-subtitle">Triple-A affiliate · Pacific Coast League</div>
-
-      <div class="grid-2" style="margin-bottom:1rem;">
-
-        <!-- Recent results -->
+      <div class="grid-2">
         <div class="card">
           <div class="card-title">Recent Results</div>
-          <div id="recent-record" style="font-family:var(--font-display);font-size:2rem;color:var(--teal-bright);margin-bottom:1rem;">—</div>
-          <div id="recent-games">
-            <div class="loading">Loading...</div>
-          </div>
+          <div id="recent-record" style="font-family:var(--font-display);font-size:2rem;color:var(--teal-bright);margin-bottom:1rem">—</div>
+          <div id="recent-games"><div class="loading">Loading...</div></div>
         </div>
-
-        <!-- PCL standings -->
         <div class="card">
           <div class="card-title">Pacific Coast League Standings</div>
-          <table class="data-table" id="pcl-table">
-            <thead>
-              <tr>
-                <th>Team</th>
-                <th class="num">W</th>
-                <th class="num">L</th>
-                <th class="num">PCT</th>
-                <th class="num">GB</th>
-              </tr>
-            </thead>
-            <tbody id="pcl-tbody">
-              <tr><td colspan="5" class="loading">Loading...</td></tr>
-            </tbody>
+          <table class="data-table">
+            <thead><tr><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th></tr></thead>
+            <tbody id="pcl-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
           </table>
         </div>
-
-        <!-- Prospect watch -->
-        <div class="card" style="grid-column: span 2;">
+        <div class="card" style="grid-column:span 2">
           <div class="card-title">⭐ Prospect Watch</div>
-          <div id="prospect-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;">
-            <div class="loading">Loading prospects...</div>
-          </div>
+          <div id="prospect-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem"><div class="loading">Loading...</div></div>
         </div>
-
       </div>
     </div>
 
     <div class="updated-ts" id="footer-ts"></div>
-
   </main>
 
   <script>
-    // ── Tab switching ─────────────────────────────────────────
-    function showPanel(id) {
+    // ── Helpers ───────────────────────────────────────────────
+    const fmt  = (v,d=3) => v==null ? '—' : Number(v).toFixed(d);
+    const fmtP = v => v==null ? '—' : Number(v).toFixed(1)+'%';
+    const num  = v => v==null ? '—' : v;
+
+    function streakBadge(s) {
+      if (!s) return '';
+      return `<span class="streak ${s.startsWith('W')?'w':'l'}">${s}</span>`;
+    }
+
+    function colorERA(v) {
+      if (v == null) return '—';
+      const n = Number(v);
+      if (n < 3.00) return `<span class="hot">${fmt(v,2)}</span>`;
+      if (n > 5.00) return `<span class="cold">${fmt(v,2)}</span>`;
+      return fmt(v,2);
+    }
+
+    function colorAVG(v) {
+      if (v == null) return '—';
+      const n = Number(v);
+      if (n >= 0.300) return `<span class="hot">${fmt(v,3)}</span>`;
+      if (n > 0 && n < 0.200) return `<span class="cold">${fmt(v,3)}</span>`;
+      return fmt(v,3);
+    }
+
+    function colorOPS(v) {
+      if (v == null) return '—';
+      const n = Number(v);
+      if (n >= 0.900) return `<span class="gold-val">${fmt(v,3)}</span>`;
+      if (n >= 0.800) return `<span class="hot">${fmt(v,3)}</span>`;
+      return fmt(v,3);
+    }
+
+    function posBadge(pos, role) {
+      const cls = role === 'SP' ? 'pos-sp' : role === 'RP' ? 'pos-rp' : '';
+      return `<span class="pos-badge ${cls}">${pos||role||''}</span>`;
+    }
+
+    function showPanel(id, btn) {
       document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-      document.getElementById('panel-' + id).classList.add('active');
-      event.target.classList.add('active');
+      document.getElementById('panel-'+id).classList.add('active');
+      if (btn) btn.classList.add('active');
     }
 
-    // ── Helpers ───────────────────────────────────────────────
-    const fmt = (v, d=3) => v == null ? '—' : Number(v).toFixed(d);
-    const fmtPct = v => v == null ? '—' : Number(v).toFixed(1) + '%';
-
-    function streakBadge(streak) {
-      if (!streak) return '';
-      const cls = streak.startsWith('W') ? 'w' : 'l';
-      return `<span class="streak ${cls}">${streak}</span>`;
-    }
-
-    // ── Load all data ─────────────────────────────────────────
     async function loadJSON(path) {
       try {
-        const r = await fetch(path + '?t=' + Date.now());
+        const r = await fetch(path+'?t='+Date.now());
         if (!r.ok) return null;
         return await r.json();
       } catch { return null; }
@@ -693,51 +458,149 @@
     async function renderStandings() {
       const data = await loadJSON('assets/data/standings.json');
       if (!data) return;
-
-      document.getElementById('last-updated').textContent = 'Updated: ' + data.updated;
+      document.getElementById('last-updated').textContent = 'Updated: '+data.updated;
       document.getElementById('footer-ts').textContent = `EDGAR · Data as of ${data.updated} · Sources: MLB StatsAPI · pybaseball`;
 
-      // Table
       const tbody = document.getElementById('standings-tbody');
-      tbody.innerHTML = data.al_west.map((t, i) => {
+      tbody.innerHTML = data.al_west.map((t,i) => {
         const isSea = t.abbrev === 'SEA';
-        return `<tr class="${isSea ? 'highlight' : ''}">
+        return `<tr class="${isSea?'highlight':''}">
           <td style="color:var(--text-dim)">${i+1}</td>
-          <td><strong>${isSea ? '★ ' : ''}${t.team}</strong></td>
-          <td class="num">${t.w}</td>
-          <td class="num">${t.l}</td>
-          <td class="num">${fmt(t.pct)}</td>
-          <td class="num">${t.gb || '—'}</td>
-          <td class="num" style="color:var(--text-dim)">${t.l10 || '—'}</td>
+          <td class="name-col">${isSea?'★ ':''}${t.team}</td>
+          <td class="num">${t.w}</td><td class="num">${t.l}</td>
+          <td class="num">${fmt(t.pct)}</td><td class="num">${t.gb||'—'}</td>
+          <td class="num" style="color:var(--text-dim)">${t.l10||'—'}</td>
           <td>${streakBadge(t.streak)}</td>
         </tr>`;
       }).join('');
 
-      // Race bars
-      const maxPct = Math.max(...data.al_west.map(t => t.pct));
-      const colors = {SEA:'#005C5C', HOU:'#EB6E1F', TEX:'#003278', LAA:'#BA0021', OAK:'#003831'};
-      document.getElementById('race-bars').innerHTML = data.al_west.map(t => `
+      const maxP = Math.max(...data.al_west.map(t=>t.pct));
+      const colors = {SEA:'var(--teal-bright)',HOU:'#EB6E1F',TEX:'#003278',LAA:'#BA0021',OAK:'#003831'};
+      document.getElementById('race-bars').innerHTML = data.al_west.map(t=>`
         <div class="race-bar-wrap">
           <div class="race-bar-label">
-            <span style="color:${t.abbrev==='SEA'?'var(--teal-bright)':''}">${t.abbrev}</span>
-            <span style="font-size:10px;color:var(--text-dim)">${t.w}-${t.l} (${fmt(t.pct,3)})</span>
+            <span style="color:${t.abbrev==='SEA'?'var(--teal-bright)':''}">${t.abbrev||t.team}</span>
+            <span style="font-size:10px;color:var(--text-dim)">${t.w}-${t.l}</span>
           </div>
           <div class="race-bar-track">
-            <div class="race-bar-fill" style="width:${(t.pct/maxPct*100)}%;background:${colors[t.abbrev]||'#445'};${t.abbrev==='SEA'?'background:var(--teal-bright);':''}" ></div>
+            <div class="race-bar-fill" style="width:${t.pct?t.pct/maxP*100:2}%;background:${colors[t.abbrev]||'#445'}"></div>
           </div>
-        </div>
-      `).join('');
+        </div>`).join('');
 
-      // SEA summary
-      const sea = data.al_west.find(t => t.abbrev === 'SEA');
+      const sea = data.al_west.find(t=>t.abbrev==='SEA');
       if (sea) {
         document.getElementById('sea-summary').innerHTML = `
           <div><div class="big-stat teal">${sea.w}-${sea.l}</div><div class="stat-label">Record</div></div>
-          <div><div class="big-stat">${sea.gb || '—'}</div><div class="stat-label">GB / Lead</div></div>
-          <div><div class="big-stat gold">${data.sea_rank || '—'}</div><div class="stat-label">AL West Rank</div></div>
-          <div><div style="margin-top:0.5rem">${streakBadge(sea.streak)}</div><div class="stat-label">Streak</div></div>
-        `;
+          <div><div class="big-stat">${sea.gb||'—'}</div><div class="stat-label">GB / Lead</div></div>
+          <div><div class="big-stat gold">${data.sea_rank||'—'}</div><div class="stat-label">AL West Rank</div></div>
+          <div><div style="margin-top:0.5rem">${streakBadge(sea.streak)}</div><div class="stat-label">Streak</div></div>`;
       }
+    }
+
+    // ── BATTING ───────────────────────────────────────────────
+    async function renderBatting() {
+      const data = await loadJSON('assets/data/traditional.json');
+      if (!data) return;
+
+      // Team totals
+      const tb = data.team_batting || {};
+      document.getElementById('team-bat-cards').innerHTML = [
+        ['AVG',  fmt(tb.avg),       'teal'],
+        ['OPS',  fmt(tb.ops),       'gold'],
+        ['HR',   num(tb.hr),        ''],
+        ['RBI',  num(tb.rbi),       ''],
+        ['R',    num(tb.r),         ''],
+        ['SB',   num(tb.sb),        ''],
+        ['BB',   num(tb.bb),        ''],
+        ['SO',   num(tb.so),        ''],
+      ].map(([label, val, cls]) => `
+        <div class="card" style="margin-bottom:0">
+          <div class="big-stat ${cls}">${val}</div>
+          <div class="stat-label">Team ${label}</div>
+        </div>`).join('');
+
+      // Roster table
+      const tbody = document.getElementById('batting-tbody');
+      if (!data.batting || !data.batting.length) {
+        tbody.innerHTML = '<tr><td colspan="17" class="loading">No batting data yet — check back after first games</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = data.batting.map(p => `<tr>
+        <td class="name-col">${p.name}</td>
+        <td>${posBadge(p.pos)}</td>
+        <td class="num">${num(p.pa)}</td>
+        <td class="num">${num(p.ab)}</td>
+        <td class="num">${colorAVG(p.avg)}</td>
+        <td class="num">${fmt(p.obp)}</td>
+        <td class="num">${fmt(p.slg)}</td>
+        <td class="num">${colorOPS(p.ops)}</td>
+        <td class="num">${num(p.h)}</td>
+        <td class="num">${num(p.doubles)}</td>
+        <td class="num">${num(p.triples)}</td>
+        <td class="num" style="${p.hr>=5?'color:var(--gold);font-weight:600':''}">${num(p.hr)}</td>
+        <td class="num">${num(p.rbi)}</td>
+        <td class="num">${num(p.r)}</td>
+        <td class="num">${num(p.sb)}</td>
+        <td class="num">${num(p.bb)}</td>
+        <td class="num" style="${p.so>=30?'color:#e57373':''}">${num(p.so)}</td>
+      </tr>`).join('');
+    }
+
+    // ── PITCHING ──────────────────────────────────────────────
+    async function renderPitching() {
+      const data = await loadJSON('assets/data/traditional.json');
+      if (!data) return;
+
+      // Team totals
+      const tp = data.team_pitching || {};
+      document.getElementById('team-pitch-cards').innerHTML = [
+        ['ERA',  fmt(tp.era,2),  tp.era < 3.5 ? 'teal' : ''],
+        ['WHIP', fmt(tp.whip),   ''],
+        ['SO',   num(tp.so),     ''],
+        ['BB',   num(tp.bb),     ''],
+        ['HR',   num(tp.hr),     ''],
+        ['SV',   num(tp.sv),     'gold'],
+      ].map(([label,val,cls]) => `
+        <div class="card" style="margin-bottom:0">
+          <div class="big-stat ${cls}">${val}</div>
+          <div class="stat-label">Team ${label}</div>
+        </div>`).join('');
+
+      const tbody = document.getElementById('pitching-tbody');
+      if (!data.pitching || !data.pitching.length) {
+        tbody.innerHTML = '<tr><td colspan="18" class="loading">No pitching data yet — check back after first games</td></tr>';
+        return;
+      }
+
+      let lastRole = '';
+      tbody.innerHTML = data.pitching.map(p => {
+        let divider = '';
+        if (p.role !== lastRole) {
+          lastRole = p.role;
+          divider = `<tr class="role-divider"><td colspan="18">${p.role === 'SP' ? '— Starting Rotation —' : '— Bullpen —'}</td></tr>`;
+        }
+        return divider + `<tr>
+          <td class="name-col">${p.name}</td>
+          <td>${posBadge(p.pos, p.role)}</td>
+          <td class="num">${num(p.w)}</td>
+          <td class="num">${num(p.l)}</td>
+          <td class="num">${colorERA(p.era)}</td>
+          <td class="num">${num(p.g)}</td>
+          <td class="num">${num(p.gs)}</td>
+          <td class="num" style="${p.sv>=5?'color:var(--gold)':''}">${num(p.sv)}</td>
+          <td class="num">${num(p.hld)}</td>
+          <td class="num">${fmt(p.ip,1)}</td>
+          <td class="num">${num(p.h)}</td>
+          <td class="num">${num(p.er)}</td>
+          <td class="num">${num(p.bb)}</td>
+          <td class="num" style="${p.so>=20?'color:var(--teal-bright)':''}">${num(p.so)}</td>
+          <td class="num">${num(p.hr)}</td>
+          <td class="num">${fmt(p.whip)}</td>
+          <td class="num">${fmt(p.k9,1)}</td>
+          <td class="num">${fmt(p.avg)}</td>
+        </tr>`;
+      }).join('');
     }
 
     // ── STATCAST ──────────────────────────────────────────────
@@ -745,138 +608,109 @@
       const data = await loadJSON('assets/data/statcast.json');
       if (!data) return;
 
-      // Barrels
       const barrelTbody = document.getElementById('barrel-tbody');
       if (data.batting_leaders && data.batting_leaders.length) {
-        barrelTbody.innerHTML = data.batting_leaders.slice(0, 12).map(p => `
-          <tr>
-            <td>${p.name || '—'}</td>
-            <td class="num" style="color:var(--teal-bright)">${fmtPct(p.barrel_pct)}</td>
-            <td class="num">${p.barrels ?? '—'}</td>
-            <td class="num">${fmt(p.avg_ev, 1)}</td>
-            <td class="num">${fmtPct(p.hard_hit_pct)}</td>
-          </tr>
-        `).join('');
+        barrelTbody.innerHTML = data.batting_leaders.slice(0,12).map(p=>`<tr>
+          <td>${p.name||'—'}</td>
+          <td class="num" style="color:var(--teal-bright)">${fmtP(p.barrel_pct)}</td>
+          <td class="num">${p.barrels??'—'}</td>
+          <td class="num">${fmt(p.avg_ev,1)}</td>
+          <td class="num">${fmtP(p.hard_hit_pct)}</td>
+        </tr>`).join('');
       } else {
         barrelTbody.innerHTML = '<tr><td colspan="5" class="loading">No data yet — check back after first games</td></tr>';
       }
 
-      // xBA delta
       const xbaTbody = document.getElementById('xba-tbody');
       if (data.xba_delta && data.xba_delta.length) {
-        xbaTbody.innerHTML = data.xba_delta.map(p => {
-          const d = p.delta ?? 0;
-          const cls = d > 0.01 ? 'delta-pos' : d < -0.01 ? 'delta-neg' : '';
-          const verdict = d > 0.015 ? '🍀 Lucky' : d < -0.015 ? '🔴 Unlucky' : '— Even';
-          return `<tr>
-            <td>${p.name}</td>
-            <td class="num">${fmt(p.ba)}</td>
-            <td class="num">${fmt(p.xba)}</td>
-            <td class="num ${cls}">${d > 0 ? '+' : ''}${fmt(d, 3)}</td>
-            <td style="font-size:11px">${verdict}</td>
-          </tr>`;
+        xbaTbody.innerHTML = data.xba_delta.map(p=>{
+          const d = p.delta??0;
+          const cls = d>0.01?'delta-pos':d<-0.01?'delta-neg':'';
+          const verdict = d>0.015?'🍀 Lucky':d<-0.015?'🔴 Unlucky':'— Even';
+          return `<tr><td>${p.name}</td><td class="num">${fmt(p.ba)}</td><td class="num">${fmt(p.xba)}</td><td class="num ${cls}">${d>0?'+':''}${fmt(d,3)}</td><td style="font-size:11px">${verdict}</td></tr>`;
         }).join('');
       } else {
         xbaTbody.innerHTML = '<tr><td colspan="5" class="loading">No data yet</td></tr>';
       }
 
-      // Sprint speed bars
       if (data.sprint_speed && data.sprint_speed.length) {
-        const maxSpd = Math.max(...data.sprint_speed.map(p => p.sprint_spd || 0));
-        document.getElementById('sprint-bars').innerHTML = data.sprint_speed.map(p => `
+        const maxS = Math.max(...data.sprint_speed.map(p=>p.sprint_spd||0));
+        document.getElementById('sprint-bars').innerHTML = data.sprint_speed.map(p=>`
           <div class="race-bar-wrap">
-            <div class="race-bar-label">
-              <span>${p.name}</span>
-              <span style="font-size:10px;color:var(--teal-bright)">${p.sprint_spd ?? '—'} ft/s</span>
-            </div>
-            <div class="race-bar-track">
-              <div class="race-bar-fill" style="width:${p.sprint_spd ? p.sprint_spd/maxSpd*100 : 0}%;background:var(--teal)"></div>
-            </div>
-          </div>
-        `).join('');
+            <div class="race-bar-label"><span>${p.name}</span><span style="font-size:10px;color:var(--teal-bright)">${p.sprint_spd??'—'} ft/s</span></div>
+            <div class="race-bar-track"><div class="race-bar-fill" style="width:${p.sprint_spd?p.sprint_spd/maxS*100:0}%;background:var(--teal)"></div></div>
+          </div>`).join('');
       } else {
         document.getElementById('sprint-bars').innerHTML = '<div class="loading">No sprint data yet</div>';
       }
 
-      // Sweet spot
       const sweetTbody = document.getElementById('sweet-tbody');
       if (data.batting_leaders && data.batting_leaders.length) {
-        const sorted = [...data.batting_leaders].sort((a, b) => (b.sweet_spot_pct ?? 0) - (a.sweet_spot_pct ?? 0));
-        sweetTbody.innerHTML = sorted.slice(0, 10).map(p => `
-          <tr>
-            <td>${p.name}</td>
-            <td class="num" style="color:var(--gold)">${fmtPct(p.sweet_spot_pct)}</td>
-            <td class="num">${fmt(p.avg_la, 1)}°</td>
-            <td class="num">${fmt(p.max_ev, 1)}</td>
-          </tr>
-        `).join('');
+        const sorted = [...data.batting_leaders].sort((a,b)=>(b.sweet_spot_pct??0)-(a.sweet_spot_pct??0));
+        sweetTbody.innerHTML = sorted.slice(0,10).map(p=>`<tr>
+          <td>${p.name}</td>
+          <td class="num" style="color:var(--gold)">${fmtP(p.sweet_spot_pct)}</td>
+          <td class="num">${fmt(p.avg_la,1)}°</td>
+          <td class="num">${fmt(p.max_ev,1)}</td>
+        </tr>`).join('');
       }
     }
 
-    // ── PITCHERS ──────────────────────────────────────────────
-    async function renderPitchers() {
+    // ── ADVANCED PITCHERS ─────────────────────────────────────
+    async function renderAdvancedPitchers() {
       const data = await loadJSON('assets/data/pitchers.json');
       if (!data) return;
 
-      const starters = (data.pitchers || []).filter(p => p.role === 'SP');
-      const relievers = (data.pitchers || []).filter(p => p.role === 'RP');
+      const starters  = (data.pitchers||[]).filter(p=>p.role==='SP');
+      const relievers = (data.pitchers||[]).filter(p=>p.role==='RP');
 
-      const pitchRow = (p, cols) => `<tr>${cols.map((c, i) =>
-        `<td class="${i > 0 ? 'num' : ''}" style="${c==='ERA'&&p[c]<3?'color:var(--teal-bright)':''}">${p[c] ?? '—'}</td>`
-      ).join('')}</tr>`;
-
-      // SP table
       document.getElementById('sp-tbody').innerHTML = starters.length
-        ? starters.map(p => `<tr>
-            <td><strong>${p.Name}</strong></td>
-            <td class="num">${p.IP ?? '—'}</td>
-            <td class="num" style="${p.ERA < 3 ? 'color:var(--teal-bright)' : ''}">${p.ERA ?? '—'}</td>
-            <td class="num">${p.FIP ?? '—'}</td>
-            <td class="num">${p.WHIP ?? '—'}</td>
-            <td class="num">${p['K/9'] ?? '—'}</td>
-            <td class="num">${p['BB/9'] ?? '—'}</td>
-            <td class="num">${p['SwStr%'] ? fmtPct(p['SwStr%']) : '—'}</td>
-            <td class="num" style="color:var(--gold)">${p.WAR ?? '—'}</td>
+        ? starters.map(p=>`<tr>
+            <td class="name-col">${p.Name}</td>
+            <td class="num">${p.IP??'—'}</td>
+            <td class="num">${colorERA(p.ERA)}</td>
+            <td class="num">${p.FIP??'—'}</td>
+            <td class="num">${p.WHIP??'—'}</td>
+            <td class="num">${p['K/9']??'—'}</td>
+            <td class="num">${p['BB/9']??'—'}</td>
+            <td class="num">${p['SwStr%']?fmtP(p['SwStr%']):'—'}</td>
+            <td class="num" style="color:var(--gold)">${p.WAR??'—'}</td>
           </tr>`).join('')
         : '<tr><td colspan="9" class="loading">No starter data yet</td></tr>';
 
-      // RP table
       document.getElementById('rp-tbody').innerHTML = relievers.length
-        ? relievers.map(p => `<tr>
-            <td>${p.Name}</td>
-            <td class="num">${p.IP ?? '—'}</td>
-            <td class="num">${p.ERA ?? '—'}</td>
-            <td class="num">${p.FIP ?? '—'}</td>
-            <td class="num">${p.WHIP ?? '—'}</td>
-            <td class="num">${p['K%'] ? fmtPct(p['K%']) : '—'}</td>
-            <td class="num">${p['BB%'] ? fmtPct(p['BB%']) : '—'}</td>
-            <td class="num">${p.SV ?? 0}</td>
+        ? relievers.map(p=>`<tr>
+            <td class="name-col">${p.Name}</td>
+            <td class="num">${p.IP??'—'}</td>
+            <td class="num">${colorERA(p.ERA)}</td>
+            <td class="num">${p.FIP??'—'}</td>
+            <td class="num">${p.WHIP??'—'}</td>
+            <td class="num">${p['K%']?fmtP(p['K%']):'—'}</td>
+            <td class="num">${p['BB%']?fmtP(p['BB%']):'—'}</td>
+            <td class="num">${p.SV??0}</td>
           </tr>`).join('')
         : '<tr><td colspan="8" class="loading">No bullpen data yet</td></tr>';
 
-      // Pitch mix
-      const pitchMixEl = document.getElementById('pitch-mix-grid');
+      const pmEl = document.getElementById('pitch-mix-grid');
+      const pitchColors = {FF:'#005C5C',SI:'#007A7A',SL:'#C0922B',CU:'#8B4513',CH:'#4A90A4',FC:'#2E6B8A',FS:'#7B68EE',ST:'#9B59B6'};
       if (data.pitch_mix && Object.keys(data.pitch_mix).length) {
-        const pitchColors = {FF:'#005C5C',SI:'#007A7A',SL:'#C0922B',CU:'#8B4513',CH:'#4A90A4',FC:'#2E6B8A',FS:'#7B68EE',ST:'#9B59B6'};
-        pitchMixEl.style.gridTemplateColumns = 'repeat(auto-fill, minmax(280px, 1fr))';
-        pitchMixEl.innerHTML = Object.entries(data.pitch_mix).map(([name, pitches]) => `
-          <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:3px;padding:1rem;">
+        pmEl.style.gridTemplateColumns = 'repeat(auto-fill,minmax(280px,1fr))';
+        pmEl.innerHTML = Object.entries(data.pitch_mix).map(([name,pitches])=>`
+          <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:3px;padding:1rem">
             <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);margin-bottom:0.75rem">${name}</div>
-            ${pitches.sort((a,b)=>b.pct-a.pct).map(p => `
+            ${pitches.sort((a,b)=>b.pct-a.pct).map(p=>`
               <div style="margin-bottom:6px">
                 <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;margin-bottom:3px">
                   <span><span class="pitch-badge">${p.pitch_type}</span></span>
-                  <span style="color:var(--text-dim)">${p.pct}% · ${p.avg_velo ?? '—'} mph</span>
+                  <span style="color:var(--text-dim)">${p.pct}% · ${p.avg_velo??'—'} mph</span>
                 </div>
                 <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px">
                   <div style="height:100%;width:${p.pct}%;background:${pitchColors[p.pitch_type]||'#445'};border-radius:2px"></div>
                 </div>
-              </div>
-            `).join('')}
-          </div>
-        `).join('');
+              </div>`).join('')}
+          </div>`).join('');
       } else {
-        pitchMixEl.innerHTML = '<div class="loading">Pitch mix data loads after a few games</div>';
+        pmEl.innerHTML = '<div class="loading">Pitch mix loads after a few games</div>';
       }
     }
 
@@ -885,65 +719,53 @@
       const data = await loadJSON('assets/data/rainiers.json');
       if (!data) return;
 
-      document.getElementById('recent-record').textContent = data.recent_record || '—';
+      document.getElementById('recent-record').textContent = data.recent_record||'—';
 
-      // Recent games
       const gamesEl = document.getElementById('recent-games');
       if (data.recent_games && data.recent_games.length) {
-        gamesEl.innerHTML = data.recent_games.map(g => {
+        gamesEl.innerHTML = data.recent_games.map(g=>{
           const tacHome = g.home.includes('Tacoma');
-          const score = tacHome
-            ? `${g.home_score} – ${g.away_score}`
-            : `${g.away_score} – ${g.home_score}`;
-          const opp = tacHome ? g.away : g.home;
+          const score = tacHome ? `${g.home_score} – ${g.away_score}` : `${g.away_score} – ${g.home_score}`;
+          const opp   = tacHome ? g.away : g.home;
           return `<div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid rgba(0,92,92,0.15);font-family:var(--font-mono);font-size:11px">
-            <span class="wl-dot ${g.win ? 'w' : 'l'}"></span>
+            <span class="wl-dot ${g.win?'w':'l'}"></span>
             <span style="color:var(--text-dim);min-width:90px">${g.date}</span>
             <span style="flex:1">vs ${opp}</span>
-            <span style="color:${g.win ? 'var(--teal-bright)' : 'var(--text-dim)'}">${score}</span>
-            <span style="color:${g.win ? 'var(--teal-bright)' : '#e57373'}">${g.win ? 'W' : 'L'}</span>
+            <span style="color:${g.win?'var(--teal-bright)':'var(--text-dim)'}">${score}</span>
+            <span style="color:${g.win?'var(--teal-bright)':'#e57373'}">${g.win?'W':'L'}</span>
           </div>`;
         }).join('');
       } else {
-        gamesEl.innerHTML = '<div class="loading">No recent game data</div>';
+        gamesEl.innerHTML = '<div class="loading">No recent game data — Rainiers open March 27</div>';
       }
 
-      // PCL standings
       const pclTbody = document.getElementById('pcl-tbody');
       if (data.pcl_standings && data.pcl_standings.length) {
-        pclTbody.innerHTML = data.pcl_standings.map(t => `
-          <tr class="${t.team.includes('Tacoma') ? 'highlight' : ''}">
-            <td>${t.team.includes('Tacoma') ? '★ ' : ''}${t.team}</td>
-            <td class="num">${t.w}</td>
-            <td class="num">${t.l}</td>
-            <td class="num">${fmt(t.pct)}</td>
-            <td class="num">${t.gb || '—'}</td>
-          </tr>
-        `).join('');
-      } else {
-        pclTbody.innerHTML = '<tr><td colspan="5" class="loading">PCL standings loading...</td></tr>';
+        pclTbody.innerHTML = data.pcl_standings.map(t=>`
+          <tr class="${t.team.includes('Tacoma')?'highlight':''}">
+            <td class="name-col">${t.team.includes('Tacoma')?'★ ':''}${t.team}</td>
+            <td class="num">${t.w}</td><td class="num">${t.l}</td>
+            <td class="num">${fmt(t.pct)}</td><td class="num">${t.gb||'—'}</td>
+          </tr>`).join('');
       }
 
-      // Prospect watch
-      const prospectGrid = document.getElementById('prospect-grid');
+      const pgEl = document.getElementById('prospect-grid');
       if (data.prospect_watch && data.prospect_watch.length) {
-        prospectGrid.innerHTML = data.prospect_watch.map(name => `
-          <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:3px;padding:0.85rem 1rem;">
-            <div style="font-family:var(--font-body);font-weight:600;font-size:13px;color:var(--text);margin-bottom:4px">
-              ${name} <span class="prospect-tag">watch</span>
-            </div>
+        pgEl.innerHTML = data.prospect_watch.map(name=>`
+          <div style="background:var(--bg-card2);border:1px solid var(--border);border-radius:3px;padding:0.85rem 1rem">
+            <div style="font-weight:600;font-size:13px;margin-bottom:4px">${name} <span class="prospect-tag">watch</span></div>
             <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim)">Tacoma Rainiers</div>
-          </div>
-        `).join('');
+          </div>`).join('');
       }
     }
 
     // ── Init ──────────────────────────────────────────────────
     renderStandings();
+    renderBatting();
+    renderPitching();
     renderStatcast();
-    renderPitchers();
+    renderAdvancedPitchers();
     renderRainiers();
   </script>
-
 </body>
 </html>

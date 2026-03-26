@@ -10,7 +10,6 @@ import shutil
 import json
 from datetime import datetime, timezone
 
-# Import absolute paths from config
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import DATA_DIR, ASSET_DIR
@@ -19,7 +18,13 @@ from config import DATA_DIR, ASSET_DIR
 def build():
     os.makedirs(ASSET_DIR, exist_ok=True)
 
-    files = ["standings.json", "statcast.json", "pitchers.json", "rainiers.json"]
+    files = [
+        "standings.json",
+        "traditional.json",
+        "statcast.json",
+        "pitchers.json",
+        "rainiers.json",
+    ]
     copied = 0
 
     print(f"\n🏗️  Building site...")

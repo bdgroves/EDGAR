@@ -1,7 +1,7 @@
 """
 edgar/data/fetch_all.py
 ───────────────────────
-Runs all four data fetchers in sequence.
+Runs all five data fetchers in sequence.
 Called by GitHub Actions every morning.
 """
 
@@ -11,10 +11,11 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from fetch_standings import fetch_standings
-from fetch_statcast  import fetch_statcast_all
-from fetch_pitchers  import fetch_pitchers_all
-from fetch_rainiers  import fetch_rainiers_all
+from fetch_standings   import fetch_standings
+from fetch_statcast    import fetch_statcast_all
+from fetch_pitchers    import fetch_pitchers_all
+from fetch_rainiers    import fetch_rainiers_all
+from fetch_traditional import fetch_traditional_all
 
 
 def main():
@@ -29,6 +30,12 @@ def main():
         print()
     except Exception as e:
         print(f"❌ Standings failed: {e}\n")
+
+    try:
+        results["traditional"] = fetch_traditional_all()
+        print()
+    except Exception as e:
+        print(f"❌ Traditional stats failed: {e}\n")
 
     try:
         results["statcast"] = fetch_statcast_all()
@@ -49,7 +56,7 @@ def main():
         print(f"❌ Rainiers failed: {e}\n")
 
     print(f"{'='*50}")
-    print(f"  ✅ Fetch complete — {len(results)}/4 modules succeeded")
+    print(f"  ✅ Fetch complete — {len(results)}/5 modules succeeded")
     print(f"{'='*50}\n")
 
 
