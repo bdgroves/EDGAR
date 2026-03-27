@@ -668,8 +668,8 @@
       if (data.xba_delta && data.xba_delta.length) {
         xbaTbody.innerHTML = data.xba_delta.map(p=>{
           const d = p.delta??0;
-          const cls = d>0.01?'delta-pos':d<-0.01?'delta-neg':'';
-          const verdict = d>0.015?'🍀 Lucky':d<-0.015?'🔴 Unlucky':'— Even';
+          const cls = d>0.01?'delta-neg':d<-0.01?'delta-pos':'';
+          const verdict = d>0.015?'🍀 Lucky (regression coming)':d<-0.015?'🔥 Due (results catching up)':'— Even';
           return `<tr><td>${p.name}</td><td class="num">${fmt(p.ba)}</td><td class="num">${fmt(p.xba)}</td><td class="num ${cls}">${d>0?'+':''}${fmt(d,3)}</td><td style="font-size:11px">${verdict}</td></tr>`;
         }).join('');
       } else {
