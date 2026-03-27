@@ -4,7 +4,7 @@ on:
   schedule:
     # 6:00 AM UTC = 10 PM PT (night before's games fully processed)
     - cron: '0 6 * * *'
-  workflow_dispatch:   # allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -43,5 +43,7 @@ jobs:
           git config user.name  "edgar-bot"
           git config user.email "edgar-bot@users.noreply.github.com"
           git add docs/assets/data/
-          git diff --staged --quiet || git commit -m "data: daily update $(date -u +'%Y-%m-%d')"
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "data: daily update $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin main
           git push

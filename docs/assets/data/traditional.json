@@ -21,8 +21,8 @@
       "doubles": 1,
       "triples": 0,
       "pa": 4,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     },
     {
       "id": 663728,
@@ -43,8 +43,8 @@
       "doubles": 0,
       "triples": 0,
       "pa": 4,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     },
     {
       "id": 686527,
@@ -65,8 +65,8 @@
       "doubles": 0,
       "triples": 0,
       "pa": 4,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     },
     {
       "id": 647304,
@@ -87,8 +87,8 @@
       "doubles": 0,
       "triples": 0,
       "pa": 4,
-      "gidp": 1,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 1
     },
     {
       "id": 677594,
@@ -109,8 +109,8 @@
       "doubles": 0,
       "triples": 0,
       "pa": 4,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     },
     {
       "id": 670042,
@@ -131,8 +131,8 @@
       "doubles": 0,
       "triples": 0,
       "pa": 4,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     },
     {
       "id": 668227,
@@ -153,8 +153,8 @@
       "doubles": 1,
       "triples": 0,
       "pa": 4,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     },
     {
       "id": 702284,
@@ -175,8 +175,8 @@
       "doubles": 0,
       "triples": 0,
       "pa": 3,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     },
     {
       "id": 660844,
@@ -197,8 +197,8 @@
       "doubles": 0,
       "triples": 0,
       "pa": 3,
-      "gidp": 0,
-      "hbp": 0
+      "hbp": 0,
+      "gidp": 0
     }
   ],
   "pitching": [
@@ -323,6 +323,29 @@
       "avg": 0.5
     }
   ],
-  "team_batting": {},
-  "team_pitching": {}
+  "team_batting": {
+    "avg": 0.188,
+    "obp": 0.235,
+    "slg": 0.625,
+    "ops": 0.86,
+    "hr": 4,
+    "rbi": 4,
+    "r": 4,
+    "sb": 0,
+    "bb": 2,
+    "so": 14,
+    "h": 6,
+    "ab": 32,
+    "source": "aggregated"
+  },
+  "team_pitching": {
+    "era": 6.51,
+    "whip": 1.687,
+    "so": 11,
+    "bb": 2,
+    "hr": 2,
+    "sv": 0,
+    "ip": 8.3,
+    "source": "aggregated"
+  }
 }

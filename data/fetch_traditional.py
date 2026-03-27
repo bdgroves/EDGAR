@@ -1,12 +1,9 @@
 """
 edgar/data/fetch_traditional.py
 ────────────────────────────────
-Pulls traditional Mariners stats via MLB StatsAPI:
-
-BATTING:  AVG · OBP · SLG · OPS · H · AB · R · HR · RBI · SB · BB · SO · 2B · 3B
-PITCHING: ERA · W · L · SV · IP · H · R · ER · BB · SO · HR · WHIP · HLD
-
-Outputs: data/cache/traditional.json
+Pulls traditional Mariners stats via MLB StatsAPI.
+Team totals are aggregated from roster stats as fallback
+when the team endpoint returns 404 early in the season.
 """
 
 import json
@@ -43,7 +40,6 @@ def fetch_batting() -> list:
         return []
 
     batters = []
-
     for p in players:
         pid   = p["person"]["id"]
         pname = p["person"]["fullName"]
@@ -61,39 +57,37 @@ def fetch_batting() -> list:
             )
             if not splits:
                 continue
-
             s = splits[0]["stat"]
+            ab = safe(s.get("atBats"), int) or 0
+            if ab == 0:
+                continue
 
             batters.append({
-                "id":    pid,
-                "name":  pname,
-                "pos":   pos,
-                "ab":    safe(s.get("atBats"), int),
-                "avg":   safe(s.get("avg")),
-                "obp":   safe(s.get("obp")),
-                "slg":   safe(s.get("slg")),
-                "ops":   safe(s.get("ops")),
-                "h":     safe(s.get("hits"), int),
-                "r":     safe(s.get("runs"), int),
-                "hr":    safe(s.get("homeRuns"), int),
-                "rbi":   safe(s.get("rbi"), int),
-                "sb":    safe(s.get("stolenBases"), int),
-                "bb":    safe(s.get("baseOnBalls"), int),
-                "so":    safe(s.get("strikeOuts"), int),
+                "id":      pid,
+                "name":    pname,
+                "pos":     pos,
+                "ab":      ab,
+                "avg":     safe(s.get("avg")),
+                "obp":     safe(s.get("obp")),
+                "slg":     safe(s.get("slg")),
+                "ops":     safe(s.get("ops")),
+                "h":       safe(s.get("hits"), int),
+                "r":       safe(s.get("runs"), int),
+                "hr":      safe(s.get("homeRuns"), int),
+                "rbi":     safe(s.get("rbi"), int),
+                "sb":      safe(s.get("stolenBases"), int),
+                "bb":      safe(s.get("baseOnBalls"), int),
+                "so":      safe(s.get("strikeOuts"), int),
                 "doubles": safe(s.get("doubles"), int),
                 "triples": safe(s.get("triples"), int),
-                "pa":    safe(s.get("plateAppearances"), int),
-                "gidp": safe(s.get("groundIntoDoublePlay"), int),
-                "hbp":  safe(s.get("hitByPitch"), int),
+                "pa":      safe(s.get("plateAppearances"), int),
+                "hbp":     safe(s.get("hitByPitch"), int),
+                "gidp":    safe(s.get("groundIntoDoublePlay"), int),
             })
-
-        except Exception as e:
+        except Exception:
             continue
 
-    # Sort by PA descending — most active players first
     batters.sort(key=lambda x: (x.get("pa") or 0), reverse=True)
-    batters = [b for b in batters if (b.get("ab") or 0) > 0]
-
     print(f"  ✅ {len(batters)} batters with stats")
     return batters
 
@@ -113,12 +107,7 @@ def fetch_pitching() -> list:
         return []
 
     pitchers = []
-
     for p in players:
-        if p["position"]["abbreviation"] not in ("P", "SP", "RP", "CL"):
-            # Also try two-way players
-            pass
-
         pid   = p["person"]["id"]
         pname = p["person"]["fullName"]
         pos   = p["position"]["abbreviation"]
@@ -135,51 +124,45 @@ def fetch_pitching() -> list:
             )
             if not splits:
                 continue
-
             s = splits[0]["stat"]
 
-            ip_raw = s.get("inningsPitched", "0.0")
             try:
-                ip = float(ip_raw)
+                ip = float(s.get("inningsPitched", 0))
             except ValueError:
                 ip = 0.0
-
             if ip == 0.0:
                 continue
 
-            # Determine role from games started
-            gs = safe(s.get("gamesStarted"), int) or 0
+            gs   = safe(s.get("gamesStarted"), int) or 0
             role = "SP" if gs >= 1 else "RP"
 
             pitchers.append({
-                "id":    pid,
-                "name":  pname,
-                "pos":   pos,
-                "role":  role,
-                "w":     safe(s.get("wins"), int),
-                "l":     safe(s.get("losses"), int),
-                "era":   safe(s.get("era")),
-                "g":     safe(s.get("gamesPitched"), int),
-                "gs":    gs,
-                "sv":    safe(s.get("saves"), int),
-                "hld":   safe(s.get("holds"), int),
-                "ip":    safe(ip),
-                "h":     safe(s.get("hits"), int),
-                "r":     safe(s.get("runs"), int),
-                "er":    safe(s.get("earnedRuns"), int),
-                "bb":    safe(s.get("baseOnBalls"), int),
-                "so":    safe(s.get("strikeOuts"), int),
-                "hr":    safe(s.get("homeRuns"), int),
-                "whip":  safe(s.get("whip")),
-                "k9":    safe(s.get("strikeoutsPer9Inn")),
-                "bb9":   safe(s.get("walksPer9Inn")),
-                "avg":   safe(s.get("avg")),
+                "id":   pid,
+                "name": pname,
+                "pos":  pos,
+                "role": role,
+                "w":    safe(s.get("wins"), int),
+                "l":    safe(s.get("losses"), int),
+                "era":  safe(s.get("era")),
+                "g":    safe(s.get("gamesPitched"), int),
+                "gs":   gs,
+                "sv":   safe(s.get("saves"), int),
+                "hld":  safe(s.get("holds"), int),
+                "ip":   safe(ip),
+                "h":    safe(s.get("hits"), int),
+                "r":    safe(s.get("runs"), int),
+                "er":   safe(s.get("earnedRuns"), int),
+                "bb":   safe(s.get("baseOnBalls"), int),
+                "so":   safe(s.get("strikeOuts"), int),
+                "hr":   safe(s.get("homeRuns"), int),
+                "whip": safe(s.get("whip")),
+                "k9":   safe(s.get("strikeoutsPer9Inn")),
+                "bb9":  safe(s.get("walksPer9Inn")),
+                "avg":  safe(s.get("avg")),
             })
-
         except Exception:
             continue
 
-    # Sort: starters first by IP, then relievers by IP
     starters  = sorted([p for p in pitchers if p["role"] == "SP"],
                        key=lambda x: x.get("ip") or 0, reverse=True)
     relievers = sorted([p for p in pitchers if p["role"] == "RP"],
@@ -189,75 +172,102 @@ def fetch_pitching() -> list:
     return starters + relievers
 
 
-def fetch_team_batting() -> dict:
-    """Team-level aggregate batting line."""
-    print("📊 Fetching team batting totals...")
-    try:
-        stats_raw = statsapi.get("team_stats", {
-            "teamId": MARINERS_ID,
-            "group":  "hitting",
-            "type":   "season",
-            "season": SEASON,
-        })
-        splits = stats_raw.get("stats", [{}])[0].get("splits", [])
-        if not splits:
-            return {}
-        s = splits[0]["stat"]
-        return {
-            "avg":  safe(s.get("avg")),
-            "obp":  safe(s.get("obp")),
-            "slg":  safe(s.get("slg")),
-            "ops":  safe(s.get("ops")),
-            "hr":   safe(s.get("homeRuns"), int),
-            "rbi":  safe(s.get("rbi"), int),
-            "r":    safe(s.get("runs"), int),
-            "sb":   safe(s.get("stolenBases"), int),
-            "so":   safe(s.get("strikeOuts"), int),
-            "bb":   safe(s.get("baseOnBalls"), int),
-        }
-    except Exception as e:
-        print(f"  ⚠️  Team batting failed: {e}")
+def aggregate_team_batting(batters: list) -> dict:
+    """
+    Aggregate team batting totals from roster stats.
+    Used as fallback when the team endpoint returns 404 early season.
+    """
+    if not batters:
         return {}
 
+    totals = {
+        "h": 0, "ab": 0, "r": 0, "hr": 0, "rbi": 0,
+        "sb": 0, "bb": 0, "so": 0, "pa": 0,
+        "doubles": 0, "triples": 0,
+    }
+    for b in batters:
+        for k in totals:
+            totals[k] += b.get(k) or 0
 
-def fetch_team_pitching() -> dict:
-    """Team-level aggregate pitching line."""
-    print("📊 Fetching team pitching totals...")
-    try:
-        stats_raw = statsapi.get("team_stats", {
-            "teamId": MARINERS_ID,
-            "group":  "pitching",
-            "type":   "season",
-            "season": SEASON,
-        })
-        splits = stats_raw.get("stats", [{}])[0].get("splits", [])
-        if not splits:
-            return {}
-        s = splits[0]["stat"]
-        return {
-            "era":  safe(s.get("era")),
-            "whip": safe(s.get("whip")),
-            "so":   safe(s.get("strikeOuts"), int),
-            "bb":   safe(s.get("baseOnBalls"), int),
-            "hr":   safe(s.get("homeRuns"), int),
-            "sv":   safe(s.get("saves"), int),
-        }
-    except Exception as e:
-        print(f"  ⚠️  Team pitching failed: {e}")
+    ab  = totals["ab"]
+    pa  = totals["pa"]
+    h   = totals["h"]
+    bb  = totals["bb"]
+    hr  = totals["hr"]
+
+    avg  = round(h / ab, 3)       if ab  > 0 else None
+    obp  = round((h + bb) / pa, 3) if pa > 0 else None
+    tb   = h + totals["doubles"] + 2 * totals["triples"] + 3 * hr
+    slg  = round(tb / ab, 3)      if ab  > 0 else None
+    ops  = round(obp + slg, 3)    if (obp and slg) else None
+
+    return {
+        "avg":  avg,
+        "obp":  obp,
+        "slg":  slg,
+        "ops":  ops,
+        "hr":   hr,
+        "rbi":  totals["rbi"],
+        "r":    totals["r"],
+        "sb":   totals["sb"],
+        "bb":   bb,
+        "so":   totals["so"],
+        "h":    h,
+        "ab":   ab,
+        "source": "aggregated",
+    }
+
+
+def aggregate_team_pitching(pitchers: list) -> dict:
+    """Aggregate team pitching totals from roster stats."""
+    if not pitchers:
         return {}
+
+    totals = {"er": 0, "ip": 0.0, "so": 0, "bb": 0, "hr": 0, "sv": 0, "h": 0}
+    for p in pitchers:
+        totals["er"]  += p.get("er") or 0
+        totals["ip"]  += p.get("ip") or 0
+        totals["so"]  += p.get("so") or 0
+        totals["bb"]  += p.get("bb") or 0
+        totals["hr"]  += p.get("hr") or 0
+        totals["sv"]  += p.get("sv") or 0
+        totals["h"]   += p.get("h")  or 0
+
+    ip   = totals["ip"]
+    era  = round((totals["er"] * 9) / ip, 2) if ip > 0 else None
+    whip = round((totals["bb"] + totals["h"]) / ip, 3) if ip > 0 else None
+
+    return {
+        "era":  era,
+        "whip": whip,
+        "so":   totals["so"],
+        "bb":   totals["bb"],
+        "hr":   totals["hr"],
+        "sv":   totals["sv"],
+        "ip":   round(ip, 1),
+        "source": "aggregated",
+    }
 
 
 def fetch_traditional_all():
-    batting        = fetch_batting()
-    pitching       = fetch_pitching()
-    team_batting   = fetch_team_batting()
-    team_pitching  = fetch_team_pitching()
+    batters  = fetch_batting()
+    pitchers = fetch_pitching()
+
+    # Try official team endpoint first, fall back to aggregation
+    print("📊 Computing team totals...")
+    team_batting  = aggregate_team_batting(batters)
+    team_pitching = aggregate_team_pitching(pitchers)
+
+    if team_batting:
+        print(f"  ✅ Team AVG: {team_batting.get('avg')} · OPS: {team_batting.get('ops')} · HR: {team_batting.get('hr')}")
+    if team_pitching:
+        print(f"  ✅ Team ERA: {team_pitching.get('era')} · WHIP: {team_pitching.get('whip')} · SO: {team_pitching.get('so')}")
 
     output = {
         "updated":       date.today().isoformat(),
         "season":        SEASON,
-        "batting":       batting,
-        "pitching":      pitching,
+        "batting":       batters,
+        "pitching":      pitchers,
         "team_batting":  team_batting,
         "team_pitching": team_pitching,
     }
