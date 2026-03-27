@@ -14,3 +14,5 @@ data/cache/
 docs/assets/data/manifest.json
 
 docs/assets/data/manifest.json
+
+docs/assets/data/*.json
