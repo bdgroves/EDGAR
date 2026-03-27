@@ -42,12 +42,6 @@ def build():
         else:
             print(f"  ⚠️  {fname} not found in cache — skipping")
 
-    manifest = {
-        "built_at": datetime.now(timezone.utc).isoformat(),
-        "files":    files,
-        "copied":   copied,
-    }
-    with open(os.path.join(ASSET_DIR, "manifest.json"), "w") as f:
         json.dump(manifest, f, indent=2)
 
     print(f"\n  {copied}/{len(files)} data files deployed to docs/assets/data/")
@@ -56,3 +50,4 @@ def build():
 
 if __name__ == "__main__":
     build()
+
