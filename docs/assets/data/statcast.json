@@ -106,6 +106,24 @@
       "pa": 3
     },
     {
+      "name": "Raleigh, Cal",
+      "ba": 0.0,
+      "xba": null,
+      "delta": 0.0,
+      "woba": 0.19,
+      "xwoba": 0.19,
+      "pa": 4
+    },
+    {
+      "name": "Young, Cole",
+      "ba": 0.0,
+      "xba": null,
+      "delta": 0.0,
+      "woba": 0.0,
+      "xwoba": 0.0,
+      "pa": 3
+    },
+    {
       "name": "Arozarena, Randy",
       "ba": 0.25,
       "xba": 0.192,
@@ -122,24 +140,6 @@
       "woba": 1.101,
       "xwoba": 0.475,
       "pa": 4
-    },
-    {
-      "name": "Raleigh, Cal",
-      "ba": 0.0,
-      "xba": NaN,
-      "delta": NaN,
-      "woba": 0.19,
-      "xwoba": 0.19,
-      "pa": 4
-    },
-    {
-      "name": "Young, Cole",
-      "ba": 0.0,
-      "xba": NaN,
-      "delta": NaN,
-      "woba": 0.0,
-      "xwoba": 0.0,
-      "pa": 3
     }
   ],
   "sprint_speed": []
