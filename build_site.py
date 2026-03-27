@@ -7,7 +7,6 @@ so GitHub Pages can serve them to the frontend.
 
 import os
 import shutil
-import json
 from datetime import datetime, timezone
 
 import sys
@@ -42,12 +41,9 @@ def build():
         else:
             print(f"  ⚠️  {fname} not found in cache — skipping")
 
-        json.dump(manifest, f, indent=2)
-
     print(f"\n  {copied}/{len(files)} data files deployed to docs/assets/data/")
     print(f"  → git add . && git commit -m 'data: update' && git push\n")
 
 
 if __name__ == "__main__":
     build()
-
