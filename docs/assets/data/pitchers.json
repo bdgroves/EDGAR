@@ -1,6 +1,132 @@
 {
   "updated": "2026-03-27",
   "season": 2026,
-  "pitchers": [],
-  "pitch_mix": {}
+  "pitchers": [
+    {
+      "Name": "Casey Legumina",
+      "G": 1.0,
+      "GS": 0.0,
+      "IP": 1.0,
+      "W": 0.0,
+      "L": 0.0,
+      "SV": 0.0,
+      "ERA": 0.0,
+      "FIP": 5.63,
+      "xFIP": 7.39,
+      "WHIP": 2.0,
+      "K/9": 18.0,
+      "BB/9": 9.0,
+      "K%": 0.33,
+      "BB%": 0.17,
+      "K-BB%": 0.17,
+      "SwStr%": 0.1,
+      "CSW%": 0.21,
+      "WAR": 0.0,
+      "Age": 29.0,
+      "role": "RP"
+    },
+    {
+      "Name": "Gabe Speier",
+      "G": 1.0,
+      "GS": 0.0,
+      "IP": 1.0,
+      "W": 0.0,
+      "L": 1.0,
+      "SV": 0.0,
+      "ERA": 18.0,
+      "FIP": 1.63,
+      "xFIP": 3.39,
+      "WHIP": 3.0,
+      "K/9": 9.0,
+      "BB/9": 0.0,
+      "K%": 0.17,
+      "BB%": 0.0,
+      "K-BB%": 0.17,
+      "SwStr%": 0.2,
+      "CSW%": 0.4,
+      "WAR": 0.0,
+      "Age": 31.0,
+      "role": "RP"
+    },
+    {
+      "Name": "Cooper Criswell",
+      "G": 1.0,
+      "GS": 0.0,
+      "IP": 1.0,
+      "W": 0.0,
+      "L": 0.0,
+      "SV": 0.0,
+      "ERA": 9.0,
+      "FIP": 17.63,
+      "xFIP": 6.39,
+      "WHIP": 2.0,
+      "K/9": 9.0,
+      "BB/9": 9.0,
+      "K%": 0.25,
+      "BB%": 0.25,
+      "K-BB%": 0.0,
+      "SwStr%": 0.06,
+      "CSW%": 0.35,
+      "WAR": -0.1,
+      "Age": 29.0,
+      "role": "RP"
+    },
+    {
+      "Name": "Logan Gilbert",
+      "G": 1.0,
+      "GS": 1.0,
+      "IP": 5.1,
+      "W": 0.0,
+      "L": 0.0,
+      "SV": 0.0,
+      "ERA": 5.06,
+      "FIP": 3.44,
+      "xFIP": 3.97,
+      "WHIP": 0.94,
+      "K/9": 11.81,
+      "BB/9": 0.0,
+      "K%": 0.33,
+      "BB%": 0.0,
+      "K-BB%": 0.33,
+      "SwStr%": 0.14,
+      "CSW%": 0.34,
+      "WAR": 0.2,
+      "Age": 29.0,
+      "role": "SP"
+    }
+  ],
+  "pitch_mix": {
+    "Logan Gilbert": [
+      {
+        "pitch_type": "CU",
+        "count": 4,
+        "pct": 4.7,
+        "avg_velo": 80.6
+      },
+      {
+        "pitch_type": "FC",
+        "count": 18,
+        "pct": 20.9,
+        "avg_velo": 90.8
+      },
+      {
+        "pitch_type": "FF",
+        "count": 29,
+        "pct": 33.7,
+        "avg_velo": 94.7
+      },
+      {
+        "pitch_type": "FS",
+        "count": 20,
+        "pct": 23.3,
+        "avg_velo": 81.5
+      },
+      {
+        "pitch_type": "SL",
+        "count": 15,
+        "pct": 17.4,
+        "avg_velo": 85.8
+      }
+    ]
+  }
 }
