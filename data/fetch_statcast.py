@@ -197,3 +197,4 @@ def fetch_statcast_all():
 
 if __name__ == "__main__":
     fetch_statcast_all()
+
