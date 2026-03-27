@@ -1,14 +1,8 @@
 """
 edgar/data/fetch_statcast.py
 ─────────────────────────────
-Pulls Mariners Statcast leaderboard stats:
-  - Barrels & barrel %
-  - Exit velocity (max + avg hard hit)
-  - Sprint speed
-  - xBA vs BA ("lucky/unlucky" delta)
-  - Sweet spot %
-
-Outputs: data/cache/statcast.json
+Pulls Mariners Statcast leaderboard stats.
+Filters by player_id matched against active Mariners roster.
 """
 
 import json
@@ -17,9 +11,10 @@ import sys
 from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from config import SEASON, DATA_DIR, MARINERS_ABBREV
+from config import SEASON, DATA_DIR, MARINERS_ABBREV, MARINERS_ID
 
 import pybaseball
+import statsapi
 import pandas as pd
 
 pybaseball.cache.enable()
@@ -32,40 +27,44 @@ def safe_round(val, decimals=3):
         return None
 
 
-def fetch_statcast_batting() -> list:
-    """Pull season-to-date Statcast batting leaders for the Mariners."""
-    print("🔥 Fetching Statcast batting leaders...")
-
+def get_mariners_mlbam_ids() -> set:
+    """Return set of MLBAM player IDs on the active Mariners roster."""
     try:
-        df = pybaseball.statcast_batter_exitvelo_barrels(SEASON, minBBE=10)
+        roster_raw = statsapi.get(
+            "team_roster",
+            {"teamId": MARINERS_ID, "rosterType": "active", "season": SEASON},
+        )
+        ids = {p["person"]["id"] for p in roster_raw.get("roster", [])}
+        print(f"  ℹ️  {len(ids)} players on active Mariners roster")
+        return ids
+    except Exception as e:
+        print(f"  ⚠️  Roster ID lookup failed: {e}")
+        return set()
+
+
+def fetch_statcast_batting(sea_ids: set) -> list:
+    print("🔥 Fetching Statcast batting leaders...")
+    try:
+        df = pybaseball.statcast_batter_exitvelo_barrels(SEASON, minBBE=1)
     except Exception as e:
         print(f"  ⚠️  Statcast batting fetch failed: {e}")
         return []
 
     if df is None or df.empty:
-        print("  ⚠️  No Statcast batting data yet (early season)")
+        print("  ⚠️  No Statcast batting data yet")
         return []
 
-    print(f"  ℹ️  Columns available: {list(df.columns)}")
-
-    # Try multiple possible team column names — Savant changes these occasionally
-    team_col = None
-    for candidate in ["team_name", "team_name_alt", "team", "Team"]:
-        if candidate in df.columns:
-            team_col = candidate
-            break
-
-    if team_col is None:
-        print(f"  ⚠️  No team column found. Returning all players (no team filter).")
-        sea = df.copy()
+    # Filter by player_id matching Mariners roster
+    if sea_ids and "player_id" in df.columns:
+        sea = df[df["player_id"].isin(sea_ids)].copy()
     else:
-        sea = df[df[team_col].str.contains("Seattle", case=False, na=False)].copy()
+        print("  ⚠️  Could not filter by team — returning empty")
+        return []
 
     if sea.empty:
         print("  ⚠️  No Mariners batters in Statcast data yet")
         return []
 
-    # Rename whichever columns are present
     col_map = {
         "last_name, first_name": "name",
         "attempts":              "bbe",
@@ -81,36 +80,33 @@ def fetch_statcast_batting() -> list:
     sea = sea.rename(columns={k: v for k, v in col_map.items() if k in sea.columns})
 
     records = []
-    target_cols = set(col_map.values())
     for _, row in sea.iterrows():
         rec = {}
-        for col in target_cols:
+        for col in col_map.values():
             if col in row:
                 val = row[col]
                 rec[col] = safe_round(val) if isinstance(val, float) else val
         records.append(rec)
 
+    print(f"  ✅ {len(records)} Mariners batters in Statcast")
     return records
 
 
-def fetch_xba_delta() -> list:
-    """Pull xBA vs actual BA — who's getting lucky or unlucky."""
+def fetch_xba_delta(sea_ids: set) -> list:
     print("🎲 Fetching xBA vs BA delta...")
-
     try:
-        df = pybaseball.statcast_batter_expected_stats(SEASON, minPA=20)
+        df = pybaseball.statcast_batter_expected_stats(SEASON, minPA=1)
         if df is None or df.empty:
             return []
 
-        # Flexible team column detection
-        team_col = next((c for c in ["team_name", "team_name_alt", "team", "Team"]
-                         if c in df.columns), None)
-        if team_col:
-            sea = df[df[team_col].str.contains("Seattle", case=False, na=False)].copy()
+        # Filter by player_id
+        if sea_ids and "player_id" in df.columns:
+            sea = df[df["player_id"].isin(sea_ids)].copy()
         else:
-            sea = df.copy()
+            return []
 
         if sea.empty:
+            print("  ⚠️  No Mariners in xBA data yet")
             return []
 
         sea["ba_delta"] = sea["ba"] - sea["est_ba"]
@@ -127,6 +123,8 @@ def fetch_xba_delta() -> list:
                 "xwoba": safe_round(row.get("est_woba")),
                 "pa":    int(row.get("pa", 0)),
             })
+
+        print(f"  ✅ {len(records)} Mariners in xBA data")
         return records
 
     except Exception as e:
@@ -134,21 +132,21 @@ def fetch_xba_delta() -> list:
         return []
 
 
-def fetch_sprint_speed() -> list:
-    """Pull sprint speed leaderboard filtered to Mariners."""
+def fetch_sprint_speed(sea_ids: set) -> list:
     print("💨 Fetching sprint speed...")
-
     try:
-        df = pybaseball.statcast_sprint_speed(SEASON, min_opp=5)
+        df = pybaseball.statcast_sprint_speed(SEASON, min_opp=1)
         if df is None or df.empty:
             return []
 
-        # Flexible team column
+        # Try team column first, fall back to player_id
         team_col = next((c for c in ["team", "Team", "team_name"] if c in df.columns), None)
         if team_col:
             sea = df[df[team_col] == MARINERS_ABBREV].copy()
+        elif sea_ids and "player_id" in df.columns:
+            sea = df[df["player_id"].isin(sea_ids)].copy()
         else:
-            sea = df.copy()
+            return []
 
         if sea.empty:
             return []
@@ -158,11 +156,13 @@ def fetch_sprint_speed() -> list:
         records = []
         for _, row in sea.iterrows():
             records.append({
-                "name":         row.get("last_name, first_name", ""),
-                "sprint_spd":   safe_round(row.get("sprint_speed")),
-                "hp_to_1b":     safe_round(row.get("hp_to_1b")),
+                "name":          row.get("last_name, first_name", ""),
+                "sprint_spd":    safe_round(row.get("sprint_speed")),
+                "hp_to_1b":      safe_round(row.get("hp_to_1b")),
                 "opportunities": int(row.get("competitive_runs", 0)),
             })
+
+        print(f"  ✅ {len(records)} Mariners sprint speed entries")
         return records
 
     except Exception as e:
@@ -171,9 +171,12 @@ def fetch_sprint_speed() -> list:
 
 
 def fetch_statcast_all():
-    batting = fetch_statcast_batting()
-    xba     = fetch_xba_delta()
-    sprint  = fetch_sprint_speed()
+    # Get Mariners roster IDs once — used for all filters
+    sea_ids = get_mariners_mlbam_ids()
+
+    batting = fetch_statcast_batting(sea_ids)
+    xba     = fetch_xba_delta(sea_ids)
+    sprint  = fetch_sprint_speed(sea_ids)
 
     output = {
         "updated":         date.today().isoformat(),
