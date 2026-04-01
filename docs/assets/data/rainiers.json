@@ -1,8 +1,45 @@
 {
   "updated": "2026-04-01",
   "season": 2026,
-  "recent_record": "0-0 (last 0 games)",
-  "recent_games": [],
+  "recent_record": "2-2 (last 4 games)",
+  "recent_games": [
+    {
+      "date": "2026-03-31",
+      "home": "Tacoma Rainiers",
+      "away": "El Paso Chihuahuas",
+      "home_score": 4,
+      "away_score": 6,
+      "venue": "Cheney Stadium",
+      "win": false
+    },
+    {
+      "date": "2026-03-29",
+      "home": "Reno Aces",
+      "away": "Tacoma Rainiers",
+      "home_score": 4,
+      "away_score": 9,
+      "venue": "Greater Nevada Field",
+      "win": true
+    },
+    {
+      "date": "2026-03-28",
+      "home": "Reno Aces",
+      "away": "Tacoma Rainiers",
+      "home_score": 8,
+      "away_score": 4,
+      "venue": "Greater Nevada Field",
+      "win": false
+    },
+    {
+      "date": "2026-03-27",
+      "home": "Reno Aces",
+      "away": "Tacoma Rainiers",
+      "home_score": 6,
+      "away_score": 7,
+      "venue": "Greater Nevada Field",
+      "win": true
+    }
+  ],
   "roster": {
     "batters": [
       {
