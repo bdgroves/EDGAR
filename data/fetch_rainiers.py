@@ -51,7 +51,7 @@ def fetch_recent_games(days: int = 7) -> list:
         schedule = statsapi.schedule(
             start_date=start_dt.strftime("%m/%d/%Y"),
             end_date=end_dt.strftime("%m/%d/%Y"),
-            team=TACOMA_ID,
+            team=TACOMA_ID,`n        sportId=11,
         )
     except Exception as e:
         print(f"  ⚠️  Schedule fetch failed: {e}")
