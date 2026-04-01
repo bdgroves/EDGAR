@@ -9,7 +9,7 @@ _HERE = os.path.dirname(os.path.abspath(__file__))  # always the edgar/ root
 # ── Team identifiers ──────────────────────────────────────────────
 MARINERS_ID       = 136
 MARINERS_ABBREV   = "SEA"
-TACOMA_ID         = 6047
+TACOMA_ID       = 529
 TACOMA_ABBREV     = "TAC"
 
 # ── AL West competitors ───────────────────────────────────────────
