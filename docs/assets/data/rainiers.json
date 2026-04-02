@@ -735,6 +735,26 @@
       "l10": ""
     },
     {
+      "team": "Sacramento River Cats",
+      "w": 3,
+      "l": 2,
+      "pct": 0.6,
+      "gb": "1.0",
+      "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
+    },
+    {
+      "team": "Reno Aces",
+      "w": 3,
+      "l": 2,
+      "pct": 0.6,
+      "gb": "1.0",
+      "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
+    },
+    {
       "team": "El Paso Chihuahuas",
       "w": 2,
       "l": 2,
@@ -755,31 +775,11 @@
       "l10": ""
     },
     {
-      "team": "Reno Aces",
-      "w": 2,
-      "l": 2,
-      "pct": 0.5,
-      "gb": "1.5",
-      "div": "Pacific Coast League West",
-      "streak": "",
-      "l10": ""
-    },
-    {
-      "team": "Sacramento River Cats",
-      "w": 2,
-      "l": 2,
-      "pct": 0.5,
-      "gb": "1.5",
-      "div": "Pacific Coast League West",
-      "streak": "",
-      "l10": ""
-    },
-    {
       "team": "Round Rock Express",
       "w": 1,
-      "l": 3,
-      "pct": 0.25,
-      "gb": "2.5",
+      "l": 4,
+      "pct": 0.2,
+      "gb": "3.0",
       "div": "Pacific Coast League East",
       "streak": "",
       "l10": ""
@@ -787,9 +787,9 @@
     {
       "team": "Albuquerque Isotopes",
       "w": 1,
-      "l": 3,
-      "pct": 0.25,
-      "gb": "2.5",
+      "l": 4,
+      "pct": 0.2,
+      "gb": "3.0",
       "div": "Pacific Coast League East",
       "streak": "",
       "l10": ""
@@ -797,9 +797,9 @@
     {
       "team": "Salt Lake Bees",
       "w": 1,
-      "l": 3,
-      "pct": 0.25,
-      "gb": "2.5",
+      "l": 4,
+      "pct": 0.2,
+      "gb": "3.0",
       "div": "Pacific Coast League West",
       "streak": "",
       "l10": ""
