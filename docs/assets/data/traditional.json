@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-02",
+  "updated": "2026-04-03",
   "season": 2026,
   "batting": [
     {
@@ -263,28 +263,6 @@
       "doubles": 0,
       "triples": 0,
       "pa": 4,
-      "hbp": 0,
-      "gidp": 0
-    },
-    {
-      "id": 669208,
-      "name": "Ryan Bliss",
-      "pos": "2B",
-      "ab": 2,
-      "avg": 0.0,
-      "obp": 0.0,
-      "slg": 0.0,
-      "ops": 0.0,
-      "h": 0,
-      "r": 0,
-      "hr": 0,
-      "rbi": 0,
-      "sb": 0,
-      "bb": 0,
-      "so": 2,
-      "doubles": 0,
-      "triples": 0,
-      "pa": 2,
       "hbp": 0,
       "gidp": 0
     }
@@ -604,18 +582,18 @@
     }
   ],
   "team_batting": {
-    "avg": 0.205,
-    "obp": 0.282,
-    "slg": 0.362,
-    "ops": 0.644,
+    "avg": 0.207,
+    "obp": 0.284,
+    "slg": 0.366,
+    "ops": 0.65,
     "hr": 8,
     "rbi": 26,
     "r": 27,
     "sb": 5,
     "bb": 26,
-    "so": 72,
+    "so": 70,
     "h": 47,
-    "ab": 229,
+    "ab": 227,
     "source": "aggregated"
   },
   "team_pitching": {
