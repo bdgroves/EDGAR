@@ -131,20 +131,6 @@
       "div_name": "American League West"
     },
     {
-      "team": "Detroit Tigers",
-      "abbrev": "",
-      "w": 4,
-      "l": 4,
-      "pct": 0.5,
-      "gb": "1.0",
-      "streak": "",
-      "l10": "",
-      "rs": 0,
-      "ra": 0,
-      "div_id": 202,
-      "div_name": "American League Central"
-    },
-    {
       "team": "Tampa Bay Rays",
       "abbrev": "",
       "w": 4,
@@ -188,6 +174,20 @@
     },
     {
       "team": "Chicago White Sox",
+      "abbrev": "",
+      "w": 4,
+      "l": 5,
+      "pct": 0.444,
+      "gb": "1.5",
+      "streak": "",
+      "l10": "",
+      "rs": 0,
+      "ra": 0,
+      "div_id": 202,
+      "div_name": "American League Central"
+    },
+    {
+      "team": "Detroit Tigers",
       "abbrev": "",
       "w": 4,
       "l": 5,
