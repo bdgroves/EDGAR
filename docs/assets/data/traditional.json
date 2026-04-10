@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09",
+  "updated": "2026-04-10",
   "season": 2026,
   "batting": [
     {
@@ -269,7 +269,7 @@
     {
       "id": 656582,
       "name": "Connor Joe",
-      "pos": "RF",
+      "pos": "1B",
       "ab": 3,
       "avg": 0.0,
       "obp": 0.0,
