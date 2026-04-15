@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -41,7 +42,6 @@
       overflow-x: hidden;
     }
 
-    /* ── Header ──────────────────────────────────────────────── */
     header {
       padding: 2.5rem 2rem 2rem;
       border-bottom: 1px solid var(--border);
@@ -67,11 +67,9 @@
     }
 
     .logo-sub { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase; margin-top: 0.25rem; }
-
     .header-meta { margin-left: auto; text-align: right; font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); line-height: 1.8; }
     .header-meta .season-badge { display: inline-block; background: var(--teal); color: #fff; padding: 2px 10px; font-size: 10px; letter-spacing: 0.15em; border-radius: 2px; margin-bottom: 4px; }
 
-    /* ── Nav ─────────────────────────────────────────────────── */
     nav {
       position: sticky; top: 0; z-index: 100;
       display: flex;
@@ -92,7 +90,6 @@
     nav button:hover { color: var(--silver); }
     nav button.active { color: var(--teal-bright); border-bottom-color: var(--teal-bright); }
 
-    /* ── Main ────────────────────────────────────────────────── */
     main { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; padding: 2rem; }
 
     .panel { display: none; }
@@ -107,11 +104,9 @@
     .panel.active > *:nth-child(3) { animation-delay: 0.10s; }
     .panel.active > *:nth-child(4) { animation-delay: 0.15s; }
 
-    /* ── Section titles ──────────────────────────────────────── */
     .section-title { font-family: var(--font-display); font-size: 2.2rem; letter-spacing: 0.06em; color: var(--teal-bright); margin-bottom: 0.25rem; }
     .section-subtitle { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 1.75rem; }
 
-    /* ── Cards ───────────────────────────────────────────────── */
     .card {
       background: var(--bg-card); border: 1px solid var(--border);
       border-radius: 4px; padding: 1.25rem 1.5rem;
@@ -120,19 +115,16 @@
     .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--teal), transparent); }
     .card-title { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1rem; }
 
-    /* ── Grids ───────────────────────────────────────────────── */
     .grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin-bottom: 1rem; }
     .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-bottom: 1rem; }
     @media(max-width:900px) { .grid-4 { grid-template-columns: repeat(2,1fr); } }
     @media(max-width:600px) { .grid-4,.grid-2 { grid-template-columns: 1fr; } }
 
-    /* ── Stat displays ───────────────────────────────────────── */
     .big-stat { font-family: var(--font-display); font-size: 3rem; line-height: 1; color: var(--text); }
     .big-stat.teal { color: var(--teal-bright); }
     .big-stat.gold { color: var(--gold); }
     .stat-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-top: 0.3rem; }
 
-    /* ── Tables ──────────────────────────────────────────────── */
     .data-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 12px; }
     .data-table th { text-align: left; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
     .data-table td { padding: 0.5rem 0.6rem; border-bottom: 1px solid rgba(0,92,92,0.12); color: var(--text); white-space: nowrap; }
@@ -140,20 +132,16 @@
     .data-table .num { text-align: right; font-variant-numeric: tabular-nums; }
     .data-table .name-col { font-family: var(--font-body); font-weight: 600; }
 
-    /* highlight standout values */
     .hot  { color: var(--teal-bright) !important; font-weight: 600; }
     .cold { color: #e57373 !important; }
     .gold-val { color: var(--gold) !important; font-weight: 600; }
 
-    /* pos badge */
     .pos-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; padding: 1px 5px; border-radius: 2px; background: rgba(0,92,92,0.25); color: var(--teal-bright); border: 1px solid var(--border); margin-left: 5px; }
     .pos-sp { background: rgba(192,146,43,0.15); color: var(--gold); border-color: rgba(192,146,43,0.3); }
     .pos-rp { background: rgba(0,92,92,0.2); color: var(--teal-bright); }
 
-    /* role divider */
     .role-divider td { background: rgba(0,92,92,0.08) !important; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); padding: 0.3rem 0.6rem; }
 
-    /* ── Standings extras ────────────────────────────────────── */
     .race-bar-wrap { margin: 0.4rem 0; }
     .race-bar-label { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; margin-bottom: 3px; }
     .race-bar-track { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
@@ -163,7 +151,6 @@
     .streak.w { background: rgba(0,165,165,0.2); color: var(--teal-bright); }
     .streak.l { background: rgba(192,146,43,0.2); color: var(--gold); }
 
-    /* ── Misc ────────────────────────────────────────────────── */
     .loading { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); padding: 2rem; text-align: center; letter-spacing: 0.2em; }
     .updated-ts { font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
     .wl-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }
@@ -173,7 +160,9 @@
     .delta-pos { color: var(--teal-bright); }
     .delta-neg { color: #e57373; }
     .pitch-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; padding: 2px 5px; border-radius: 2px; background: rgba(0,92,92,0.3); border: 1px solid var(--border); color: var(--teal-bright); margin-right: 3px; }
+    tr.highlight td { background: rgba(0,92,92,0.08); }
   </style>
+
 </head>
 <body>
 
@@ -201,249 +190,165 @@
 
   <main>
 
-    <!-- ══ AL WEST ══════════════════════════════════════════════ -->
-    <div class="panel active" id="panel-standings">
-      <div class="section-title">AL West</div>
-      <div class="section-subtitle">Division standings · 2026 season</div>
-
-      <div class="card" style="grid-column:span 2">
-        <div class="card-title">Division Standings</div>
-        <table class="data-table">
-          <thead><tr><th>#</th><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th class="num">L10</th><th>Streak</th></tr></thead>
-          <tbody id="standings-tbody"><tr><td colspan="8" class="loading">⌛ Loading...</td></tr></tbody>
-        </table>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">Win % Race</div>
-          <div id="race-bars"><div class="loading">Loading...</div></div>
-        </div>
-        <div class="card">
-          <div class="card-title">Mariners at a glance</div>
-          <div id="sea-summary" style="display:flex;gap:2rem;flex-wrap:wrap"><div class="loading">Loading...</div></div>
-        </div>
-      </div>
+```
+<div class="panel active" id="panel-standings">
+  <div class="section-title">AL West</div>
+  <div class="section-subtitle">Division standings · 2026 season</div>
+  <div class="card">
+    <div class="card-title">Division Standings</div>
+    <table class="data-table">
+      <thead><tr><th>#</th><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th class="num">L10</th><th>Streak</th></tr></thead>
+      <tbody id="standings-tbody"><tr><td colspan="8" class="loading">⌛ Loading...</td></tr></tbody>
+    </table>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Win % Race</div>
+      <div id="race-bars"><div class="loading">Loading...</div></div>
     </div>
-
-    <!-- ══ BATTING ═══════════════════════════════════════════════ -->
-    <div class="panel" id="panel-batting">
-      <div class="section-title">Batting</div>
-      <div class="section-subtitle">AVG · OBP · SLG · OPS · HR · RBI · R · SB · and more</div>
-
-      <!-- Team totals -->
-      <div class="grid-4" id="team-bat-cards">
-        <div class="loading" style="grid-column:span 4">Loading team totals...</div>
-      </div>
-
-      <!-- Full roster batting table -->
-      <div class="card">
-        <div class="card-title">Roster Batting — 2026 Season</div>
-        <div style="overflow-x:auto">
-          <table class="data-table" id="batting-table">
-            <thead>
-              <tr>
-                <th>Player</th>
-                <th>Pos</th>
-                <th class="num">PA</th>
-                <th class="num">AB</th>
-                <th class="num">AVG</th>
-                <th class="num">OBP</th>
-                <th class="num">SLG</th>
-                <th class="num">OPS</th>
-                <th class="num">H</th>
-                <th class="num">2B</th>
-                <th class="num">3B</th>
-                <th class="num">HR</th>
-                <th class="num">RBI</th>
-                <th class="num">R</th>
-                <th class="num">SB</th>
-                <th class="num">BB</th>
-                <th class="num">SO</th>
-              </tr>
-            </thead>
-            <tbody id="batting-tbody"><tr><td colspan="17" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </div>
+    <div class="card">
+      <div class="card-title">Mariners at a glance</div>
+      <div id="sea-summary" style="display:flex;gap:2rem;flex-wrap:wrap"><div class="loading">Loading...</div></div>
     </div>
+  </div>
+</div>
 
-    <!-- ══ PITCHING ══════════════════════════════════════════════ -->
-    <div class="panel" id="panel-pitching">
-      <div class="section-title">Pitching</div>
-      <div class="section-subtitle">ERA · WHIP · W-L · K · BB · HR · SV · HLD</div>
-
-      <!-- Team pitching totals -->
-      <div class="grid-4" id="team-pitch-cards">
-        <div class="loading" style="grid-column:span 4">Loading team totals...</div>
-      </div>
-
-      <!-- Full roster pitching table -->
-      <div class="card">
-        <div class="card-title">Roster Pitching — 2026 Season</div>
-        <div style="overflow-x:auto">
-          <table class="data-table" id="pitching-table">
-            <thead>
-              <tr>
-                <th>Player</th>
-                <th>Role</th>
-                <th class="num">W</th>
-                <th class="num">L</th>
-                <th class="num">ERA</th>
-                <th class="num">G</th>
-                <th class="num">GS</th>
-                <th class="num">SV</th>
-                <th class="num">HLD</th>
-                <th class="num">IP</th>
-                <th class="num">H</th>
-                <th class="num">ER</th>
-                <th class="num">BB</th>
-                <th class="num">SO</th>
-                <th class="num">HR</th>
-                <th class="num">WHIP</th>
-                <th class="num">K/9</th>
-                <th class="num">OPP AVG</th>
-              </tr>
-            </thead>
-            <tbody id="pitching-tbody"><tr><td colspan="18" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </div>
+<div class="panel" id="panel-batting">
+  <div class="section-title">Batting</div>
+  <div class="section-subtitle">AVG · OBP · SLG · OPS · HR · RBI · R · SB · and more</div>
+  <div class="grid-4" id="team-bat-cards"><div class="loading" style="grid-column:span 4">Loading team totals...</div></div>
+  <div class="card">
+    <div class="card-title">Roster Batting — 2026 Season</div>
+    <div style="overflow-x:auto">
+      <table class="data-table">
+        <thead><tr><th>Player</th><th>Pos</th><th class="num">PA</th><th class="num">AB</th><th class="num">AVG</th><th class="num">OBP</th><th class="num">SLG</th><th class="num">OPS</th><th class="num">H</th><th class="num">2B</th><th class="num">3B</th><th class="num">HR</th><th class="num">RBI</th><th class="num">R</th><th class="num">SB</th><th class="num">BB</th><th class="num">SO</th></tr></thead>
+        <tbody id="batting-tbody"><tr><td colspan="17" class="loading">Loading...</td></tr></tbody>
+      </table>
     </div>
+  </div>
+</div>
 
-    <!-- ══ STATCAST ══════════════════════════════════════════════ -->
-    <div class="panel" id="panel-statcast">
-      <div class="section-title">Statcast</div>
-      <div class="section-subtitle">Exit velocity · barrels · sprint speed · xBA vs BA</div>
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">🛢️ Barrel Leaderboard</div>
-          <table class="data-table">
-            <thead><tr><th>Batter</th><th class="num">Barrel%</th><th class="num">Barrels</th><th class="num">Avg EV</th><th class="num">Hard Hit%</th></tr></thead>
-            <tbody id="barrel-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-        <div class="card">
-          <div class="card-title">🎲 xBA vs BA — luck index</div>
-          <table class="data-table">
-            <thead><tr><th>Batter</th><th class="num">BA</th><th class="num">xBA</th><th class="num">Δ</th><th>Verdict</th></tr></thead>
-            <tbody id="xba-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-        <div class="card">
-          <div class="card-title">💨 Sprint Speed — ft/sec</div>
-          <div id="sprint-bars"><div class="loading">Loading...</div></div>
-        </div>
-        <div class="card">
-          <div class="card-title">🎯 Sweet Spot % (8°–32° launch angle)</div>
-          <table class="data-table">
-            <thead><tr><th>Batter</th><th class="num">Sweet%</th><th class="num">Avg LA</th><th class="num">Max EV</th></tr></thead>
-            <tbody id="sweet-tbody"><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </div>
+<div class="panel" id="panel-pitching">
+  <div class="section-title">Pitching</div>
+  <div class="section-subtitle">ERA · WHIP · W-L · K · BB · HR · SV · HLD</div>
+  <div class="grid-4" id="team-pitch-cards"><div class="loading" style="grid-column:span 4">Loading team totals...</div></div>
+  <div class="card">
+    <div class="card-title">Roster Pitching — 2026 Season</div>
+    <div style="overflow-x:auto">
+      <table class="data-table">
+        <thead><tr><th>Player</th><th>Role</th><th class="num">W</th><th class="num">L</th><th class="num">ERA</th><th class="num">G</th><th class="num">GS</th><th class="num">SV</th><th class="num">HLD</th><th class="num">IP</th><th class="num">H</th><th class="num">ER</th><th class="num">BB</th><th class="num">SO</th><th class="num">HR</th><th class="num">WHIP</th><th class="num">K/9</th><th class="num">OPP AVG</th></tr></thead>
+        <tbody id="pitching-tbody"><tr><td colspan="18" class="loading">Loading...</td></tr></tbody>
+      </table>
     </div>
+  </div>
+</div>
 
-    <!-- ══ ADVANCED PITCHERS ═════════════════════════════════════ -->
-    <div class="panel" id="panel-pitchers">
-      <div class="section-title">Advanced Pitching</div>
-      <div class="section-subtitle">FIP · xFIP · CSW% · SwStr% · Pitch Arsenal</div>
-      <div class="card">
-        <div class="card-title">Starting Rotation</div>
-        <div style="overflow-x:auto">
-          <table class="data-table">
-            <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K/9</th><th class="num">BB/9</th><th class="num">SwStr%</th><th class="num">WAR</th></tr></thead>
-            <tbody id="sp-tbody"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">Bullpen</div>
-        <div style="overflow-x:auto">
-          <table class="data-table">
-            <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K%</th><th class="num">BB%</th><th class="num">SV</th></tr></thead>
-            <tbody id="rp-tbody"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">Starter Pitch Arsenal</div>
-        <div id="pitch-mix-grid" style="display:grid;gap:1rem"><div class="loading">Loading pitch mix...</div></div>
-      </div>
+<div class="panel" id="panel-statcast">
+  <div class="section-title">Statcast</div>
+  <div class="section-subtitle">Exit velocity · barrels · sprint speed · xBA vs BA</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">🛢️ Barrel Leaderboard</div>
+      <table class="data-table">
+        <thead><tr><th>Batter</th><th class="num">Barrel%</th><th class="num">Barrels</th><th class="num">Avg EV</th><th class="num">Hard Hit%</th></tr></thead>
+        <tbody id="barrel-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
+      </table>
     </div>
-
-    <!-- ══ RAINIERS ══════════════════════════════════════════════ -->
-    <div class="panel" id="panel-rainiers">
-      <div class="section-title">Tacoma Rainiers</div>
-      <div class="section-subtitle">Triple-A affiliate · Pacific Coast League · Who's coming up?</div>
-
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">Recent Results</div>
-          <div id="recent-record" style="font-family:var(--font-display);font-size:2rem;color:var(--teal-bright);margin-bottom:1rem">—</div>
-          <div id="recent-games"><div class="loading">Loading...</div></div>
-        </div>
-        <div class="card">
-          <div class="card-title">Pacific Coast League Standings</div>
-          <table class="data-table">
-            <thead><tr><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th>Streak</th></tr></thead>
-            <tbody id="pcl-tbody"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">⭐ Prospect Watch — Players to Know</div>
-        <div id="prospect-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem">
-          <div class="loading">Loading...</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">🏏 Rainiers Batting — 2026 Season</div>
-        <div style="overflow-x:auto">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Player</th><th>Pos</th>
-                <th class="num">PA</th><th class="num">AB</th>
-                <th class="num">AVG</th><th class="num">OBP</th><th class="num">SLG</th><th class="num">OPS</th>
-                <th class="num">H</th><th class="num">2B</th><th class="num">3B</th>
-                <th class="num">HR</th><th class="num">RBI</th><th class="num">R</th>
-                <th class="num">SB</th><th class="num">BB</th><th class="num">SO</th>
-              </tr>
-            </thead>
-            <tbody id="rain-bat-tbody"><tr><td colspan="17" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">⚾ Rainiers Pitching — 2026 Season</div>
-        <div style="overflow-x:auto">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Player</th><th>Role</th>
-                <th class="num">W</th><th class="num">L</th><th class="num">ERA</th>
-                <th class="num">G</th><th class="num">GS</th><th class="num">SV</th>
-                <th class="num">IP</th><th class="num">H</th><th class="num">ER</th>
-                <th class="num">BB</th><th class="num">SO</th><th class="num">HR</th>
-                <th class="num">WHIP</th><th class="num">K/9</th>
-              </tr>
-            </thead>
-            <tbody id="rain-pitch-tbody"><tr><td colspan="16" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-
+    <div class="card">
+      <div class="card-title">🎲 xBA vs BA — luck index</div>
+      <table class="data-table">
+        <thead><tr><th>Batter</th><th class="num">BA</th><th class="num">xBA</th><th class="num">Δ</th><th>Verdict</th></tr></thead>
+        <tbody id="xba-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
+      </table>
     </div>
+    <div class="card">
+      <div class="card-title">💨 Sprint Speed — ft/sec</div>
+      <div id="sprint-bars"><div class="loading">Loading...</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🎯 Sweet Spot % (8°–32° launch angle)</div>
+      <table class="data-table">
+        <thead><tr><th>Batter</th><th class="num">Sweet%</th><th class="num">Avg LA</th><th class="num">Max EV</th></tr></thead>
+        <tbody id="sweet-tbody"><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-    <div class="updated-ts" id="footer-ts"></div>
+<div class="panel" id="panel-pitchers">
+  <div class="section-title">Advanced Pitching</div>
+  <div class="section-subtitle">FIP · xFIP · CSW% · SwStr% · Pitch Arsenal</div>
+  <div class="card">
+    <div class="card-title">Starting Rotation</div>
+    <div style="overflow-x:auto">
+      <table class="data-table">
+        <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K/9</th><th class="num">BB/9</th><th class="num">SwStr%</th><th class="num">WAR</th></tr></thead>
+        <tbody id="sp-tbody"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Bullpen</div>
+    <div style="overflow-x:auto">
+      <table class="data-table">
+        <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K%</th><th class="num">BB%</th><th class="num">SV</th></tr></thead>
+        <tbody id="rp-tbody"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Starter Pitch Arsenal</div>
+    <div id="pitch-mix-grid" style="display:grid;gap:1rem"><div class="loading">Loading pitch mix...</div></div>
+  </div>
+</div>
+
+<div class="panel" id="panel-rainiers">
+  <div class="section-title">Tacoma Rainiers</div>
+  <div class="section-subtitle">Triple-A affiliate · Pacific Coast League · Who's coming up?</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Recent Results</div>
+      <div id="recent-record" style="font-family:var(--font-display);font-size:2rem;color:var(--teal-bright);margin-bottom:1rem">—</div>
+      <div id="recent-games"><div class="loading">Loading...</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Pacific Coast League Standings</div>
+      <table class="data-table">
+        <thead><tr><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th>Streak</th></tr></thead>
+        <tbody id="pcl-tbody"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">⭐ Prospect Watch — Players to Know</div>
+    <div id="prospect-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem"><div class="loading">Loading...</div></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🏏 Rainiers Batting — 2026 Season</div>
+    <div style="overflow-x:auto">
+      <table class="data-table">
+        <thead><tr><th>Player</th><th>Pos</th><th class="num">PA</th><th class="num">AB</th><th class="num">AVG</th><th class="num">OBP</th><th class="num">SLG</th><th class="num">OPS</th><th class="num">H</th><th class="num">2B</th><th class="num">3B</th><th class="num">HR</th><th class="num">RBI</th><th class="num">R</th><th class="num">SB</th><th class="num">BB</th><th class="num">SO</th></tr></thead>
+        <tbody id="rain-bat-tbody"><tr><td colspan="17" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">⚾ Rainiers Pitching — 2026 Season</div>
+    <div style="overflow-x:auto">
+      <table class="data-table">
+        <thead><tr><th>Player</th><th>Role</th><th class="num">W</th><th class="num">L</th><th class="num">ERA</th><th class="num">G</th><th class="num">GS</th><th class="num">SV</th><th class="num">IP</th><th class="num">H</th><th class="num">ER</th><th class="num">BB</th><th class="num">SO</th><th class="num">HR</th><th class="num">WHIP</th><th class="num">K/9</th></tr></thead>
+        <tbody id="rain-pitch-tbody"><tr><td colspan="16" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="updated-ts" id="footer-ts"></div>
+```
+
   </main>
 
   <script>
-    // ── Helpers ───────────────────────────────────────────────
     const fmt  = (v,d=3) => v==null ? '—' : Number(v).toFixed(d);
     const fmtP = v => v==null ? '—' : Number(v).toFixed(1)+'%';
     const num  = v => v==null ? '—' : v;
@@ -489,15 +394,17 @@
       if (btn) btn.classList.add('active');
     }
 
+    // ── THE FIX: absolute URLs so paths work from any domain ──
     async function loadJSON(path) {
       try {
-        const r = await fetch(path+'?t='+Date.now());
+        const base = 'https://bdgroves.github.io/EDGAR/';
+        const url = path.startsWith('http') ? path : base + path;
+        const r = await fetch(url+'?t='+Date.now());
         if (!r.ok) return null;
         return await r.json();
       } catch { return null; }
     }
 
-    // ── STANDINGS ─────────────────────────────────────────────
     async function renderStandings() {
       const data = await loadJSON('assets/data/standings.json');
       if (!data) return;
@@ -540,70 +447,58 @@
       }
     }
 
-    // ── BATTING ───────────────────────────────────────────────
     async function renderBatting() {
       const data = await loadJSON('assets/data/traditional.json');
       if (!data) return;
 
-      // Team totals
       const tb = data.team_batting || {};
       document.getElementById('team-bat-cards').innerHTML = [
-        ['AVG',  fmt(tb.avg),       'teal'],
-        ['OPS',  fmt(tb.ops),       'gold'],
-        ['HR',   num(tb.hr),        ''],
-        ['RBI',  num(tb.rbi),       ''],
-        ['R',    num(tb.r),         ''],
-        ['SB',   num(tb.sb),        ''],
-        ['BB',   num(tb.bb),        ''],
-        ['SO',   num(tb.so),        ''],
-      ].map(([label, val, cls]) => `
+        ['AVG',  fmt(tb.avg),  'teal'],
+        ['OPS',  fmt(tb.ops),  'gold'],
+        ['HR',   num(tb.hr),   ''],
+        ['RBI',  num(tb.rbi),  ''],
+        ['R',    num(tb.r),    ''],
+        ['SB',   num(tb.sb),   ''],
+        ['BB',   num(tb.bb),   ''],
+        ['SO',   num(tb.so),   ''],
+      ].map(([label,val,cls]) => `
         <div class="card" style="margin-bottom:0">
           <div class="big-stat ${cls}">${val}</div>
           <div class="stat-label">Team ${label}</div>
         </div>`).join('');
 
-      // Roster table
       const tbody = document.getElementById('batting-tbody');
       if (!data.batting || !data.batting.length) {
-        tbody.innerHTML = '<tr><td colspan="17" class="loading">No batting data yet — check back after first games</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="17" class="loading">No batting data yet</td></tr>';
         return;
       }
-
       tbody.innerHTML = data.batting.map(p => `<tr>
         <td class="name-col">${p.name}</td>
         <td>${posBadge(p.pos)}</td>
-        <td class="num">${num(p.pa)}</td>
-        <td class="num">${num(p.ab)}</td>
+        <td class="num">${num(p.pa)}</td><td class="num">${num(p.ab)}</td>
         <td class="num">${colorAVG(p.avg)}</td>
-        <td class="num">${fmt(p.obp)}</td>
-        <td class="num">${fmt(p.slg)}</td>
+        <td class="num">${fmt(p.obp)}</td><td class="num">${fmt(p.slg)}</td>
         <td class="num">${colorOPS(p.ops)}</td>
-        <td class="num">${num(p.h)}</td>
-        <td class="num">${num(p.doubles)}</td>
-        <td class="num">${num(p.triples)}</td>
+        <td class="num">${num(p.h)}</td><td class="num">${num(p.doubles)}</td><td class="num">${num(p.triples)}</td>
         <td class="num" style="${p.hr>=5?'color:var(--gold);font-weight:600':''}">${num(p.hr)}</td>
-        <td class="num">${num(p.rbi)}</td>
-        <td class="num">${num(p.r)}</td>
-        <td class="num">${num(p.sb)}</td>
+        <td class="num">${num(p.rbi)}</td><td class="num">${num(p.r)}</td><td class="num">${num(p.sb)}</td>
         <td class="num">${num(p.bb)}</td>
         <td class="num" style="${p.so>=30?'color:#e57373':''}">${num(p.so)}</td>
       </tr>`).join('');
     }
 
-    // ── PITCHING ──────────────────────────────────────────────
     async function renderPitching() {
       const data = await loadJSON('assets/data/traditional.json');
       if (!data) return;
 
-      // Team totals
       const tp = data.team_pitching || {};
       document.getElementById('team-pitch-cards').innerHTML = [
-        ['ERA',  fmt(tp.era,2),  tp.era < 3.5 ? 'teal' : ''],
-        ['WHIP', fmt(tp.whip),   ''],
-        ['SO',   num(tp.so),     ''],
-        ['BB',   num(tp.bb),     ''],
-        ['HR',   num(tp.hr),     ''],
-        ['SV',   num(tp.sv),     'gold'],
+        ['ERA',  fmt(tp.era,2), tp.era < 3.5 ? 'teal' : ''],
+        ['WHIP', fmt(tp.whip),  ''],
+        ['SO',   num(tp.so),    ''],
+        ['BB',   num(tp.bb),    ''],
+        ['HR',   num(tp.hr),    ''],
+        ['SV',   num(tp.sv),    'gold'],
       ].map(([label,val,cls]) => `
         <div class="card" style="margin-bottom:0">
           <div class="big-stat ${cls}">${val}</div>
@@ -612,41 +507,32 @@
 
       const tbody = document.getElementById('pitching-tbody');
       if (!data.pitching || !data.pitching.length) {
-        tbody.innerHTML = '<tr><td colspan="18" class="loading">No pitching data yet — check back after first games</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="18" class="loading">No pitching data yet</td></tr>';
         return;
       }
-
       let lastRole = '';
       tbody.innerHTML = data.pitching.map(p => {
         let divider = '';
         if (p.role !== lastRole) {
           lastRole = p.role;
-          divider = `<tr class="role-divider"><td colspan="18">${p.role === 'SP' ? '— Starting Rotation —' : '— Bullpen —'}</td></tr>`;
+          divider = `<tr class="role-divider"><td colspan="18">${p.role==='SP'?'— Starting Rotation —':'— Bullpen —'}</td></tr>`;
         }
         return divider + `<tr>
-          <td class="name-col">${p.name}</td>
-          <td>${posBadge(p.pos, p.role)}</td>
-          <td class="num">${num(p.w)}</td>
-          <td class="num">${num(p.l)}</td>
+          <td class="name-col">${p.name}</td><td>${posBadge(p.pos, p.role)}</td>
+          <td class="num">${num(p.w)}</td><td class="num">${num(p.l)}</td>
           <td class="num">${colorERA(p.era)}</td>
-          <td class="num">${num(p.g)}</td>
-          <td class="num">${num(p.gs)}</td>
+          <td class="num">${num(p.g)}</td><td class="num">${num(p.gs)}</td>
           <td class="num" style="${p.sv>=5?'color:var(--gold)':''}">${num(p.sv)}</td>
-          <td class="num">${num(p.hld)}</td>
-          <td class="num">${fmt(p.ip,1)}</td>
-          <td class="num">${num(p.h)}</td>
-          <td class="num">${num(p.er)}</td>
+          <td class="num">${num(p.hld)}</td><td class="num">${fmt(p.ip,1)}</td>
+          <td class="num">${num(p.h)}</td><td class="num">${num(p.er)}</td>
           <td class="num">${num(p.bb)}</td>
           <td class="num" style="${p.so>=20?'color:var(--teal-bright)':''}">${num(p.so)}</td>
-          <td class="num">${num(p.hr)}</td>
-          <td class="num">${fmt(p.whip)}</td>
-          <td class="num">${fmt(p.k9,1)}</td>
-          <td class="num">${fmt(p.avg)}</td>
+          <td class="num">${num(p.hr)}</td><td class="num">${fmt(p.whip)}</td>
+          <td class="num">${fmt(p.k9,1)}</td><td class="num">${fmt(p.avg)}</td>
         </tr>`;
       }).join('');
     }
 
-    // ── STATCAST ──────────────────────────────────────────────
     async function renderStatcast() {
       const data = await loadJSON('assets/data/statcast.json');
       if (!data) return;
@@ -661,7 +547,7 @@
           <td class="num">${fmtP(p.hard_hit_pct)}</td>
         </tr>`).join('');
       } else {
-        barrelTbody.innerHTML = '<tr><td colspan="5" class="loading">No data yet — check back after first games</td></tr>';
+        barrelTbody.innerHTML = '<tr><td colspan="5" class="loading">No data yet</td></tr>';
       }
 
       const xbaTbody = document.getElementById('xba-tbody');
@@ -699,7 +585,6 @@
       }
     }
 
-    // ── ADVANCED PITCHERS ─────────────────────────────────────
     async function renderAdvancedPitchers() {
       const data = await loadJSON('assets/data/pitchers.json');
       if (!data) return;
@@ -710,12 +595,9 @@
       document.getElementById('sp-tbody').innerHTML = starters.length
         ? starters.map(p=>`<tr>
             <td class="name-col">${p.Name}</td>
-            <td class="num">${p.IP??'—'}</td>
-            <td class="num">${colorERA(p.ERA)}</td>
-            <td class="num">${p.FIP??'—'}</td>
-            <td class="num">${p.WHIP??'—'}</td>
-            <td class="num">${p['K/9']??'—'}</td>
-            <td class="num">${p['BB/9']??'—'}</td>
+            <td class="num">${p.IP??'—'}</td><td class="num">${colorERA(p.ERA)}</td>
+            <td class="num">${p.FIP??'—'}</td><td class="num">${p.WHIP??'—'}</td>
+            <td class="num">${p['K/9']??'—'}</td><td class="num">${p['BB/9']??'—'}</td>
             <td class="num">${p['SwStr%']?fmtP(p['SwStr%']):'—'}</td>
             <td class="num" style="color:var(--gold)">${p.WAR??'—'}</td>
           </tr>`).join('')
@@ -724,10 +606,8 @@
       document.getElementById('rp-tbody').innerHTML = relievers.length
         ? relievers.map(p=>`<tr>
             <td class="name-col">${p.Name}</td>
-            <td class="num">${p.IP??'—'}</td>
-            <td class="num">${colorERA(p.ERA)}</td>
-            <td class="num">${p.FIP??'—'}</td>
-            <td class="num">${p.WHIP??'—'}</td>
+            <td class="num">${p.IP??'—'}</td><td class="num">${colorERA(p.ERA)}</td>
+            <td class="num">${p.FIP??'—'}</td><td class="num">${p.WHIP??'—'}</td>
             <td class="num">${p['K%']?fmtP(p['K%']):'—'}</td>
             <td class="num">${p['BB%']?fmtP(p['BB%']):'—'}</td>
             <td class="num">${p.SV??0}</td>
@@ -757,14 +637,12 @@
       }
     }
 
-    // ── RAINIERS ──────────────────────────────────────────────
     async function renderRainiers() {
       const data = await loadJSON('assets/data/rainiers.json');
       if (!data) return;
 
       document.getElementById('recent-record').textContent = data.recent_record||'—';
 
-      // Recent games
       const gamesEl = document.getElementById('recent-games');
       if (data.recent_games && data.recent_games.length) {
         gamesEl.innerHTML = data.recent_games.map(g=>{
@@ -780,10 +658,9 @@
           </div>`;
         }).join('');
       } else {
-        gamesEl.innerHTML = '<div class="loading">No games yet — Rainiers open March 27</div>';
+        gamesEl.innerHTML = '<div class="loading">No recent games found</div>';
       }
 
-      // PCL standings
       const pclTbody = document.getElementById('pcl-tbody');
       if (data.pcl_standings && data.pcl_standings.length) {
         pclTbody.innerHTML = data.pcl_standings.map(t=>`
@@ -796,7 +673,6 @@
           </tr>`).join('');
       }
 
-      // Prospect watch cards with live stats
       const batters  = data.roster?.batters  || [];
       const pitchers = data.roster?.pitchers || [];
       const allPlayers = [...batters, ...pitchers];
@@ -836,27 +712,18 @@
         }).join('');
       }
 
-      // Rainiers batting table
       const rainBatTbody = document.getElementById('rain-bat-tbody');
       if (batters.length) {
         rainBatTbody.innerHTML = batters.map(p => {
           const star = p.prospect ? `<span class="prospect-tag">★</span>` : '';
           return `<tr class="${p.prospect?'highlight':''}">
-            <td class="name-col">${p.name}${star}</td>
-            <td>${posBadge(p.pos)}</td>
-            <td class="num">${num(p.pa)}</td>
-            <td class="num">${num(p.ab)}</td>
-            <td class="num">${colorAVG(p.avg)}</td>
-            <td class="num">${fmt(p.obp)}</td>
-            <td class="num">${fmt(p.slg)}</td>
-            <td class="num">${colorOPS(p.ops)}</td>
-            <td class="num">${num(p.h)}</td>
-            <td class="num">${num(p.doubles)}</td>
-            <td class="num">${num(p.triples)}</td>
+            <td class="name-col">${p.name}${star}</td><td>${posBadge(p.pos)}</td>
+            <td class="num">${num(p.pa)}</td><td class="num">${num(p.ab)}</td>
+            <td class="num">${colorAVG(p.avg)}</td><td class="num">${fmt(p.obp)}</td>
+            <td class="num">${fmt(p.slg)}</td><td class="num">${colorOPS(p.ops)}</td>
+            <td class="num">${num(p.h)}</td><td class="num">${num(p.doubles)}</td><td class="num">${num(p.triples)}</td>
             <td class="num" style="${p.hr>=3?'color:var(--gold);font-weight:600':''}">${num(p.hr)}</td>
-            <td class="num">${num(p.rbi)}</td>
-            <td class="num">${num(p.r)}</td>
-            <td class="num">${num(p.sb)}</td>
+            <td class="num">${num(p.rbi)}</td><td class="num">${num(p.r)}</td><td class="num">${num(p.sb)}</td>
             <td class="num">${num(p.bb)}</td>
             <td class="num" style="${p.so>=20?'color:#e57373':''}">${num(p.so)}</td>
           </tr>`;
@@ -865,7 +732,6 @@
         rainBatTbody.innerHTML = '<tr><td colspan="17" class="loading">Stats load after Rainiers opening day — March 27</td></tr>';
       }
 
-      // Rainiers pitching table
       const rainPitchTbody = document.getElementById('rain-pitch-tbody');
       if (pitchers.length) {
         let lastRole = '';
@@ -877,21 +743,15 @@
           }
           const star = p.prospect ? `<span class="prospect-tag">★</span>` : '';
           return divider + `<tr class="${p.prospect?'highlight':''}">
-            <td class="name-col">${p.name}${star}</td>
-            <td>${posBadge(p.pos, p.role)}</td>
-            <td class="num">${num(p.w)}</td>
-            <td class="num">${num(p.l)}</td>
+            <td class="name-col">${p.name}${star}</td><td>${posBadge(p.pos, p.role)}</td>
+            <td class="num">${num(p.w)}</td><td class="num">${num(p.l)}</td>
             <td class="num">${colorERA(p.era)}</td>
-            <td class="num">${num(p.g)}</td>
-            <td class="num">${num(p.gs)}</td>
+            <td class="num">${num(p.g)}</td><td class="num">${num(p.gs)}</td>
             <td class="num" style="${p.sv>=3?'color:var(--gold)':''}">${num(p.sv)}</td>
-            <td class="num">${fmt(p.ip,1)}</td>
-            <td class="num">${num(p.h)}</td>
-            <td class="num">${num(p.er)}</td>
-            <td class="num">${num(p.bb)}</td>
+            <td class="num">${fmt(p.ip,1)}</td><td class="num">${num(p.h)}</td>
+            <td class="num">${num(p.er)}</td><td class="num">${num(p.bb)}</td>
             <td class="num" style="${p.so>=15?'color:var(--teal-bright)':''}">${num(p.so)}</td>
-            <td class="num">${num(p.hr)}</td>
-            <td class="num">${fmt(p.whip)}</td>
+            <td class="num">${num(p.hr)}</td><td class="num">${fmt(p.whip)}</td>
             <td class="num">${fmt(p.k9,1)}</td>
           </tr>`;
         }).join('');
@@ -900,7 +760,6 @@
       }
     }
 
-    // ── Init ──────────────────────────────────────────────────
     renderStandings();
     renderBatting();
     renderPitching();
@@ -908,5 +767,6 @@
     renderAdvancedPitchers();
     renderRainiers();
   </script>
+
 </body>
 </html>
