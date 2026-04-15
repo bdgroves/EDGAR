@@ -187,9 +187,11 @@
     <button onclick="showPanel('pitchers',this)">Advanced P</button>
     <button onclick="showPanel('rainiers',this)">Rainiers</button>
   </nav>
+  <div id="debug-bar" style="background:#1a0000;color:#ff6b6b;font-family:monospace;font-size:11px;padding:6px 2rem;display:block;"></div>
 
   <main>
 
+<<<<<<< HEAD
 ```
 <div class="panel active" id="panel-standings">
   <div class="section-title">AL West</div>
@@ -209,10 +211,48 @@
     <div class="card">
       <div class="card-title">Mariners at a glance</div>
       <div id="sea-summary" style="display:flex;gap:2rem;flex-wrap:wrap"><div class="loading">Loading...</div></div>
+=======
+    <div class="panel active" id="panel-standings">
+      <div class="section-title">AL West</div>
+      <div class="section-subtitle">Division standings · 2026 season</div>
+      <div class="card">
+        <div class="card-title">Division Standings</div>
+        <table class="data-table">
+          <thead><tr><th>#</th><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th class="num">L10</th><th>Streak</th></tr></thead>
+          <tbody id="standings-tbody"><tr><td colspan="8" class="loading">⌛ Loading...</td></tr></tbody>
+        </table>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Win % Race</div>
+          <div id="race-bars"><div class="loading">Loading...</div></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Mariners at a glance</div>
+          <div id="sea-summary" style="display:flex;gap:2rem;flex-wrap:wrap"><div class="loading">Loading...</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-batting">
+      <div class="section-title">Batting</div>
+      <div class="section-subtitle">AVG · OBP · SLG · OPS · HR · RBI · R · SB · and more</div>
+      <div class="grid-4" id="team-bat-cards"><div class="loading" style="grid-column:span 4">Loading team totals...</div></div>
+      <div class="card">
+        <div class="card-title">Roster Batting — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Player</th><th>Pos</th><th class="num">PA</th><th class="num">AB</th><th class="num">AVG</th><th class="num">OBP</th><th class="num">SLG</th><th class="num">OPS</th><th class="num">H</th><th class="num">2B</th><th class="num">3B</th><th class="num">HR</th><th class="num">RBI</th><th class="num">R</th><th class="num">SB</th><th class="num">BB</th><th class="num">SO</th></tr></thead>
+            <tbody id="batting-tbody"><tr><td colspan="17" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+>>>>>>> f5763ec (fix: clean index, absolute data URLs, no code fence corruption)
     </div>
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="panel" id="panel-batting">
   <div class="section-title">Batting</div>
   <div class="section-subtitle">AVG · OBP · SLG · OPS · HR · RBI · R · SB · and more</div>
@@ -224,10 +264,26 @@
         <thead><tr><th>Player</th><th>Pos</th><th class="num">PA</th><th class="num">AB</th><th class="num">AVG</th><th class="num">OBP</th><th class="num">SLG</th><th class="num">OPS</th><th class="num">H</th><th class="num">2B</th><th class="num">3B</th><th class="num">HR</th><th class="num">RBI</th><th class="num">R</th><th class="num">SB</th><th class="num">BB</th><th class="num">SO</th></tr></thead>
         <tbody id="batting-tbody"><tr><td colspan="17" class="loading">Loading...</td></tr></tbody>
       </table>
+=======
+    <div class="panel" id="panel-pitching">
+      <div class="section-title">Pitching</div>
+      <div class="section-subtitle">ERA · WHIP · W-L · K · BB · HR · SV · HLD</div>
+      <div class="grid-4" id="team-pitch-cards"><div class="loading" style="grid-column:span 4">Loading team totals...</div></div>
+      <div class="card">
+        <div class="card-title">Roster Pitching — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Player</th><th>Role</th><th class="num">W</th><th class="num">L</th><th class="num">ERA</th><th class="num">G</th><th class="num">GS</th><th class="num">SV</th><th class="num">HLD</th><th class="num">IP</th><th class="num">H</th><th class="num">ER</th><th class="num">BB</th><th class="num">SO</th><th class="num">HR</th><th class="num">WHIP</th><th class="num">K/9</th><th class="num">OPP AVG</th></tr></thead>
+            <tbody id="pitching-tbody"><tr><td colspan="18" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+>>>>>>> f5763ec (fix: clean index, absolute data URLs, no code fence corruption)
     </div>
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="panel" id="panel-pitching">
   <div class="section-title">Pitching</div>
   <div class="section-subtitle">ERA · WHIP · W-L · K · BB · HR · SV · HLD</div>
@@ -239,10 +295,43 @@
         <thead><tr><th>Player</th><th>Role</th><th class="num">W</th><th class="num">L</th><th class="num">ERA</th><th class="num">G</th><th class="num">GS</th><th class="num">SV</th><th class="num">HLD</th><th class="num">IP</th><th class="num">H</th><th class="num">ER</th><th class="num">BB</th><th class="num">SO</th><th class="num">HR</th><th class="num">WHIP</th><th class="num">K/9</th><th class="num">OPP AVG</th></tr></thead>
         <tbody id="pitching-tbody"><tr><td colspan="18" class="loading">Loading...</td></tr></tbody>
       </table>
+=======
+    <div class="panel" id="panel-statcast">
+      <div class="section-title">Statcast</div>
+      <div class="section-subtitle">Exit velocity · barrels · sprint speed · xBA vs BA</div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">🛢️ Barrel Leaderboard</div>
+          <table class="data-table">
+            <thead><tr><th>Batter</th><th class="num">Barrel%</th><th class="num">Barrels</th><th class="num">Avg EV</th><th class="num">Hard Hit%</th></tr></thead>
+            <tbody id="barrel-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-title">🎲 xBA vs BA — luck index</div>
+          <table class="data-table">
+            <thead><tr><th>Batter</th><th class="num">BA</th><th class="num">xBA</th><th class="num">Δ</th><th>Verdict</th></tr></thead>
+            <tbody id="xba-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-title">💨 Sprint Speed — ft/sec</div>
+          <div id="sprint-bars"><div class="loading">Loading...</div></div>
+        </div>
+        <div class="card">
+          <div class="card-title">🎯 Sweet Spot % (8°–32° launch angle)</div>
+          <table class="data-table">
+            <thead><tr><th>Batter</th><th class="num">Sweet%</th><th class="num">Avg LA</th><th class="num">Max EV</th></tr></thead>
+            <tbody id="sweet-tbody"><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+>>>>>>> f5763ec (fix: clean index, absolute data URLs, no code fence corruption)
     </div>
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="panel" id="panel-statcast">
   <div class="section-title">Statcast</div>
   <div class="section-subtitle">Exit velocity · barrels · sprint speed · xBA vs BA</div>
@@ -260,6 +349,74 @@
         <thead><tr><th>Batter</th><th class="num">BA</th><th class="num">xBA</th><th class="num">Δ</th><th>Verdict</th></tr></thead>
         <tbody id="xba-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
       </table>
+=======
+    <div class="panel" id="panel-pitchers">
+      <div class="section-title">Advanced Pitching</div>
+      <div class="section-subtitle">FIP · xFIP · CSW% · SwStr% · Pitch Arsenal</div>
+      <div class="card">
+        <div class="card-title">Starting Rotation</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K/9</th><th class="num">BB/9</th><th class="num">SwStr%</th><th class="num">WAR</th></tr></thead>
+            <tbody id="sp-tbody"><tr><td colspan="9" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Bullpen</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Name</th><th class="num">IP</th><th class="num">ERA</th><th class="num">FIP</th><th class="num">WHIP</th><th class="num">K%</th><th class="num">BB%</th><th class="num">SV</th></tr></thead>
+            <tbody id="rp-tbody"><tr><td colspan="8" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Starter Pitch Arsenal</div>
+        <div id="pitch-mix-grid" style="display:grid;gap:1rem"><div class="loading">Loading pitch mix...</div></div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-rainiers">
+      <div class="section-title">Tacoma Rainiers</div>
+      <div class="section-subtitle">Triple-A affiliate · Pacific Coast League · Who's coming up?</div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Recent Results</div>
+          <div id="recent-record" style="font-family:var(--font-display);font-size:2rem;color:var(--teal-bright);margin-bottom:1rem">—</div>
+          <div id="recent-games"><div class="loading">Loading...</div></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Pacific Coast League Standings</div>
+          <table class="data-table">
+            <thead><tr><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th>Streak</th></tr></thead>
+            <tbody id="pcl-tbody"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">⭐ Prospect Watch — Players to Know</div>
+        <div id="prospect-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem"><div class="loading">Loading...</div></div>
+      </div>
+      <div class="card">
+        <div class="card-title">🏏 Rainiers Batting — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Player</th><th>Pos</th><th class="num">PA</th><th class="num">AB</th><th class="num">AVG</th><th class="num">OBP</th><th class="num">SLG</th><th class="num">OPS</th><th class="num">H</th><th class="num">2B</th><th class="num">3B</th><th class="num">HR</th><th class="num">RBI</th><th class="num">R</th><th class="num">SB</th><th class="num">BB</th><th class="num">SO</th></tr></thead>
+            <tbody id="rain-bat-tbody"><tr><td colspan="17" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">⚾ Rainiers Pitching — 2026 Season</div>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Player</th><th>Role</th><th class="num">W</th><th class="num">L</th><th class="num">ERA</th><th class="num">G</th><th class="num">GS</th><th class="num">SV</th><th class="num">IP</th><th class="num">H</th><th class="num">ER</th><th class="num">BB</th><th class="num">SO</th><th class="num">HR</th><th class="num">WHIP</th><th class="num">K/9</th></tr></thead>
+            <tbody id="rain-pitch-tbody"><tr><td colspan="16" class="loading">Stats load after Rainiers opening day — March 27</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+>>>>>>> f5763ec (fix: clean index, absolute data URLs, no code fence corruption)
     </div>
     <div class="card">
       <div class="card-title">💨 Sprint Speed — ft/sec</div>
