@@ -396,13 +396,19 @@
 
     // ── THE FIX: absolute URLs so paths work from any domain ──
     async function loadJSON(path) {
+      const base = 'https://bdgroves.github.io/EDGAR/';
+      const url = path.startsWith('http') ? path : base + path;
       try {
-        const base = 'https://bdgroves.github.io/EDGAR/';
-        const url = path.startsWith('http') ? path : base + path;
         const r = await fetch(url, {cache: 'no-store'});
-        if (!r.ok) { console.error('EDGAR fetch failed:', url, r.status); return null; }
+        if (!r.ok) {
+          document.getElementById('debug-bar').textContent = `FETCH FAILED: ${url} → HTTP ${r.status}`;
+          return null;
+        }
         return await r.json();
-      } catch(e) { console.error('EDGAR fetch error:', e); return null; }
+      } catch(e) {
+        document.getElementById('debug-bar').textContent = `FETCH ERROR: ${url} → ${e.message}`;
+        return null;
+      }
     }
 
     async function renderStandings() {
