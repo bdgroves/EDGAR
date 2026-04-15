@@ -390,19 +390,17 @@
       if (btn) btn.classList.add('active');
     }
 
-    // ── THE FIX: absolute URLs so paths work from any domain ──
+    // Use relative paths — always works same-origin on GitHub Pages
     async function loadJSON(path) {
-      const base = 'https://bdgroves.github.io/EDGAR/';
-      const url = path.startsWith('http') ? path : base + path;
       try {
-        const r = await fetch(url, {cache: 'no-store'});
+        const r = await fetch(path);
         if (!r.ok) {
-          document.getElementById('debug-bar').textContent = `FETCH FAILED: ${url} → HTTP ${r.status}`;
+          document.getElementById('debug-bar').textContent = `HTTP ${r.status}: ${path}`;
           return null;
         }
         return await r.json();
       } catch(e) {
-        document.getElementById('debug-bar').textContent = `FETCH ERROR: ${url} → ${e.message}`;
+        document.getElementById('debug-bar').textContent = `ERROR: ${path} — ${e.message}`;
         return null;
       }
     }
