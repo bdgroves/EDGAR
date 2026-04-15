@@ -160,6 +160,7 @@
     .delta-neg { color: #e57373; }
     .pitch-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; padding: 2px 5px; border-radius: 2px; background: rgba(0,92,92,0.3); border: 1px solid var(--border); color: var(--teal-bright); margin-right: 3px; }
     tr.highlight td { background: rgba(0,92,92,0.08); }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
   </style>
 </head>
 <body>
@@ -192,6 +193,15 @@
     <div class="panel active" id="panel-standings">
       <div class="section-title">AL West</div>
       <div class="section-subtitle">Division standings · 2026 season</div>
+
+      <!-- TODAY'S GAMES — live from MLB StatsAPI -->
+      <div class="card" id="today-games-card">
+        <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
+          <span>⚾ Today's Games</span>
+          <span id="scores-ts" style="font-size:9px;color:var(--text-muted)">Loading...</span>
+        </div>
+        <div id="today-games"><div class="loading">Fetching live scores...</div></div>
+      </div>
       <div class="card">
         <div class="card-title">Division Standings</div>
         <table class="data-table">
@@ -759,6 +769,108 @@
         rainPitchTbody.innerHTML = '<tr><td colspan="16" class="loading">Stats load after Rainiers opening day — March 27</td></tr>';
       }
     }
+
+    // ── LIVE SCORES ───────────────────────────────────────────
+    const SEA_ID = 136;
+    const AL_WEST_IDS = new Set([136,117,108,133,140]); // SEA,HOU,LAA,OAK,TEX
+
+    async function fetchLiveScores() {
+      const today = new Date().toISOString().slice(0,10);
+      const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${today}&hydrate=linescore,team`;
+      try {
+        const r = await fetch(url);
+        if (!r.ok) return;
+        const data = await r.json();
+        const games = data.dates?.[0]?.games || [];
+
+        const el = document.getElementById('today-games');
+        const ts = document.getElementById('scores-ts');
+        ts.textContent = 'Updated ' + new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+
+        if (!games.length) {
+          el.innerHTML = '<div style="font-family:var(--font-mono);font-size:11px;color:var(--text-dim);padding:0.5rem 0">No games scheduled today</div>';
+          return;
+        }
+
+        // Sort: SEA games first, then AL West, then rest
+        games.sort((a,b) => {
+          const aHasSEA = a.teams.home.team.id===SEA_ID||a.teams.away.team.id===SEA_ID;
+          const bHasSEA = b.teams.home.team.id===SEA_ID||b.teams.away.team.id===SEA_ID;
+          const aALW = AL_WEST_IDS.has(a.teams.home.team.id)||AL_WEST_IDS.has(a.teams.away.team.id);
+          const bALW = AL_WEST_IDS.has(b.teams.home.team.id)||AL_WEST_IDS.has(b.teams.away.team.id);
+          if (aHasSEA && !bHasSEA) return -1;
+          if (!aHasSEA && bHasSEA) return 1;
+          if (aALW && !bALW) return -1;
+          if (!aALW && bALW) return 1;
+          return 0;
+        });
+
+        el.innerHTML = games.map(g => {
+          const away = g.teams.away;
+          const home = g.teams.home;
+          const state = g.status.abstractGameState; // Preview, Live, Final
+          const detail = g.status.detailedState;
+          const isSEA = home.team.id===SEA_ID || away.team.id===SEA_ID;
+          const isALW = AL_WEST_IDS.has(home.team.id) || AL_WEST_IDS.has(away.team.id);
+
+          let scoreHtml = '';
+          let statusHtml = '';
+
+          if (state === 'Preview') {
+            const gt = g.gameDate ? new Date(g.gameDate).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/Los_Angeles'}) : '';
+            statusHtml = `<span style="color:var(--text-dim)">${gt} PT</span>`;
+            scoreHtml = `<span style="color:var(--text-muted)">vs</span>`;
+          } else if (state === 'Live') {
+            const inn = g.linescore?.currentInningOrdinal || '';
+            const half = g.linescore?.inningHalf || '';
+            const awayR = away.score ?? '0';
+            const homeR = home.score ?? '0';
+            const awayWin = awayR > homeR;
+            const homeWin = homeR > awayR;
+            scoreHtml = `
+              <span style="color:${away.team.id===SEA_ID?'var(--teal-bright)':awayWin?'var(--text)':'var(--text-dim)'};font-weight:${awayWin?'600':'400'}">${awayR}</span>
+              <span style="color:var(--text-muted);font-size:9px;margin:0 2px">–</span>
+              <span style="color:${home.team.id===SEA_ID?'var(--teal-bright)':homeWin?'var(--text)':'var(--text-dim)'};font-weight:${homeWin?'600':'400'}">${homeR}</span>`;
+            statusHtml = `<span style="color:var(--teal-bright);animation:pulse 1.5s infinite">${half === 'Top' ? '▲' : '▼'} ${inn}</span>`;
+          } else {
+            const awayR = away.score ?? '—';
+            const homeR = home.score ?? '—';
+            const awayWin = away.isWinner;
+            const homeWin = home.isWinner;
+            scoreHtml = `
+              <span style="color:${away.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'};font-weight:${awayWin?'600':'400'}">${awayR}</span>
+              <span style="color:var(--text-muted);font-size:9px;margin:0 2px">–</span>
+              <span style="color:${home.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'};font-weight:${homeWin?'600':'400'}">${homeR}</span>`;
+            statusHtml = `<span style="color:var(--text-muted)">Final${detail.includes('Extra')||detail.includes('Inn')?(' '+detail.replace('Final','').trim()):''}</span>`;
+          }
+
+          return `<div style="display:grid;grid-template-columns:1fr auto auto;gap:0.75rem;align-items:center;padding:0.5rem 0;border-bottom:1px solid rgba(0,92,92,0.12);font-family:var(--font-mono);font-size:12px;${isSEA?'background:rgba(0,92,92,0.06);margin:0 -1.5rem;padding-left:1.5rem;padding-right:1.5rem':''}">
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <div style="color:${away.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'}${away.isWinner?';font-weight:600':''}">
+                ${away.team.id===SEA_ID?'★ ':''}${away.team.abbreviation}
+                <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${away.leagueRecord?.wins}-${away.leagueRecord?.losses}</span>
+              </div>
+              <div style="color:${home.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'}${home.isWinner?';font-weight:600':''}">
+                ${home.team.id===SEA_ID?'★ ':''}${home.team.abbreviation} <span style="font-size:9px;color:var(--text-muted)">▴</span>
+                <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${home.leagueRecord?.wins}-${home.leagueRecord?.losses}</span>
+              </div>
+            </div>
+            <div style="text-align:right;display:flex;flex-direction:column;gap:2px">
+              <div>${state==='Preview'?'—':away.score??'—'}</div>
+              <div>${state==='Preview'?'—':home.score??'—'}</div>
+            </div>
+            <div style="text-align:right;min-width:70px;font-size:10px">${statusHtml}</div>
+          </div>`;
+        }).join('');
+
+      } catch(e) {
+        document.getElementById('today-games').innerHTML = `<div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);padding:0.5rem 0">Scores unavailable — ${e.message}</div>`;
+      }
+    }
+
+    // Auto-refresh every 30 seconds
+    fetchLiveScores();
+    setInterval(fetchLiveScores, 30000);
 
     renderStandings();
     renderBatting();
