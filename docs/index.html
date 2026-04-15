@@ -399,10 +399,10 @@
       try {
         const base = 'https://bdgroves.github.io/EDGAR/';
         const url = path.startsWith('http') ? path : base + path;
-        const r = await fetch(url+'?t='+Date.now());
-        if (!r.ok) return null;
+        const r = await fetch(url, {cache: 'no-store'});
+        if (!r.ok) { console.error('EDGAR fetch failed:', url, r.status); return null; }
         return await r.json();
-      } catch { return null; }
+      } catch(e) { console.error('EDGAR fetch error:', e); return null; }
     }
 
     async function renderStandings() {
