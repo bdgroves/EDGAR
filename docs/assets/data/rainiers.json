@@ -1,7 +1,7 @@
 {
-  "updated": "2026-04-14",
+  "updated": "2026-04-15",
   "season": 2026,
-  "recent_record": "2-4 (last 6 games)",
+  "recent_record": "1-4 (last 5 games)",
   "recent_games": [
     {
       "date": "2026-04-12",
@@ -47,15 +47,6 @@
       "away_score": 3,
       "venue": "Constellation Field",
       "win": true
-    },
-    {
-      "date": "2026-04-07",
-      "home": "Sugar Land Space Cowboys",
-      "away": "Tacoma Rainiers",
-      "home_score": 0,
-      "away_score": 1,
-      "venue": "Constellation Field",
-      "win": true
     }
   ],
   "roster": {
@@ -80,27 +71,6 @@
         "doubles": 1,
         "triples": 0,
         "pa": 70
-      },
-      {
-        "id": 621550,
-        "name": "Patrick Wisdom",
-        "pos": "1B",
-        "prospect": false,
-        "ab": 53,
-        "avg": 0.264,
-        "obp": 0.371,
-        "slg": 0.774,
-        "ops": 1.145,
-        "h": 14,
-        "r": 11,
-        "hr": 9,
-        "rbi": 17,
-        "sb": 1,
-        "bb": 9,
-        "so": 14,
-        "doubles": 0,
-        "triples": 0,
-        "pa": 62
       },
       {
         "id": 801126,
@@ -504,30 +474,6 @@
         "avg": 0.13
       },
       {
-        "id": 680604,
-        "name": "Blas Casta\u00f1o",
-        "pos": "P",
-        "prospect": false,
-        "role": "RP",
-        "w": 3,
-        "l": 1,
-        "era": 1.42,
-        "g": 6,
-        "gs": 0,
-        "sv": 0,
-        "hld": 0,
-        "ip": 6.1,
-        "h": 2,
-        "er": 1,
-        "bb": 1,
-        "so": 4,
-        "hr": 0,
-        "whip": 0.47,
-        "k9": 5.68,
-        "bb9": 1.42,
-        "avg": 0.105
-      },
-      {
         "id": 695380,
         "name": "Alex Hoppe",
         "pos": "P",
@@ -783,22 +729,22 @@
       "l10": ""
     },
     {
-      "team": "El Paso Chihuahuas",
-      "w": 6,
-      "l": 9,
-      "pct": 0.4,
-      "gb": "4.0",
-      "div": "Pacific Coast League East",
-      "streak": "",
-      "l10": ""
-    },
-    {
       "team": "Tacoma Rainiers",
       "w": 6,
       "l": 9,
       "pct": 0.4,
       "gb": "4.0",
       "div": "Pacific Coast League West",
+      "streak": "",
+      "l10": ""
+    },
+    {
+      "team": "El Paso Chihuahuas",
+      "w": 6,
+      "l": 10,
+      "pct": 0.375,
+      "gb": "4.5",
+      "div": "Pacific Coast League East",
       "streak": "",
       "l10": ""
     },
@@ -814,10 +760,10 @@
     },
     {
       "team": "Round Rock Express",
-      "w": 4,
+      "w": 5,
       "l": 11,
-      "pct": 0.267,
-      "gb": "6.0",
+      "pct": 0.312,
+      "gb": "5.5",
       "div": "Pacific Coast League East",
       "streak": "",
       "l10": ""

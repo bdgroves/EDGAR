@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-14",
+  "updated": "2026-04-15",
   "season": 2026,
   "al_west": [
     {
@@ -117,20 +117,6 @@
       "div_name": "American League East"
     },
     {
-      "team": "Baltimore Orioles",
-      "abbrev": "",
-      "w": 9,
-      "l": 7,
-      "pct": 0.562,
-      "gb": "-",
-      "streak": "",
-      "l10": "",
-      "rs": 0,
-      "ra": 0,
-      "div_id": 201,
-      "div_name": "American League East"
-    },
-    {
       "team": "Texas Rangers",
       "abbrev": "TEX",
       "w": 9,
@@ -143,6 +129,20 @@
       "ra": 0,
       "div_id": 200,
       "div_name": "American League West"
+    },
+    {
+      "team": "Baltimore Orioles",
+      "abbrev": "",
+      "w": 9,
+      "l": 8,
+      "pct": 0.529,
+      "gb": "0.5",
+      "streak": "",
+      "l10": "",
+      "rs": 0,
+      "ra": 0,
+      "div_id": 201,
+      "div_name": "American League East"
     },
     {
       "team": "Tampa Bay Rays",
@@ -173,6 +173,20 @@
       "div_name": "American League West"
     },
     {
+      "team": "Detroit Tigers",
+      "abbrev": "",
+      "w": 8,
+      "l": 9,
+      "pct": 0.471,
+      "gb": "2.0",
+      "streak": "",
+      "l10": "",
+      "rs": 0,
+      "ra": 0,
+      "div_id": 202,
+      "div_name": "American League Central"
+    },
+    {
       "team": "Los Angeles Angels",
       "abbrev": "LAA",
       "w": 8,
@@ -199,20 +213,6 @@
       "ra": 0,
       "div_id": 200,
       "div_name": "American League West"
-    },
-    {
-      "team": "Kansas City Royals",
-      "abbrev": "",
-      "w": 7,
-      "l": 9,
-      "pct": 0.438,
-      "gb": "2.5",
-      "streak": "",
-      "l10": "",
-      "rs": 0,
-      "ra": 0,
-      "div_id": 202,
-      "div_name": "American League Central"
     }
   ],
   "sea_rank": 4
