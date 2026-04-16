@@ -902,7 +902,14 @@
         const r = await fetch(url);
         if (!r.ok) return;
         const data = await r.json();
-        const games = data.dates?.[0]?.games || [];
+        const rawGames = data.dates?.[0]?.games || [];
+        // Dedupe by gamePk — the hydrate sometimes returns split-admission/makeup variants
+        const seen = new Set();
+        const games = rawGames.filter(g => {
+          if (seen.has(g.gamePk)) return false;
+          seen.add(g.gamePk);
+          return true;
+        });
 
         const el = document.getElementById('rainiers-today');
         const ts = document.getElementById('rain-scores-ts');
