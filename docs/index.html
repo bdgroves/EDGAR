@@ -331,6 +331,16 @@
     <div class="panel" id="panel-rainiers">
       <div class="section-title">Tacoma Rainiers</div>
       <div class="section-subtitle">Triple-A affiliate · Pacific Coast League · Who's coming up?</div>
+
+      <!-- TODAY'S RAINIERS GAME — live from MiLB StatsAPI -->
+      <div class="card" id="rainiers-today-card">
+        <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
+          <span>🌧️ Today's Rainiers Game</span>
+          <span id="rain-scores-ts" style="font-size:9px;color:var(--text-muted)">Loading...</span>
+        </div>
+        <div id="rainiers-today"><div class="loading">Fetching live score...</div></div>
+      </div>
+
       <div class="grid-2">
         <div class="card">
           <div class="card-title">Recent Results</div>
@@ -677,13 +687,17 @@
           const tacHome = g.home.includes('Tacoma');
           const score = tacHome ? `${g.home_score} – ${g.away_score}` : `${g.away_score} – ${g.home_score}`;
           const opp   = tacHome ? g.away : g.home;
-          return `<div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid rgba(0,92,92,0.15);font-family:var(--font-mono);font-size:11px">
+          const gamePk = g.game_pk || g.gamePk;
+          const rowHtml = `<div class="game-row" style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid rgba(0,92,92,0.15);font-family:var(--font-mono);font-size:11px">
             <span class="wl-dot ${g.win?'w':'l'}"></span>
             <span style="color:var(--text-dim);min-width:90px">${g.date}</span>
             <span style="flex:1">vs ${opp}</span>
             <span style="color:${g.win?'var(--teal-bright)':'var(--text-dim)'}">${score}</span>
-            <span style="color:${g.win?'var(--teal-bright)':'#e57373'}">${g.win?'W':'L'}</span>
+            <span style="color:${g.win?'var(--teal-bright)':'#e57373'}">${g.win?'W':'L'}${gamePk?'<span class="ext-icon">↗</span>':''}</span>
           </div>`;
+          return gamePk
+            ? `<a href="https://www.milb.com/gameday/${gamePk}" target="_blank" rel="noopener noreferrer" class="game-link" title="Open ${opp} @ Tacoma box score on MiLB Gameday">${rowHtml}</a>`
+            : rowHtml;
         }).join('');
       } else {
         gamesEl.innerHTML = '<div class="loading">No recent games found</div>';
@@ -876,6 +890,82 @@
     // Auto-refresh every 30 seconds
     fetchLiveScores();
     setInterval(fetchLiveScores, 30000);
+
+    // ── RAINIERS LIVE SCORE ───────────────────────────────────
+    const TAC_ID = 529; // Tacoma Rainiers
+
+    async function fetchRainiersToday() {
+      const today = new Date().toISOString().slice(0,10);
+      // sportId=11 is Triple-A; teamId filter narrows to Tacoma's game
+      const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=${TAC_ID}&date=${today}&hydrate=linescore,team`;
+      try {
+        const r = await fetch(url);
+        if (!r.ok) return;
+        const data = await r.json();
+        const games = data.dates?.[0]?.games || [];
+
+        const el = document.getElementById('rainiers-today');
+        const ts = document.getElementById('rain-scores-ts');
+        if (ts) ts.textContent = 'Updated ' + new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+
+        if (!games.length) {
+          el.innerHTML = '<div style="font-family:var(--font-mono);font-size:11px;color:var(--text-dim);padding:0.5rem 0">No game scheduled today — check back tomorrow</div>';
+          return;
+        }
+
+        el.innerHTML = games.map(g => {
+          const away = g.teams.away;
+          const home = g.teams.home;
+          const state = g.status.abstractGameState;
+          const detail = g.status.detailedState;
+          const isHome = home.team.id === TAC_ID;
+          const opp = isHome ? away : home;
+          const tac = isHome ? home : away;
+          const venue = g.venue?.name || '';
+          const gamePk = g.gamePk;
+          const gameUrl = `https://www.milb.com/gameday/${gamePk}`;
+          const gameTitle = `Open ${away.team.abbreviation || away.team.name} @ ${home.team.abbreviation || home.team.name} on MiLB Gameday`;
+
+          let statusHtml = '';
+          if (state === 'Preview') {
+            const gt = g.gameDate ? new Date(g.gameDate).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/Los_Angeles'}) : '';
+            statusHtml = `<span style="color:var(--text-dim)">${gt} PT · ${venue}</span>`;
+          } else if (state === 'Live') {
+            const inn = g.linescore?.currentInningOrdinal || '';
+            const half = g.linescore?.inningHalf || '';
+            statusHtml = `<span style="color:var(--teal-bright);animation:pulse 1.5s infinite">${half === 'Top' ? '▲' : '▼'} ${inn}</span>`;
+          } else {
+            statusHtml = `<span style="color:var(--text-muted)">Final${detail.includes('Extra')||detail.includes('Inn')?(' '+detail.replace('Final','').trim()):''}</span>`;
+          }
+
+          return `<a href="${gameUrl}" target="_blank" rel="noopener noreferrer" class="game-link" title="${gameTitle}">
+            <div class="game-row" style="display:grid;grid-template-columns:1fr auto auto;gap:0.75rem;align-items:center;padding:0.5rem 0;font-family:var(--font-mono);font-size:12px;background:rgba(0,92,92,0.06);margin:0 -1.5rem;padding-left:1.5rem;padding-right:1.5rem">
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="color:${away.team.id===TAC_ID?'var(--teal-bright)':'var(--text)'}${away.isWinner?';font-weight:600':''}">
+                  ${away.team.id===TAC_ID?'★ ':''}${away.team.abbreviation || away.team.name}
+                  <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${away.leagueRecord?.wins ?? ''}-${away.leagueRecord?.losses ?? ''}</span>
+                </div>
+                <div style="color:${home.team.id===TAC_ID?'var(--teal-bright)':'var(--text)'}${home.isWinner?';font-weight:600':''}">
+                  ${home.team.id===TAC_ID?'★ ':''}${home.team.abbreviation || home.team.name} <span style="font-size:9px;color:var(--text-muted)">▴</span>
+                  <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${home.leagueRecord?.wins ?? ''}-${home.leagueRecord?.losses ?? ''}</span>
+                </div>
+              </div>
+              <div style="text-align:right;display:flex;flex-direction:column;gap:2px">
+                <div>${state==='Preview'?'—':away.score??'—'}</div>
+                <div>${state==='Preview'?'—':home.score??'—'}</div>
+              </div>
+              <div style="text-align:right;min-width:70px;font-size:10px">${statusHtml}<span class="ext-icon">↗</span></div>
+            </div>
+          </a>`;
+        }).join('');
+
+      } catch(e) {
+        document.getElementById('rainiers-today').innerHTML = `<div style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);padding:0.5rem 0">Score unavailable — ${e.message}</div>`;
+      }
+    }
+
+    fetchRainiersToday();
+    setInterval(fetchRainiersToday, 30000);
 
     renderStandings();
     renderBatting();
