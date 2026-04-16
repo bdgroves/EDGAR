@@ -161,6 +161,24 @@
     .pitch-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; padding: 2px 5px; border-radius: 2px; background: rgba(0,92,92,0.3); border: 1px solid var(--border); color: var(--teal-bright); margin-right: 3px; }
     tr.highlight td { background: rgba(0,92,92,0.08); }
     @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+    /* ── Clickable game cards → MLB Gameday ── */
+    .game-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .game-link:hover .game-row { background: rgba(0,165,165,0.08); }
+    .game-link:hover .ext-icon { opacity: 1; color: var(--teal-bright); }
+    .ext-icon {
+      opacity: 0.3;
+      font-size: 9px;
+      margin-left: 5px;
+      color: var(--text-dim);
+      transition: opacity 0.15s, color 0.15s;
+    }
   </style>
 </head>
 <body>
@@ -812,55 +830,42 @@
           const detail = g.status.detailedState;
           const isSEA = home.team.id===SEA_ID || away.team.id===SEA_ID;
           const isALW = AL_WEST_IDS.has(home.team.id) || AL_WEST_IDS.has(away.team.id);
+          const gamePk = g.gamePk;
+          const gameUrl = `https://www.mlb.com/gameday/${gamePk}`;
+          const gameTitle = `Open ${away.team.abbreviation} @ ${home.team.abbreviation} on MLB Gameday`;
 
-          let scoreHtml = '';
           let statusHtml = '';
 
           if (state === 'Preview') {
             const gt = g.gameDate ? new Date(g.gameDate).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/Los_Angeles'}) : '';
             statusHtml = `<span style="color:var(--text-dim)">${gt} PT</span>`;
-            scoreHtml = `<span style="color:var(--text-muted)">vs</span>`;
           } else if (state === 'Live') {
             const inn = g.linescore?.currentInningOrdinal || '';
             const half = g.linescore?.inningHalf || '';
-            const awayR = away.score ?? '0';
-            const homeR = home.score ?? '0';
-            const awayWin = awayR > homeR;
-            const homeWin = homeR > awayR;
-            scoreHtml = `
-              <span style="color:${away.team.id===SEA_ID?'var(--teal-bright)':awayWin?'var(--text)':'var(--text-dim)'};font-weight:${awayWin?'600':'400'}">${awayR}</span>
-              <span style="color:var(--text-muted);font-size:9px;margin:0 2px">–</span>
-              <span style="color:${home.team.id===SEA_ID?'var(--teal-bright)':homeWin?'var(--text)':'var(--text-dim)'};font-weight:${homeWin?'600':'400'}">${homeR}</span>`;
             statusHtml = `<span style="color:var(--teal-bright);animation:pulse 1.5s infinite">${half === 'Top' ? '▲' : '▼'} ${inn}</span>`;
           } else {
-            const awayR = away.score ?? '—';
-            const homeR = home.score ?? '—';
-            const awayWin = away.isWinner;
-            const homeWin = home.isWinner;
-            scoreHtml = `
-              <span style="color:${away.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'};font-weight:${awayWin?'600':'400'}">${awayR}</span>
-              <span style="color:var(--text-muted);font-size:9px;margin:0 2px">–</span>
-              <span style="color:${home.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'};font-weight:${homeWin?'600':'400'}">${homeR}</span>`;
             statusHtml = `<span style="color:var(--text-muted)">Final${detail.includes('Extra')||detail.includes('Inn')?(' '+detail.replace('Final','').trim()):''}</span>`;
           }
 
-          return `<div style="display:grid;grid-template-columns:1fr auto auto;gap:0.75rem;align-items:center;padding:0.5rem 0;border-bottom:1px solid rgba(0,92,92,0.12);font-family:var(--font-mono);font-size:12px;${isSEA?'background:rgba(0,92,92,0.06);margin:0 -1.5rem;padding-left:1.5rem;padding-right:1.5rem':''}">
-            <div style="display:flex;flex-direction:column;gap:2px">
-              <div style="color:${away.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'}${away.isWinner?';font-weight:600':''}">
-                ${away.team.id===SEA_ID?'★ ':''}${away.team.abbreviation}
-                <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${away.leagueRecord?.wins}-${away.leagueRecord?.losses}</span>
+          return `<a href="${gameUrl}" target="_blank" rel="noopener noreferrer" class="game-link" title="${gameTitle}">
+            <div class="game-row" style="display:grid;grid-template-columns:1fr auto auto;gap:0.75rem;align-items:center;padding:0.5rem 0;border-bottom:1px solid rgba(0,92,92,0.12);font-family:var(--font-mono);font-size:12px;${isSEA?'background:rgba(0,92,92,0.06);margin:0 -1.5rem;padding-left:1.5rem;padding-right:1.5rem':''}">
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="color:${away.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'}${away.isWinner?';font-weight:600':''}">
+                  ${away.team.id===SEA_ID?'★ ':''}${away.team.abbreviation}
+                  <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${away.leagueRecord?.wins}-${away.leagueRecord?.losses}</span>
+                </div>
+                <div style="color:${home.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'}${home.isWinner?';font-weight:600':''}">
+                  ${home.team.id===SEA_ID?'★ ':''}${home.team.abbreviation} <span style="font-size:9px;color:var(--text-muted)">▴</span>
+                  <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${home.leagueRecord?.wins}-${home.leagueRecord?.losses}</span>
+                </div>
               </div>
-              <div style="color:${home.team.id===SEA_ID?'var(--teal-bright)':'var(--text)'}${home.isWinner?';font-weight:600':''}">
-                ${home.team.id===SEA_ID?'★ ':''}${home.team.abbreviation} <span style="font-size:9px;color:var(--text-muted)">▴</span>
-                <span style="font-size:9px;color:var(--text-muted);margin-left:4px">${home.leagueRecord?.wins}-${home.leagueRecord?.losses}</span>
+              <div style="text-align:right;display:flex;flex-direction:column;gap:2px">
+                <div>${state==='Preview'?'—':away.score??'—'}</div>
+                <div>${state==='Preview'?'—':home.score??'—'}</div>
               </div>
+              <div style="text-align:right;min-width:70px;font-size:10px">${statusHtml}<span class="ext-icon">↗</span></div>
             </div>
-            <div style="text-align:right;display:flex;flex-direction:column;gap:2px">
-              <div>${state==='Preview'?'—':away.score??'—'}</div>
-              <div>${state==='Preview'?'—':home.score??'—'}</div>
-            </div>
-            <div style="text-align:right;min-width:70px;font-size:10px">${statusHtml}</div>
-          </div>`;
+          </a>`;
         }).join('');
 
       } catch(e) {
