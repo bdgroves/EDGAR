@@ -807,7 +807,7 @@
     const AL_WEST_IDS = new Set([136,117,108,133,140]); // SEA,HOU,LAA,OAK,TEX
 
     async function fetchLiveScores() {
-      const today = new Date().toISOString().slice(0,10);
+      const today = new Date().toLocaleDateString('en-CA', {timeZone: 'America/Los_Angeles'});
       const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${today}&hydrate=linescore,team`;
       try {
         const r = await fetch(url);
@@ -895,7 +895,7 @@
     const TAC_ID = 529; // Tacoma Rainiers
 
     async function fetchRainiersToday() {
-      const today = new Date().toISOString().slice(0,10);
+      const today = new Date().toLocaleDateString('en-CA', {timeZone: 'America/Los_Angeles'});
       // sportId=11 is Triple-A; teamId filter narrows to Tacoma's game
       const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=${TAC_ID}&date=${today}&hydrate=linescore,team`;
       try {
