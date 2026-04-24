@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-23",
+  "updated": "2026-04-24",
   "season": 2026,
   "al_west": [
     {
-      "team": "Athletics",
-      "abbrev": "OAK",
+      "team": "Texas Rangers",
+      "abbrev": "TEX",
       "w": 13,
       "l": 12,
       "pct": 0.52,
@@ -17,12 +17,12 @@
       "div_name": "American League West"
     },
     {
-      "team": "Texas Rangers",
-      "abbrev": "TEX",
-      "w": 12,
+      "team": "Athletics",
+      "abbrev": "OAK",
+      "w": 13,
       "l": 12,
-      "pct": 0.5,
-      "gb": "0.5",
+      "pct": 0.52,
+      "gb": "-",
       "streak": "",
       "l10": "",
       "rs": 0,
@@ -77,9 +77,9 @@
     {
       "team": "New York Yankees",
       "abbrev": "",
-      "w": 15,
+      "w": 16,
       "l": 9,
-      "pct": 0.625,
+      "pct": 0.64,
       "gb": "-",
       "streak": "",
       "l10": "",
@@ -103,12 +103,26 @@
       "div_name": "American League Central"
     },
     {
+      "team": "Detroit Tigers",
+      "abbrev": "",
+      "w": 14,
+      "l": 12,
+      "pct": 0.538,
+      "gb": "-",
+      "streak": "",
+      "l10": "",
+      "rs": 0,
+      "ra": 0,
+      "div_id": 202,
+      "div_name": "American League Central"
+    },
+    {
       "team": "Tampa Bay Rays",
       "abbrev": "",
       "w": 13,
       "l": 11,
       "pct": 0.542,
-      "gb": "2.0",
+      "gb": "2.5",
       "streak": "",
       "l10": "",
       "rs": 0,
@@ -117,18 +131,18 @@
       "div_name": "American League East"
     },
     {
-      "team": "Detroit Tigers",
-      "abbrev": "",
+      "team": "Texas Rangers",
+      "abbrev": "TEX",
       "w": 13,
       "l": 12,
       "pct": 0.52,
-      "gb": "0.5",
+      "gb": "-",
       "streak": "",
       "l10": "",
       "rs": 0,
       "ra": 0,
-      "div_id": 202,
-      "div_name": "American League Central"
+      "div_id": 200,
+      "div_name": "American League West"
     },
     {
       "team": "Athletics",
@@ -145,46 +159,32 @@
       "div_name": "American League West"
     },
     {
-      "team": "Minnesota Twins",
-      "abbrev": "",
-      "w": 12,
-      "l": 12,
-      "pct": 0.5,
-      "gb": "1.0",
-      "streak": "",
-      "l10": "",
-      "rs": 0,
-      "ra": 0,
-      "div_id": 202,
-      "div_name": "American League Central"
-    },
-    {
-      "team": "Texas Rangers",
-      "abbrev": "TEX",
-      "w": 12,
-      "l": 12,
-      "pct": 0.5,
-      "gb": "0.5",
-      "streak": "",
-      "l10": "",
-      "rs": 0,
-      "ra": 0,
-      "div_id": 200,
-      "div_name": "American League West"
-    },
-    {
       "team": "Baltimore Orioles",
       "abbrev": "",
       "w": 12,
       "l": 13,
       "pct": 0.48,
-      "gb": "3.5",
+      "gb": "4.0",
       "streak": "",
       "l10": "",
       "rs": 0,
       "ra": 0,
       "div_id": 201,
       "div_name": "American League East"
+    },
+    {
+      "team": "Minnesota Twins",
+      "abbrev": "",
+      "w": 12,
+      "l": 13,
+      "pct": 0.48,
+      "gb": "1.5",
+      "streak": "",
+      "l10": "",
+      "rs": 0,
+      "ra": 0,
+      "div_id": 202,
+      "div_name": "American League Central"
     },
     {
       "team": "Los Angeles Angels",
