@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-24",
+  "updated": "2026-04-25",
   "season": 2026,
   "batting_leaders": [
     {
@@ -213,7 +213,7 @@
     {
       "name": "Rodr\u00edguez, Julio",
       "sprint_spd": 28.4,
-      "hp_to_1b": 4.37,
+      "hp_to_1b": 4.36,
       "opportunities": 44
     },
     {
@@ -253,16 +253,16 @@
       "opportunities": 13
     },
     {
-      "name": "Crawford, J.P.",
-      "sprint_spd": 25.7,
-      "hp_to_1b": null,
-      "opportunities": 19
-    },
-    {
       "name": "Raleigh, Cal",
       "sprint_spd": 25.7,
       "hp_to_1b": null,
       "opportunities": 25
+    },
+    {
+      "name": "Crawford, J.P.",
+      "sprint_spd": 25.7,
+      "hp_to_1b": null,
+      "opportunities": 19
     },
     {
       "name": "Donovan, Brendan",
