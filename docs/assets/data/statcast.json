@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-01",
+  "updated": "2026-05-02",
   "season": 2026,
   "batting_leaders": [
     {
@@ -27,20 +27,20 @@
       "avg_dist": 152.0
     },
     {
-      "name": "Raleigh, Cal",
-      "bbe": 86,
-      "avg_ev": 86.9,
-      "max_ev": 109.9,
-      "barrels": 12,
-      "avg_dist": 203.0
-    },
-    {
       "name": "Young, Cole",
       "bbe": 86,
       "avg_ev": 88.4,
       "max_ev": 111.3,
       "barrels": 8,
       "avg_dist": 182.0
+    },
+    {
+      "name": "Raleigh, Cal",
+      "bbe": 86,
+      "avg_ev": 86.9,
+      "max_ev": 109.9,
+      "barrels": 12,
+      "avg_dist": 203.0
     },
     {
       "name": "Crawford, J.P.",
@@ -159,7 +159,7 @@
       "xba": 0.164,
       "delta": -0.015,
       "woba": 0.225,
-      "xwoba": 0.244,
+      "xwoba": 0.245,
       "pa": 88
     },
     {
@@ -194,7 +194,7 @@
       "ba": 0.254,
       "xba": 0.254,
       "delta": 0.0,
-      "woba": 0.307,
+      "woba": 0.308,
       "xwoba": 0.318,
       "pa": 140
     },
@@ -242,7 +242,7 @@
     {
       "name": "Young, Cole",
       "sprint_spd": 27.6,
-      "hp_to_1b": null,
+      "hp_to_1b": 4.35,
       "opportunities": 42
     },
     {
