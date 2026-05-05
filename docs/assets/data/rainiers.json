@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "season": 2026,
   "recent_record": "2-4 (last 6 games)",
   "recent_games": [
@@ -580,30 +580,6 @@
         "k9": 13.97,
         "bb9": 4.66,
         "avg": 0.097
-      },
-      {
-        "id": 681006,
-        "name": "Josh Simpson",
-        "pos": "P",
-        "prospect": false,
-        "role": "RP",
-        "w": 0,
-        "l": 0,
-        "era": 0.96,
-        "g": 9,
-        "gs": 0,
-        "sv": 1,
-        "hld": 2,
-        "ip": 9.1,
-        "h": 3,
-        "er": 1,
-        "bb": 6,
-        "so": 12,
-        "hr": 0,
-        "whip": 0.96,
-        "k9": 11.57,
-        "bb9": 5.79,
-        "avg": 0.094
       },
       {
         "id": 691172,
