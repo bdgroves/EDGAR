@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08",
+  "updated": "2026-05-09",
   "season": 2026,
   "batting_leaders": [
     {
@@ -75,6 +75,14 @@
       "avg_dist": 190.0
     },
     {
+      "name": "Donovan, Brendan",
+      "bbe": 45,
+      "avg_ev": 83.8,
+      "max_ev": 103.9,
+      "barrels": 2,
+      "avg_dist": 142.0
+    },
+    {
       "name": "Refsnyder, Rob",
       "bbe": 32,
       "avg_ev": 87.8,
@@ -97,14 +105,6 @@
       "max_ev": 107.7,
       "barrels": 2,
       "avg_dist": 210.0
-    },
-    {
-      "name": "Pereda, Jhonny",
-      "bbe": 4,
-      "avg_ev": 81.6,
-      "max_ev": 105.2,
-      "barrels": 0,
-      "avg_dist": 221.0
     }
   ],
   "xba_delta": [
@@ -217,20 +217,20 @@
       "pa": 158
     },
     {
-      "name": "Pereda, Jhonny",
-      "ba": 0.4,
-      "xba": 0.353,
-      "delta": 0.047,
-      "woba": 0.361,
-      "xwoba": 0.343,
-      "pa": 5
+      "name": "Donovan, Brendan",
+      "ba": 0.304,
+      "xba": 0.238,
+      "delta": 0.066,
+      "woba": 0.423,
+      "xwoba": 0.339,
+      "pa": 71
     }
   ],
   "sprint_speed": [
     {
       "name": "Rodr\u00edguez, Julio",
       "sprint_spd": 28.6,
-      "hp_to_1b": 4.35,
+      "hp_to_1b": 4.34,
       "opportunities": 61
     },
     {
@@ -284,7 +284,7 @@
     {
       "name": "Crawford, J.P.",
       "sprint_spd": 25.7,
-      "hp_to_1b": 4.68,
+      "hp_to_1b": 4.69,
       "opportunities": 36
     },
     {
