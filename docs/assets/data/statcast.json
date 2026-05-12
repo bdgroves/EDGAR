@@ -1,54 +1,54 @@
 {
-  "updated": "2026-05-11",
+  "updated": "2026-05-12",
   "season": 2026,
   "batting_leaders": [
     {
       "name": "Naylor, Josh",
-      "bbe": 121,
-      "avg_ev": 87.9,
+      "bbe": 124,
+      "avg_ev": 87.7,
       "max_ev": 111.5,
-      "barrels": 8,
-      "avg_dist": 154.0
+      "barrels": 9,
+      "avg_dist": 155.0
     },
     {
       "name": "Rodr\u00edguez, Julio",
-      "bbe": 119,
-      "avg_ev": 89.3,
+      "bbe": 121,
+      "avg_ev": 89.5,
       "max_ev": 111.3,
       "barrels": 10,
-      "avg_dist": 154.0
+      "avg_dist": 153.0
     },
     {
       "name": "Arozarena, Randy",
-      "bbe": 107,
-      "avg_ev": 90.7,
+      "bbe": 108,
+      "avg_ev": 90.8,
       "max_ev": 113.0,
       "barrels": 6,
       "avg_dist": 141.0
     },
     {
       "name": "Young, Cole",
-      "bbe": 101,
-      "avg_ev": 88.1,
+      "bbe": 105,
+      "avg_ev": 87.9,
       "max_ev": 111.3,
       "barrels": 8,
-      "avg_dist": 174.0
+      "avg_dist": 172.0
     },
     {
       "name": "Raleigh, Cal",
-      "bbe": 97,
+      "bbe": 98,
       "avg_ev": 86.9,
       "max_ev": 109.9,
       "barrels": 12,
-      "avg_dist": 197.0
+      "avg_dist": 198.0
     },
     {
       "name": "Crawford, J.P.",
-      "bbe": 87,
-      "avg_ev": 88.8,
+      "bbe": 90,
+      "avg_ev": 88.2,
       "max_ev": 107.8,
       "barrels": 8,
-      "avg_dist": 155.0
+      "avg_dist": 153.0
     },
     {
       "name": "Rivas, Leo",
@@ -60,11 +60,11 @@
     },
     {
       "name": "Canzone, Dominic",
-      "bbe": 59,
-      "avg_ev": 94.8,
+      "bbe": 60,
+      "avg_ev": 94.2,
       "max_ev": 114.1,
       "barrels": 9,
-      "avg_dist": 196.0
+      "avg_dist": 192.0
     },
     {
       "name": "Raley, Luke",
@@ -76,9 +76,9 @@
     },
     {
       "name": "Donovan, Brendan",
-      "bbe": 50,
-      "avg_ev": 84.7,
-      "max_ev": 103.9,
+      "bbe": 54,
+      "avg_ev": 85.2,
+      "max_ev": 109.6,
       "barrels": 2,
       "avg_dist": 153.0
     },
@@ -100,11 +100,11 @@
     },
     {
       "name": "Joe, Connor",
-      "bbe": 16,
-      "avg_ev": 93.8,
+      "bbe": 18,
+      "avg_ev": 92.5,
       "max_ev": 107.7,
       "barrels": 2,
-      "avg_dist": 210.0
+      "avg_dist": 212.0
     }
   ],
   "xba_delta": [

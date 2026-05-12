@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-11",
+  "updated": "2026-05-12",
   "season": 2026,
   "recent_record": "2-4 (last 6 games)",
   "recent_games": [
@@ -568,30 +568,6 @@
         "k9": 11.15,
         "bb9": 4.7,
         "avg": 0.286
-      },
-      {
-        "id": 682445,
-        "name": "Domingo Gonzalez",
-        "pos": "P",
-        "prospect": false,
-        "role": "RP",
-        "w": 0,
-        "l": 0,
-        "era": 1.8,
-        "g": 12,
-        "gs": 0,
-        "sv": 0,
-        "hld": 3,
-        "ip": 15.0,
-        "h": 12,
-        "er": 3,
-        "bb": 2,
-        "so": 14,
-        "hr": 0,
-        "whip": 0.93,
-        "k9": 8.4,
-        "bb9": 1.2,
-        "avg": 0.222
       },
       {
         "id": 621074,
