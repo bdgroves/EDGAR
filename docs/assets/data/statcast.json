@@ -1,54 +1,78 @@
 {
-  "updated": "2026-05-13",
+  "updated": "2026-05-14",
   "season": 2026,
   "batting_leaders": [
     {
       "name": "Naylor, Josh",
-      "bbe": 127,
-      "avg_ev": 87.8,
+      "bbe": 132,
+      "avg_ev": 88.1,
       "max_ev": 111.5,
       "barrels": 9,
-      "avg_dist": 155.0
+      "avg_dist": 153.0
     },
     {
       "name": "Rodr\u00edguez, Julio",
-      "bbe": 124,
+      "bbe": 127,
       "avg_ev": 89.4,
       "max_ev": 111.3,
       "barrels": 11,
-      "avg_dist": 155.0
+      "avg_dist": 154.0
     },
     {
       "name": "Arozarena, Randy",
-      "bbe": 111,
-      "avg_ev": 90.9,
+      "bbe": 115,
+      "avg_ev": 91.1,
       "max_ev": 113.0,
-      "barrels": 6,
-      "avg_dist": 139.0
+      "barrels": 7,
+      "avg_dist": 144.0
     },
     {
       "name": "Young, Cole",
-      "bbe": 108,
-      "avg_ev": 88.3,
+      "bbe": 112,
+      "avg_ev": 88.4,
       "max_ev": 111.3,
-      "barrels": 8,
-      "avg_dist": 168.0
+      "barrels": 9,
+      "avg_dist": 167.0
     },
     {
       "name": "Raleigh, Cal",
-      "bbe": 101,
-      "avg_ev": 86.9,
+      "bbe": 104,
+      "avg_ev": 87.4,
       "max_ev": 109.9,
-      "barrels": 12,
-      "avg_dist": 200.0
+      "barrels": 13,
+      "avg_dist": 203.0
     },
     {
       "name": "Crawford, J.P.",
-      "bbe": 94,
-      "avg_ev": 88.1,
+      "bbe": 97,
+      "avg_ev": 88.4,
       "max_ev": 107.8,
       "barrels": 8,
-      "avg_dist": 149.0
+      "avg_dist": 153.0
+    },
+    {
+      "name": "Canzone, Dominic",
+      "bbe": 65,
+      "avg_ev": 93.5,
+      "max_ev": 114.1,
+      "barrels": 10,
+      "avg_dist": 192.0
+    },
+    {
+      "name": "Raley, Luke",
+      "bbe": 63,
+      "avg_ev": 93.4,
+      "max_ev": 113.8,
+      "barrels": 14,
+      "avg_dist": 192.0
+    },
+    {
+      "name": "Donovan, Brendan",
+      "bbe": 62,
+      "avg_ev": 85.1,
+      "max_ev": 109.6,
+      "barrels": 2,
+      "avg_dist": 151.0
     },
     {
       "name": "Rivas, Leo",
@@ -57,30 +81,6 @@
       "max_ev": 100.0,
       "barrels": 1,
       "avg_dist": 171.0
-    },
-    {
-      "name": "Canzone, Dominic",
-      "bbe": 61,
-      "avg_ev": 94.4,
-      "max_ev": 114.1,
-      "barrels": 9,
-      "avg_dist": 192.0
-    },
-    {
-      "name": "Raley, Luke",
-      "bbe": 60,
-      "avg_ev": 93.7,
-      "max_ev": 113.8,
-      "barrels": 13,
-      "avg_dist": 191.0
-    },
-    {
-      "name": "Donovan, Brendan",
-      "bbe": 58,
-      "avg_ev": 84.9,
-      "max_ev": 109.6,
-      "barrels": 2,
-      "avg_dist": 147.0
     },
     {
       "name": "Refsnyder, Rob",
