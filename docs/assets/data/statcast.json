@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18",
+  "updated": "2026-05-19",
   "season": 2026,
   "batting_leaders": [
     {
@@ -57,14 +57,6 @@
       "max_ev": 113.8,
       "barrels": 17,
       "avg_dist": 186.0
-    },
-    {
-      "name": "Rivas, Leo",
-      "bbe": 66,
-      "avg_ev": 86.2,
-      "max_ev": 100.0,
-      "barrels": 1,
-      "avg_dist": 175.0
     },
     {
       "name": "Refsnyder, Rob",
@@ -172,15 +164,6 @@
       "pa": 112
     },
     {
-      "name": "Rivas, Leo",
-      "ba": 0.131,
-      "xba": 0.15,
-      "delta": -0.019,
-      "woba": 0.22,
-      "xwoba": 0.239,
-      "pa": 120
-    },
-    {
       "name": "Raley, Luke",
       "ba": 0.269,
       "xba": 0.285,
@@ -197,6 +180,15 @@
       "woba": 0.31,
       "xwoba": 0.326,
       "pa": 189
+    },
+    {
+      "name": "Wisdom, Patrick",
+      "ba": 0.0,
+      "xba": null,
+      "delta": 0.0,
+      "woba": 0.0,
+      "xwoba": 0.0,
+      "pa": 1
     },
     {
       "name": "Rodr\u00edguez, Julio",
