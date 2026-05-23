@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22",
+  "updated": "2026-05-23",
   "season": 2026,
   "batting_leaders": [
     {
@@ -75,20 +75,20 @@
       "avg_dist": 182.0
     },
     {
-      "name": "Joe, Connor",
-      "bbe": 22,
-      "avg_ev": 92.1,
-      "max_ev": 107.7,
-      "barrels": 2,
-      "avg_dist": 188.0
-    },
-    {
       "name": "Pereda, Jhonny",
       "bbe": 12,
       "avg_ev": 91.7,
       "max_ev": 106.7,
       "barrels": 1,
       "avg_dist": 236.0
+    },
+    {
+      "name": "Robles, Victor",
+      "bbe": 10,
+      "avg_ev": 82.6,
+      "max_ev": 102.5,
+      "barrels": 1,
+      "avg_dist": 135.0
     },
     {
       "name": "Emerson, Colt",
@@ -108,15 +108,6 @@
     }
   ],
   "xba_delta": [
-    {
-      "name": "Joe, Connor",
-      "ba": 0.182,
-      "xba": 0.281,
-      "delta": -0.099,
-      "woba": 0.297,
-      "xwoba": 0.369,
-      "pa": 39
-    },
     {
       "name": "Wisdom, Patrick",
       "ba": 0.125,
@@ -197,6 +188,15 @@
       "woba": 0.31,
       "xwoba": 0.326,
       "pa": 200
+    },
+    {
+      "name": "Robles, Victor",
+      "ba": 0.231,
+      "xba": 0.232,
+      "delta": -0.001,
+      "woba": 0.237,
+      "xwoba": 0.256,
+      "pa": 13
     },
     {
       "name": "Rodr\u00edguez, Julio",
