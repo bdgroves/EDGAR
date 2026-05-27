@@ -1,62 +1,62 @@
 {
-  "updated": "2026-05-26",
+  "updated": "2026-05-27",
   "season": 2026,
   "batting_leaders": [
     {
-      "name": "Rodr\u00edguez, Julio",
-      "bbe": 165,
-      "avg_ev": 89.9,
-      "max_ev": 113.0,
-      "barrels": 13,
-      "avg_dist": 160.0
-    },
-    {
       "name": "Naylor, Josh",
-      "bbe": 164,
+      "bbe": 169,
       "avg_ev": 87.7,
       "max_ev": 111.5,
       "barrels": 10,
-      "avg_dist": 155.0
+      "avg_dist": 153.0
+    },
+    {
+      "name": "Rodr\u00edguez, Julio",
+      "bbe": 168,
+      "avg_ev": 90.0,
+      "max_ev": 113.0,
+      "barrels": 13,
+      "avg_dist": 161.0
     },
     {
       "name": "Arozarena, Randy",
-      "bbe": 142,
-      "avg_ev": 91.1,
+      "bbe": 146,
+      "avg_ev": 91.3,
       "max_ev": 113.0,
-      "barrels": 10,
-      "avg_dist": 149.0
+      "barrels": 11,
+      "avg_dist": 150.0
     },
     {
       "name": "Young, Cole",
-      "bbe": 142,
-      "avg_ev": 88.2,
+      "bbe": 145,
+      "avg_ev": 87.9,
       "max_ev": 111.3,
       "barrels": 9,
-      "avg_dist": 168.0
+      "avg_dist": 167.0
     },
     {
       "name": "Crawford, J.P.",
-      "bbe": 127,
-      "avg_ev": 88.2,
+      "bbe": 129,
+      "avg_ev": 88.3,
       "max_ev": 107.8,
-      "barrels": 10,
-      "avg_dist": 149.0
-    },
-    {
-      "name": "Canzone, Dominic",
-      "bbe": 85,
-      "avg_ev": 92.8,
-      "max_ev": 114.1,
-      "barrels": 12,
-      "avg_dist": 176.0
+      "barrels": 11,
+      "avg_dist": 152.0
     },
     {
       "name": "Raley, Luke",
-      "bbe": 85,
-      "avg_ev": 91.7,
+      "bbe": 88,
+      "avg_ev": 91.8,
       "max_ev": 113.8,
       "barrels": 18,
-      "avg_dist": 186.0
+      "avg_dist": 190.0
+    },
+    {
+      "name": "Canzone, Dominic",
+      "bbe": 87,
+      "avg_ev": 93.1,
+      "max_ev": 114.1,
+      "barrels": 13,
+      "avg_dist": 176.0
     },
     {
       "name": "Refsnyder, Rob",
@@ -76,27 +76,27 @@
     },
     {
       "name": "Pereda, Jhonny",
-      "bbe": 15,
-      "avg_ev": 90.9,
+      "bbe": 19,
+      "avg_ev": 89.0,
       "max_ev": 106.7,
       "barrels": 1,
-      "avg_dist": 243.0
+      "avg_dist": 227.0
     },
     {
       "name": "Emerson, Colt",
-      "bbe": 15,
-      "avg_ev": 87.7,
+      "bbe": 18,
+      "avg_ev": 86.5,
       "max_ev": 103.3,
       "barrels": 0,
       "avg_dist": 182.0
     },
     {
       "name": "Robles, Victor",
-      "bbe": 11,
-      "avg_ev": 81.2,
+      "bbe": 12,
+      "avg_ev": 81.8,
       "max_ev": 102.5,
       "barrels": 1,
-      "avg_dist": 124.0
+      "avg_dist": 115.0
     },
     {
       "name": "Wisdom, Patrick",
