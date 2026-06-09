@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "season": 2026,
   "recent_record": "2-4 (last 6 games)",
   "recent_games": [
@@ -60,27 +60,6 @@
   ],
   "roster": {
     "batters": [
-      {
-        "id": 669208,
-        "name": "Ryan Bliss",
-        "pos": "2B",
-        "prospect": false,
-        "ab": 211,
-        "avg": 0.204,
-        "obp": 0.263,
-        "slg": 0.28,
-        "ops": 0.543,
-        "h": 43,
-        "r": 13,
-        "hr": 1,
-        "rbi": 15,
-        "sb": 9,
-        "bb": 13,
-        "so": 60,
-        "doubles": 11,
-        "triples": 1,
-        "pa": 235
-      },
       {
         "id": 700032,
         "name": "Victor Labrada",

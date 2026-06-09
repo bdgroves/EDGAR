@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "season": 2026,
   "batting_leaders": [
     {
@@ -33,14 +33,6 @@
       "max_ev": 113.0,
       "barrels": 14,
       "avg_dist": 155.0
-    },
-    {
-      "name": "Crawford, J.P.",
-      "bbe": 150,
-      "avg_ev": 88.3,
-      "max_ev": 107.8,
-      "barrels": 14,
-      "avg_dist": 161.0
     },
     {
       "name": "Raley, Luke",
@@ -136,15 +128,6 @@
       "pa": 94
     },
     {
-      "name": "Crawford, J.P.",
-      "ba": 0.228,
-      "xba": 0.255,
-      "delta": -0.027,
-      "woba": 0.346,
-      "xwoba": 0.358,
-      "pa": 233
-    },
-    {
       "name": "Naylor, Josh",
       "ba": 0.257,
       "xba": 0.276,
@@ -188,6 +171,15 @@
       "woba": 0.338,
       "xwoba": 0.338,
       "pa": 291
+    },
+    {
+      "name": "Bliss, Ryan",
+      "ba": 0.0,
+      "xba": null,
+      "delta": 0.0,
+      "woba": 0.0,
+      "xwoba": 0.0,
+      "pa": 2
     },
     {
       "name": "Garver, Mitch",
