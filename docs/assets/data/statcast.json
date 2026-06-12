@@ -1,54 +1,54 @@
 {
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "season": 2026,
   "batting_leaders": [
     {
       "name": "Naylor, Josh",
-      "bbe": 213,
-      "avg_ev": 87.6,
+      "bbe": 217,
+      "avg_ev": 87.7,
       "max_ev": 111.5,
       "barrels": 11,
       "avg_dist": 150.0
     },
     {
       "name": "Rodr\u00edguez, Julio",
-      "bbe": 213,
-      "avg_ev": 90.5,
+      "bbe": 216,
+      "avg_ev": 90.4,
       "max_ev": 114.6,
       "barrels": 20,
-      "avg_dist": 166.0
+      "avg_dist": 164.0
     },
     {
       "name": "Young, Cole",
-      "bbe": 193,
-      "avg_ev": 87.5,
+      "bbe": 197,
+      "avg_ev": 87.6,
       "max_ev": 111.3,
       "barrels": 10,
       "avg_dist": 163.0
     },
     {
       "name": "Arozarena, Randy",
-      "bbe": 191,
+      "bbe": 194,
       "avg_ev": 91.6,
       "max_ev": 113.0,
       "barrels": 15,
-      "avg_dist": 157.0
-    },
-    {
-      "name": "Raley, Luke",
-      "bbe": 112,
-      "avg_ev": 90.3,
-      "max_ev": 113.8,
-      "barrels": 21,
-      "avg_dist": 186.0
+      "avg_dist": 154.0
     },
     {
       "name": "Canzone, Dominic",
-      "bbe": 112,
-      "avg_ev": 93.2,
+      "bbe": 116,
+      "avg_ev": 93.1,
       "max_ev": 114.7,
       "barrels": 19,
-      "avg_dist": 175.0
+      "avg_dist": 176.0
+    },
+    {
+      "name": "Raley, Luke",
+      "bbe": 115,
+      "avg_ev": 90.2,
+      "max_ev": 113.8,
+      "barrels": 21,
+      "avg_dist": 181.0
     },
     {
       "name": "Refsnyder, Rob",
@@ -60,11 +60,11 @@
     },
     {
       "name": "Garver, Mitch",
-      "bbe": 55,
-      "avg_ev": 90.0,
+      "bbe": 56,
+      "avg_ev": 89.9,
       "max_ev": 110.5,
       "barrels": 4,
-      "avg_dist": 188.0
+      "avg_dist": 185.0
     },
     {
       "name": "Pereda, Jhonny",
@@ -97,6 +97,14 @@
       "max_ev": 109.3,
       "barrels": 5,
       "avg_dist": 190.0
+    },
+    {
+      "name": "Mastrobuoni, Miles",
+      "bbe": 2,
+      "avg_ev": 94.9,
+      "max_ev": 98.8,
+      "barrels": 0,
+      "avg_dist": 174.0
     }
   ],
   "xba_delta": [
