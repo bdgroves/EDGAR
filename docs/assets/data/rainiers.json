@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15",
+  "updated": "2026-06-16",
   "season": 2026,
   "recent_record": "5-1 (last 6 games)",
   "recent_games": [
@@ -250,6 +250,27 @@
         "pa": 102
       },
       {
+        "id": 621550,
+        "name": "Patrick Wisdom",
+        "pos": "3B",
+        "prospect": false,
+        "ab": 76,
+        "avg": 0.276,
+        "obp": 0.389,
+        "slg": 0.789,
+        "ops": 1.178,
+        "h": 21,
+        "r": 17,
+        "hr": 12,
+        "rbi": 23,
+        "sb": 2,
+        "bb": 14,
+        "so": 22,
+        "doubles": 1,
+        "triples": 1,
+        "pa": 90
+      },
+      {
         "id": 689070,
         "name": "Spencer Packard",
         "pos": "LF",
@@ -311,27 +332,6 @@
         "doubles": 3,
         "triples": 0,
         "pa": 61
-      },
-      {
-        "id": 692046,
-        "name": "Axel Sanchez",
-        "pos": "SS",
-        "prospect": false,
-        "ab": 40,
-        "avg": 0.175,
-        "obp": 0.277,
-        "slg": 0.35,
-        "ops": 0.627,
-        "h": 7,
-        "r": 8,
-        "hr": 2,
-        "rbi": 6,
-        "sb": 2,
-        "bb": 5,
-        "so": 12,
-        "doubles": 1,
-        "triples": 0,
-        "pa": 47
       },
       {
         "id": 660844,
@@ -637,6 +637,30 @@
         "k9": 11.45,
         "bb9": 8.18,
         "avg": 0.224
+      },
+      {
+        "id": 682445,
+        "name": "Domingo Gonzalez",
+        "pos": "P",
+        "prospect": false,
+        "role": "RP",
+        "w": 0,
+        "l": 1,
+        "era": 1.66,
+        "g": 18,
+        "gs": 0,
+        "sv": 0,
+        "hld": 3,
+        "ip": 21.2,
+        "h": 18,
+        "er": 4,
+        "bb": 6,
+        "so": 19,
+        "hr": 0,
+        "whip": 1.11,
+        "k9": 7.89,
+        "bb9": 2.49,
+        "avg": 0.228
       },
       {
         "id": 686763,
