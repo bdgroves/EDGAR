@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16",
+  "updated": "2026-06-17",
   "season": 2026,
   "batting_leaders": [
     {
@@ -27,12 +27,12 @@
       "avg_dist": 166.0
     },
     {
-      "name": "Arozarena, Randy",
-      "bbe": 198,
-      "avg_ev": 91.7,
-      "max_ev": 113.0,
-      "barrels": 15,
-      "avg_dist": 152.0
+      "name": "Crawford, J.P.",
+      "bbe": 150,
+      "avg_ev": 88.3,
+      "max_ev": 107.8,
+      "barrels": 14,
+      "avg_dist": 161.0
     },
     {
       "name": "Canzone, Dominic",
@@ -51,6 +51,14 @@
       "avg_dist": 182.0
     },
     {
+      "name": "Raleigh, Cal",
+      "bbe": 106,
+      "avg_ev": 87.5,
+      "max_ev": 109.9,
+      "barrels": 13,
+      "avg_dist": 202.0
+    },
+    {
       "name": "Refsnyder, Rob",
       "bbe": 62,
       "avg_ev": 87.3,
@@ -65,14 +73,6 @@
       "max_ev": 110.5,
       "barrels": 4,
       "avg_dist": 186.0
-    },
-    {
-      "name": "Pereda, Jhonny",
-      "bbe": 52,
-      "avg_ev": 89.8,
-      "max_ev": 106.7,
-      "barrels": 2,
-      "avg_dist": 170.0
     },
     {
       "name": "Emerson, Colt",
@@ -101,13 +101,13 @@
   ],
   "xba_delta": [
     {
-      "name": "Pereda, Jhonny",
-      "ba": 0.27,
-      "xba": 0.306,
-      "delta": -0.036,
-      "woba": 0.31,
-      "xwoba": 0.341,
-      "pa": 68
+      "name": "Crawford, J.P.",
+      "ba": 0.228,
+      "xba": 0.255,
+      "delta": -0.027,
+      "woba": 0.345,
+      "xwoba": 0.358,
+      "pa": 233
     },
     {
       "name": "Refsnyder, Rob",
@@ -126,6 +126,15 @@
       "woba": 0.305,
       "xwoba": 0.323,
       "pa": 296
+    },
+    {
+      "name": "Raleigh, Cal",
+      "ba": 0.161,
+      "xba": 0.18,
+      "delta": -0.019,
+      "woba": 0.251,
+      "xwoba": 0.289,
+      "pa": 181
     },
     {
       "name": "Raley, Luke",
@@ -171,15 +180,6 @@
       "woba": 0.301,
       "xwoba": 0.301,
       "pa": 107
-    },
-    {
-      "name": "Arozarena, Randy",
-      "ba": 0.291,
-      "xba": 0.271,
-      "delta": 0.02,
-      "woba": 0.366,
-      "xwoba": 0.353,
-      "pa": 302
     },
     {
       "name": "Robles, Victor",
