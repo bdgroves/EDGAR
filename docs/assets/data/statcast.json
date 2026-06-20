@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19",
+  "updated": "2026-06-20",
   "season": 2026,
   "batting_leaders": [
     {
@@ -91,20 +91,20 @@
       "avg_dist": 116.0
     },
     {
+      "name": "Wilson, Weston",
+      "bbe": 28,
+      "avg_ev": 86.7,
+      "max_ev": 110.3,
+      "barrels": 1,
+      "avg_dist": 163.0
+    },
+    {
       "name": "Joe, Connor",
       "bbe": 23,
       "avg_ev": 92.8,
       "max_ev": 107.7,
       "barrels": 2,
       "avg_dist": 192.0
-    },
-    {
-      "name": "Mastrobuoni, Miles",
-      "bbe": 15,
-      "avg_ev": 89.8,
-      "max_ev": 101.0,
-      "barrels": 0,
-      "avg_dist": 163.0
     }
   ],
   "xba_delta": [
@@ -208,6 +208,15 @@
       "pa": 55
     },
     {
+      "name": "Wilson, Weston",
+      "ba": 0.231,
+      "xba": 0.198,
+      "delta": 0.033,
+      "woba": 0.315,
+      "xwoba": 0.297,
+      "pa": 46
+    },
+    {
       "name": "Emerson, Colt",
       "ba": 0.235,
       "xba": 0.166,
@@ -215,15 +224,6 @@
       "woba": 0.359,
       "xwoba": 0.236,
       "pa": 94
-    },
-    {
-      "name": "Mastrobuoni, Miles",
-      "ba": 0.217,
-      "xba": 0.147,
-      "delta": 0.07,
-      "woba": 0.226,
-      "xwoba": 0.187,
-      "pa": 27
     }
   ],
   "sprint_speed": [
