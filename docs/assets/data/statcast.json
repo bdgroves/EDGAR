@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23",
+  "updated": "2026-06-24",
   "season": 2026,
   "batting_leaders": [
     {
@@ -25,6 +25,14 @@
       "max_ev": 111.3,
       "barrels": 12,
       "avg_dist": 165.0
+    },
+    {
+      "name": "Arozarena, Randy",
+      "bbe": 198,
+      "avg_ev": 91.7,
+      "max_ev": 113.0,
+      "barrels": 15,
+      "avg_dist": 152.0
     },
     {
       "name": "Crawford, J.P.",
@@ -97,26 +105,9 @@
       "max_ev": 110.3,
       "barrels": 1,
       "avg_dist": 157.0
-    },
-    {
-      "name": "Joe, Connor",
-      "bbe": 24,
-      "avg_ev": 92.5,
-      "max_ev": 107.7,
-      "barrels": 2,
-      "avg_dist": 184.0
     }
   ],
   "xba_delta": [
-    {
-      "name": "Joe, Connor",
-      "ba": 0.179,
-      "xba": 0.257,
-      "delta": -0.078,
-      "woba": 0.274,
-      "xwoba": 0.337,
-      "pa": 45
-    },
     {
       "name": "Refsnyder, Rob",
       "ba": 0.139,
@@ -140,7 +131,7 @@
       "ba": 0.25,
       "xba": 0.273,
       "delta": -0.023,
-      "woba": 0.3,
+      "woba": 0.301,
       "xwoba": 0.323,
       "pa": 312
     },
@@ -185,7 +176,7 @@
       "ba": 0.281,
       "xba": 0.291,
       "delta": -0.01,
-      "woba": 0.39,
+      "woba": 0.391,
       "xwoba": 0.384,
       "pa": 201
     },
@@ -208,6 +199,15 @@
       "pa": 60
     },
     {
+      "name": "Arozarena, Randy",
+      "ba": 0.291,
+      "xba": 0.271,
+      "delta": 0.02,
+      "woba": 0.365,
+      "xwoba": 0.353,
+      "pa": 302
+    },
+    {
       "name": "Wilson, Weston",
       "ba": 0.222,
       "xba": 0.202,
@@ -222,7 +222,7 @@
       "xba": 0.164,
       "delta": 0.053,
       "woba": 0.334,
-      "xwoba": 0.229,
+      "xwoba": 0.228,
       "pa": 101
     }
   ],
@@ -296,13 +296,13 @@
     {
       "name": "Refsnyder, Rob",
       "sprint_spd": 26.9,
-      "hp_to_1b": 4.55,
+      "hp_to_1b": 4.56,
       "opportunities": 29
     },
     {
       "name": "Canzone, Dominic",
       "sprint_spd": 26.4,
-      "hp_to_1b": 4.49,
+      "hp_to_1b": 4.47,
       "opportunities": 62
     },
     {
