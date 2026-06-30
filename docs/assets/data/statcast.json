@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29",
+  "updated": "2026-06-30",
   "season": 2026,
   "batting_leaders": [
     {
@@ -67,14 +67,6 @@
       "avg_dist": 204.0
     },
     {
-      "name": "Refsnyder, Rob",
-      "bbe": 77,
-      "avg_ev": 86.1,
-      "max_ev": 109.6,
-      "barrels": 5,
-      "avg_dist": 157.0
-    },
-    {
       "name": "Emerson, Colt",
       "bbe": 72,
       "avg_ev": 87.1,
@@ -105,17 +97,25 @@
       "max_ev": 110.3,
       "barrels": 1,
       "avg_dist": 159.0
+    },
+    {
+      "name": "Kennedy, Buddy",
+      "bbe": 4,
+      "avg_ev": 86.1,
+      "max_ev": 96.0,
+      "barrels": 0,
+      "avg_dist": 228.0
     }
   ],
   "xba_delta": [
     {
-      "name": "Refsnyder, Rob",
-      "ba": 0.133,
-      "xba": 0.169,
-      "delta": -0.036,
-      "woba": 0.195,
-      "xwoba": 0.249,
-      "pa": 119
+      "name": "Kennedy, Buddy",
+      "ba": 0.0,
+      "xba": 0.119,
+      "delta": -0.119,
+      "woba": 0.087,
+      "xwoba": 0.191,
+      "pa": 8
     },
     {
       "name": "Young, Cole",
