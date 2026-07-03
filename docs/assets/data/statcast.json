@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02",
+  "updated": "2026-07-03",
   "season": 2026,
   "batting_leaders": [
     {
@@ -122,7 +122,7 @@
       "ba": 0.214,
       "xba": 0.243,
       "delta": -0.029,
-      "woba": 0.312,
+      "woba": 0.311,
       "xwoba": 0.332,
       "pa": 292
     },
@@ -140,7 +140,7 @@
       "ba": 0.238,
       "xba": 0.258,
       "delta": -0.02,
-      "woba": 0.34,
+      "woba": 0.339,
       "xwoba": 0.357,
       "pa": 227
     },
@@ -248,7 +248,7 @@
     {
       "name": "Young, Cole",
       "sprint_spd": 27.8,
-      "hp_to_1b": 4.33,
+      "hp_to_1b": 4.32,
       "opportunities": 116
     },
     {
