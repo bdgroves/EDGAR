@@ -1,42 +1,34 @@
 {
-  "updated": "2026-07-03",
+  "updated": "2026-07-04",
   "season": 2026,
   "batting_leaders": [
     {
       "name": "Naylor, Josh",
-      "bbe": 271,
-      "avg_ev": 87.7,
+      "bbe": 274,
+      "avg_ev": 87.6,
       "max_ev": 111.5,
       "barrels": 14,
-      "avg_dist": 159.0
-    },
-    {
-      "name": "Rodr\u00edguez, Julio",
-      "bbe": 266,
-      "avg_ev": 90.2,
-      "max_ev": 114.6,
-      "barrels": 24,
-      "avg_dist": 167.0
+      "avg_dist": 158.0
     },
     {
       "name": "Young, Cole",
-      "bbe": 258,
+      "bbe": 259,
       "avg_ev": 88.2,
       "max_ev": 111.3,
       "barrels": 14,
-      "avg_dist": 166.0
+      "avg_dist": 167.0
     },
     {
       "name": "Arozarena, Randy",
-      "bbe": 218,
-      "avg_ev": 91.5,
+      "bbe": 220,
+      "avg_ev": 91.4,
       "max_ev": 113.0,
       "barrels": 17,
-      "avg_dist": 152.0
+      "avg_dist": 153.0
     },
     {
       "name": "Crawford, J.P.",
-      "bbe": 190,
+      "bbe": 194,
       "avg_ev": 88.0,
       "max_ev": 107.8,
       "barrels": 14,
@@ -44,19 +36,19 @@
     },
     {
       "name": "Canzone, Dominic",
-      "bbe": 150,
-      "avg_ev": 93.4,
+      "bbe": 153,
+      "avg_ev": 93.2,
       "max_ev": 114.7,
       "barrels": 24,
-      "avg_dist": 180.0
+      "avg_dist": 176.0
     },
     {
       "name": "Raley, Luke",
-      "bbe": 135,
-      "avg_ev": 90.9,
+      "bbe": 136,
+      "avg_ev": 91.0,
       "max_ev": 113.8,
       "barrels": 23,
-      "avg_dist": 185.0
+      "avg_dist": 184.0
     },
     {
       "name": "Raleigh, Cal",
@@ -68,11 +60,11 @@
     },
     {
       "name": "Emerson, Colt",
-      "bbe": 76,
-      "avg_ev": 87.0,
+      "bbe": 78,
+      "avg_ev": 86.8,
       "max_ev": 106.4,
       "barrels": 5,
-      "avg_dist": 163.0
+      "avg_dist": 164.0
     },
     {
       "name": "Garver, Mitch",
@@ -99,6 +91,14 @@
       "avg_dist": 159.0
     },
     {
+      "name": "Mastrobuoni, Miles",
+      "bbe": 15,
+      "avg_ev": 89.8,
+      "max_ev": 101.0,
+      "barrels": 0,
+      "avg_dist": 163.0
+    },
+    {
       "name": "Kennedy, Buddy",
       "bbe": 4,
       "avg_ev": 86.1,
@@ -120,65 +120,56 @@
     {
       "name": "Crawford, J.P.",
       "ba": 0.214,
-      "xba": 0.243,
-      "delta": -0.029,
+      "xba": 0.244,
+      "delta": -0.03,
       "woba": 0.311,
       "xwoba": 0.332,
-      "pa": 292
-    },
-    {
-      "name": "Young, Cole",
-      "ba": 0.261,
-      "xba": 0.282,
-      "delta": -0.021,
-      "woba": 0.317,
-      "xwoba": 0.339,
-      "pa": 348
+      "pa": 296
     },
     {
       "name": "Raley, Luke",
-      "ba": 0.238,
-      "xba": 0.258,
-      "delta": -0.02,
-      "woba": 0.339,
-      "xwoba": 0.357,
-      "pa": 227
+      "ba": 0.234,
+      "xba": 0.256,
+      "delta": -0.022,
+      "woba": 0.335,
+      "xwoba": 0.354,
+      "pa": 230
+    },
+    {
+      "name": "Young, Cole",
+      "ba": 0.259,
+      "xba": 0.28,
+      "delta": -0.021,
+      "woba": 0.314,
+      "xwoba": 0.336,
+      "pa": 351
     },
     {
       "name": "Naylor, Josh",
-      "ba": 0.257,
-      "xba": 0.277,
-      "delta": -0.02,
-      "woba": 0.306,
-      "xwoba": 0.328,
-      "pa": 347
-    },
-    {
-      "name": "Raleigh, Cal",
-      "ba": 0.164,
-      "xba": 0.18,
-      "delta": -0.016,
-      "woba": 0.261,
-      "xwoba": 0.292,
-      "pa": 239
-    },
-    {
-      "name": "Rodr\u00edguez, Julio",
-      "ba": 0.259,
+      "ba": 0.254,
       "xba": 0.274,
-      "delta": -0.015,
-      "woba": 0.327,
-      "xwoba": 0.35,
-      "pa": 377
+      "delta": -0.02,
+      "woba": 0.302,
+      "xwoba": 0.325,
+      "pa": 351
     },
     {
       "name": "Canzone, Dominic",
-      "ba": 0.273,
-      "xba": 0.288,
+      "ba": 0.269,
+      "xba": 0.285,
+      "delta": -0.016,
+      "woba": 0.38,
+      "xwoba": 0.383,
+      "pa": 223
+    },
+    {
+      "name": "Raleigh, Cal",
+      "ba": 0.163,
+      "xba": 0.178,
       "delta": -0.015,
-      "woba": 0.384,
-      "xwoba": 0.386,
-      "pa": 219
+      "woba": 0.261,
+      "xwoba": 0.292,
+      "pa": 242
     },
     {
       "name": "Garver, Mitch",
@@ -191,39 +182,48 @@
     },
     {
       "name": "Wilson, Weston",
-      "ba": 0.22,
-      "xba": 0.202,
+      "ba": 0.212,
+      "xba": 0.194,
       "delta": 0.018,
-      "woba": 0.285,
-      "xwoba": 0.278,
-      "pa": 57
+      "woba": 0.276,
+      "xwoba": 0.269,
+      "pa": 59
     },
     {
       "name": "Robles, Victor",
       "ba": 0.233,
       "xba": 0.215,
       "delta": 0.018,
-      "woba": 0.237,
-      "xwoba": 0.246,
-      "pa": 76
+      "woba": 0.243,
+      "xwoba": 0.252,
+      "pa": 77
     },
     {
       "name": "Arozarena, Randy",
-      "ba": 0.283,
-      "xba": 0.26,
+      "ba": 0.284,
+      "xba": 0.261,
       "delta": 0.023,
-      "woba": 0.359,
-      "xwoba": 0.343,
-      "pa": 335
+      "woba": 0.361,
+      "xwoba": 0.346,
+      "pa": 339
     },
     {
       "name": "Emerson, Colt",
-      "ba": 0.218,
-      "xba": 0.181,
-      "delta": 0.037,
-      "woba": 0.326,
-      "xwoba": 0.253,
-      "pa": 132
+      "ba": 0.213,
+      "xba": 0.18,
+      "delta": 0.033,
+      "woba": 0.318,
+      "xwoba": 0.251,
+      "pa": 135
+    },
+    {
+      "name": "Mastrobuoni, Miles",
+      "ba": 0.217,
+      "xba": 0.147,
+      "delta": 0.07,
+      "woba": 0.225,
+      "xwoba": 0.187,
+      "pa": 27
     }
   ],
   "sprint_speed": [
@@ -237,13 +237,13 @@
       "name": "Rodr\u00edguez, Julio",
       "sprint_spd": 28.9,
       "hp_to_1b": 4.33,
-      "opportunities": 122
+      "opportunities": 123
     },
     {
       "name": "Raley, Luke",
       "sprint_spd": 28.7,
       "hp_to_1b": 4.3,
-      "opportunities": 62
+      "opportunities": 63
     },
     {
       "name": "Young, Cole",
@@ -273,7 +273,7 @@
       "name": "Emerson, Colt",
       "sprint_spd": 27.1,
       "hp_to_1b": 4.36,
-      "opportunities": 42
+      "opportunities": 43
     },
     {
       "name": "Wisdom, Patrick",
@@ -301,9 +301,9 @@
     },
     {
       "name": "Canzone, Dominic",
-      "sprint_spd": 26.3,
+      "sprint_spd": 26.2,
       "hp_to_1b": 4.48,
-      "opportunities": 65
+      "opportunities": 68
     },
     {
       "name": "Raleigh, Cal",
@@ -313,9 +313,9 @@
     },
     {
       "name": "Crawford, J.P.",
-      "sprint_spd": 25.6,
+      "sprint_spd": 25.7,
       "hp_to_1b": 4.66,
-      "opportunities": 78
+      "opportunities": 80
     },
     {
       "name": "Garver, Mitch",
@@ -333,7 +333,7 @@
       "name": "Naylor, Josh",
       "sprint_spd": 24.7,
       "hp_to_1b": 4.74,
-      "opportunities": 113
+      "opportunities": 115
     },
     {
       "name": "Pereda, Jhonny",
