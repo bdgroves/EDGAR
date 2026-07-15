@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14",
+  "updated": "2026-07-15",
   "season": 2026,
   "batting_leaders": [
     {
@@ -236,7 +236,7 @@
     {
       "name": "Robles, Victor",
       "sprint_spd": 28.7,
-      "hp_to_1b": 4.36,
+      "hp_to_1b": 4.37,
       "opportunities": 37
     },
     {
@@ -296,7 +296,7 @@
     {
       "name": "Arozarena, Randy",
       "sprint_spd": 26.9,
-      "hp_to_1b": 4.45,
+      "hp_to_1b": 4.44,
       "opportunities": 134
     },
     {

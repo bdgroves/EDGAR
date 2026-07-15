@@ -1,7 +1,7 @@
 {
-  "updated": "2026-07-14",
+  "updated": "2026-07-15",
   "season": 2026,
-  "recent_record": "3-3 (last 6 games)",
+  "recent_record": "3-2 (last 5 games)",
   "recent_games": [
     {
       "date": "2026-07-12",
@@ -47,15 +47,6 @@
       "away_score": 9,
       "venue": "Las Vegas Ballpark",
       "win": true
-    },
-    {
-      "date": "2026-07-07",
-      "home": "Las Vegas Aviators",
-      "away": "Tacoma Rainiers",
-      "home_score": 9,
-      "away_score": 5,
-      "venue": "Las Vegas Ballpark",
-      "win": false
     }
   ],
   "roster": {
