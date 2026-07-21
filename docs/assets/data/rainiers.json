@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-21",
   "season": 2026,
   "recent_record": "2-1 (last 3 games)",
   "recent_games": [
@@ -221,27 +221,6 @@
         "doubles": 5,
         "triples": 0,
         "pa": 156
-      },
-      {
-        "id": 664670,
-        "name": "Alejo Lopez",
-        "pos": "2B",
-        "prospect": false,
-        "ab": 129,
-        "avg": 0.302,
-        "obp": 0.379,
-        "slg": 0.419,
-        "ops": 0.798,
-        "h": 39,
-        "r": 26,
-        "hr": 2,
-        "rbi": 13,
-        "sb": 3,
-        "bb": 13,
-        "so": 10,
-        "doubles": 9,
-        "triples": 0,
-        "pa": 146
       },
       {
         "id": 703197,
