@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24",
+  "updated": "2026-07-25",
   "season": 2026,
   "batting_leaders": [
     {
@@ -236,7 +236,7 @@
     {
       "name": "Raley, Luke",
       "sprint_spd": 28.6,
-      "hp_to_1b": 4.31,
+      "hp_to_1b": 4.32,
       "opportunities": 74
     },
     {
@@ -290,7 +290,7 @@
     {
       "name": "Arozarena, Randy",
       "sprint_spd": 26.9,
-      "hp_to_1b": 4.44,
+      "hp_to_1b": 4.43,
       "opportunities": 147
     },
     {
