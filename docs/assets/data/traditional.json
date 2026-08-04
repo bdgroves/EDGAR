@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "season": 2026,
   "batting": [
     {
@@ -507,30 +507,6 @@
       "avg": 0.204
     },
     {
-      "id": 695380,
-      "name": "Alex Hoppe",
-      "pos": "P",
-      "role": "RP",
-      "w": 0,
-      "l": 1,
-      "era": 5.79,
-      "g": 24,
-      "gs": 0,
-      "sv": 0,
-      "hld": 1,
-      "ip": 28.0,
-      "h": 27,
-      "r": 21,
-      "er": 18,
-      "bb": 11,
-      "so": 34,
-      "hr": 2,
-      "whip": 1.36,
-      "k9": 10.93,
-      "bb9": 3.54,
-      "avg": 0.245
-    },
-    {
       "id": 677961,
       "name": "Cole Wilcox",
       "pos": "P",
@@ -643,13 +619,13 @@
     "source": "aggregated"
   },
   "team_pitching": {
-    "era": 3.7,
-    "whip": 1.165,
-    "so": 810,
-    "bb": 210,
-    "hr": 101,
+    "era": 3.62,
+    "whip": 1.158,
+    "so": 776,
+    "bb": 199,
+    "hr": 99,
     "sv": 23,
-    "ip": 805.4,
+    "ip": 777.4,
     "source": "aggregated"
   }
 }
