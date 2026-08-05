@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04",
+  "updated": "2026-08-05",
   "season": 2026,
   "batting_leaders": [
     {
@@ -25,6 +25,14 @@
       "max_ev": 114.6,
       "barrels": 27,
       "avg_dist": 169.0
+    },
+    {
+      "name": "Ward, Taylor",
+      "bbe": 310,
+      "avg_ev": 89.1,
+      "max_ev": 109.5,
+      "barrels": 17,
+      "avg_dist": 176.0
     },
     {
       "name": "Arozarena, Randy",
@@ -67,20 +75,12 @@
       "avg_dist": 150.0
     },
     {
-      "name": "Refsnyder, Rob",
-      "bbe": 81,
-      "avg_ev": 86.6,
-      "max_ev": 112.3,
-      "barrels": 7,
-      "avg_dist": 158.0
-    },
-    {
-      "name": "Garver, Mitch",
-      "bbe": 77,
-      "avg_ev": 90.6,
-      "max_ev": 110.5,
-      "barrels": 7,
-      "avg_dist": 187.0
+      "name": "Donovan, Brendan",
+      "bbe": 70,
+      "avg_ev": 85.9,
+      "max_ev": 109.6,
+      "barrels": 3,
+      "avg_dist": 162.0
     },
     {
       "name": "Rivas, Leo",
@@ -99,23 +99,23 @@
       "avg_dist": 151.0
     },
     {
-      "name": "Fairchild, Stuart",
-      "bbe": 5,
-      "avg_ev": 94.2,
-      "max_ev": 104.2,
-      "barrels": 0,
-      "avg_dist": 160.0
+      "name": "Pereda, Jhonny",
+      "bbe": 52,
+      "avg_ev": 89.8,
+      "max_ev": 106.7,
+      "barrels": 2,
+      "avg_dist": 170.0
     }
   ],
   "xba_delta": [
     {
-      "name": "Refsnyder, Rob",
-      "ba": 0.14,
-      "xba": 0.17,
-      "delta": -0.03,
-      "woba": 0.207,
-      "xwoba": 0.255,
-      "pa": 129
+      "name": "Pereda, Jhonny",
+      "ba": 0.27,
+      "xba": 0.306,
+      "delta": -0.036,
+      "woba": 0.308,
+      "xwoba": 0.341,
+      "pa": 68
     },
     {
       "name": "Rivas, Leo",
@@ -136,15 +136,6 @@
       "pa": 442
     },
     {
-      "name": "Garver, Mitch",
-      "ba": 0.175,
-      "xba": 0.194,
-      "delta": -0.019,
-      "woba": 0.278,
-      "xwoba": 0.301,
-      "pa": 149
-    },
-    {
       "name": "Raleigh, Cal",
       "ba": 0.162,
       "xba": 0.181,
@@ -163,6 +154,15 @@
       "pa": 320
     },
     {
+      "name": "Naylor, Josh",
+      "ba": 0.263,
+      "xba": 0.277,
+      "delta": -0.014,
+      "woba": 0.305,
+      "xwoba": 0.322,
+      "pa": 455
+    },
+    {
       "name": "Young, Cole",
       "ba": 0.269,
       "xba": 0.282,
@@ -172,13 +172,13 @@
       "pa": 453
     },
     {
-      "name": "Naylor, Josh",
-      "ba": 0.263,
-      "xba": 0.273,
-      "delta": -0.01,
-      "woba": 0.305,
-      "xwoba": 0.319,
-      "pa": 455
+      "name": "Ward, Taylor",
+      "ba": 0.246,
+      "xba": 0.25,
+      "delta": -0.004,
+      "woba": 0.335,
+      "xwoba": 0.346,
+      "pa": 506
     },
     {
       "name": "Emerson, Colt",
@@ -194,9 +194,18 @@
       "ba": 0.241,
       "xba": 0.233,
       "delta": 0.008,
-      "woba": 0.253,
+      "woba": 0.254,
       "xwoba": 0.268,
       "pa": 126
+    },
+    {
+      "name": "Donovan, Brendan",
+      "ba": 0.274,
+      "xba": 0.263,
+      "delta": 0.011,
+      "woba": 0.371,
+      "xwoba": 0.344,
+      "pa": 101
     },
     {
       "name": "Arozarena, Randy",
@@ -215,15 +224,6 @@
       "woba": 0.282,
       "xwoba": 0.242,
       "pa": 98
-    },
-    {
-      "name": "Fairchild, Stuart",
-      "ba": 0.158,
-      "xba": 0.089,
-      "delta": 0.069,
-      "woba": 0.307,
-      "xwoba": 0.28,
-      "pa": 27
     }
   ],
   "sprint_speed": [
@@ -242,7 +242,7 @@
     {
       "name": "Robles, Victor",
       "sprint_spd": 28.6,
-      "hp_to_1b": 4.35,
+      "hp_to_1b": 4.36,
       "opportunities": 45
     },
     {
