@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11",
+  "updated": "2026-08-12",
   "season": 2026,
   "batting_leaders": [
     {
@@ -149,7 +149,7 @@
       "ba": 0.161,
       "xba": 0.179,
       "delta": -0.018,
-      "woba": 0.26,
+      "woba": 0.261,
       "xwoba": 0.295,
       "pa": 359
     },
@@ -302,7 +302,7 @@
     {
       "name": "Arozarena, Randy",
       "sprint_spd": 27.0,
-      "hp_to_1b": 4.43,
+      "hp_to_1b": 4.42,
       "opportunities": 167
     },
     {
