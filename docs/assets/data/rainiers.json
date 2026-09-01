@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-01",
   "season": 2026,
   "recent_record": "5-1 (last 6 games)",
   "recent_games": [
@@ -697,30 +697,6 @@
         "k9": 11.32,
         "bb9": 8.71,
         "avg": 0.37
-      },
-      {
-        "id": 681867,
-        "name": "Cooper Criswell",
-        "pos": "P",
-        "prospect": false,
-        "role": "RP",
-        "w": 2,
-        "l": 0,
-        "era": 10.13,
-        "g": 3,
-        "gs": 0,
-        "sv": 0,
-        "hld": 0,
-        "ip": 2.2,
-        "h": 2,
-        "er": 3,
-        "bb": 1,
-        "so": 3,
-        "hr": 1,
-        "whip": 1.13,
-        "k9": 10.13,
-        "bb9": 3.38,
-        "avg": 0.2
       }
     ]
   },
