@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "season": 2026,
   "batting_leaders": [
     {
@@ -277,7 +277,7 @@
     {
       "name": "Wilson, Weston",
       "sprint_spd": 27.8,
-      "hp_to_1b": 4.54,
+      "hp_to_1b": 4.53,
       "opportunities": 49
     },
     {
@@ -287,16 +287,16 @@
       "opportunities": 38
     },
     {
-      "name": "Ward, Taylor",
-      "sprint_spd": 27.5,
-      "hp_to_1b": 4.5,
-      "opportunities": 184
-    },
-    {
       "name": "Mastrobuoni, Miles",
       "sprint_spd": 27.5,
       "hp_to_1b": null,
       "opportunities": 9
+    },
+    {
+      "name": "Ward, Taylor",
+      "sprint_spd": 27.5,
+      "hp_to_1b": 4.5,
+      "opportunities": 184
     },
     {
       "name": "Arroyo, Michael",
@@ -343,7 +343,7 @@
     {
       "name": "Crawford, J.P.",
       "sprint_spd": 26.2,
-      "hp_to_1b": 4.6,
+      "hp_to_1b": 4.59,
       "opportunities": 136
     },
     {
