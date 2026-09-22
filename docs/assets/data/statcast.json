@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "season": 2026,
   "batting_leaders": [
     {
@@ -148,7 +148,7 @@
       "ba": 0.246,
       "xba": 0.259,
       "delta": -0.013,
-      "woba": 0.306,
+      "woba": 0.307,
       "xwoba": 0.314,
       "pa": 613
     },
@@ -229,7 +229,7 @@
       "ba": 0.2,
       "xba": 0.137,
       "delta": 0.063,
-      "woba": 0.275,
+      "woba": 0.274,
       "xwoba": 0.236,
       "pa": 71
     },
@@ -247,7 +247,7 @@
     {
       "name": "Rodr\u00edguez, Julio",
       "sprint_spd": 28.7,
-      "hp_to_1b": 4.34,
+      "hp_to_1b": 4.35,
       "opportunities": 210
     },
     {
