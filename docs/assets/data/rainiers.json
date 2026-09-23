@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "season": 2026,
-  "recent_record": "2-4 (last 6 games)",
+  "recent_record": "2-3 (last 5 games)",
   "recent_games": [
     {
       "date": "2026-09-20",
@@ -47,15 +47,6 @@
       "away_score": 6,
       "venue": "Dell Diamond",
       "win": true
-    },
-    {
-      "date": "2026-09-15",
-      "home": "Round Rock Express",
-      "away": "Tacoma Rainiers",
-      "home_score": 9,
-      "away_score": 2,
-      "venue": "Dell Diamond",
-      "win": false
     }
   ],
   "roster": {
@@ -352,7 +343,7 @@
         "sv": 0,
         "hld": 0,
         "ip": 127.2,
-        "h": 158,
+        "h": 157,
         "er": 73,
         "bb": 52,
         "so": 99,
@@ -360,7 +351,7 @@
         "whip": 1.64,
         "k9": 6.98,
         "bb9": 3.67,
-        "avg": 0.306
+        "avg": 0.304
       },
       {
         "id": 663884,
