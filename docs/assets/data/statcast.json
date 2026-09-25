@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "season": 2026,
   "batting_leaders": [
     {
@@ -83,20 +83,20 @@
       "avg_dist": 157.0
     },
     {
+      "name": "Rivas, Leo",
+      "bbe": 80,
+      "avg_ev": 86.5,
+      "max_ev": 100.8,
+      "barrels": 1,
+      "avg_dist": 173.0
+    },
+    {
       "name": "Pereda, Jhonny",
       "bbe": 68,
       "avg_ev": 90.1,
       "max_ev": 106.7,
       "barrels": 2,
       "avg_dist": 162.0
-    },
-    {
-      "name": "Rodden, Brock",
-      "bbe": 38,
-      "avg_ev": 88.0,
-      "max_ev": 106.3,
-      "barrels": 2,
-      "avg_dist": 206.0
     },
     {
       "name": "Montes, Lazaro",
@@ -116,6 +116,15 @@
     }
   ],
   "xba_delta": [
+    {
+      "name": "Rivas, Leo",
+      "ba": 0.147,
+      "xba": 0.171,
+      "delta": -0.024,
+      "woba": 0.227,
+      "xwoba": 0.25,
+      "pa": 139
+    },
     {
       "name": "Ward, Taylor",
       "ba": 0.223,
@@ -225,15 +234,6 @@
       "pa": 652
     },
     {
-      "name": "Rodden, Brock",
-      "ba": 0.197,
-      "xba": 0.135,
-      "delta": 0.062,
-      "woba": 0.271,
-      "xwoba": 0.233,
-      "pa": 72
-    },
-    {
       "name": "Arroyo, Michael",
       "ba": 0.304,
       "xba": 0.24,
@@ -287,16 +287,16 @@
       "opportunities": 38
     },
     {
-      "name": "Ward, Taylor",
-      "sprint_spd": 27.5,
-      "hp_to_1b": 4.5,
-      "opportunities": 184
-    },
-    {
       "name": "Mastrobuoni, Miles",
       "sprint_spd": 27.5,
       "hp_to_1b": null,
       "opportunities": 9
+    },
+    {
+      "name": "Ward, Taylor",
+      "sprint_spd": 27.5,
+      "hp_to_1b": 4.5,
+      "opportunities": 184
     },
     {
       "name": "Arroyo, Michael",
