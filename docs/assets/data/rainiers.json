@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "season": 2026,
-  "recent_record": "1-2 (last 3 games)",
+  "recent_record": "1-1 (last 2 games)",
   "recent_games": [
     {
       "date": "2026-09-20",
@@ -17,15 +17,6 @@
       "home": "Round Rock Express",
       "away": "Tacoma Rainiers",
       "home_score": 6,
-      "away_score": 2,
-      "venue": "Dell Diamond",
-      "win": false
-    },
-    {
-      "date": "2026-09-18",
-      "home": "Round Rock Express",
-      "away": "Tacoma Rainiers",
-      "home_score": 5,
       "away_score": 2,
       "venue": "Dell Diamond",
       "win": false
@@ -505,30 +496,6 @@
         "k9": 9.0,
         "bb9": 4.42,
         "avg": 0.243
-      },
-      {
-        "id": 700187,
-        "name": "Troy Taylor",
-        "pos": "P",
-        "prospect": false,
-        "role": "RP",
-        "w": 1,
-        "l": 2,
-        "era": 5.05,
-        "g": 54,
-        "gs": 0,
-        "sv": 5,
-        "hld": 6,
-        "ip": 57.0,
-        "h": 63,
-        "er": 32,
-        "bb": 37,
-        "so": 65,
-        "hr": 5,
-        "whip": 1.75,
-        "k9": 10.26,
-        "bb9": 5.84,
-        "avg": 0.279
       },
       {
         "id": 670234,
