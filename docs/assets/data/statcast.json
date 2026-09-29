@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "season": 2026,
   "batting_leaders": [
     {
@@ -283,7 +283,7 @@
     {
       "name": "Wilson, Weston",
       "sprint_spd": 27.8,
-      "hp_to_1b": 4.54,
+      "hp_to_1b": 4.56,
       "opportunities": 52
     },
     {
