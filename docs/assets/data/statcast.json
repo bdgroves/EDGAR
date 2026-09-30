@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "season": 2026,
   "batting_leaders": [
     {
@@ -67,6 +67,14 @@
       "avg_dist": 203.0
     },
     {
+      "name": "Donovan, Brendan",
+      "bbe": 115,
+      "avg_ev": 85.7,
+      "max_ev": 109.6,
+      "barrels": 3,
+      "avg_dist": 143.0
+    },
+    {
       "name": "Robles, Victor",
       "bbe": 115,
       "avg_ev": 83.5,
@@ -99,6 +107,14 @@
       "avg_dist": 161.0
     },
     {
+      "name": "Rodden, Brock",
+      "bbe": 38,
+      "avg_ev": 88.0,
+      "max_ev": 106.3,
+      "barrels": 2,
+      "avg_dist": 206.0
+    },
+    {
       "name": "Arroyo, Michael",
       "bbe": 30,
       "avg_ev": 88.8,
@@ -113,9 +129,43 @@
       "max_ev": 116.1,
       "barrels": 5,
       "avg_dist": 203.0
+    },
+    {
+      "name": "Wisdom, Patrick",
+      "bbe": 26,
+      "avg_ev": 92.7,
+      "max_ev": 109.3,
+      "barrels": 5,
+      "avg_dist": 213.0
+    },
+    {
+      "name": "Bliss, Ryan",
+      "bbe": 6,
+      "avg_ev": 92.2,
+      "max_ev": 100.5,
+      "barrels": 0,
+      "avg_dist": 213.0
     }
   ],
   "xba_delta": [
+    {
+      "name": "Bliss, Ryan",
+      "ba": 0.125,
+      "xba": 0.203,
+      "delta": -0.078,
+      "woba": 0.159,
+      "xwoba": 0.27,
+      "pa": 10
+    },
+    {
+      "name": "Wisdom, Patrick",
+      "ba": 0.106,
+      "xba": 0.158,
+      "delta": -0.052,
+      "woba": 0.151,
+      "xwoba": 0.236,
+      "pa": 50
+    },
     {
       "name": "Rivas, Leo",
       "ba": 0.153,
@@ -234,6 +284,15 @@
       "pa": 670
     },
     {
+      "name": "Donovan, Brendan",
+      "ba": 0.277,
+      "xba": 0.25,
+      "delta": 0.027,
+      "woba": 0.349,
+      "xwoba": 0.314,
+      "pa": 159
+    },
+    {
       "name": "Arroyo, Michael",
       "ba": 0.371,
       "xba": 0.323,
@@ -241,6 +300,15 @@
       "woba": 0.414,
       "xwoba": 0.375,
       "pa": 41
+    },
+    {
+      "name": "Rodden, Brock",
+      "ba": 0.197,
+      "xba": 0.135,
+      "delta": 0.062,
+      "woba": 0.271,
+      "xwoba": 0.233,
+      "pa": 72
     }
   ],
   "sprint_speed": [
