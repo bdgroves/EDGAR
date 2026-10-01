@@ -1,0 +1,2 @@
+desk failed: https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=529&date=2026-10-01&hydrate=linescore,team
+desk failed: https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-01&hydrate=linescore,team
