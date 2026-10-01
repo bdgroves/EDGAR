@@ -106,7 +106,7 @@ The pipeline ran every night all season. Some of what it published was wrong, an
 | **Players disappeared.** Stats came from the *active* roster on the day of the fetch, so anyone traded, released or optioned vanished — Luis Castillo's 99⅔ innings, Luke Raley, Matt Brash. | all season | Every player who appeared for Seattle, from the `/stats` endpoint filtered to the team |
 | **Team totals were wrong.** They were summed from that partial roster (647 runs instead of 664, 157 HR instead of 182), and innings were added as decimals. | all season | Official team totals from `/teams/136/stats` |
 | **Streak, last 10 and run differential were empty; the "wild card" was the ten best AL records.** | all season | MLB StatsAPI `/standings`, regular-season and wild-card views |
-| **Rainiers results went blank** the day the Triple-A season ended. | since Sept. 21 | Last ten completed games of the season |
+| **Rainiers results went blank** a week after the Triple-A season ended on Sept. 20 (it showed "the last 7 days"). | since Sept. 28 | Last ten completed games of the season |
 
 Two rules now keep it honest: a fetcher only publishes when its output passes a check (otherwise yesterday's file stays up), and every run writes `health.json`, which the page footer shows.
 

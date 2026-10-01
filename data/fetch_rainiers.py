@@ -45,8 +45,8 @@ def safe(val, t=float, decimals=3):
 def fetch_recent_games(n: int = 10) -> list:
     """The last n completed Rainiers games of the season.
 
-    Used to be "games in the last 7 days", which went empty the day the
-    Triple-A season ended (Sept. 20) and stayed empty all offseason."""
+    Used to be "games in the last 7 days", which went empty a week after
+    the Triple-A season ended (Sept. 20) and stayed empty all offseason."""
     print(f"🌧️  Fetching the last {n} Rainiers results...")
     from mlb import get
     try:
