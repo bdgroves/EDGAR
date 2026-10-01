@@ -364,6 +364,7 @@
       <div class="grid-2">
         <div class="card">
           <div class="card-title">🛢️ Barrel Leaderboard</div>
+          <div class="card-note">50+ batted balls. Barrel%: share of batted balls hit at the speed and angle that most often become extra-base hits.</div>
           <table class="data-table">
             <thead><tr><th>Batter</th><th class="num">Barrel%</th><th class="num">Barrels</th><th class="num">Avg EV</th><th class="num">Hard Hit%</th></tr></thead>
             <tbody id="barrel-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
@@ -371,6 +372,7 @@
         </div>
         <div class="card">
           <div class="card-title">🎲 xBA vs BA — luck index</div>
+          <div class="card-note">Hitters with 50+ plate appearances. Negative: hit the ball better than the results showed.</div>
           <table class="data-table">
             <thead><tr><th>Batter</th><th class="num">BA</th><th class="num">xBA</th><th class="num">Δ</th><th>Verdict</th></tr></thead>
             <tbody id="xba-tbody"><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
@@ -439,10 +441,10 @@
         </div>
         <div class="card">
           <div class="card-title">Pacific Coast League Standings</div>
-          <table class="data-table">
+          <div style="overflow-x:auto"><table class="data-table">
             <thead><tr><th>Team</th><th class="num">W</th><th class="num">L</th><th class="num">PCT</th><th class="num">GB</th><th>Streak</th></tr></thead>
             <tbody id="pcl-tbody"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
-          </table>
+          </table></div>
         </div>
       </div>
       <div class="card">
@@ -577,14 +579,16 @@
       }).join('') : '<tr><td colspan="5" class="loading">—</td></tr>';
 
       // Postseason (October): who's still playing
-      const post = data.postseason || [];
+      // Real matchups only (not "AL Lower Seed vs AL Higher Seed" placeholders)
+      const post = (data.postseason || []).filter(x => !x.teams.some(t => /Seed|Champion|\//.test(t)));
       document.getElementById('post-title').textContent = post.length ? `Postseason ${data.season}` + (post.some(x => x.teams.some(t => /Seattle/.test(t))) ? '' : ' — without the Mariners') : 'Postseason';
       document.getElementById('post-list').innerHTML = post.length ? post.map(s => {
         const [a, b] = s.teams;
         const wa = s.wins[a] || 0, wb = s.wins[b] || 0;
         const need = Math.ceil((s.games_in_series || 1) / 2);
         const done = wa >= need || wb >= need;
-        const lead = wa === wb ? `tied ${wa}-${wb}` : `${wa > wb ? a : b} ${done ? 'won' : 'leads'} ${Math.max(wa, wb)}-${Math.min(wa, wb)}`;
+        const today = new Date().toLocaleDateString('en-CA', {timeZone: 'America/Los_Angeles'});
+        const lead = wa + wb === 0 ? (s.start > today ? `starts ${mdate(s.start)}` : 'game 1 today') : wa === wb ? `tied ${wa}-${wb}` : `${wa > wb ? a : b} ${done ? 'won' : 'leads'} ${Math.max(wa, wb)}-${Math.min(wa, wb)}`;
         return `<div class="post-row"><div class="post-series">${esc(s.label || s.series)}</div><div>${esc(a)} vs ${esc(b)}</div><div class="post-state ${done ? 'done' : ''}">${esc(lead)}</div></div>`;
       }).join('') : '<div class="loading">The postseason schedule appears here in October.</div>';
 
@@ -600,7 +604,7 @@
         document.getElementById('final-record').textContent = `${sea.w}–${sea.l}`;
         const ord = ['','1st','2nd','3rd','4th','5th'][data.sea_rank] || '';
         document.getElementById('final-line').innerHTML =
-          `${ord} in the AL West, ${sea.gb} games behind ${esc(lead.team)}${lead.w === lead.l ? `, who won the division at ${lead.w}–${lead.l}` : ` (${lead.w}–${lead.l})`}. ` +
+          `${ord} in the AL West, ${String(sea.gb).replace(/\.0$/, '')} games behind ${esc(lead.team)}${lead.w === lead.l ? `, who won the division at ${lead.w}–${lead.l}` : ` (${lead.w}–${lead.l})`}. ` +
           `Outscored ${sea.rs}–${sea.ra} (${sign(sea.diff)}); the run differential says ${sea.x_record || '—'}.`;
       } else if (sea) {
         document.getElementById('final-card').hidden = true;
@@ -653,9 +657,11 @@
         s += `<line x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 0 ? 'rgba(214,228,239,.35)' : 'rgba(255,255,255,.05)'}"/><text x="${pl - 5}" y="${y(v) + 3}" text-anchor="end" class="ax">${v > 0 ? '+' + v : v}</text>`;
       // month boundaries
       let prevM = '';
+      const perMonth = {};
+      games.forEach(g => perMonth[g.date.slice(0, 7)] = (perMonth[g.date.slice(0, 7)] || 0) + 1);
       games.forEach((g, i) => {
         const m = g.date.slice(0, 7);
-        if (m !== prevM) {
+        if (m !== prevM && perMonth[m] >= 8) {
           prevM = m;
           s += `<line x1="${x(i) - xw / 2}" x2="${x(i) - xw / 2}" y1="${pt}" y2="${H - pb + 50}" stroke="rgba(255,255,255,.05)"/><text x="${x(i) + 2}" y="${H - 6}" class="ax">${new Date(g.date + 'T12:00').toLocaleDateString('en-US', {month: 'short'})}</text>`;
         }
@@ -692,7 +698,9 @@
       let s = '';
       for (let v = 0; v <= max; v += 5) s += `<line x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(255,255,255,.05)"/><text x="${pl - 5}" y="${y(v) + 3}" text-anchor="end" class="ax">${v || 'lead'}</text>`;
       let prevM = '';
-      race.dates.forEach((d, i) => { const m = d.slice(0, 7); if (m !== prevM) { prevM = m; s += `<text x="${x(i)}" y="${H - 6}" class="ax">${new Date(d + 'T12:00').toLocaleDateString('en-US', {month: 'short'})}</text>`; } });
+      const dpm = {};
+      race.dates.forEach(d => dpm[d.slice(0, 7)] = (dpm[d.slice(0, 7)] || 0) + 1);
+      race.dates.forEach((d, i) => { const m = d.slice(0, 7); if (m !== prevM && dpm[m] >= 8) { prevM = m; s += `<text x="${x(i)}" y="${H - 6}" class="ax">${new Date(d + 'T12:00').toLocaleDateString('en-US', {month: 'short'})}</text>`; } });
       const order = Object.keys(race.gb).sort((a, b) => (a === 'SEA') - (b === 'SEA'));
       order.forEach(t => {
         const ser = race.gb[t];
@@ -726,6 +734,7 @@
       const data = await loadJSON('assets/data/traditional.json');
       if (!data) return;
 
+      window.SEA_PLAYERS = [...(data.batting || []), ...(data.pitching || [])];
       const tb = data.team_batting || {};
       document.getElementById('team-bat-cards').innerHTML = [
         ['AVG',  fmt(tb.avg),  'teal'],
@@ -816,7 +825,9 @@
 
       const barrelTbody = document.getElementById('barrel-tbody');
       if (data.batting_leaders && data.batting_leaders.length) {
-        barrelTbody.innerHTML = data.batting_leaders.slice(0,12).map(p=>`<tr>
+        // Rate stats need a sample: 50+ batted balls
+        const qual = data.batting_leaders.filter(p => (p.bbe ?? 0) >= 50);
+        barrelTbody.innerHTML = [...qual].sort((a, b) => (b.barrel_pct ?? 0) - (a.barrel_pct ?? 0)).slice(0,12).map(p=>`<tr>
           <td>${p.name||'—'}</td>
           <td class="num" style="color:var(--teal-bright)">${fmtP(p.barrel_pct)}</td>
           <td class="num">${p.barrels??'—'}</td>
@@ -829,7 +840,7 @@
 
       const xbaTbody = document.getElementById('xba-tbody');
       if (data.xba_delta && data.xba_delta.length) {
-        xbaTbody.innerHTML = data.xba_delta.map(p=>{
+        xbaTbody.innerHTML = data.xba_delta.filter(p => (p.pa ?? 0) >= 50).map(p=>{
           const d = p.delta??0;
           const cls = d>0.01?'delta-neg':d<-0.01?'delta-pos':'';
           const verdict = d>0.015?'🍀 Lucky (regression coming)':d<-0.015?'🔥 Due (results catching up)':'— Even';
@@ -852,7 +863,7 @@
 
       const sweetTbody = document.getElementById('sweet-tbody');
       if (data.batting_leaders && data.batting_leaders.length) {
-        const sorted = [...data.batting_leaders].sort((a,b)=>(b.sweet_spot_pct??0)-(a.sweet_spot_pct??0));
+        const sorted = data.batting_leaders.filter(p => (p.bbe ?? 0) >= 50).sort((a,b)=>(b.sweet_spot_pct??0)-(a.sweet_spot_pct??0));
         sweetTbody.innerHTML = sorted.slice(0,10).map(p=>`<tr>
           <td>${p.name}</td>
           <td class="num" style="color:var(--gold)">${fmtP(p.sweet_spot_pct)}</td>
@@ -998,14 +1009,14 @@
 
       const batters  = data.roster?.batters  || [];
       const pitchers = data.roster?.pitchers || [];
-      const allPlayers = [...batters, ...pitchers];
+      const allPlayers = [...pitchers, ...batters];   // a pitcher's pitching line beats his rehab at-bats
       const pgEl = document.getElementById('prospect-grid');
 
       if (data.prospect_watch && data.prospect_watch.length) {
         pgEl.innerHTML = data.prospect_watch.map(name => {
-          const lastName = name.toLowerCase().split(' ').slice(-1)[0];
-          const player = allPlayers.find(p => p.name && p.name.toLowerCase().includes(lastName));
-          let statsLine = '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:6px">Stats load after opening day</div>';
+          const player = allPlayers.find(p => p.name && p.name.toLowerCase() === name.toLowerCase());
+          const mlb = (window.SEA_PLAYERS || []).find(p => p.name.toLowerCase() === name.toLowerCase());
+          let statsLine = `<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:6px">${mlb ? 'Spent 2026 in Seattle — see the Batting and Pitching tabs' : 'No Triple-A stats in 2026'}</div>`;
 
           if (player && player.avg != null) {
             statsLine = `<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-top:8px;font-family:var(--font-mono)">
@@ -1258,11 +1269,10 @@
     renderStandings();
     renderSeason();
     renderHealth();
-    renderBatting();
+    renderBatting().then(renderRainiers);
     renderPitching();
     renderStatcast();
     renderAdvancedPitchers();
-    renderRainiers();
   </script>
 </body>
 </html>

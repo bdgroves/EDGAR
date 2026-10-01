@@ -83,11 +83,32 @@ The most underrated pitching stat you're not talking about. Every pitch either b
 
 ```
 EDGAR
-├── 📊 AL West Standings       ← Where are we? Where are they?
-├── 🔥 Statcast Intelligence   ← Exit velo · barrels · sprint · luck index
-├── ⚾ Pitcher Breakdown       ← FIP · CSW% · pitch arsenal · SwStr%
-└── 🌧️  Tacoma Rainiers        ← Who's coming? Who's ready?
+├── 📈 The Season              ← every game on one line · AL West race · month by month
+├── 📊 Standings               ← run differential · expected record · real wild card · postseason
+├── 🏏 Batting / Pitching      ← everyone who played for Seattle · official team totals
+├── 🔥 Statcast Intelligence   ← barrels · hard-hit · sweet spot · sprint · luck index
+├── ⚾ Advanced Pitching       ← FIP · xERA · K-BB% · CSW% · SwStr% · pitch arsenal
+└── 🌧️  Tacoma Rainiers        ← season results · everyone who played · prospect watch
 ```
+
+### 2026 in one line
+
+The Mariners finished **76–86**, third in the AL West, five games behind a Houston team that won the division at 81–81. They peaked at four games over .500 on June 9 and sank to twelve under in late September. The Season tab draws all 162 games.
+
+### What broke in 2026, and what changed (October 2026)
+
+The pipeline ran every night all season. Some of what it published was wrong, and nothing said so:
+
+| Problem | How long | Fix |
+|---|---|---|
+| **Advanced Pitching was empty.** FanGraphs began refusing pybaseball's requests (HTTP 403); the fetch returned nothing and the empty file was published. | early April → October | FIP computed from MLB StatsAPI with the league constant; xERA and pitch-by-pitch CSW%, SwStr%, whiff% and arsenal from Baseball Savant |
+| **Barrel%, Hard Hit%, Sweet Spot% and launch angle were blank.** The code looked for column names Savant doesn't use. | all season | Mapped to Savant's real columns (`brl_percent`, `ev95percent`, `anglesweetspotpercent`, `avg_hit_angle`) |
+| **Players disappeared.** Stats came from the *active* roster on the day of the fetch, so anyone traded, released or optioned vanished — Luis Castillo's 99⅔ innings, Luke Raley, Matt Brash. | all season | Every player who appeared for Seattle, from the `/stats` endpoint filtered to the team |
+| **Team totals were wrong.** They were summed from that partial roster (647 runs instead of 664, 157 HR instead of 182), and innings were added as decimals. | all season | Official team totals from `/teams/136/stats` |
+| **Streak, last 10 and run differential were empty; the "wild card" was the ten best AL records.** | all season | MLB StatsAPI `/standings`, regular-season and wild-card views |
+| **Rainiers results went blank** the day the Triple-A season ended. | since Sept. 21 | Last ten completed games of the season |
+
+Two rules now keep it honest: a fetcher only publishes when its output passes a check (otherwise yesterday's file stays up), and every run writes `health.json`, which the page footer shows.
 
 The Tacoma module isn't an afterthought. The 2026 Mariners will be built, in part, by players who are in Cheney Stadium right now. **EDGAR watches them.**
 
@@ -96,10 +117,10 @@ The Tacoma module isn't an afterthought. The 2026 Mariners will be built, in par
 ## The Stack
 
 ```
-pybaseball          ← Statcast · Baseball Reference · FanGraphs
-mlb-statsapi        ← Live scores · MiLB · schedules · rosters
+MLB StatsAPI        ← standings · schedules · every player's stats · MiLB
+Baseball Savant     ← via pybaseball: exit velo · barrels · xBA · pitch-by-pitch
 pandas              ← Because data doesn't clean itself
-matplotlib          ← When numbers need to become pictures
+inline SVG          ← charts drawn in the browser, no chart library
 GitHub Actions      ← Runs at 10 PM PT every night. No days off.
 GitHub Pages        ← Always on. Always current.
 pixi                ← Reproducible environments, no excuses
@@ -131,7 +152,8 @@ Or run individual modules:
 ```bash
 pixi run standings   # AL West standings
 pixi run statcast    # Barrels, EV, sprint speed, xBA
-pixi run pitchers    # FIP, CSW%, pitch mix
+pixi run pitchers    # FIP, xERA, CSW%, pitch arsenal
+pixi run season      # game log, AL West race, splits
 pixi run rainiers    # Tacoma results + prospect watch
 ```
 
@@ -190,7 +212,7 @@ MIT. Use it, fork it, build on it. Just root for the right team.
 
 *Powered by `pybaseball` · `mlb-statsapi` · GitHub Actions*
 
-*Data: Baseball Savant · FanGraphs · Baseball Reference · MLB StatsAPI*
+*Data: MLB StatsAPI · Baseball Savant*
 
 ![GitHub Actions](https://github.com/bdgroves/EDGAR/actions/workflows/daily_update.yml/badge.svg)
 

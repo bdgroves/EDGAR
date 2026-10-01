@@ -130,7 +130,9 @@ def fetch_standings():
     output = {
         "updated": date.today().isoformat(),
         "season": SEASON,
-        "final": games_left == 0,
+        # Regular season is over once every team is done or the postseason has
+        # begun (a rained-out game that never gets made up leaves a team at 161).
+        "final": games_left == 0 or any(p["start"] and p["start"] <= date.today().isoformat() for p in (post or [])),
         "al_west": al_west,
         "al_wildcard": wildcard,
         "sea_rank": int(sea["div_rank"]) if sea and sea["div_rank"] else None,
