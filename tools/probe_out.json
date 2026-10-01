@@ -1,0 +1,2372 @@
+{
+ "standings": {
+  "copyright": "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "records": [
+   {
+    "standingsType": "regularSeason",
+    "league": {
+     "id": 103,
+     "link": "/api/v1/league/103"
+    },
+    "division": {
+     "id": 201,
+     "link": "/api/v1/divisions/201"
+    },
+    "sport": {
+     "id": 1,
+     "link": "/api/v1/sports/1"
+    },
+    "roundRobin": {
+     "status": "false"
+    },
+    "lastUpdated": "2026-10-01T02:01:20.079Z",
+    "teamRecords": [
+     {
+      "team": {
+       "springLeague": {
+        "id": 115,
+        "name": "Grapefruit League",
+        "link": "/api/v1/league/115",
+        "abbreviation": "GL"
+       },
+       "allStarStatus": "N",
+       "id": 139,
+       "name": "Tampa Bay Rays",
+       "link": "/api/v1/teams/139",
+       "season": 2026,
+       "venue": {
+        "id": 12,
+        "name": "Tropicana Field",
+        "link": "/api/v1/venues/12"
+       },
+       "springVenue": {
+        "id": 2534,
+        "link": "/api/v1/venues/2534"
+       },
+       "teamCode": "tba",
+       "fileCode": "tb",
+       "abbreviation": "TB",
+       "teamName": "Rays",
+       "locationName": "St. Petersburg",
+       "firstYearOfPlay": "1996",
+       "league": {
+        "id": 103,
+        "name": "American League",
+        "link": "/api/v1/league/103"
+       },
+       "division": {
+        "id": 201,
+        "name": "American League East",
+        "link": "/api/v1/divisions/201"
+       },
+       "sport": {
+        "id": 1,
+        "link": "/api/v1/sports/1",
+        "name": "Major League Baseball"
+       },
+       "shortName": "Tampa Bay",
+       "franchiseName": "Tampa Bay",
+       "clubName": "Rays",
+       "active": true
+      },
+      "season": "2026",
+      "streak": {
+       "streakCode": "L1",
+       "streakType": "losses",
+       "streakNumber": 1
+      },
+      "clinchIndicator": "z",
+      "divisionRank": "1",
+      "leagueRank": "1",
+      "sportRank": "3",
+      "gamesPlayed": 162,
+      "gamesBack": "-",
+      "wildCardGamesBack": "-",
+      "leagueGamesBack": "-",
+      "springLeagueGamesBack": "-",
+      "sportGamesBack": "-",
+      "divisionGamesBack": "-",
+      "conferenceGamesBack": "-",
+      "leagueRecord": {
+       "wins": 98,
+       "losses": 64,
+       "ties": 0,
+       "pct": ".605"
+      },
+      "lastUpdated": "2026-09-27T21:21:55Z",
+      "records": {
+       "splitRecords": [
+        {
+         "wins": 55,
+         "losses": 26,
+         "type": "home",
+         "pct": ".679"
+        },
+        {
+         "wins": 43,
+         "losses": 38,
+         "type": "away",
+         "pct": ".531"
+        },
+        "...16"
+       ],
+       "divisionRecords": [
+        {
+         "wins": 22,
+         "losses": 9,
+         "pct": ".710",
+         "division": {
+          "id": 200,
+          "name": "American League West",
+          "link": "/api/v1/divisions/200"
+         }
+        },
+        {
+         "wins": 28,
+         "losses": 24,
+         "pct": ".538",
+         "division": {
+          "id": 201,
+          "name": "American League East",
+          "link": "/api/v1/divisions/201"
+         }
+        },
+        "...3"
+       ],
+       "overallRecords": [
+        {
+         "wins": 55,
+         "losses": 26,
+         "type": "home",
+         "pct": ".679"
+        },
+        {
+         "wins": 43,
+         "losses": 38,
+         "type": "away",
+         "pct": ".531"
+        }
+       ],
+       "leagueRecords": [
+        {
+         "wins": 71,
+         "losses": 43,
+         "pct": ".623",
+         "league": {
+          "id": 103,
+          "name": "American League",
+          "link": "/api/v1/league/103"
+         }
+        },
+        {
+         "wins": 27,
+         "losses": 21,
+         "pct": ".563",
+         "league": {
+          "id": 104,
+          "name": "National League",
+          "link": "/api/v1/league/104"
+         }
+        }
+       ],
+       "expectedRecords": [
+        {
+         "wins": 90,
+         "losses": 72,
+         "type": "xWinLoss",
+         "pct": ".556"
+        },
+        {
+         "wins": 90,
+         "losses": 72,
+         "type": "xWinLossSeason",
+         "pct": ".556"
+        }
+       ]
+      },
+      "runsAllowed": 650,
+      "runsScored": 736,
+      "divisionChamp": true,
+      "divisionLeader": true,
+      "hasWildcard": true,
+      "clinched": true,
+      "eliminationNumber": "-",
+      "eliminationNumberSport": "-",
+      "eliminationNumberLeague": "-",
+      "eliminationNumberDivision": "-",
+      "eliminationNumberConference": "-",
+      "wildCardEliminationNumber": "-",
+      "magicNumber": "-",
+      "wins": 98,
+      "losses": 64,
+      "runDifferential": 86,
+      "winningPercentage": ".605"
+     },
+     {
+      "team": {
+       "springLeague": {
+        "id": 115,
+        "name": "Grapefruit League",
+        "link": "/api/v1/league/115",
+        "abbreviation": "GL"
+       },
+       "allStarStatus": "N",
+       "id": 147,
+       "name": "New York Yankees",
+       "link": "/api/v1/teams/147",
+       "season": 2026,
+       "venue": {
+        "id": 3313,
+        "name": "Yankee Stadium",
+        "link": "/api/v1/venues/3313"
+       },
+       "springVenue": {
+        "id": 2523,
+        "link": "/api/v1/venues/2523"
+       },
+       "teamCode": "nya",
+       "fileCode": "nyy",
+       "abbreviation": "NYY",
+       "teamName": "Yankees",
+       "locationName": "Bronx",
+       "firstYearOfPlay": "1903",
+       "league": {
+        "id": 103,
+        "name": "American League",
+        "link": "/api/v1/league/103"
+       },
+       "division": {
+        "id": 201,
+        "name": "American League East",
+        "link": "/api/v1/divisions/201"
+       },
+       "sport": {
+        "id": 1,
+        "link": "/api/v1/sports/1",
+        "name": "Major League Baseball"
+       },
+       "shortName": "NY Yankees",
+       "franchiseName": "New York",
+       "clubName": "Yankees",
+       "active": true
+      },
+      "season": "2026",
+      "streak": {
+       "streakCode": "W1",
+       "streakType": "wins",
+       "streakNumber": 1
+      },
+      "clinchIndicator": "w",
+      "divisionRank": "2",
+      "leagueRank": "2",
+      "wildCardRank": "1",
+      "sportRank": "5",
+      "gamesPlayed": 161,
+      "gamesBack": "4.5",
+      "wildCardGamesBack": "+9.5",
+      "leagueGamesBack": "4.5",
+      "springLeagueGamesBack": "-",
+      "sportGamesBack": "4.5",
+      "divisionGamesBack": "4.5",
+      "conferenceGamesBack": "-",
+      "leagueRecord": {
+       "wins": 93,
+       "losses": 68,
+       "ties": 0,
+       "pct": ".578"
+      },
+      "lastUpdated": "2026-10-01T01:58:45Z",
+      "records": {
+       "splitRecords": [
+        {
+         "wins": 46,
+         "losses": 34,
+         "type": "home",
+         "pct": ".575"
+        },
+        {
+         "wins": 47,
+         "losses": 34,
+         "type": "away",
+         "pct": ".580"
+        },
+        "...16"
+       ],
+       "divisionRecords": [
+        {
+         "wins": 18,
+         "losses": 13,
+         "pct": ".581",
+         "division": {
+          "id": 200,
+          "name": "American League West",
+          "link": "/api/v1/divisions/200"
+         }
+        },
+        {
+         "wins": 29,
+         "losses": 22,
+         "pct": ".569",
+         "division": {
+          "id": 201,
+          "name": "American League East",
+          "link": "/api/v1/divisions/201"
+         }
+        },
+        "...3"
+       ],
+       "overallRecords": [
+        {
+         "wins": 46,
+         "losses": 34,
+         "type": "home",
+         "pct": ".575"
+        },
+        {
+         "wins": 47,
+         "losses": 34,
+         "type": "away",
+         "pct": ".580"
+        }
+       ],
+       "leagueRecords": [
+        {
+         "wins": 66,
+         "losses": 47,
+         "pct": ".584",
+         "league": {
+          "id": 103,
+          "name": "American League",
+          "link": "/api/v1/league/103"
+         }
+        },
+        {
+         "wins": 27,
+         "losses": 21,
+         "pct": ".563",
+         "league": {
+          "id": 104,
+          "name": "National League",
+          "link": "/api/v1/league/104"
+         }
+        }
+       ],
+       "expectedRecords": [
+        {
+         "wins": 96,
+         "losses": 65,
+         "type": "xWinLoss",
+         "pct": ".596"
+        },
+        {
+         "wins": 96,
+         "losses": 66,
+         "type": "xWinLossSeason",
+         "pct": ".593"
+        }
+       ]
+      },
+      "runsAllowed": 601,
+      "runsScored": 739,
+      "divisionChamp": false,
+      "divisionLeader": false,
+      "wildCardLeader": true,
+      "hasWildcard": true,
+      "clinched": true,
+      "eliminationNumber": "E",
+      "eliminationNumberSport": "E",
+      "eliminationNumberLeague": "E",
+      "eliminationNumberDivision": "E",
+      "eliminationNumberConference": "E",
+      "wildCardEliminationNumber": "-",
+      "wins": 93,
+      "losses": 68,
+      "runDifferential": 138,
+      "winningPercentage": ".578"
+     },
+     "...5"
+    ]
+   },
+   {
+    "standingsType": "regularSeason",
+    "league": {
+     "id": 103,
+     "link": "/api/v1/league/103"
+    },
+    "division": {
+     "id": 202,
+     "link": "/api/v1/divisions/202"
+    },
+    "sport": {
+     "id": 1,
+     "link": "/api/v1/sports/1"
+    },
+    "roundRobin": {
+     "status": "false"
+    },
+    "lastUpdated": "2026-10-01T02:01:22.050Z",
+    "teamRecords": [
+     {
+      "team": {
+       "springLeague": {
+        "id": 114,
+        "name": "Cactus League",
+        "link": "/api/v1/league/114",
+        "abbreviation": "CL"
+       },
+       "allStarStatus": "N",
+       "id": 114,
+       "name": "Cleveland Guardians",
+       "link": "/api/v1/teams/114",
+       "season": 2026,
+       "venue": {
+        "id": 5,
+        "name": "Progressive Field",
+        "link": "/api/v1/venues/5"
+       },
+       "springVenue": {
+        "id": 3834,
+        "link": "/api/v1/venues/3834"
+       },
+       "teamCode": "cle",
+       "fileCode": "cle",
+       "abbreviation": "CLE",
+       "teamName": "Guardians",
+       "locationName": "Cleveland",
+       "firstYearOfPlay": "1901",
+       "league": {
+        "id": 103,
+        "name": "American League",
+        "link": "/api/v1/league/103"
+       },
+       "division": {
+        "id": 202,
+        "name": "American League Central",
+        "link": "/api/v1/divisions/202"
+       },
+       "sport": {
+        "id": 1,
+        "link": "/api/v1/sports/1",
+        "name": "Major League Baseball"
+       },
+       "shortName": "Cleveland",
+       "franchiseName": "Cleveland",
+       "clubName": "Guardians",
+       "active": true
+      },
+      "season": "2026",
+      "streak": {
+       "streakCode": "L1",
+       "streakType": "losses",
+       "streakNumber": 1
+      },
+      "clinchIndicator": "y",
+      "divisionRank": "1",
+      "leagueRank": "4",
+      "sportRank": "11",
+      "gamesPlayed": 162,
+      "gamesBack": "-",
+      "wildCardGamesBack": "-",
+      "leagueGamesBack": "13.0",
+      "springLeagueGamesBack": "-",
+      "sportGamesBack": "13.0",
+      "divisionGamesBack": "-",
+      "conferenceGamesBack": "-",
+      "leagueRecord": {
+       "wins": 85,
+       "losses": 77,
+       "ties": 0,
+       "pct": ".525"
+      },
+      "lastUpdated": "2026-10-01T02:01:22Z",
+      "records": {
+       "splitRecords": [
+        {
+         "wins": 41,
+         "losses": 40,
+         "type": "home",
+         "pct": ".506"
+        },
+        {
+         "wins": 44,
+         "losses": 37,
+         "type": "away",
+         "pct": ".543"
+        },
+        "...16"
+       ],
+       "divisionRecords": [
+        {
+         "wins": 19,
+         "losses": 12,
+         "pct": ".613",
+         "division": {
+          "id": 200,
+          "name": "American League West",
+          "link": "/api/v1/divisions/200"
+         }
+        },
+        {
+         "wins": 12,
+         "losses": 19,
+         "pct": ".387",
+         "division": {
+          "id": 201,
+          "name": "American League East",
+          "link": "/api/v1/divisions/201"
+         }
+        },
+        "...3"
+       ],
+       "overallRecords": [
+        {
+         "wins": 41,
+         "losses": 40,
+         "type": "home",
+         "pct": ".506"
+        },
+        {
+         "wins": 44,
+         "losses": 37,
+         "type": "away",
+         "pct": ".543"
+        }
+       ],
+       "leagueRecords": [
+        {
+         "wins": 60,
+         "losses": 54,
+         "pct": ".526",
+         "league": {
+          "id": 103,
+          "name": "American League",
+          "link": "/api/v1/league/103"
+         }
+        },
+        {
+         "wins": 25,
+         "losses": 23,
+         "pct": ".521",
+         "league": {
+          "id": 104,
+          "name": "National League",
+          "link": "/api/v1/league/104"
+         }
+        }
+       ],
+       "expectedRecords": [
+        {
+         "wins": 82,
+         "losses": 80,
+         "type": "xWinLoss",
+         "pct": ".506"
+        },
+        {
+         "wins": 82,
+         "losses": 80,
+         "type": "xWinLossSeason",
+         "pct": ".506"
+        }
+       ]
+      },
+      "runsAllowed": 667,
+      "runsScored": 678,
+      "divisionChamp": true,
+      "divisionLeader": true,
+      "hasWildcard": true,
+      "clinched": true,
+      "eliminationNumber": "-",
+      "eliminationNumberSport": "E",
+      "eliminationNumberLeague": "E",
+      "eliminationNumberDivision": "-",
+      "eliminationNumberConference": "E",
+      "wildCardEliminationNumber": "-",
+      "magicNumber": "-",
+      "wins": 85,
+      "losses": 77,
+      "runDifferential": 11,
+      "winningPercentage": ".525"
+     },
+     {
+      "team": {
+       "springLeague": {
+        "id": 114,
+        "name": "Cactus League",
+        "link": "/api/v1/league/114",
+        "abbreviation": "CL"
+       },
+       "allStarStatus": "N",
+       "id": 145,
+       "name": "Chicago White Sox",
+       "link": "/api/v1/teams/145",
+       "season": 2026,
+       "venue": {
+        "id": 4,
+        "name": "Rate Field",
+        "link": "/api/v1/venues/4"
+       },
+       "springVenue": {
+        "id": 3809,
+        "link": "/api/v1/venues/3809"
+       },
+       "teamCode": "cha",
+       "fileCode": "cws",
+       "abbreviation": "CWS",
+       "teamName": "White Sox",
+       "locationName": "Chicago",
+       "firstYearOfPlay": "1901",
+       "league": {
+        "id": 103,
+        "name": "American League",
+        "link": "/api/v1/league/103"
+       },
+       "division": {
+        "id": 202,
+        "name": "American League Central",
+        "link": "/api/v1/divisions/202"
+       },
+       "sport": {
+        "id": 1,
+        "link": "/api/v1/sports/1",
+        "name": "Major League Baseball"
+       },
+       "shortName": "Chi White Sox",
+       "franchiseName": "Chicago",
+       "clubName": "White Sox",
+       "active": true
+      },
+      "season": "2026",
+      "streak": {
+       "streakCode": "W1",
+       "streakType": "wins",
+       "streakNumber": 1
+      },
+      "clinchIndicator": "w",
+      "divisionRank": "2",
+      "leagueRank": "5",
+      "wildCardRank": "3",
+      "sportRank": "12",
+      "gamesPlayed": 162,
+      "gamesBack": "1.0",
+      "wildCardGamesBack": "-",
+      "leagueGamesBack": "14.0",
+      "springLeagueGamesBack": "-",
+      "sportGamesBack": "14.0",
+      "divisionGamesBack": "1.0",
+      "conferenceGamesBack": "-",
+      "leagueRecord": {
+       "wins": 84,
+       "losses": 78,
+       "ties": 0,
+       "pct": ".519"
+      },
+      "lastUpdated": "2026-09-27T21:38:40Z",
+      "records": {
+       "splitRecords": [
+        {
+         "wins": 48,
+         "losses": 33,
+         "type": "home",
+         "pct": ".593"
+        },
+        {
+         "wins": 36,
+         "losses": 45,
+         "type": "away",
+         "pct": ".444"
+        },
+        "...16"
+       ],
+       "divisionRecords": [
+        {
+         "wins": 18,
+         "losses": 13,
+         "pct": ".581",
+         "division": {
+          "id": 200,
+          "name": "American League West",
+          "link": "/api/v1/divisions/200"
+         }
+        },
+        {
+         "wins": 12,
+         "losses": 19,
+         "pct": ".387",
+         "division": {
+          "id": 201,
+          "name": "American League East",
+          "link": "/api/v1/divisions/201"
+         }
+        },
+        "...3"
+       ],
+       "overallRecords": [
+        {
+         "wins": 48,
+         "losses": 33,
+         "type": "home",
+         "pct": ".593"
+        },
+        {
+         "wins": 36,
+         "losses": 45,
+         "type": "away",
+         "pct": ".444"
+        }
+       ],
+       "leagueRecords": [
+        {
+         "wins": 63,
+         "losses": 51,
+         "pct": ".553",
+         "league": {
+          "id": 103,
+          "name": "American League",
+          "link": "/api/v1/league/103"
+         }
+        },
+        {
+         "wins": 21,
+         "losses": 27,
+         "pct": ".438",
+         "league": {
+          "id": 104,
+          "name": "National League",
+          "link": "/api/v1/league/104"
+         }
+        }
+       ],
+       "expectedRecords": [
+        {
+         "wins": 87,
+         "losses": 75,
+         "type": "xWinLoss",
+         "pct": ".537"
+        },
+        {
+         "wins": 87,
+         "losses": 75,
+         "type": "xWinLossSeason",
+         "pct": ".537"
+        }
+       ]
+      },
+      "runsAllowed": 720,
+      "runsScored": 776,
+      "divisionChamp": false,
+      "divisionLeader": false,
+      "wildCardLeader": true,
+      "hasWildcard": true,
+      "clinched": true,
+      "eliminationNumber": "E",
+      "eliminationNumberSport": "E",
+      "eliminationNumberLeague": "E",
+      "eliminationNumberDivision": "E",
+      "eliminationNumberConference": "E",
+      "wildCardEliminationNumber": "-",
+      "wins": 84,
+      "losses": 78,
+      "runDifferential": 56,
+      "winningPercentage": ".519"
+     },
+     "...5"
+    ]
+   },
+   "...3"
+  ]
+ },
+ "wildcard": {
+  "copyright": "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "records": [
+   {
+    "standingsType": "wildCard",
+    "league": {
+     "id": 103,
+     "link": "/api/v1/league/103"
+    },
+    "division": {
+     "id": 201,
+     "link": "/api/v1/divisions/201"
+    },
+    "lastUpdated": "2026-10-01T02:01:20.079Z",
+    "teamRecords": [
+     {
+      "team": {
+       "id": 147,
+       "name": "Yankees",
+       "link": "/api/v1/teams/147"
+      },
+      "season": "2026",
+      "streak": {
+       "streakCode": "W1",
+       "streakType": "wins",
+       "streakNumber": 1
+      },
+      "clinchIndicator": "w",
+      "divisionRank": "2",
+      "leagueRank": "2",
+      "wildCardRank": "1",
+      "sportRank": "5",
+      "gamesPlayed": 161,
+      "gamesBack": "4.5",
+      "wildCardGamesBack": "+9.5",
+      "leagueGamesBack": "4.5",
+      "springLeagueGamesBack": "-",
+      "sportGamesBack": "4.5",
+      "divisionGamesBack": "4.5",
+      "conferenceGamesBack": "-",
+      "leagueRecord": {
+       "wins": 93,
+       "losses": 68,
+       "ties": 0,
+       "pct": ".578"
+      },
+      "lastUpdated": "2026-10-01T01:58:45Z",
+      "records": {
+       "splitRecords": [
+        {
+         "wins": 46,
+         "losses": 34,
+         "type": "home",
+         "pct": ".575"
+        },
+        {
+         "wins": 47,
+         "losses": 34,
+         "type": "away",
+         "pct": ".580"
+        },
+        "...16"
+       ],
+       "divisionRecords": [
+        {
+         "wins": 18,
+         "losses": 13,
+         "pct": ".581",
+         "division": {
+          "id": 200,
+          "name": "American League West",
+          "link": "/api/v1/divisions/200"
+         }
+        },
+        {
+         "wins": 29,
+         "losses": 22,
+         "pct": ".569",
+         "division": {
+          "id": 201,
+          "name": "American League East",
+          "link": "/api/v1/divisions/201"
+         }
+        },
+        "...3"
+       ],
+       "overallRecords": [
+        {
+         "wins": 46,
+         "losses": 34,
+         "type": "home",
+         "pct": ".575"
+        },
+        {
+         "wins": 47,
+         "losses": 34,
+         "type": "away",
+         "pct": ".580"
+        }
+       ],
+       "leagueRecords": [
+        {
+         "wins": 66,
+         "losses": 47,
+         "pct": ".584",
+         "league": {
+          "id": 103,
+          "name": "American League",
+          "link": "/api/v1/league/103"
+         }
+        },
+        {
+         "wins": 27,
+         "losses": 21,
+         "pct": ".563",
+         "league": {
+          "id": 104,
+          "name": "National League",
+          "link": "/api/v1/league/104"
+         }
+        }
+       ],
+       "expectedRecords": [
+        {
+         "wins": 96,
+         "losses": 65,
+         "type": "xWinLoss",
+         "pct": ".596"
+        },
+        {
+         "wins": 96,
+         "losses": 66,
+         "type": "xWinLossSeason",
+         "pct": ".593"
+        }
+       ]
+      },
+      "runsAllowed": 601,
+      "runsScored": 739,
+      "divisionChamp": false,
+      "divisionLeader": false,
+      "wildCardLeader": true,
+      "hasWildcard": true,
+      "clinched": true,
+      "eliminationNumber": "E",
+      "eliminationNumberSport": "E",
+      "eliminationNumberLeague": "E",
+      "eliminationNumberDivision": "E",
+      "eliminationNumberConference": "E",
+      "wildCardEliminationNumber": "-",
+      "wins": 93,
+      "losses": 68,
+      "runDifferential": 138,
+      "winningPercentage": ".578"
+     },
+     {
+      "team": {
+       "id": 111,
+       "name": "Red Sox",
+       "link": "/api/v1/teams/111"
+      },
+      "season": "2026",
+      "streak": {
+       "streakCode": "L1",
+       "streakType": "losses",
+       "streakNumber": 1
+      },
+      "clinchIndicator": "w",
+      "divisionRank": "3",
+      "leagueRank": "3",
+      "wildCardRank": "2",
+      "sportRank": "9",
+      "gamesPlayed": 162,
+      "gamesBack": "11.0",
+      "wildCardGamesBack": "+3.0",
+      "leagueGamesBack": "11.0",
+      "springLeagueGamesBack": "-",
+      "sportGamesBack": "11.0",
+      "divisionGamesBack": "11.0",
+      "conferenceGamesBack": "-",
+      "leagueRecord": {
+       "wins": 87,
+       "losses": 75,
+       "ties": 0,
+       "pct": ".537"
+      },
+      "lastUpdated": "2026-10-01T02:01:20Z",
+      "records": {
+       "splitRecords": [
+        {
+         "wins": 41,
+         "losses": 40,
+         "type": "home",
+         "pct": ".506"
+        },
+        {
+         "wins": 46,
+         "losses": 35,
+         "type": "away",
+         "pct": ".568"
+        },
+        "...16"
+       ],
+       "divisionRecords": [
+        {
+         "wins": 15,
+         "losses": 16,
+         "pct": ".484",
+         "division": {
+          "id": 200,
+          "name": "American League West",
+          "link": "/api/v1/divisions/200"
+         }
+        },
+        {
+         "wins": 25,
+         "losses": 27,
+         "pct": ".481",
+         "division": {
+          "id": 201,
+          "name": "American League East",
+          "link": "/api/v1/divisions/201"
+         }
+        },
+        "...3"
+       ],
+       "overallRecords": [
+        {
+         "wins": 41,
+         "losses": 40,
+         "type": "home",
+         "pct": ".506"
+        },
+        {
+         "wins": 46,
+         "losses": 35,
+         "type": "away",
+         "pct": ".568"
+        }
+       ],
+       "leagueRecords": [
+        {
+         "wins": 60,
+         "losses": 54,
+         "pct": ".526",
+         "league": {
+          "id": 103,
+          "name": "American League",
+          "link": "/api/v1/league/103"
+         }
+        },
+        {
+         "wins": 27,
+         "losses": 21,
+         "pct": ".563",
+         "league": {
+          "id": 104,
+          "name": "National League",
+          "link": "/api/v1/league/104"
+         }
+        }
+       ],
+       "expectedRecords": [
+        {
+         "wins": 90,
+         "losses": 72,
+         "type": "xWinLoss",
+         "pct": ".556"
+        },
+        {
+         "wins": 90,
+         "losses": 72,
+         "type": "xWinLossSeason",
+         "pct": ".556"
+        }
+       ]
+      },
+      "runsAllowed": 611,
+      "runsScored": 689,
+      "divisionChamp": false,
+      "divisionLeader": false,
+      "wildCardLeader": true,
+      "hasWildcard": true,
+      "clinched": true,
+      "eliminationNumber": "E",
+      "eliminationNumberSport": "E",
+      "eliminationNumberLeague": "E",
+      "eliminationNumberDivision": "E",
+      "eliminationNumberConference": "E",
+      "wildCardEliminationNumber": "-",
+      "wins": 87,
+      "losses": 75,
+      "runDifferential": 78,
+      "winningPercentage": ".537"
+     },
+     "...12"
+    ]
+   }
+  ]
+ },
+ "team_stats": {
+  "copyright": "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "stats": [
+   {
+    "type": {
+     "displayName": "season"
+    },
+    "group": {
+     "displayName": "hitting"
+    },
+    "exemptions": [],
+    "splits": [
+     {
+      "season": "2026",
+      "stat": {
+       "gamesPlayed": 162,
+       "groundOuts": 1308,
+       "airOuts": 1475,
+       "runs": 664,
+       "doubles": 206,
+       "triples": 18,
+       "homeRuns": 182,
+       "strikeOuts": 1400,
+       "baseOnBalls": 557,
+       "intentionalWalks": 15,
+       "hits": 1253,
+       "hitByPitch": 95,
+       "avg": ".233",
+       "atBats": 5385,
+       "obp": ".314",
+       "slg": ".379",
+       "ops": ".693",
+       "caughtStealing": 39,
+       "stolenBases": 114,
+       "stolenBasePercentage": ".745",
+       "caughtStealingPercentage": ".255",
+       "groundIntoDoublePlay": 103,
+       "numberOfPitches": 23792,
+       "plateAppearances": 6089,
+       "totalBases": 2041,
+       "rbi": 638,
+       "leftOnBase": 1129,
+       "sacBunts": 13,
+       "sacFlies": 38,
+       "babip": ".279",
+       "groundOutsToAirouts": "0.89",
+       "catchersInterference": 1,
+       "atBatsPerHomeRun": "29.59"
+      },
+      "team": {
+       "id": 136,
+       "name": "Seattle Mariners",
+       "link": "/api/v1/teams/136"
+      }
+     }
+    ]
+   },
+   {
+    "type": {
+     "displayName": "season"
+    },
+    "group": {
+     "displayName": "pitching"
+    },
+    "exemptions": [],
+    "splits": [
+     {
+      "season": "2026",
+      "stat": {
+       "gamesPlayed": 162,
+       "gamesStarted": 162,
+       "groundOuts": 1307,
+       "airOuts": 1463,
+       "runs": 722,
+       "doubles": 250,
+       "triples": 20,
+       "homeRuns": 194,
+       "strikeOuts": 1392,
+       "baseOnBalls": 441,
+       "intentionalWalks": 18,
+       "hits": 1372,
+       "hitByPitch": 70,
+       "avg": ".251",
+       "atBats": 5466,
+       "obp": ".313",
+       "slg": ".411",
+       "ops": ".724",
+       "caughtStealing": 33,
+       "stolenBases": 122,
+       "stolenBasePercentage": ".787",
+       "caughtStealingPercentage": ".213",
+       "groundIntoDoublePlay": 100,
+       "numberOfPitches": 23197,
+       "era": "4.20",
+       "inningsPitched": "1430.1",
+       "wins": 76,
+       "losses": 86,
+       "saves": 35,
+       "saveOpportunities": 63,
+       "holds": 81,
+       "blownSaves": 28,
+       "earnedRuns": 668,
+       "whip": "1.27",
+       "battersFaced": 6047,
+       "outs": 4291,
+       "gamesPitched": 162,
+       "completeGames": 1,
+       "shutouts": 10,
+       "strikes": 15255,
+       "strikePercentage": ".660",
+       "hitBatsmen": 70,
+       "balks": 5,
+       "wildPitches": 38,
+       "pickoffs": 18,
+       "totalBases": 2244,
+       "groundOutsToAirouts": "0.89",
+       "winPercentage": ".469",
+       "pitchesPerInning": "16.22",
+       "gamesFinished": 161,
+       "strikeoutWalkRatio": "3.16",
+       "strikeoutsPer9Inn": "8.76",
+       "walksPer9Inn": "2.77",
+       "hitsPer9Inn": "8.63",
+       "runsScoredPer9": "4.54",
+       "homeRunsPer9": "1.22",
+       "catchersInterference": 2,
+       "sacBunts": 26,
+       "sacFlies": 42
+      },
+      "team": {
+       "id": 136,
+       "name": "Seattle Mariners",
+       "link": "/api/v1/teams/136"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "players_hit": {
+  "n": 28,
+  "sample": [
+   {
+    "season": "2026",
+    "stat": {
+     "age": 21,
+     "gamesPlayed": 15,
+     "groundOuts": 7,
+     "airOuts": 10,
+     "runs": 5,
+     "doubles": 2,
+     "triples": 0,
+     "homeRuns": 1,
+     "strikeOuts": 6,
+     "baseOnBalls": 5,
+     "intentionalWalks": 0,
+     "hits": 13,
+     "hitByPitch": 0,
+     "avg": ".371",
+     "atBats": 35,
+     "obp": ".439",
+     "slg": ".514",
+     "ops": ".953",
+     "caughtStealing": 0,
+     "stolenBases": 2,
+     "stolenBasePercentage": "1.000",
+     "caughtStealingPercentage": ".000",
+     "groundIntoDoublePlay": 0,
+     "numberOfPitches": 124,
+     "plateAppearances": 41,
+     "totalBases": 18,
+     "rbi": 4,
+     "leftOnBase": 11,
+     "sacBunts": 0,
+     "sacFlies": 1,
+     "babip": ".414",
+     "groundOutsToAirouts": "0.70",
+     "catchersInterference": 0,
+     "atBatsPerHomeRun": "35.00"
+    },
+    "team": {
+     "id": 136,
+     "name": "Seattle Mariners",
+     "link": "/api/v1/teams/136"
+    },
+    "player": {
+     "id": 703197,
+     "fullName": "Michael Arroyo",
+     "link": "/api/v1/people/703197",
+     "firstName": "Michael",
+     "lastName": "Arroyo"
+    },
+    "league": {
+     "id": 103,
+     "name": "AL",
+     "link": "/api/v1/league/103"
+    },
+    "sport": {
+     "id": 1,
+     "link": "/api/v1/sports/1",
+     "abbreviation": "MLB"
+    },
+    "rank": 1,
+    "position": {
+     "code": "4",
+     "name": "Second Base",
+     "type": "Infielder",
+     "abbreviation": "2B"
+    }
+   },
+   {
+    "season": "2026",
+    "stat": {
+     "age": 30,
+     "gamesPlayed": 31,
+     "groundOuts": 20,
+     "airOuts": 24,
+     "runs": 12,
+     "doubles": 2,
+     "triples": 0,
+     "homeRuns": 2,
+     "strikeOuts": 20,
+     "baseOnBalls": 9,
+     "intentionalWalks": 0,
+     "hits": 27,
+     "hitByPitch": 1,
+     "avg": ".300",
+     "atBats": 90,
+     "obp": ".366",
+     "slg": ".389",
+     "ops": ".755",
+     "caughtStealing": 0,
+     "stolenBases": 0,
+     "stolenBasePercentage": ".---",
+     "caughtStealingPercentage": ".---",
+     "groundIntoDoublePlay": 1,
+     "numberOfPitches": 430,
+     "plateAppearances": 101,
+     "totalBases": 35,
+     "rbi": 8,
+     "leftOnBase": 35,
+     "sacBunts": 0,
+     "sacFlies": 1,
+     "babip": ".362",
+     "groundOutsToAirouts": "0.83",
+     "catchersInterference": 0,
+     "atBatsPerHomeRun": "45.00"
+    },
+    "team": {
+     "id": 136,
+     "name": "Seattle Mariners",
+     "link": "/api/v1/teams/136"
+    },
+    "player": {
+     "id": 640902,
+     "fullName": "Jhonny Pereda",
+     "link": "/api/v1/people/640902",
+     "firstName": "Jhonny",
+     "lastName": "Pereda"
+    },
+    "league": {
+     "id": 103,
+     "name": "AL",
+     "link": "/api/v1/league/103"
+    },
+    "sport": {
+     "id": 1,
+     "link": "/api/v1/sports/1",
+     "abbreviation": "MLB"
+    },
+    "rank": 2,
+    "position": {
+     "code": "2",
+     "name": "Catcher",
+     "type": "Catcher",
+     "abbreviation": "C"
+    }
+   }
+  ],
+  "names": [
+   "Michael Arroyo 41",
+   "Jhonny Pereda 101",
+   "Randy Arozarena 670",
+   "Brendan Donovan 159",
+   "Dominic Canzone 533",
+   "Josh Naylor 650",
+   "Victor Robles 149",
+   "Julio Rodr\u00edguez 654",
+   "Cole Young 638",
+   "Luke Raley 287",
+   "J.P. Crawford 489",
+   "Lazaro Montes 59",
+   "Will Wilson 6",
+   "Brock Rodden 72",
+   "Miles Mastrobuoni 30",
+   "Weston Wilson 137",
+   "Colt Emerson 241",
+   "Cal Raleigh 530",
+   "Connor Joe 45",
+   "Mitch Garver 149",
+   "Leo Rivas 148",
+   "Rob Refsnyder 129",
+   "Ryan Bliss 10",
+   "Taylor Ward 101",
+   "Patrick Wisdom 50",
+   "Buddy Kennedy 11",
+   "Stuart Fairchild 0",
+   "Gabe Speier 0"
+  ]
+ },
+ "players_pit": {
+  "n": 30,
+  "sample": [
+   {
+    "season": "2026",
+    "stat": {
+     "age": 28,
+     "gamesPlayed": 20,
+     "gamesStarted": 0,
+     "groundOuts": 16,
+     "airOuts": 16,
+     "runs": 2,
+     "doubles": 2,
+     "triples": 0,
+     "homeRuns": 0,
+     "strikeOuts": 15,
+     "baseOnBalls": 6,
+     "intentionalWalks": 1,
+     "hits": 8,
+     "hitByPitch": 3,
+     "avg": ".151",
+     "atBats": 53,
+     "obp": ".270",
+     "slg": ".189",
+     "ops": ".459",
+     "caughtStealing": 1,
+     "stolenBases": 0,
+     "stolenBasePercentage": ".000",
+     "caughtStealingPercentage": "1.000",
+     "groundIntoDoublePlay": 1,
+     "numberOfPitches": 262,
+     "era": "0.54",
+     "inningsPitched": "16.2",
+     "wins": 3,
+     "losses": 0,
+     "saves": 0,
+     "saveOpportunities": 2,
+     "holds": 6,
+     "blownSaves": 2,
+     "earnedRuns": 1,
+     "whip": "0.84",
+     "battersFaced": 64,
+     "outs": 50,
+     "gamesPitched": 20,
+     "completeGames": 0,
+     "shutouts": 0,
+     "strikes": 155,
+     "strikePercentage": ".590",
+     "hitBatsmen": 3,
+     "balks": 0,
+     "wildPitches": 1,
+     "pickoffs": 0,
+     "totalBases": 10,
+     "groundOutsToAirouts": "1.00",
+     "winPercentage": "1.000",
+     "pitchesPerInning": "15.72",
+     "gamesFinished": 1,
+     "strikeoutWalkRatio": "2.50",
+     "strikeoutsPer9Inn": "8.10",
+     "walksPer9Inn": "3.24",
+     "hitsPer9Inn": "4.32",
+     "runsScoredPer9": "1.08",
+     "homeRunsPer9": "0.00",
+     "inheritedRunners": 8,
+     "inheritedRunnersScored": 2,
+     "catchersInterference": 0,
+     "sacBunts": 1,
+     "sacFlies": 1
+    },
+    "team": {
+     "id": 136,
+     "name": "Seattle Mariners",
+     "link": "/api/v1/teams/136"
+    },
+    "player": {
+     "id": 666374,
+     "fullName": "Matt Brash",
+     "link": "/api/v1/people/666374",
+     "firstName": "Matt",
+     "lastName": "Brash"
+    },
+    "league": {
+     "id": 103,
+     "name": "AL",
+     "link": "/api/v1/league/103"
+    },
+    "sport": {
+     "id": 1,
+     "link": "/api/v1/sports/1",
+     "abbreviation": "MLB"
+    },
+    "rank": 1,
+    "position": {
+     "code": "1",
+     "name": "Pitcher",
+     "type": "Pitcher",
+     "abbreviation": "P"
+    }
+   }
+  ],
+  "names": [
+   "Matt Brash 16.2",
+   "Gabe Speier 46.0",
+   "Seranthony Dom\u00ednguez 23.2",
+   "Cooper Criswell 40.2",
+   "Emerson Hancock 138.2",
+   "Logan Gilbert 186.0",
+   "Kade Anderson 35.2",
+   "Cole Wilcox 27.0",
+   "Bryan Woo 173.0",
+   "Eduard Bazardo 67.1",
+   "Bryce Miller 118.2",
+   "Jos\u00e9 A. Ferrer 64.2",
+   "Andr\u00e9s Mu\u00f1oz 57.1",
+   "Hoby Milner 6.1",
+   "George Kirby 174.2",
+   "Jos\u00e9 Suarez 2.0",
+   "Casey Legumina 11.2",
+   "Domingo Gonzalez 7.2",
+   "Carlos Vargas 19.0",
+   "Nick Davila 27.1",
+   "Luis Castillo 99.2",
+   "Michael Rucker 43.2",
+   "Alex Hoppe 28.0",
+   "Jhonathan D\u00edaz 1.1",
+   "Troy Taylor 3.0",
+   "Josh Simpson 7.1",
+   "Victor Robles 1.0",
+   "Weston Wilson 1.0",
+   "Jhonny Pereda 0.1",
+   "Leo Rivas 1.0"
+  ]
+ },
+ "league_pitching": {
+  "n": 30,
+  "sample": [
+   {
+    "season": "2026",
+    "stat": {
+     "gamesPlayed": 161,
+     "gamesStarted": 161,
+     "groundOuts": 1366,
+     "airOuts": 1404,
+     "runs": 601,
+     "doubles": 218,
+     "triples": 26,
+     "homeRuns": 165,
+     "strikeOuts": 1450,
+     "baseOnBalls": 488,
+     "intentionalWalks": 13,
+     "hits": 1203,
+     "hitByPitch": 55,
+     "avg": ".224",
+     "atBats": 5367,
+     "obp": ".294",
+     "slg": ".367",
+     "ops": ".661",
+     "caughtStealing": 22,
+     "stolenBases": 76,
+     "stolenBasePercentage": ".776",
+     "caughtStealingPercentage": ".224",
+     "groundIntoDoublePlay": 106,
+     "numberOfPitches": 23432,
+     "era": "3.23",
+     "inningsPitched": "1441.1",
+     "wins": 93,
+     "losses": 68,
+     "saves": 45,
+     "saveOpportunities": 73,
+     "holds": 86,
+     "blownSaves": 28,
+     "earnedRuns": 518,
+     "whip": "1.17",
+     "battersFaced": 5973,
+     "outs": 4324,
+     "gamesPitched": 161,
+     "completeGames": 0,
+     "shutouts": 15,
+     "strikes": 15042,
+     "strikePercentage": ".640",
+     "hitBatsmen": 55,
+     "balks": 4,
+     "wildPitches": 35,
+     "pickoffs": 16,
+     "totalBases": 1968,
+     "groundOutsToAirouts": "0.97",
+     "winPercentage": ".578",
+     "pitchesPerInning": "16.26",
+     "gamesFinished": 161,
+     "strikeoutWalkRatio": "2.97",
+     "strikeoutsPer9Inn": "9.05",
+     "walksPer9Inn": "3.05",
+     "hitsPer9Inn": "7.51",
+     "runsScoredPer9": "3.75",
+     "homeRunsPer9": "1.03",
+     "catchersInterference": 7,
+     "sacBunts": 19,
+     "sacFlies": 37
+    },
+    "team": {
+     "id": 147,
+     "name": "New York Yankees",
+     "link": "/api/v1/teams/147"
+    },
+    "rank": 1
+   }
+  ]
+ },
+ "schedule": {
+  "dates": 162,
+  "first": {
+   "date": "2026-03-26",
+   "totalItems": 1,
+   "totalEvents": 0,
+   "totalGames": 1,
+   "totalGamesInProgress": 0,
+   "games": [
+    {
+     "gamePk": 823163,
+     "gameGuid": "d6b98654-230e-4fab-b497-d28e9bc748a0",
+     "link": "/api/v1.1/game/823163/feed/live",
+     "gameType": "R",
+     "season": "2026",
+     "gameDate": "2026-03-27T02:10:00Z",
+     "officialDate": "2026-03-26",
+     "status": {
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
+      "statusCode": "F",
+      "startTimeTBD": false,
+      "abstractGameCode": "F"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+       },
+       "leagueRecord": {
+        "wins": 1,
+        "losses": 0,
+        "ties": 0,
+        "pct": "1.000"
+       },
+       "score": 6,
+       "isWinner": true,
+       "splitSquad": false,
+       "seriesNumber": 1
+      },
+      "home": {
+       "team": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+       },
+       "leagueRecord": {
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "pct": ".000"
+       },
+       "score": 4,
+       "isWinner": false,
+       "splitSquad": false,
+       "seriesNumber": 1
+      }
+     },
+     "venue": {
+      "id": 680,
+      "name": "T-Mobile Park",
+      "link": "/api/v1/venues/680"
+     },
+     "content": {
+      "link": "/api/v1/game/823163/content"
+     },
+     "isTie": false,
+     "gameNumber": 1,
+     "publicFacing": true,
+     "doubleHeader": "N",
+     "gamedayType": "P",
+     "tiebreaker": "N",
+     "calendarEventID": "14-823163-2026-03-26",
+     "seasonDisplay": "2026",
+     "dayNight": "night",
+     "description": "Mariners Home Opener",
+     "scheduledInnings": 9,
+     "reverseHomeAwayStatus": false,
+     "inningBreakLength": 120,
+     "gamesInSeries": 4,
+     "seriesGameNumber": 1,
+     "seriesDescription": "Regular Season",
+     "recordSource": "S",
+     "ifNecessary": "N",
+     "ifNecessaryDescription": "Normal Game"
+    }
+   ],
+   "events": []
+  },
+  "last": {
+   "date": "2026-09-27",
+   "totalItems": 1,
+   "totalEvents": 0,
+   "totalGames": 1,
+   "totalGamesInProgress": 0,
+   "games": [
+    {
+     "gamePk": 823084,
+     "gameGuid": "f402cd94-9f54-4b0e-ba23-d239dd053607",
+     "link": "/api/v1.1/game/823084/feed/live",
+     "gameType": "R",
+     "season": "2026",
+     "gameDate": "2026-09-27T19:10:00Z",
+     "officialDate": "2026-09-27",
+     "status": {
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
+      "statusCode": "F",
+      "startTimeTBD": false,
+      "abstractGameCode": "F"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+       },
+       "leagueRecord": {
+        "wins": 62,
+        "losses": 100,
+        "ties": 0,
+        "pct": ".383"
+       },
+       "score": 3,
+       "isWinner": false,
+       "splitSquad": false,
+       "seriesNumber": 52
+      },
+      "home": {
+       "team": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+       },
+       "leagueRecord": {
+        "wins": 76,
+        "losses": 86,
+        "ties": 0,
+        "pct": ".469"
+       },
+       "score": 7,
+       "isWinner": true,
+       "splitSquad": false,
+       "seriesNumber": 52
+      }
+     },
+     "venue": {
+      "id": 680,
+      "name": "T-Mobile Park",
+      "link": "/api/v1/venues/680"
+     },
+     "content": {
+      "link": "/api/v1/game/823084/content"
+     },
+     "isTie": false,
+     "gameNumber": 1,
+     "publicFacing": true,
+     "doubleHeader": "N",
+     "gamedayType": "P",
+     "tiebreaker": "N",
+     "calendarEventID": "14-823084-2026-09-27",
+     "seasonDisplay": "2026",
+     "dayNight": "day",
+     "scheduledInnings": 9,
+     "reverseHomeAwayStatus": false,
+     "inningBreakLength": 120,
+     "gamesInSeries": 4,
+     "seriesGameNumber": 4,
+     "seriesDescription": "Regular Season",
+     "recordSource": "S",
+     "ifNecessary": "N",
+     "ifNecessaryDescription": "Normal Game"
+    }
+   ],
+   "events": []
+  }
+ },
+ "postseason": {
+  "copyright": "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "totalItems": 50,
+  "totalEvents": 0,
+  "totalGames": 50,
+  "totalGamesInProgress": 0,
+  "wait": 10,
+  "series": [
+   {
+    "series": {
+     "id": "F_1",
+     "sortNumber": 1,
+     "isDefault": true,
+     "gameType": "F"
+    },
+    "totalItems": 2,
+    "totalGames": 2,
+    "totalGamesInProgress": 0,
+    "games": [
+     {
+      "gamePk": 849849,
+      "gameGuid": "01a2fd47-8012-4afb-be27-999e7ddd9352",
+      "link": "/api/v1.1/game/849849/feed/live",
+      "gameType": "F",
+      "season": "2026",
+      "gameDate": "2026-09-29T21:00:00Z",
+      "officialDate": "2026-09-29",
+      "status": {
+       "abstractGameState": "Final",
+       "codedGameState": "F",
+       "detailedState": "Final",
+       "statusCode": "F",
+       "startTimeTBD": false,
+       "abstractGameCode": "F"
+      },
+      "teams": {
+       "away": {
+        "team": {
+         "id": 145,
+         "name": "Chicago White Sox",
+         "link": "/api/v1/teams/145"
+        },
+        "leagueRecord": {
+         "wins": 1,
+         "losses": 0,
+         "ties": 0,
+         "pct": "1.000"
+        },
+        "score": 6,
+        "isWinner": true,
+        "splitSquad": false,
+        "seriesNumber": 1
+       },
+       "home": {
+        "team": {
+         "id": 117,
+         "name": "Houston Astros",
+         "link": "/api/v1/teams/117"
+        },
+        "leagueRecord": {
+         "wins": 0,
+         "losses": 1,
+         "ties": 0,
+         "pct": ".000"
+        },
+        "score": 3,
+        "isWinner": false,
+        "splitSquad": false,
+        "seriesNumber": 1
+       }
+      },
+      "venue": {
+       "id": 2392,
+       "name": "Daikin Park",
+       "link": "/api/v1/venues/2392"
+      },
+      "content": {
+       "link": "/api/v1/game/849849/content"
+      },
+      "isTie": false,
+      "isFeaturedGame": false,
+      "gameNumber": 1,
+      "publicFacing": true,
+      "doubleHeader": "N",
+      "gamedayType": "P",
+      "tiebreaker": "N",
+      "calendarEventID": "14-849849-2026-09-29",
+      "seasonDisplay": "2026",
+      "dayNight": "day",
+      "description": "AL Wild Card 'A' Game 1",
+      "scheduledInnings": 9,
+      "reverseHomeAwayStatus": false,
+      "inningBreakLength": 145,
+      "gamesInSeries": 3,
+      "seriesGameNumber": 1,
+      "seriesDescription": "AL Wild Card Series",
+      "recordSource": "S",
+      "ifNecessary": "N",
+      "ifNecessaryDescription": "Normal Game"
+     },
+     {
+      "gamePk": 849846,
+      "gameGuid": "c842164b-11fc-4692-b845-77283cf17edf",
+      "link": "/api/v1.1/game/849846/feed/live",
+      "gameType": "F",
+      "season": "2026",
+      "gameDate": "2026-09-30T21:00:00Z",
+      "officialDate": "2026-09-30",
+      "status": {
+       "abstractGameState": "Final",
+       "codedGameState": "F",
+       "detailedState": "Final",
+       "statusCode": "F",
+       "startTimeTBD": false,
+       "abstractGameCode": "F"
+      },
+      "teams": {
+       "away": {
+        "team": {
+         "id": 145,
+         "name": "Chicago White Sox",
+         "link": "/api/v1/teams/145"
+        },
+        "leagueRecord": {
+         "wins": 2,
+         "losses": 0,
+         "ties": 0,
+         "pct": "1.000"
+        },
+        "score": 7,
+        "isWinner": true,
+        "splitSquad": false,
+        "seriesNumber": 1
+       },
+       "home": {
+        "team": {
+         "id": 117,
+         "name": "Houston Astros",
+         "link": "/api/v1/teams/117"
+        },
+        "leagueRecord": {
+         "wins": 0,
+         "losses": 2,
+         "ties": 0,
+         "pct": ".000"
+        },
+        "score": 3,
+        "isWinner": false,
+        "splitSquad": false,
+        "seriesNumber": 1
+       }
+      },
+      "venue": {
+       "id": 2392,
+       "name": "Daikin Park",
+       "link": "/api/v1/venues/2392"
+      },
+      "content": {
+       "link": "/api/v1/game/849846/content"
+      },
+      "isTie": false,
+      "isFeaturedGame": true,
+      "gameNumber": 1,
+      "publicFacing": true,
+      "doubleHeader": "N",
+      "gamedayType": "P",
+      "tiebreaker": "N",
+      "calendarEventID": "14-849846-2026-09-30",
+      "seasonDisplay": "2026",
+      "dayNight": "day",
+      "description": "AL Wild Card 'A' Game 2",
+      "scheduledInnings": 9,
+      "reverseHomeAwayStatus": false,
+      "inningBreakLength": 145,
+      "gamesInSeries": 3,
+      "seriesGameNumber": 2,
+      "seriesDescription": "AL Wild Card Series",
+      "recordSource": "S",
+      "ifNecessary": "N",
+      "ifNecessaryDescription": "Normal Game"
+     }
+    ],
+    "sortOrder": 1
+   },
+   {
+    "series": {
+     "id": "F_2",
+     "sortNumber": 2,
+     "isDefault": true,
+     "gameType": "F"
+    },
+    "totalItems": 2,
+    "totalGames": 2,
+    "totalGamesInProgress": 0,
+    "games": [
+     {
+      "gamePk": 849851,
+      "gameGuid": "b0b65ee7-3843-498e-8d4a-d3b8b5be4166",
+      "link": "/api/v1.1/game/849851/feed/live",
+      "gameType": "F",
+      "season": "2026",
+      "gameDate": "2026-09-30T00:00:00Z",
+      "officialDate": "2026-09-29",
+      "status": {
+       "abstractGameState": "Final",
+       "codedGameState": "F",
+       "detailedState": "Final",
+       "statusCode": "F",
+       "startTimeTBD": false,
+       "abstractGameCode": "F"
+      },
+      "teams": {
+       "away": {
+        "team": {
+         "id": 111,
+         "name": "Boston Red Sox",
+         "link": "/api/v1/teams/111"
+        },
+        "leagueRecord": {
+         "wins": 0,
+         "losses": 1,
+         "ties": 0,
+         "pct": ".000"
+        },
+        "score": 0,
+        "isWinner": false,
+        "splitSquad": false,
+        "seriesNumber": 2
+       },
+       "home": {
+        "team": {
+         "id": 147,
+         "name": "New York Yankees",
+         "link": "/api/v1/teams/147"
+        },
+        "leagueRecord": {
+         "wins": 1,
+         "losses": 0,
+         "ties": 0,
+         "pct": "1.000"
+        },
+        "score": 9,
+        "isWinner": true,
+        "splitSquad": false,
+        "seriesNumber": 2
+       }
+      },
+      "venue": {
+       "id": 3313,
+       "name": "Yankee Stadium",
+       "link": "/api/v1/venues/3313"
+      },
+      "content": {
+       "link": "/api/v1/game/849851/content"
+      },
+      "isTie": false,
+      "isFeaturedGame": false,
+      "gameNumber": 1,
+      "publicFacing": true,
+      "doubleHeader": "N",
+      "gamedayType": "P",
+      "tiebreaker": "N",
+      "calendarEventID": "14-849851-2026-09-29",
+      "seasonDisplay": "2026",
+      "dayNight": "night",
+      "description": "AL Wild Card 'B' Game 1",
+      "scheduledInnings": 9,
+      "reverseHomeAwayStatus": false,
+      "inningBreakLength": 145,
+      "gamesInSeries": 3,
+      "seriesGameNumber": 1,
+      "seriesDescription": "AL Wild Card Series",
+      "recordSource": "S",
+      "ifNecessary": "N",
+      "ifNecessaryDescription": "Normal Game"
+     },
+     {
+      "gamePk": 849848,
+      "gameGuid": "bfa14416-b6c7-466c-a010-befdb5d8096b",
+      "link": "/api/v1.1/game/849848/feed/live",
+      "gameType": "F",
+      "season": "2026",
+      "gameDate": "2026-10-01T00:00:00Z",
+      "officialDate": "2026-09-30",
+      "status": {
+       "abstractGameState": "Final",
+       "codedGameState": "F",
+       "detailedState": "Final",
+       "statusCode": "F",
+       "startTimeTBD": false,
+       "abstractGameCode": "F"
+      },
+      "teams": {
+       "away": {
+        "team": {
+         "id": 111,
+         "name": "Boston Red Sox",
+         "link": "/api/v1/teams/111"
+        },
+        "leagueRecord": {
+         "wins": 0,
+         "losses": 2,
+         "ties": 0,
+         "pct": ".000"
+        },
+        "score": 2,
+        "isWinner": false,
+        "splitSquad": false,
+        "seriesNumber": 2
+       },
+       "home": {
+        "team": {
+         "id": 147,
+         "name": "New York Yankees",
+         "link": "/api/v1/teams/147"
+        },
+        "leagueRecord": {
+         "wins": 2,
+         "losses": 0,
+         "ties": 0,
+         "pct": "1.000"
+        },
+        "score": 9,
+        "isWinner": true,
+        "splitSquad": false,
+        "seriesNumber": 2
+       }
+      },
+      "venue": {
+       "id": 3313,
+       "name": "Yankee Stadium",
+       "link": "/api/v1/venues/3313"
+      },
+      "content": {
+       "link": "/api/v1/game/849848/content"
+      },
+      "isTie": false,
+      "isFeaturedGame": true,
+      "gameNumber": 1,
+      "publicFacing": true,
+      "doubleHeader": "N",
+      "gamedayType": "P",
+      "tiebreaker": "N",
+      "calendarEventID": "14-849848-2026-09-30",
+      "seasonDisplay": "2026",
+      "dayNight": "night",
+      "description": "AL Wild Card 'B' Game 2",
+      "scheduledInnings": 9,
+      "reverseHomeAwayStatus": false,
+      "inningBreakLength": 145,
+      "gamesInSeries": 3,
+      "seriesGameNumber": 2,
+      "seriesDescription": "AL Wild Card Series",
+      "recordSource": "S",
+      "ifNecessary": "N",
+      "ifNecessaryDescription": "Normal Game"
+     }
+    ],
+    "sortOrder": 2
+   },
+   "...11"
+  ]
+ },
+ "rainiers_sched": {
+  "dates": 150,
+  "last": {
+   "date": "2026-09-20",
+   "totalItems": 1,
+   "totalEvents": 0,
+   "totalGames": 1,
+   "totalGamesInProgress": 0,
+   "games": [
+    {
+     "gamePk": 815025,
+     "gameGuid": "3af1de20-e71e-43b5-9586-b23ae4786d9a",
+     "link": "/api/v1.1/game/815025/feed/live",
+     "gameType": "R",
+     "season": "2026",
+     "gameDate": "2026-09-20T18:05:00Z",
+     "officialDate": "2026-09-20",
+     "status": {
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
+      "statusCode": "F",
+      "startTimeTBD": false,
+      "abstractGameCode": "F"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+       },
+       "leagueRecord": {
+        "wins": 72,
+        "losses": 78,
+        "ties": 0,
+        "pct": ".480"
+       },
+       "score": 3,
+       "isWinner": true,
+       "splitSquad": false,
+       "seriesNumber": 26
+      },
+      "home": {
+       "team": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+       },
+       "leagueRecord": {
+        "wins": 73,
+        "losses": 77,
+        "ties": 0,
+        "pct": ".487"
+       },
+       "score": 2,
+       "isWinner": false,
+       "splitSquad": false,
+       "seriesNumber": 26
+      }
+     },
+     "venue": {
+      "id": 2528,
+      "name": "Dell Diamond",
+      "link": "/api/v1/venues/2528"
+     },
+     "content": {
+      "link": "/api/v1/game/815025/content"
+     },
+     "isTie": false,
+     "gameNumber": 1,
+     "publicFacing": true,
+     "doubleHeader": "N",
+     "gamedayType": "E",
+     "tiebreaker": "N",
+     "calendarEventID": "44-815025-2026-09-20",
+     "seasonDisplay": "2026",
+     "dayNight": "day",
+     "scheduledInnings": 9,
+     "reverseHomeAwayStatus": false,
+     "inningBreakLength": 120,
+     "gamesInSeries": 6,
+     "seriesGameNumber": 6,
+     "seriesDescription": "Regular Season",
+     "recordSource": "S",
+     "ifNecessary": "N",
+     "ifNecessaryDescription": "Normal Game"
+    }
+   ],
+   "events": []
+  }
+ },
+ "pybaseball": {
+  "fg_pitching": "ERROR HTTPError(\"Error accessing 'https://www.fangraphs.com/leaders-legacy.aspx'. Received status code 403\")",
+  "pitcher_expected": [
+   [
+    868,
+    17
+   ],
+   [
+    "last_name, first_name",
+    "player_id",
+    "year",
+    "pa",
+    "bip",
+    "ba",
+    "est_ba",
+    "est_ba_minus_ba_diff",
+    "slg",
+    "est_slg",
+    "est_slg_minus_slg_diff",
+    "woba",
+    "est_woba",
+    "est_woba_minus_woba_diff",
+    "era",
+    "xera",
+    "era_minus_xera_diff"
+   ]
+  ],
+  "arsenal_stats": [
+   [
+    3740,
+    20
+   ],
+   [
+    "last_name, first_name",
+    "player_id",
+    "team_name_alt",
+    "pitch_type",
+    "pitch_name",
+    "run_value_per_100",
+    "run_value",
+    "pitches",
+    "pitch_usage",
+    "pa",
+    "ba",
+    "slg",
+    "woba",
+    "whiff_percent",
+    "k_percent",
+    "put_away",
+    "est_ba",
+    "est_slg",
+    "est_woba",
+    "hard_hit_percent"
+   ]
+  ],
+  "pitch_arsenal_speed": [
+   [
+    822,
+    12
+   ],
+   [
+    "last_name, first_name",
+    "pitcher",
+    "ff_avg_speed",
+    "si_avg_speed",
+    "fc_avg_speed",
+    "sl_avg_speed",
+    "ch_avg_speed",
+    "cu_avg_speed",
+    "fs_avg_speed",
+    "kn_avg_speed",
+    "st_avg_speed",
+    "sv_avg_speed"
+   ]
+  ],
+  "pitcher_pitchlevel": [
+   [
+    2991,
+    119
+   ],
+   {
+    "ball": 945,
+    "foul": 543,
+    "hit_into_play": 489,
+    "called_strike": 437,
+    "swinging_strike": 400,
+    "blocked_ball": 93,
+    "foul_tip": 39,
+    "swinging_strike_blocked": 20,
+    "automatic_ball": 8,
+    "foul_bunt": 7,
+    "hit_by_pitch": 7,
+    "missed_bunt": 2,
+    "pitchout": 1
+   },
+   {
+    "FF": 1187,
+    "SL": 746,
+    "FS": 447,
+    "CH": 215,
+    "ST": 214,
+    "FC": 152,
+    "SI": 18,
+    "CU": 3,
+    "PO": 1
+   }
+  ],
+  "batter_percentile": [
+   [
+    612,
+    23
+   ],
+   [
+    "player_name",
+    "player_id",
+    "year",
+    "xwoba",
+    "xba",
+    "xslg",
+    "xiso",
+    "xobp",
+    "brl",
+    "brl_percent",
+    "exit_velocity",
+    "max_ev",
+    "hard_hit_percent",
+    "k_percent",
+    "bb_percent",
+    "whiff_percent",
+    "chase_percent",
+    "arm_strength",
+    "sprint_speed",
+    "oaa",
+    "bat_speed",
+    "squared_up_rate",
+    "swing_length"
+   ]
+  ]
+ }
+}
