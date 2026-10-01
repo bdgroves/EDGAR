@@ -23,6 +23,8 @@ def build():
         "statcast.json",
         "pitchers.json",
         "rainiers.json",
+        "season.json",
+        "health.json",
     ]
     copied = 0
 

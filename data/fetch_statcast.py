@@ -70,17 +70,17 @@ def sanitize(obj):
 # ── Roster lookup ─────────────────────────────────────────────────
 
 def get_mariners_mlbam_ids() -> set:
-    """Return set of MLBAM player IDs on the active Mariners roster."""
+    """IDs of everyone who batted for the Mariners this season.
+
+    Used to be the *active* roster on the day of the fetch, which dropped
+    anyone traded, released or sent down from the Statcast tables."""
     try:
-        roster_raw = statsapi.get(
-            "team_roster",
-            {"teamId": MARINERS_ID, "rosterType": "active", "season": SEASON},
-        )
-        ids = {p["person"]["id"] for p in roster_raw.get("roster", [])}
-        print(f"  ℹ️  {len(ids)} players on active Mariners roster")
+        from fetch_traditional import player_stats
+        ids = {sp["player"]["id"] for sp in player_stats("hitting")}
+        print(f"  ℹ️  {len(ids)} players batted for the Mariners this season")
         return ids
     except Exception as e:
-        print(f"  ⚠️  Roster ID lookup failed: {e}")
+        print(f"  ⚠️  Player ID lookup failed: {e}")
         return set()
 
 
@@ -108,19 +108,29 @@ def fetch_statcast_batting(sea_ids: set) -> list:
         print("  ⚠️  No Mariners batters in Statcast data yet")
         return []
 
+    # Savant's exit-velocity/barrels CSV column names. The original map
+    # (barrel_batted_rate, hard_hit_percent, sweet_spot_percent, ...) matched
+    # none of them, so Barrel%, Hard Hit%, Sweet Spot% and launch angle were
+    # blank all of 2026.
     col_map = {
         "last_name, first_name": "name",
+        "player_id":             "id",
         "attempts":              "bbe",
         "avg_hit_speed":         "avg_ev",
         "max_hit_speed":         "max_ev",
-        "barrel_batted_rate":    "barrel_pct",
-        "brl":                   "barrels",
-        "hard_hit_percent":      "hard_hit_pct",
+        "brl_percent":           "barrel_pct",
+        "barrels":               "barrels",
+        "ev95percent":           "hard_hit_pct",
         "avg_distance":          "avg_dist",
-        "sweet_spot_percent":    "sweet_spot_pct",
-        "avg_launch_angle":      "avg_la",
+        "max_distance":          "max_dist",
+        "anglesweetspotpercent": "sweet_spot_pct",
+        "avg_hit_angle":         "avg_la",
     }
+    missing = [k for k in col_map if k not in sea.columns]
+    if missing:
+        print(f"  ⚠️  Savant columns missing: {missing}")
     sea = sea.rename(columns={k: v for k, v in col_map.items() if k in sea.columns})
+    sea = sea.sort_values("bbe", ascending=False) if "bbe" in sea.columns else sea
 
     records = []
     for _, row in sea.iterrows():
@@ -130,7 +140,7 @@ def fetch_statcast_batting(sea_ids: set) -> list:
                 val = row[col]
                 if col in ("name",):
                     rec[col] = val
-                elif col in ("bbe", "barrels"):
+                elif col in ("bbe", "barrels", "id"):
                     rec[col] = clean_int(val)
                 else:
                     rec[col] = clean(val, decimals=3)
@@ -188,10 +198,7 @@ def fetch_sprint_speed(sea_ids: set) -> list:
         if df is None or df.empty:
             return []
 
-        team_col = next((c for c in ["team", "Team", "team_name"] if c in df.columns), None)
-        if team_col:
-            sea = df[df[team_col] == MARINERS_ABBREV].copy()
-        elif sea_ids and "player_id" in df.columns:
+        if sea_ids and "player_id" in df.columns:
             sea = df[df["player_id"].isin(sea_ids)].copy()
         else:
             return []
@@ -235,22 +242,10 @@ def fetch_statcast_all():
         "sprint_speed":    sprint,
     }
 
-    # Final safety net — walk entire output and kill any remaining NaN/Inf
-    output = sanitize(output)
-
-    os.makedirs(DATA_DIR, exist_ok=True)
-    out_path = os.path.join(DATA_DIR, "statcast.json")
-    with open(out_path, "w") as f:
-        json.dump(output, f, indent=2)
-
-    # Verify no NaN made it through
-    raw = open(out_path).read()
-    if "NaN" in raw or "Infinity" in raw:
-        print("  ⚠️  WARNING: NaN/Infinity still in output!")
-    else:
-        print("  ✅ JSON validated — no NaN values")
-
-    print(f"  ✅ Saved → {out_path}")
+    from mlb import save
+    ok = len(batting) >= 9 and any(r.get("barrel_pct") is not None for r in batting)
+    save("statcast.json", output, ok,
+         f"{len(batting)} batters, {len(xba)} xBA rows, {len(sprint)} sprint rows")
     return output
 
 

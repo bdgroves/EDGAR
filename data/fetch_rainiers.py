@@ -42,42 +42,36 @@ def safe(val, t=float, decimals=3):
         return None
 
 
-def fetch_recent_games(days: int = 7) -> list:
-    print(f"🌧️  Fetching Rainiers results (last {days} days)...")
-    end_dt   = date.today()
-    start_dt = end_dt - timedelta(days=days)
+def fetch_recent_games(n: int = 10) -> list:
+    """The last n completed Rainiers games of the season.
 
+    Used to be "games in the last 7 days", which went empty the day the
+    Triple-A season ended (Sept. 20) and stayed empty all offseason."""
+    print(f"🌧️  Fetching the last {n} Rainiers results...")
+    from mlb import get
     try:
-        schedule = statsapi.schedule(
-            start_date=start_dt.strftime("%m/%d/%Y"),
-            end_date=end_dt.strftime("%m/%d/%Y"),
-            team=TACOMA_ID,
-            sportId=11,
-        )
+        d = get("/schedule", sportId=11, teamId=TACOMA_ID, season=SEASON)
     except Exception as e:
         print(f"  ⚠️  Schedule fetch failed: {e}")
         return []
-
     games = []
-    for g in schedule:
-        if g.get("status") not in ("Final", "Game Over"):
-            continue
-        games.append({
-            "date":       g.get("game_date"),
-            "home":       g.get("home_name"),
-            "away":       g.get("away_name"),
-            "home_score": g.get("home_score"),
-            "away_score": g.get("away_score"),
-            "venue":      g.get("venue_name"),
-            "win": (
-                (g.get("home_name","").startswith("Tacoma") and g.get("home_score",0) > g.get("away_score",0))
-                or
-                (g.get("away_name","").startswith("Tacoma") and g.get("away_score",0) > g.get("home_score",0))
-            ),
-        })
-
+    for day in d.get("dates", []):
+        for g in day["games"]:
+            if g["status"].get("abstractGameState") != "Final":
+                continue
+            h, a = g["teams"]["home"], g["teams"]["away"]
+            if h.get("score") is None:
+                continue
+            tac_home = h["team"]["id"] == TACOMA_ID
+            games.append({
+                "date": g.get("officialDate") or day["date"],
+                "home": h["team"]["name"], "away": a["team"]["name"],
+                "home_score": h["score"], "away_score": a["score"],
+                "game_pk": g["gamePk"],
+                "win": bool((h if tac_home else a).get("isWinner")),
+            })
     games.sort(key=lambda x: x["date"], reverse=True)
-    return games
+    return games[:n]
 
 
 def fetch_player_batting(pid: int) -> dict:
@@ -166,60 +160,21 @@ def fetch_player_pitching(pid: int) -> dict:
 
 
 def fetch_roster_stats() -> dict:
-    """Pull full Tacoma active roster with batting + pitching stats."""
-    print("📋 Fetching Rainiers roster + stats...")
-
+    """Everyone who played for Tacoma this season (not just today's roster)."""
+    print("📋 Fetching Rainiers season stats...")
+    from fetch_traditional import player_stats, batting_row, pitching_row
     try:
-        roster_raw = statsapi.get(
-            "team_roster",
-            {"teamId": TACOMA_ID, "rosterType": "active", "season": SEASON},
-        )
-        players = roster_raw.get("roster", [])
+        bat = [batting_row(sp) for sp in player_stats("hitting", TACOMA_ID, 11)]
+        pit = [pitching_row(sp) for sp in player_stats("pitching", TACOMA_ID, 11)]
     except Exception as e:
-        print(f"  ⚠️  Roster fetch failed: {e}")
+        print(f"  ⚠️  Rainiers stats failed: {e}")
         return {"batters": [], "pitchers": []}
-
-    batters  = []
-    pitchers = []
-
-    for p in players:
-        pid       = p["person"]["id"]
-        pname     = p["person"]["fullName"]
-        pos       = p["position"]["abbreviation"]
-        is_prospect = any(pw.lower() in pname.lower() for pw in PROSPECT_WATCH)
-
-        if pos == "P":
-            stats = fetch_player_pitching(pid)
-            if stats:
-                pitchers.append({
-                    "id":       pid,
-                    "name":     pname,
-                    "pos":      pos,
-                    "prospect": is_prospect,
-                    **stats,
-                })
-        else:
-            stats = fetch_player_batting(pid)
-            if stats:
-                batters.append({
-                    "id":       pid,
-                    "name":     pname,
-                    "pos":      pos,
-                    "prospect": is_prospect,
-                    **stats,
-                })
-
-    # Sort batters by PA desc, pitchers: SP first then RP by IP
-    batters.sort(key=lambda x: (x.get("pa") or 0), reverse=True)
-    batters = [b for b in batters if (b.get("ab") or 0) > 0]
-
-    sp = sorted([p for p in pitchers if p.get("role") == "SP"],
-                key=lambda x: x.get("ip") or 0, reverse=True)
-    rp = sorted([p for p in pitchers if p.get("role") == "RP"],
-                key=lambda x: x.get("ip") or 0, reverse=True)
-
-    print(f"  ✅ {len(batters)} batters, {len(sp)} starters, {len(rp)} relievers")
-    return {"batters": batters, "pitchers": sp + rp}
+    for p in bat + pit:
+        p["prospect"] = any(pw.lower() in p["name"].lower() for pw in PROSPECT_WATCH)
+    batters = sorted([b for b in bat if (b["ab"] or 0) > 0 and b["pos"] != "P"], key=lambda b: -(b["pa"] or 0))
+    pitchers = sorted([p for p in pit if p["outs"] > 0], key=lambda p: (p["role"] != "SP", -p["outs"]))
+    print(f"  ✅ {len(batters)} batters, {len(pitchers)} pitchers")
+    return {"batters": batters, "pitchers": pitchers}
 
 
 def fetch_pcl_standings() -> list:
@@ -256,9 +211,11 @@ def fetch_rainiers_all():
     wins   = sum(1 for g in games if g["win"])
     losses = len(games) - wins
 
+    tac = next((t for t in standings if "Tacoma" in t["team"]), None)
     output = {
         "updated":        date.today().isoformat(),
         "season":         SEASON,
+        "season_record":  f"{tac['w']}-{tac['l']}" if tac else None,
         "recent_record":  f"{wins}-{losses} (last {len(games)} games)",
         "recent_games":   games,
         "roster":         roster,
@@ -266,12 +223,10 @@ def fetch_rainiers_all():
         "prospect_watch": PROSPECT_WATCH,
     }
 
-    os.makedirs(DATA_DIR, exist_ok=True)
-    out_path = os.path.join(DATA_DIR, "rainiers.json")
-    with open(out_path, "w") as f:
-        json.dump(output, f, indent=2)
-
-    print(f"  ✅ Saved → {out_path}")
+    from mlb import save
+    ok = len(roster["batters"]) >= 9 and len(standings) >= 5
+    save("rainiers.json", output, ok,
+         f"{len(roster['batters'])} batters, {len(roster['pitchers'])} pitchers, {len(games)} recent games")
     return output
 
 

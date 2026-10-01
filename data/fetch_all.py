@@ -1,7 +1,7 @@
 """
 edgar/data/fetch_all.py
 ───────────────────────
-Runs all five data fetchers in sequence.
+Runs all six data fetchers in sequence.
 Called by GitHub Actions every morning.
 """
 
@@ -16,6 +16,8 @@ from fetch_statcast    import fetch_statcast_all
 from fetch_pitchers    import fetch_pitchers_all
 from fetch_rainiers    import fetch_rainiers_all
 from fetch_traditional import fetch_traditional_all
+from fetch_season      import fetch_season
+from mlb               import write_health, HEALTH
 
 
 def main():
@@ -30,33 +32,46 @@ def main():
         print()
     except Exception as e:
         print(f"❌ Standings failed: {e}\n")
+        HEALTH.setdefault("standings.json", {"ok": False, "detail": "crashed: " + str(e)[:200]})
 
     try:
         results["traditional"] = fetch_traditional_all()
         print()
     except Exception as e:
         print(f"❌ Traditional stats failed: {e}\n")
+        HEALTH.setdefault("traditional.json", {"ok": False, "detail": "crashed: " + str(e)[:200]})
 
     try:
         results["statcast"] = fetch_statcast_all()
         print()
     except Exception as e:
         print(f"❌ Statcast failed: {e}\n")
+        HEALTH.setdefault("statcast.json", {"ok": False, "detail": "crashed: " + str(e)[:200]})
 
     try:
         results["pitchers"] = fetch_pitchers_all()
         print()
     except Exception as e:
         print(f"❌ Pitchers failed: {e}\n")
+        HEALTH.setdefault("pitchers.json", {"ok": False, "detail": "crashed: " + str(e)[:200]})
+
+    try:
+        results["season"] = fetch_season()
+        print()
+    except Exception as e:
+        print(f"❌ Season log failed: {e}\n")
+        HEALTH.setdefault("season.json", {"ok": False, "detail": "crashed: " + str(e)[:200]})
 
     try:
         results["rainiers"] = fetch_rainiers_all()
         print()
     except Exception as e:
         print(f"❌ Rainiers failed: {e}\n")
+        HEALTH.setdefault("rainiers.json", {"ok": False, "detail": "crashed: " + str(e)[:200]})
 
+    write_health()
     print(f"{'='*50}")
-    print(f"  ✅ Fetch complete — {len(results)}/5 modules succeeded")
+    print(f"  ✅ Fetch complete — {len(results)}/6 modules ran")
     print(f"{'='*50}\n")
 
 

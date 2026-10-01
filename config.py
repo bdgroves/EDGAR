@@ -18,7 +18,7 @@ AL_WEST = {
     "HOU": {"name": "Astros",    "id": 117, "color": "#EB6E1F"},
     "TEX": {"name": "Rangers",   "id": 140, "color": "#003278"},
     "LAA": {"name": "Angels",    "id": 108, "color": "#BA0021"},
-    "OAK": {"name": "Athletics", "id": 133, "color": "#003831"},
+    "ATH": {"name": "Athletics", "id": 133, "color": "#003831"},  # MLB abbreviation since the move from Oakland
 }
 
 # ── Mariners brand colors ─────────────────────────────────────────
