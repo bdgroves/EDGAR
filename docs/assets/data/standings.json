@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -492,7 +492,7 @@
       ],
       "wins": {
         "Philadelphia Phillies": 1,
-        "Atlanta Braves": 1
+        "Atlanta Braves": 2
       },
       "games_in_series": 3,
       "start": "2026-09-29"
@@ -543,11 +543,11 @@
       "series": "NL Division Series",
       "label": "NLDS 'B'",
       "teams": [
-        "ATL/PHI",
+        "Atlanta Braves",
         "Los Angeles Dodgers"
       ],
       "wins": {
-        "ATL/PHI": 0,
+        "Atlanta Braves": 0,
         "Los Angeles Dodgers": 0
       },
       "games_in_series": 5,

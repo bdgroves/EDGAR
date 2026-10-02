@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "season": 2026,
   "batting_leaders": [
     {
@@ -143,20 +143,6 @@
       "avg_la": 14.0
     },
     {
-      "name": "Donovan, Brendan",
-      "id": 680977,
-      "bbe": 115,
-      "avg_ev": 85.7,
-      "max_ev": 109.6,
-      "barrel_pct": 2.6,
-      "barrels": 3,
-      "hard_hit_pct": 27.8,
-      "avg_dist": 143.0,
-      "max_dist": 381.0,
-      "sweet_spot_pct": 34.8,
-      "avg_la": 10.6
-    },
-    {
       "name": "Robles, Victor",
       "id": 645302,
       "bbe": 115,
@@ -169,6 +155,20 @@
       "max_dist": 408.0,
       "sweet_spot_pct": 32.2,
       "avg_la": 12.3
+    },
+    {
+      "name": "Donovan, Brendan",
+      "id": 680977,
+      "bbe": 115,
+      "avg_ev": 85.7,
+      "max_ev": 109.6,
+      "barrel_pct": 2.6,
+      "barrels": 3,
+      "hard_hit_pct": 27.8,
+      "avg_dist": 143.0,
+      "max_dist": 381.0,
+      "sweet_spot_pct": 34.8,
+      "avg_la": 10.6
     },
     {
       "name": "Wilson, Weston",
@@ -269,20 +269,6 @@
       "avg_la": 16.8
     },
     {
-      "name": "Montes, Lazaro",
-      "id": 703155,
-      "bbe": 28,
-      "avg_ev": 90.0,
-      "max_ev": 116.1,
-      "barrel_pct": 17.9,
-      "barrels": 5,
-      "hard_hit_pct": 42.9,
-      "avg_dist": 203.0,
-      "max_dist": 474.0,
-      "sweet_spot_pct": 35.7,
-      "avg_la": 21.0
-    },
-    {
       "name": "Kennedy, Buddy",
       "id": 671083,
       "bbe": 28,
@@ -295,6 +281,20 @@
       "max_dist": 380.0,
       "sweet_spot_pct": 28.6,
       "avg_la": 28.1
+    },
+    {
+      "name": "Montes, Lazaro",
+      "id": 703155,
+      "bbe": 28,
+      "avg_ev": 90.0,
+      "max_ev": 116.1,
+      "barrel_pct": 17.9,
+      "barrels": 5,
+      "hard_hit_pct": 42.9,
+      "avg_dist": 203.0,
+      "max_dist": 474.0,
+      "sweet_spot_pct": 35.7,
+      "avg_la": 21.0
     },
     {
       "name": "Wisdom, Patrick",
