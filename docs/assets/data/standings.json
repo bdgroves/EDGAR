@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -456,60 +456,18 @@
   "sea_rank": 3,
   "postseason": [
     {
-      "series": "AL Wild Card Series",
-      "label": "AL Wild Card 'A'",
+      "series": "AL Division Series",
+      "label": "ALDS 'A'",
       "teams": [
-        "Chicago White Sox",
-        "Houston Astros"
+        "New York Yankees",
+        "Tampa Bay Rays"
       ],
       "wins": {
-        "Chicago White Sox": 2,
-        "Houston Astros": 0
+        "New York Yankees": 0,
+        "Tampa Bay Rays": 0
       },
-      "games_in_series": 3,
-      "start": "2026-09-29"
-    },
-    {
-      "series": "AL Wild Card Series",
-      "label": "AL Wild Card 'B'",
-      "teams": [
-        "Boston Red Sox",
-        "New York Yankees"
-      ],
-      "wins": {
-        "Boston Red Sox": 0,
-        "New York Yankees": 2
-      },
-      "games_in_series": 3,
-      "start": "2026-09-29"
-    },
-    {
-      "series": "NL Wild Card Series",
-      "label": "NL Wild Card 'A'",
-      "teams": [
-        "Philadelphia Phillies",
-        "Atlanta Braves"
-      ],
-      "wins": {
-        "Philadelphia Phillies": 1,
-        "Atlanta Braves": 2
-      },
-      "games_in_series": 3,
-      "start": "2026-09-29"
-    },
-    {
-      "series": "NL Wild Card Series",
-      "label": "NL Wild Card 'B'",
-      "teams": [
-        "Chicago Cubs",
-        "San Diego Padres"
-      ],
-      "wins": {
-        "Chicago Cubs": 0,
-        "San Diego Padres": 2
-      },
-      "games_in_series": 3,
-      "start": "2026-09-29"
+      "games_in_series": 5,
+      "start": "2026-10-03"
     },
     {
       "series": "AL Division Series",
@@ -526,15 +484,15 @@
       "start": "2026-10-03"
     },
     {
-      "series": "AL Division Series",
-      "label": "ALDS 'A'",
+      "series": "NL Division Series",
+      "label": "NLDS 'A'",
       "teams": [
-        "New York Yankees",
-        "Tampa Bay Rays"
+        "San Diego Padres",
+        "Milwaukee Brewers"
       ],
       "wins": {
-        "New York Yankees": 0,
-        "Tampa Bay Rays": 0
+        "San Diego Padres": 0,
+        "Milwaukee Brewers": 0
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -549,20 +507,6 @@
       "wins": {
         "Atlanta Braves": 0,
         "Los Angeles Dodgers": 0
-      },
-      "games_in_series": 5,
-      "start": "2026-10-03"
-    },
-    {
-      "series": "NL Division Series",
-      "label": "NLDS 'A'",
-      "teams": [
-        "San Diego Padres",
-        "Milwaukee Brewers"
-      ],
-      "wins": {
-        "San Diego Padres": 0,
-        "Milwaukee Brewers": 0
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -608,6 +552,62 @@
       },
       "games_in_series": 7,
       "start": "2026-10-23"
+    },
+    {
+      "series": "AL Wild Card Series",
+      "label": "AL Wild Card 'B'",
+      "teams": [
+        "Boston Red Sox",
+        "New York Yankees"
+      ],
+      "wins": {
+        "Boston Red Sox": 0,
+        "New York Yankees": 2
+      },
+      "games_in_series": 3,
+      "start": "2026-09-29"
+    },
+    {
+      "series": "AL Wild Card Series",
+      "label": "AL Wild Card 'A'",
+      "teams": [
+        "Chicago White Sox",
+        "Houston Astros"
+      ],
+      "wins": {
+        "Chicago White Sox": 2,
+        "Houston Astros": 0
+      },
+      "games_in_series": 3,
+      "start": "2026-09-29"
+    },
+    {
+      "series": "NL Wild Card Series",
+      "label": "NL Wild Card 'B'",
+      "teams": [
+        "Chicago Cubs",
+        "San Diego Padres"
+      ],
+      "wins": {
+        "Chicago Cubs": 0,
+        "San Diego Padres": 2
+      },
+      "games_in_series": 3,
+      "start": "2026-09-29"
+    },
+    {
+      "series": "NL Wild Card Series",
+      "label": "NL Wild Card 'A'",
+      "teams": [
+        "Philadelphia Phillies",
+        "Atlanta Braves"
+      ],
+      "wins": {
+        "Philadelphia Phillies": 1,
+        "Atlanta Braves": 2
+      },
+      "games_in_series": 3,
+      "start": "2026-09-29"
     }
   ]
 }
