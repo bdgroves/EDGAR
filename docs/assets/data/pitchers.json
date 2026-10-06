@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "season": 2026,
   "league": {
     "era": 4.17,
@@ -1323,11 +1323,11 @@
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 13.4,
+        "pct": 13.3,
         "avg_velo": 87.1,
         "spin": 2209,
         "whiff_pct": 32.6,
-        "csw_pct": 28.9
+        "csw_pct": 28.7
       },
       {
         "pitch_type": "ST",
@@ -1351,10 +1351,10 @@
         "pitch_type": "CU",
         "name": "Curve",
         "pct": 2.5,
-        "avg_velo": 82.9,
-        "spin": 2287,
+        "avg_velo": 83.0,
+        "spin": 2285,
         "whiff_pct": 40.0,
-        "csw_pct": 30.3
+        "csw_pct": 30.9
       }
     ],
     "Eduard Bazardo": [

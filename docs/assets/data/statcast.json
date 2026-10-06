@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "season": 2026,
   "batting_leaders": [
     {
@@ -143,20 +143,6 @@
       "avg_la": 14.0
     },
     {
-      "name": "Robles, Victor",
-      "id": 645302,
-      "bbe": 115,
-      "avg_ev": 83.5,
-      "max_ev": 106.9,
-      "barrel_pct": 1.7,
-      "barrels": 2,
-      "hard_hit_pct": 20.0,
-      "avg_dist": 150.0,
-      "max_dist": 408.0,
-      "sweet_spot_pct": 32.2,
-      "avg_la": 12.3
-    },
-    {
       "name": "Donovan, Brendan",
       "id": 680977,
       "bbe": 115,
@@ -169,6 +155,20 @@
       "max_dist": 381.0,
       "sweet_spot_pct": 34.8,
       "avg_la": 10.6
+    },
+    {
+      "name": "Robles, Victor",
+      "id": 645302,
+      "bbe": 115,
+      "avg_ev": 83.5,
+      "max_ev": 106.9,
+      "barrel_pct": 1.7,
+      "barrels": 2,
+      "hard_hit_pct": 20.0,
+      "avg_dist": 150.0,
+      "max_dist": 408.0,
+      "sweet_spot_pct": 32.2,
+      "avg_la": 12.3
     },
     {
       "name": "Wilson, Weston",
@@ -269,20 +269,6 @@
       "avg_la": 16.8
     },
     {
-      "name": "Kennedy, Buddy",
-      "id": 671083,
-      "bbe": 28,
-      "avg_ev": 84.4,
-      "max_ev": 105.7,
-      "barrel_pct": 10.7,
-      "barrels": 3,
-      "hard_hit_pct": 32.1,
-      "avg_dist": 187.0,
-      "max_dist": 380.0,
-      "sweet_spot_pct": 28.6,
-      "avg_la": 28.1
-    },
-    {
       "name": "Montes, Lazaro",
       "id": 703155,
       "bbe": 28,
@@ -295,6 +281,20 @@
       "max_dist": 474.0,
       "sweet_spot_pct": 35.7,
       "avg_la": 21.0
+    },
+    {
+      "name": "Kennedy, Buddy",
+      "id": 671083,
+      "bbe": 28,
+      "avg_ev": 84.4,
+      "max_ev": 105.7,
+      "barrel_pct": 10.7,
+      "barrels": 3,
+      "hard_hit_pct": 32.1,
+      "avg_dist": 187.0,
+      "max_dist": 380.0,
+      "sweet_spot_pct": 28.6,
+      "avg_la": 28.1
     },
     {
       "name": "Wisdom, Patrick",
@@ -682,10 +682,10 @@
       "opportunities": 42
     },
     {
-      "name": "Fairchild, Stuart",
+      "name": "Ward, Taylor",
       "sprint_spd": 27.5,
-      "hp_to_1b": null,
-      "opportunities": 5
+      "hp_to_1b": 4.5,
+      "opportunities": 184
     },
     {
       "name": "Mastrobuoni, Miles",
@@ -694,10 +694,10 @@
       "opportunities": 9
     },
     {
-      "name": "Ward, Taylor",
+      "name": "Fairchild, Stuart",
       "sprint_spd": 27.5,
-      "hp_to_1b": 4.5,
-      "opportunities": 184
+      "hp_to_1b": null,
+      "opportunities": 5
     },
     {
       "name": "Arozarena, Randy",

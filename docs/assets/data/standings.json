@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -464,7 +464,7 @@
       ],
       "wins": {
         "New York Yankees": 0,
-        "Tampa Bay Rays": 1
+        "Tampa Bay Rays": 2
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -477,7 +477,7 @@
         "Cleveland Guardians"
       ],
       "wins": {
-        "Chicago White Sox": 1,
+        "Chicago White Sox": 2,
         "Cleveland Guardians": 0
       },
       "games_in_series": 5,
