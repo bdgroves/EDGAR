@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -491,7 +491,7 @@
         "Milwaukee Brewers"
       ],
       "wins": {
-        "San Diego Padres": 0,
+        "San Diego Padres": 1,
         "Milwaukee Brewers": 2
       },
       "games_in_series": 5,
@@ -506,7 +506,7 @@
       ],
       "wins": {
         "Atlanta Braves": 1,
-        "Los Angeles Dodgers": 1
+        "Los Angeles Dodgers": 2
       },
       "games_in_series": 5,
       "start": "2026-10-03"

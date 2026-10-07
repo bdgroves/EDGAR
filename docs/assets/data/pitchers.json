@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "season": 2026,
   "league": {
     "era": 4.17,
@@ -1399,8 +1399,8 @@
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 39.5,
-        "avg_velo": 96.0,
+        "pct": 39.8,
+        "avg_velo": 95.9,
         "spin": 2515,
         "whiff_pct": 21.9,
         "csw_pct": 27.0
@@ -1444,11 +1444,11 @@
       {
         "pitch_type": "FC",
         "name": "Cutter",
-        "pct": 5.7,
-        "avg_velo": 91.2,
-        "spin": 2592,
-        "whiff_pct": 33.9,
-        "csw_pct": 30.8
+        "pct": 5.4,
+        "avg_velo": 91.0,
+        "spin": 2596,
+        "whiff_pct": 34.5,
+        "csw_pct": 31.4
       },
       {
         "pitch_type": "KC",
