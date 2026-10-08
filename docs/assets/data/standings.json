@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -464,7 +464,7 @@
       ],
       "wins": {
         "New York Yankees": 0,
-        "Tampa Bay Rays": 2
+        "Tampa Bay Rays": 3
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -478,7 +478,7 @@
       ],
       "wins": {
         "Chicago White Sox": 2,
-        "Cleveland Guardians": 0
+        "Cleveland Guardians": 1
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -492,7 +492,7 @@
       ],
       "wins": {
         "San Diego Padres": 1,
-        "Milwaukee Brewers": 2
+        "Milwaukee Brewers": 3
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -506,7 +506,7 @@
       ],
       "wins": {
         "Atlanta Braves": 1,
-        "Los Angeles Dodgers": 2
+        "Los Angeles Dodgers": 3
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -515,12 +515,12 @@
       "series": "NL Championship Series",
       "label": "NLCS",
       "teams": [
-        "NL Lower Seed",
-        "NL Higher Seed"
+        "Los Angeles Dodgers",
+        "Milwaukee Brewers"
       ],
       "wins": {
-        "NL Lower Seed": 0,
-        "NL Higher Seed": 0
+        "Los Angeles Dodgers": 0,
+        "Milwaukee Brewers": 0
       },
       "games_in_series": 7,
       "start": "2026-10-11"
@@ -529,12 +529,12 @@
       "series": "AL Championship Series",
       "label": "ALCS",
       "teams": [
-        "AL Lower Seed",
-        "AL Higher Seed"
+        "CLE/CWS",
+        "Tampa Bay Rays"
       ],
       "wins": {
-        "AL Lower Seed": 0,
-        "AL Higher Seed": 0
+        "CLE/CWS": 0,
+        "Tampa Bay Rays": 0
       },
       "games_in_series": 7,
       "start": "2026-10-12"

@@ -1,35 +1,35 @@
 {
-  "generated": "2026-10-07T12:48:10+00:00",
+  "generated": "2026-10-08T12:58:01+00:00",
   "modules": {
     "standings.json": {
       "ok": true,
       "detail": "5 AL West teams, SEA 76-86",
-      "checked": "2026-10-07T12:46:48+00:00"
+      "checked": "2026-10-08T12:56:35+00:00"
     },
     "traditional.json": {
       "ok": true,
       "detail": "26 hitters, 30 pitchers, team G=162",
-      "checked": "2026-10-07T12:46:48+00:00"
+      "checked": "2026-10-08T12:56:36+00:00"
     },
     "statcast.json": {
       "ok": true,
       "detail": "27 batters, 27 xBA rows, 25 sprint rows",
-      "checked": "2026-10-07T12:46:48+00:00"
+      "checked": "2026-10-08T12:56:36+00:00"
     },
     "pitchers.json": {
       "ok": true,
       "detail": "24 pitchers, 20 with pitch data, 0 pitch-data failures",
-      "checked": "2026-10-07T12:48:08+00:00"
+      "checked": "2026-10-08T12:57:59+00:00"
     },
     "season.json": {
       "ok": true,
       "detail": "162 Mariners games, 179 race dates",
-      "checked": "2026-10-07T12:48:10+00:00"
+      "checked": "2026-10-08T12:58:00+00:00"
     },
     "rainiers.json": {
       "ok": true,
       "detail": "34 batters, 36 pitchers, 10 recent games",
-      "checked": "2026-10-07T12:48:10+00:00"
+      "checked": "2026-10-08T12:58:01+00:00"
     }
   }
 }
