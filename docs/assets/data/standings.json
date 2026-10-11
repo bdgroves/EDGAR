@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -478,7 +478,7 @@
       ],
       "wins": {
         "Chicago White Sox": 2,
-        "Cleveland Guardians": 2
+        "Cleveland Guardians": 3
       },
       "games_in_series": 5,
       "start": "2026-10-03"
@@ -529,11 +529,11 @@
       "series": "AL Championship Series",
       "label": "ALCS",
       "teams": [
-        "CLE/CWS",
+        "Cleveland Guardians",
         "Tampa Bay Rays"
       ],
       "wins": {
-        "CLE/CWS": 0,
+        "Cleveland Guardians": 0,
         "Tampa Bay Rays": 0
       },
       "games_in_series": 7,
