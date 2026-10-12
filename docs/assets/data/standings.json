@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -456,76 +456,6 @@
   "sea_rank": 3,
   "postseason": [
     {
-      "series": "AL Division Series",
-      "label": "ALDS 'A'",
-      "teams": [
-        "New York Yankees",
-        "Tampa Bay Rays"
-      ],
-      "wins": {
-        "New York Yankees": 0,
-        "Tampa Bay Rays": 3
-      },
-      "games_in_series": 5,
-      "start": "2026-10-03"
-    },
-    {
-      "series": "AL Division Series",
-      "label": "ALDS 'B'",
-      "teams": [
-        "Chicago White Sox",
-        "Cleveland Guardians"
-      ],
-      "wins": {
-        "Chicago White Sox": 2,
-        "Cleveland Guardians": 3
-      },
-      "games_in_series": 5,
-      "start": "2026-10-03"
-    },
-    {
-      "series": "NL Division Series",
-      "label": "NLDS 'A'",
-      "teams": [
-        "San Diego Padres",
-        "Milwaukee Brewers"
-      ],
-      "wins": {
-        "San Diego Padres": 1,
-        "Milwaukee Brewers": 3
-      },
-      "games_in_series": 5,
-      "start": "2026-10-03"
-    },
-    {
-      "series": "NL Division Series",
-      "label": "NLDS 'B'",
-      "teams": [
-        "Atlanta Braves",
-        "Los Angeles Dodgers"
-      ],
-      "wins": {
-        "Atlanta Braves": 1,
-        "Los Angeles Dodgers": 3
-      },
-      "games_in_series": 5,
-      "start": "2026-10-03"
-    },
-    {
-      "series": "NL Championship Series",
-      "label": "NLCS",
-      "teams": [
-        "Los Angeles Dodgers",
-        "Milwaukee Brewers"
-      ],
-      "wins": {
-        "Los Angeles Dodgers": 0,
-        "Milwaukee Brewers": 0
-      },
-      "games_in_series": 7,
-      "start": "2026-10-11"
-    },
-    {
       "series": "AL Championship Series",
       "label": "ALCS",
       "teams": [
@@ -538,6 +468,20 @@
       },
       "games_in_series": 7,
       "start": "2026-10-12"
+    },
+    {
+      "series": "NL Championship Series",
+      "label": "NLCS",
+      "teams": [
+        "Los Angeles Dodgers",
+        "Milwaukee Brewers"
+      ],
+      "wins": {
+        "Los Angeles Dodgers": 0,
+        "Milwaukee Brewers": 1
+      },
+      "games_in_series": 7,
+      "start": "2026-10-11"
     },
     {
       "series": "World Series",
@@ -608,6 +552,62 @@
       },
       "games_in_series": 3,
       "start": "2026-09-29"
+    },
+    {
+      "series": "AL Division Series",
+      "label": "ALDS 'B'",
+      "teams": [
+        "Chicago White Sox",
+        "Cleveland Guardians"
+      ],
+      "wins": {
+        "Chicago White Sox": 2,
+        "Cleveland Guardians": 3
+      },
+      "games_in_series": 5,
+      "start": "2026-10-03"
+    },
+    {
+      "series": "AL Division Series",
+      "label": "ALDS 'A'",
+      "teams": [
+        "New York Yankees",
+        "Tampa Bay Rays"
+      ],
+      "wins": {
+        "New York Yankees": 0,
+        "Tampa Bay Rays": 3
+      },
+      "games_in_series": 5,
+      "start": "2026-10-03"
+    },
+    {
+      "series": "NL Division Series",
+      "label": "NLDS 'B'",
+      "teams": [
+        "Atlanta Braves",
+        "Los Angeles Dodgers"
+      ],
+      "wins": {
+        "Atlanta Braves": 1,
+        "Los Angeles Dodgers": 3
+      },
+      "games_in_series": 5,
+      "start": "2026-10-03"
+    },
+    {
+      "series": "NL Division Series",
+      "label": "NLDS 'A'",
+      "teams": [
+        "San Diego Padres",
+        "Milwaukee Brewers"
+      ],
+      "wins": {
+        "San Diego Padres": 1,
+        "Milwaukee Brewers": 3
+      },
+      "games_in_series": 5,
+      "start": "2026-10-03"
     }
   ]
 }
