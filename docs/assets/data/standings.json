@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -478,7 +478,7 @@
       ],
       "wins": {
         "Los Angeles Dodgers": 0,
-        "Milwaukee Brewers": 2
+        "Milwaukee Brewers": 3
       },
       "games_in_series": 7,
       "start": "2026-10-11"

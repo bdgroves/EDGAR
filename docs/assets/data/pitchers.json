@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "season": 2026,
   "league": {
     "era": 4.17,
@@ -1003,11 +1003,11 @@
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 33.4,
-        "avg_velo": 95.1,
-        "spin": 2124,
-        "whiff_pct": 11.3,
-        "csw_pct": 26.6
+        "pct": 33.5,
+        "avg_velo": 95.0,
+        "spin": 2123,
+        "whiff_pct": 11.2,
+        "csw_pct": 26.5
       },
       {
         "pitch_type": "SL",
