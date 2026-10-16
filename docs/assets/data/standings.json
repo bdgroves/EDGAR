@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -463,7 +463,7 @@
         "Tampa Bay Rays"
       ],
       "wins": {
-        "Cleveland Guardians": 1,
+        "Cleveland Guardians": 2,
         "Tampa Bay Rays": 1
       },
       "games_in_series": 7,
@@ -478,7 +478,7 @@
       ],
       "wins": {
         "Los Angeles Dodgers": 0,
-        "Milwaukee Brewers": 3
+        "Milwaukee Brewers": 4
       },
       "games_in_series": 7,
       "start": "2026-10-11"
@@ -488,11 +488,11 @@
       "label": "World Series",
       "teams": [
         "AL Champion",
-        "NL Champion"
+        "Milwaukee Brewers"
       ],
       "wins": {
         "AL Champion": 0,
-        "NL Champion": 0
+        "Milwaukee Brewers": 0
       },
       "games_in_series": 7,
       "start": "2026-10-23"
