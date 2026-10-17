@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -487,11 +487,11 @@
       "series": "World Series",
       "label": "World Series",
       "teams": [
-        "AL Champion",
+        "TB/CLE",
         "Milwaukee Brewers"
       ],
       "wins": {
-        "AL Champion": 0,
+        "TB/CLE": 0,
         "Milwaukee Brewers": 0
       },
       "games_in_series": 7,
