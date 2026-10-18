@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "season": 2026,
   "batting_leaders": [
     {
@@ -682,12 +682,6 @@
       "opportunities": 42
     },
     {
-      "name": "Mastrobuoni, Miles",
-      "sprint_spd": 27.5,
-      "hp_to_1b": null,
-      "opportunities": 9
-    },
-    {
       "name": "Ward, Taylor",
       "sprint_spd": 27.5,
       "hp_to_1b": 4.5,
@@ -698,6 +692,12 @@
       "sprint_spd": 27.5,
       "hp_to_1b": null,
       "opportunities": 5
+    },
+    {
+      "name": "Mastrobuoni, Miles",
+      "sprint_spd": 27.5,
+      "hp_to_1b": null,
+      "opportunities": 9
     },
     {
       "name": "Arozarena, Randy",
