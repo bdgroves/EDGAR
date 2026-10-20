@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -464,7 +464,7 @@
       ],
       "wins": {
         "Cleveland Guardians": 2,
-        "Tampa Bay Rays": 3
+        "Tampa Bay Rays": 4
       },
       "games_in_series": 7,
       "start": "2026-10-12"
@@ -487,11 +487,11 @@
       "series": "World Series",
       "label": "World Series",
       "teams": [
-        "TB/CLE",
+        "Tampa Bay Rays",
         "Milwaukee Brewers"
       ],
       "wins": {
-        "TB/CLE": 0,
+        "Tampa Bay Rays": 0,
         "Milwaukee Brewers": 0
       },
       "games_in_series": 7,

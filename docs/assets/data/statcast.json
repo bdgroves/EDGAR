@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "season": 2026,
   "batting_leaders": [
     {
@@ -688,16 +688,16 @@
       "opportunities": 184
     },
     {
-      "name": "Fairchild, Stuart",
-      "sprint_spd": 27.5,
-      "hp_to_1b": null,
-      "opportunities": 5
-    },
-    {
       "name": "Mastrobuoni, Miles",
       "sprint_spd": 27.5,
       "hp_to_1b": null,
       "opportunities": 9
+    },
+    {
+      "name": "Fairchild, Stuart",
+      "sprint_spd": 27.5,
+      "hp_to_1b": null,
+      "opportunities": 5
     },
     {
       "name": "Arozarena, Randy",
