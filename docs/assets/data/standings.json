@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -456,34 +456,6 @@
   "sea_rank": 3,
   "postseason": [
     {
-      "series": "AL Championship Series",
-      "label": "ALCS",
-      "teams": [
-        "Cleveland Guardians",
-        "Tampa Bay Rays"
-      ],
-      "wins": {
-        "Cleveland Guardians": 2,
-        "Tampa Bay Rays": 4
-      },
-      "games_in_series": 7,
-      "start": "2026-10-12"
-    },
-    {
-      "series": "NL Championship Series",
-      "label": "NLCS",
-      "teams": [
-        "Los Angeles Dodgers",
-        "Milwaukee Brewers"
-      ],
-      "wins": {
-        "Los Angeles Dodgers": 0,
-        "Milwaukee Brewers": 4
-      },
-      "games_in_series": 7,
-      "start": "2026-10-11"
-    },
-    {
       "series": "World Series",
       "label": "World Series",
       "teams": [
@@ -608,6 +580,34 @@
       },
       "games_in_series": 5,
       "start": "2026-10-03"
+    },
+    {
+      "series": "NL Championship Series",
+      "label": "NLCS",
+      "teams": [
+        "Los Angeles Dodgers",
+        "Milwaukee Brewers"
+      ],
+      "wins": {
+        "Los Angeles Dodgers": 0,
+        "Milwaukee Brewers": 4
+      },
+      "games_in_series": 7,
+      "start": "2026-10-11"
+    },
+    {
+      "series": "AL Championship Series",
+      "label": "ALCS",
+      "teams": [
+        "Cleveland Guardians",
+        "Tampa Bay Rays"
+      ],
+      "wins": {
+        "Cleveland Guardians": 2,
+        "Tampa Bay Rays": 4
+      },
+      "games_in_series": 7,
+      "start": "2026-10-12"
     }
   ]
 }
