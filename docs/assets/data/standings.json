@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "season": 2026,
   "final": true,
   "al_west": [
@@ -464,7 +464,7 @@
       ],
       "wins": {
         "Tampa Bay Rays": 1,
-        "Milwaukee Brewers": 3
+        "Milwaukee Brewers": 4
       },
       "games_in_series": 7,
       "start": "2026-10-23"
