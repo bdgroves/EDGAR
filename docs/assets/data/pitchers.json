@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "season": 2026,
   "league": {
     "era": 4.17,
@@ -41,10 +41,10 @@
       "xera": 3.63,
       "xwoba": 0.294,
       "woba": 0.299,
-      "pitches": 2982,
-      "csw_pct": 30.1,
-      "swstr_pct": 15.5,
-      "whiff_pct": 30.7
+      "pitches": 3138,
+      "csw_pct": 28.6,
+      "swstr_pct": 14.7,
+      "whiff_pct": 27.8
     },
     {
       "id": 669923,
@@ -81,10 +81,10 @@
       "xera": 4.21,
       "xwoba": 0.315,
       "woba": 0.341,
-      "pitches": 2758,
-      "csw_pct": 26.5,
-      "swstr_pct": 11.6,
-      "whiff_pct": 22.4
+      "pitches": 2902,
+      "csw_pct": 25.2,
+      "swstr_pct": 11.1,
+      "whiff_pct": 20.4
     },
     {
       "id": 693433,
@@ -121,10 +121,10 @@
       "xera": 3.68,
       "xwoba": 0.296,
       "woba": 0.285,
-      "pitches": 2667,
-      "csw_pct": 27.7,
-      "swstr_pct": 13.4,
-      "whiff_pct": 25.2
+      "pitches": 2812,
+      "csw_pct": 26.2,
+      "swstr_pct": 12.7,
+      "whiff_pct": 22.9
     },
     {
       "id": 676106,
@@ -161,10 +161,10 @@
       "xera": 4.01,
       "xwoba": 0.308,
       "woba": 0.302,
-      "pitches": 2171,
-      "csw_pct": 25.8,
-      "swstr_pct": 12.3,
-      "whiff_pct": 23.7
+      "pitches": 2290,
+      "csw_pct": 24.5,
+      "swstr_pct": 11.7,
+      "whiff_pct": 21.4
     },
     {
       "id": 682243,
@@ -201,10 +201,10 @@
       "xera": 3.7,
       "xwoba": 0.297,
       "woba": 0.309,
-      "pitches": 1884,
-      "csw_pct": 26.6,
-      "swstr_pct": 13.6,
-      "whiff_pct": 25.0
+      "pitches": 1981,
+      "csw_pct": 25.3,
+      "swstr_pct": 12.9,
+      "whiff_pct": 22.9
     },
     {
       "id": 622491,
@@ -241,10 +241,10 @@
       "xera": 5.02,
       "xwoba": 0.341,
       "woba": 0.361,
-      "pitches": 2366,
-      "csw_pct": 25.5,
-      "swstr_pct": 12.3,
-      "whiff_pct": 23.7
+      "pitches": 2502,
+      "csw_pct": 24.1,
+      "swstr_pct": 11.6,
+      "whiff_pct": 21.3
     },
     {
       "id": 807739,
@@ -281,10 +281,10 @@
       "xera": 3.89,
       "xwoba": 0.304,
       "woba": 0.305,
-      "pitches": 541,
-      "csw_pct": 26.2,
-      "swstr_pct": 13.3,
-      "whiff_pct": 24.4
+      "pitches": 569,
+      "csw_pct": 25.0,
+      "swstr_pct": 12.7,
+      "whiff_pct": 22.3
     },
     {
       "id": 660825,
@@ -321,10 +321,10 @@
       "xera": 4.95,
       "xwoba": 0.339,
       "woba": 0.348,
-      "pitches": 1133,
-      "csw_pct": 30.3,
-      "swstr_pct": 9.8,
-      "whiff_pct": 21.9
+      "pitches": 1200,
+      "csw_pct": 28.6,
+      "swstr_pct": 9.2,
+      "whiff_pct": 19.3
     },
     {
       "id": 678606,
@@ -361,10 +361,10 @@
       "xera": 4.09,
       "xwoba": 0.311,
       "woba": 0.333,
-      "pitches": 1090,
-      "csw_pct": 26.5,
-      "swstr_pct": 9.7,
-      "whiff_pct": 19.4
+      "pitches": 1141,
+      "csw_pct": 25.3,
+      "swstr_pct": 9.3,
+      "whiff_pct": 17.8
     },
     {
       "id": 662253,
@@ -401,10 +401,10 @@
       "xera": 3.27,
       "xwoba": 0.28,
       "woba": 0.296,
-      "pitches": 953,
-      "csw_pct": 35.4,
-      "swstr_pct": 19.0,
-      "whiff_pct": 39.6
+      "pitches": 976,
+      "csw_pct": 34.5,
+      "swstr_pct": 18.5,
+      "whiff_pct": 37.7
     },
     {
       "id": 642100,
@@ -441,10 +441,10 @@
       "xera": 3.7,
       "xwoba": 0.297,
       "woba": 0.285,
-      "pitches": 698,
-      "csw_pct": 29.2,
-      "swstr_pct": 12.8,
-      "whiff_pct": 24.5
+      "pitches": 738,
+      "csw_pct": 27.6,
+      "swstr_pct": 12.1,
+      "whiff_pct": 22.1
     },
     {
       "id": 621074,
@@ -481,10 +481,10 @@
       "xera": 3.92,
       "xwoba": 0.305,
       "woba": 0.307,
-      "pitches": 757,
-      "csw_pct": 30.0,
-      "swstr_pct": 12.0,
-      "whiff_pct": 25.9
+      "pitches": 782,
+      "csw_pct": 29.0,
+      "swstr_pct": 11.6,
+      "whiff_pct": 24.2
     },
     {
       "id": 681867,
@@ -521,10 +521,10 @@
       "xera": 3.81,
       "xwoba": 0.301,
       "woba": 0.313,
-      "pitches": 642,
-      "csw_pct": 28.2,
-      "swstr_pct": 9.8,
-      "whiff_pct": 20.7
+      "pitches": 668,
+      "csw_pct": 27.1,
+      "swstr_pct": 9.4,
+      "whiff_pct": 19.0
     },
     {
       "id": 695380,
@@ -561,10 +561,10 @@
       "xera": 4.03,
       "xwoba": 0.309,
       "woba": 0.311,
-      "pitches": 733,
-      "csw_pct": 26.7,
-      "swstr_pct": 12.0,
-      "whiff_pct": 25.9
+      "pitches": 761,
+      "csw_pct": 25.8,
+      "swstr_pct": 11.6,
+      "whiff_pct": 23.9
     },
     {
       "id": 689546,
@@ -601,10 +601,10 @@
       "xera": 4.99,
       "xwoba": 0.34,
       "woba": 0.315,
-      "pitches": 446,
-      "csw_pct": 26.0,
-      "swstr_pct": 7.2,
-      "whiff_pct": 15.8
+      "pitches": 467,
+      "csw_pct": 24.8,
+      "swstr_pct": 6.9,
+      "whiff_pct": 14.3
     },
     {
       "id": 677961,
@@ -641,10 +641,10 @@
       "xera": 5.51,
       "xwoba": 0.355,
       "woba": 0.326,
-      "pitches": 488,
-      "csw_pct": 32.2,
-      "swstr_pct": 14.5,
-      "whiff_pct": 31.4
+      "pitches": 505,
+      "csw_pct": 31.1,
+      "swstr_pct": 14.1,
+      "whiff_pct": 29.2
     },
     {
       "id": 622554,
@@ -681,10 +681,10 @@
       "xera": 3.65,
       "xwoba": 0.295,
       "woba": 0.296,
-      "pitches": 1111,
-      "csw_pct": 27.1,
-      "swstr_pct": 13.1,
-      "whiff_pct": 27.9
+      "pitches": 1157,
+      "csw_pct": 26.0,
+      "swstr_pct": 12.5,
+      "whiff_pct": 25.6
     },
     {
       "id": 672841,
@@ -721,10 +721,10 @@
       "xera": 4.35,
       "xwoba": 0.32,
       "woba": 0.302,
-      "pitches": 282,
-      "csw_pct": 23.0,
-      "swstr_pct": 8.5,
-      "whiff_pct": 16.2
+      "pitches": 296,
+      "csw_pct": 22.0,
+      "swstr_pct": 8.1,
+      "whiff_pct": 14.8
     },
     {
       "id": 666374,
@@ -761,10 +761,10 @@
       "xera": 4.24,
       "xwoba": 0.316,
       "woba": 0.218,
-      "pitches": 262,
-      "csw_pct": 31.3,
-      "swstr_pct": 12.6,
-      "whiff_pct": 31.4
+      "pitches": 276,
+      "csw_pct": 29.7,
+      "swstr_pct": 12.0,
+      "whiff_pct": 27.7
     },
     {
       "id": 668984,
@@ -801,10 +801,10 @@
       "xera": 4.24,
       "xwoba": 0.316,
       "woba": 0.322,
-      "pitches": 1118,
-      "csw_pct": 26.2,
-      "swstr_pct": 10.9,
-      "whiff_pct": 20.9
+      "pitches": 1181,
+      "csw_pct": 24.8,
+      "swstr_pct": 10.3,
+      "whiff_pct": 18.9
     },
     {
       "id": 682445,
@@ -956,34 +956,34 @@
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 59.5,
+        "pct": 58.0,
         "avg_velo": 86.8,
         "spin": 2921,
-        "whiff_pct": 38.1,
-        "csw_pct": 33.3
+        "whiff_pct": 35.8,
+        "csw_pct": 32.5
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 21.0,
-        "avg_velo": 97.4,
-        "spin": 2254,
-        "whiff_pct": 19.0,
-        "csw_pct": 32.7
+        "pct": 22.1,
+        "avg_velo": 97.3,
+        "spin": 2252,
+        "whiff_pct": 14.8,
+        "csw_pct": 29.5
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 13.4,
+        "pct": 14.1,
         "avg_velo": 90.9,
-        "spin": 1813,
-        "whiff_pct": 27.8,
-        "csw_pct": 25.7
+        "spin": 1821,
+        "whiff_pct": 22.7,
+        "csw_pct": 23.1
       },
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 6.1,
+        "pct": 5.8,
         "avg_velo": 96.5,
         "spin": 2222,
         "whiff_pct": 0.0,
@@ -994,63 +994,63 @@
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 40.3,
+        "pct": 40.8,
         "avg_velo": 95.4,
-        "spin": 2249,
-        "whiff_pct": 32.7,
-        "csw_pct": 33.1
+        "spin": 2248,
+        "whiff_pct": 29.3,
+        "csw_pct": 30.9
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
         "pct": 33.5,
-        "avg_velo": 95.0,
-        "spin": 2123,
-        "whiff_pct": 11.2,
-        "csw_pct": 26.5
+        "avg_velo": 95.1,
+        "spin": 2125,
+        "whiff_pct": 10.1,
+        "csw_pct": 25.1
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 25.6,
+        "pct": 25.2,
         "avg_velo": 84.2,
         "spin": 2229,
-        "whiff_pct": 26.6,
-        "csw_pct": 27.4
+        "whiff_pct": 24.4,
+        "csw_pct": 26.3
       }
     ],
     "Seranthony Domínguez": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 43.1,
+        "pct": 43.2,
         "avg_velo": 97.3,
         "spin": 2331,
-        "whiff_pct": 24.2,
-        "csw_pct": 28.6
+        "whiff_pct": 22.3,
+        "csw_pct": 27.4
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 27.7,
+        "pct": 27.9,
         "avg_velo": 85.1,
         "spin": 2456,
-        "whiff_pct": 31.2,
-        "csw_pct": 26.9
+        "whiff_pct": 28.0,
+        "csw_pct": 25.7
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 16.5,
+        "pct": 16.7,
         "avg_velo": 97.6,
-        "spin": 2249,
-        "whiff_pct": 12.9,
-        "csw_pct": 21.3
+        "spin": 2250,
+        "whiff_pct": 11.6,
+        "csw_pct": 20.2
       },
       {
         "pitch_type": "FS",
         "name": "Splitter",
-        "pct": 11.3,
+        "pct": 10.9,
         "avg_velo": 85.9,
         "spin": 976,
         "whiff_pct": 55.0,
@@ -1061,466 +1061,466 @@
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 28.5,
+        "pct": 28.4,
         "avg_velo": 90.7,
         "spin": 2058,
-        "whiff_pct": 11.1,
-        "csw_pct": 29.5
+        "whiff_pct": 10.3,
+        "csw_pct": 28.4
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 26.5,
+        "pct": 26.3,
         "avg_velo": 85.3,
-        "spin": 1547,
-        "whiff_pct": 22.6,
-        "csw_pct": 22.9
+        "spin": 1546,
+        "whiff_pct": 21.2,
+        "csw_pct": 22.2
       },
       {
         "pitch_type": "FC",
         "name": "Cutter",
-        "pct": 19.6,
+        "pct": 19.3,
         "avg_velo": 87.0,
         "spin": 2305,
-        "whiff_pct": 27.9,
-        "csw_pct": 29.4
+        "whiff_pct": 26.6,
+        "csw_pct": 28.7
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 17.8,
+        "pct": 18.3,
         "avg_velo": 78.3,
         "spin": 2627,
-        "whiff_pct": 25.0,
-        "csw_pct": 35.1
+        "whiff_pct": 20.8,
+        "csw_pct": 32.8
       },
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 7.0,
+        "pct": 6.9,
         "avg_velo": 90.6,
-        "spin": 2265,
-        "whiff_pct": 26.3,
-        "csw_pct": 24.4
+        "spin": 2267,
+        "whiff_pct": 25.0,
+        "csw_pct": 23.9
       }
     ],
     "Emerson Hancock": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 39.5,
+        "pct": 40.2,
         "avg_velo": 95.4,
-        "spin": 2355,
-        "whiff_pct": 23.3,
-        "csw_pct": 27.0
+        "spin": 2354,
+        "whiff_pct": 20.8,
+        "csw_pct": 25.2
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 23.4,
+        "pct": 23.2,
         "avg_velo": 94.8,
         "spin": 2356,
-        "whiff_pct": 11.8,
-        "csw_pct": 26.0
+        "whiff_pct": 10.8,
+        "csw_pct": 24.8
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 16.1,
+        "pct": 15.8,
         "avg_velo": 77.2,
         "spin": 2612,
-        "whiff_pct": 37.3,
-        "csw_pct": 24.6
+        "whiff_pct": 34.2,
+        "csw_pct": 23.8
       },
       {
         "pitch_type": "FC",
         "name": "Cutter",
-        "pct": 11.6,
+        "pct": 11.7,
         "avg_velo": 85.8,
-        "spin": 2299,
-        "whiff_pct": 34.3,
-        "csw_pct": 31.3
+        "spin": 2300,
+        "whiff_pct": 30.0,
+        "csw_pct": 29.6
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 5.0,
+        "pct": 4.8,
         "avg_velo": 87.1,
-        "spin": 1531,
-        "whiff_pct": 20.9,
-        "csw_pct": 11.1
+        "spin": 1528,
+        "whiff_pct": 19.6,
+        "csw_pct": 10.8
       },
       {
         "pitch_type": "CU",
         "name": "Curve",
-        "pct": 4.5,
-        "avg_velo": 76.1,
-        "spin": 2577,
-        "whiff_pct": 39.0,
-        "csw_pct": 20.6
+        "pct": 4.3,
+        "avg_velo": 76.2,
+        "spin": 2578,
+        "whiff_pct": 38.1,
+        "csw_pct": 20.4
       }
     ],
     "Logan Gilbert": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 39.8,
+        "pct": 40.2,
         "avg_velo": 96.4,
         "spin": 2231,
-        "whiff_pct": 22.7,
-        "csw_pct": 31.3
+        "whiff_pct": 20.3,
+        "csw_pct": 29.5
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
         "pct": 25.0,
         "avg_velo": 86.8,
-        "spin": 2119,
-        "whiff_pct": 37.5,
-        "csw_pct": 34.0
+        "spin": 2117,
+        "whiff_pct": 34.2,
+        "csw_pct": 32.4
       },
       {
         "pitch_type": "FS",
         "name": "Splitter",
-        "pct": 15.0,
+        "pct": 14.7,
         "avg_velo": 82.0,
-        "spin": 685,
-        "whiff_pct": 42.1,
-        "csw_pct": 22.1
-      },
-      {
-        "pitch_type": "CH",
-        "name": "Changeup",
-        "pct": 7.2,
-        "avg_velo": 85.9,
-        "spin": 1490,
-        "whiff_pct": 32.1,
-        "csw_pct": 25.6
+        "spin": 683,
+        "whiff_pct": 39.3,
+        "csw_pct": 21.4
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
         "pct": 7.2,
         "avg_velo": 81.2,
-        "spin": 2375,
-        "whiff_pct": 37.5,
-        "csw_pct": 31.3
+        "spin": 2372,
+        "whiff_pct": 33.9,
+        "csw_pct": 29.8
+      },
+      {
+        "pitch_type": "CH",
+        "name": "Changeup",
+        "pct": 7.0,
+        "avg_velo": 85.9,
+        "spin": 1490,
+        "whiff_pct": 30.1,
+        "csw_pct": 25.0
       },
       {
         "pitch_type": "FC",
         "name": "Cutter",
-        "pct": 5.1,
+        "pct": 5.2,
         "avg_velo": 91.2,
         "spin": 2330,
-        "whiff_pct": 15.9,
-        "csw_pct": 30.9
+        "whiff_pct": 13.9,
+        "csw_pct": 29.0
       }
     ],
     "Kade Anderson": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 40.5,
+        "pct": 40.6,
         "avg_velo": 93.5,
-        "spin": 2030,
-        "whiff_pct": 17.5,
-        "csw_pct": 21.9
+        "spin": 2032,
+        "whiff_pct": 15.9,
+        "csw_pct": 20.8
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
         "pct": 24.6,
-        "avg_velo": 87.9,
+        "avg_velo": 87.8,
         "spin": 2336,
-        "whiff_pct": 29.1,
-        "csw_pct": 27.8
+        "whiff_pct": 26.7,
+        "csw_pct": 26.4
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 17.7,
+        "pct": 17.8,
         "avg_velo": 84.4,
-        "spin": 1508,
-        "whiff_pct": 31.0,
-        "csw_pct": 21.9
+        "spin": 1512,
+        "whiff_pct": 28.6,
+        "csw_pct": 20.8
       },
       {
         "pitch_type": "CU",
         "name": "Curve",
-        "pct": 15.3,
+        "pct": 14.9,
         "avg_velo": 81.9,
-        "spin": 2543,
-        "whiff_pct": 30.8,
-        "csw_pct": 41.0
+        "spin": 2540,
+        "whiff_pct": 28.6,
+        "csw_pct": 40.0
+      },
+      {
+        "pitch_type": "SI",
+        "name": "Sinker",
+        "pct": 2.1,
+        "avg_velo": 93.1,
+        "spin": 1956,
+        "whiff_pct": 12.5,
+        "csw_pct": 16.7
       }
     ],
     "Cole Wilcox": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 27.7,
+        "pct": 27.9,
         "avg_velo": 96.6,
-        "spin": 2101,
-        "whiff_pct": 28.6,
-        "csw_pct": 33.3
+        "spin": 2098,
+        "whiff_pct": 25.8,
+        "csw_pct": 31.9
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 27.3,
+        "pct": 26.7,
         "avg_velo": 86.5,
-        "spin": 2172,
-        "whiff_pct": 33.9,
-        "csw_pct": 36.8
+        "spin": 2173,
+        "whiff_pct": 32.8,
+        "csw_pct": 36.3
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
         "pct": 17.2,
         "avg_velo": 87.6,
-        "spin": 2179,
-        "whiff_pct": 41.7,
-        "csw_pct": 36.9
+        "spin": 2178,
+        "whiff_pct": 39.2,
+        "csw_pct": 35.6
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 16.0,
+        "pct": 15.8,
         "avg_velo": 96.5,
-        "spin": 1995,
-        "whiff_pct": 16.1,
-        "csw_pct": 25.6
+        "spin": 1994,
+        "whiff_pct": 15.2,
+        "csw_pct": 25.0
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 11.9,
+        "pct": 12.3,
         "avg_velo": 87.8,
-        "spin": 1513,
-        "whiff_pct": 31.4,
-        "csw_pct": 20.7
+        "spin": 1524,
+        "whiff_pct": 28.2,
+        "csw_pct": 19.4
       }
     ],
     "Bryan Woo": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 47.2,
+        "pct": 47.7,
         "avg_velo": 96.1,
-        "spin": 2264,
-        "whiff_pct": 25.9,
-        "csw_pct": 27.6
+        "spin": 2263,
+        "whiff_pct": 23.2,
+        "csw_pct": 26.0
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 19.1,
+        "pct": 18.8,
         "avg_velo": 95.9,
         "spin": 2267,
-        "whiff_pct": 12.3,
-        "csw_pct": 27.1
+        "whiff_pct": 11.5,
+        "csw_pct": 26.1
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
         "pct": 13.3,
         "avg_velo": 87.1,
-        "spin": 2209,
-        "whiff_pct": 32.6,
-        "csw_pct": 28.7
+        "spin": 2210,
+        "whiff_pct": 29.4,
+        "csw_pct": 27.2
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
         "pct": 11.6,
         "avg_velo": 84.5,
-        "spin": 2479,
-        "whiff_pct": 36.6,
-        "csw_pct": 31.1
+        "spin": 2478,
+        "whiff_pct": 33.1,
+        "csw_pct": 29.4
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 6.3,
+        "pct": 6.2,
         "avg_velo": 89.6,
         "spin": 1963,
-        "whiff_pct": 18.9,
-        "csw_pct": 19.8
+        "whiff_pct": 17.5,
+        "csw_pct": 19.0
       },
       {
         "pitch_type": "CU",
         "name": "Curve",
         "pct": 2.5,
         "avg_velo": 83.0,
-        "spin": 2285,
-        "whiff_pct": 40.0,
-        "csw_pct": 30.9
+        "spin": 2286,
+        "whiff_pct": 38.5,
+        "csw_pct": 30.4
       }
     ],
     "Eduard Bazardo": [
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 61.5,
+        "pct": 62.1,
         "avg_velo": 95.7,
         "spin": 2200,
-        "whiff_pct": 15.3,
-        "csw_pct": 29.0
+        "whiff_pct": 13.3,
+        "csw_pct": 27.1
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 34.2,
+        "pct": 33.6,
         "avg_velo": 83.6,
         "spin": 2635,
-        "whiff_pct": 34.7,
-        "csw_pct": 34.9
+        "whiff_pct": 31.7,
+        "csw_pct": 33.5
       },
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 2.3,
+        "pct": 2.4,
         "avg_velo": 95.4,
-        "spin": 2173,
-        "whiff_pct": 30.0,
-        "csw_pct": 19.2
-      },
-      {
-        "pitch_type": "FS",
-        "name": "Splitter",
-        "pct": 2.0,
-        "avg_velo": 91.0,
-        "spin": 1690,
-        "whiff_pct": 10.0,
-        "csw_pct": 4.3
+        "spin": 2176,
+        "whiff_pct": 23.1,
+        "csw_pct": 17.2
       }
     ],
     "Bryce Miller": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 39.8,
+        "pct": 40.0,
         "avg_velo": 95.9,
-        "spin": 2515,
-        "whiff_pct": 21.9,
-        "csw_pct": 27.0
+        "spin": 2513,
+        "whiff_pct": 20.0,
+        "csw_pct": 25.5
       },
       {
         "pitch_type": "FS",
         "name": "Splitter",
-        "pct": 23.4,
+        "pct": 23.3,
         "avg_velo": 84.6,
-        "spin": 1114,
-        "whiff_pct": 32.4,
-        "csw_pct": 26.8
+        "spin": 1116,
+        "whiff_pct": 30.0,
+        "csw_pct": 25.5
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 11.4,
+        "pct": 11.2,
         "avg_velo": 87.3,
         "spin": 2478,
-        "whiff_pct": 28.7,
-        "csw_pct": 27.6
+        "whiff_pct": 26.7,
+        "csw_pct": 26.6
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 8.6,
+        "pct": 8.7,
         "avg_velo": 95.3,
-        "spin": 2435,
-        "whiff_pct": 1.7,
-        "csw_pct": 28.4
+        "spin": 2434,
+        "whiff_pct": 1.4,
+        "csw_pct": 26.6
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 7.2,
+        "pct": 7.3,
         "avg_velo": 83.7,
-        "spin": 2381,
-        "whiff_pct": 22.8,
-        "csw_pct": 21.3
+        "spin": 2378,
+        "whiff_pct": 20.0,
+        "csw_pct": 20.1
       },
       {
         "pitch_type": "FC",
         "name": "Cutter",
         "pct": 5.4,
         "avg_velo": 91.0,
-        "spin": 2596,
-        "whiff_pct": 34.5,
-        "csw_pct": 31.4
+        "spin": 2595,
+        "whiff_pct": 31.7,
+        "csw_pct": 29.9
       },
       {
         "pitch_type": "KC",
         "name": "Knuckle Curve",
-        "pct": 4.2,
+        "pct": 4.1,
         "avg_velo": 82.9,
-        "spin": 2336,
-        "whiff_pct": 26.8,
-        "csw_pct": 18.8
+        "spin": 2335,
+        "whiff_pct": 26.2,
+        "csw_pct": 18.5
       }
     ],
     "José A. Ferrer": [
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 68.9,
+        "pct": 68.6,
         "avg_velo": 97.6,
         "spin": 2142,
-        "whiff_pct": 13.1,
-        "csw_pct": 27.4
+        "whiff_pct": 12.1,
+        "csw_pct": 26.3
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 18.0,
+        "pct": 18.1,
         "avg_velo": 87.6,
-        "spin": 2253,
-        "whiff_pct": 41.6,
-        "csw_pct": 21.4
+        "spin": 2251,
+        "whiff_pct": 37.0,
+        "csw_pct": 20.3
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 12.5,
+        "pct": 12.6,
         "avg_velo": 88.4,
         "spin": 2450,
-        "whiff_pct": 28.1,
-        "csw_pct": 27.9
+        "whiff_pct": 24.6,
+        "csw_pct": 26.4
       }
     ],
     "Andrés Muñoz": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 42.9,
+        "pct": 43.0,
         "avg_velo": 99.8,
         "spin": 2334,
-        "whiff_pct": 24.6,
-        "csw_pct": 33.3
+        "whiff_pct": 23.2,
+        "csw_pct": 32.4
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 42.4,
+        "pct": 42.5,
         "avg_velo": 87.2,
         "spin": 2385,
-        "whiff_pct": 49.5,
-        "csw_pct": 37.6
+        "whiff_pct": 47.2,
+        "csw_pct": 36.6
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 7.8,
+        "pct": 7.7,
         "avg_velo": 98.5,
         "spin": 2206,
-        "whiff_pct": 15.4,
-        "csw_pct": 32.4
+        "whiff_pct": 14.8,
+        "csw_pct": 32.0
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 6.9,
+        "pct": 6.8,
         "avg_velo": 92.9,
         "spin": 1584,
         "whiff_pct": 80.0,
@@ -1531,137 +1531,137 @@
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 28.4,
+        "pct": 28.9,
         "avg_velo": 96.7,
         "spin": 2263,
-        "whiff_pct": 23.4,
-        "csw_pct": 24.1
+        "whiff_pct": 21.0,
+        "csw_pct": 22.5
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 28.3,
+        "pct": 28.1,
         "avg_velo": 87.5,
-        "spin": 2380,
-        "whiff_pct": 26.6,
-        "csw_pct": 29.5
+        "spin": 2379,
+        "whiff_pct": 24.3,
+        "csw_pct": 28.2
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
         "pct": 20.9,
         "avg_velo": 96.9,
-        "spin": 2309,
-        "whiff_pct": 12.5,
-        "csw_pct": 28.0
+        "spin": 2308,
+        "whiff_pct": 11.4,
+        "csw_pct": 26.6
       },
       {
         "pitch_type": "KC",
         "name": "Knuckle Curve",
-        "pct": 10.2,
-        "avg_velo": 84.1,
-        "spin": 2372,
-        "whiff_pct": 22.9,
-        "csw_pct": 27.7
+        "pct": 9.9,
+        "avg_velo": 84.2,
+        "spin": 2370,
+        "whiff_pct": 21.9,
+        "csw_pct": 27.1
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 5.1,
+        "pct": 5.2,
         "avg_velo": 88.8,
-        "spin": 1615,
-        "whiff_pct": 26.2,
-        "csw_pct": 21.4
+        "spin": 1614,
+        "whiff_pct": 22.7,
+        "csw_pct": 20.0
       },
       {
         "pitch_type": "FC",
         "name": "Cutter",
-        "pct": 4.2,
+        "pct": 4.1,
         "avg_velo": 92.9,
-        "spin": 2299,
-        "whiff_pct": 30.4,
-        "csw_pct": 25.9
+        "spin": 2302,
+        "whiff_pct": 28.3,
+        "csw_pct": 25.0
       },
       {
         "pitch_type": "FS",
         "name": "Splitter",
         "pct": 2.9,
         "avg_velo": 87.3,
-        "spin": 1080,
-        "whiff_pct": 24.3,
-        "csw_pct": 15.0
+        "spin": 1086,
+        "whiff_pct": 22.5,
+        "csw_pct": 14.5
       }
     ],
     "Casey Legumina": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 43.1,
+        "pct": 44.0,
         "avg_velo": 93.0,
-        "spin": 2357,
-        "whiff_pct": 23.3,
-        "csw_pct": 27.8
+        "spin": 2359,
+        "whiff_pct": 20.5,
+        "csw_pct": 25.8
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 22.0,
+        "pct": 21.5,
         "avg_velo": 92.8,
-        "spin": 2294,
-        "whiff_pct": 9.3,
-        "csw_pct": 30.5
+        "spin": 2293,
+        "whiff_pct": 8.7,
+        "csw_pct": 29.5
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 11.7,
+        "pct": 11.6,
         "avg_velo": 86.6,
         "spin": 1522,
-        "whiff_pct": 13.8,
-        "csw_pct": 14.5
-      },
-      {
-        "pitch_type": "SL",
-        "name": "Slider",
-        "pct": 11.7,
-        "avg_velo": 84.9,
-        "spin": 2585,
-        "whiff_pct": 24.6,
-        "csw_pct": 20.6
+        "whiff_pct": 12.7,
+        "csw_pct": 13.9
       },
       {
         "pitch_type": "ST",
         "name": "Sweeper",
-        "pct": 11.4,
+        "pct": 11.5,
         "avg_velo": 79.9,
-        "spin": 2681,
-        "whiff_pct": 34.3,
-        "csw_pct": 29.7
+        "spin": 2680,
+        "whiff_pct": 30.8,
+        "csw_pct": 27.9
+      },
+      {
+        "pitch_type": "SL",
+        "name": "Slider",
+        "pct": 11.3,
+        "avg_velo": 84.9,
+        "spin": 2587,
+        "whiff_pct": 23.4,
+        "csw_pct": 20.1
       }
     ],
     "Carlos Vargas": [
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 50.4,
+        "pct": 50.7,
         "avg_velo": 96.1,
-        "spin": 2120,
-        "whiff_pct": 11.1,
-        "csw_pct": 23.2
+        "spin": 2121,
+        "whiff_pct": 10.0,
+        "csw_pct": 22.0
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 25.2,
+        "pct": 26.0,
         "avg_velo": 88.1,
-        "spin": 2567,
-        "whiff_pct": 25.6,
-        "csw_pct": 19.7
+        "spin": 2569,
+        "whiff_pct": 22.4,
+        "csw_pct": 18.2
       },
       {
         "pitch_type": "FC",
         "name": "Cutter",
-        "pct": 24.5,
+        "pct": 23.3,
         "avg_velo": 93.6,
         "spin": 2295,
         "whiff_pct": 15.2,
@@ -1672,134 +1672,134 @@
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 65.0,
+        "pct": 65.3,
         "avg_velo": 87.4,
-        "spin": 2079,
-        "whiff_pct": 16.7,
-        "csw_pct": 25.9
+        "spin": 2080,
+        "whiff_pct": 15.0,
+        "csw_pct": 24.6
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 24.0,
+        "pct": 23.8,
         "avg_velo": 94.8,
-        "spin": 2067,
-        "whiff_pct": 10.0,
-        "csw_pct": 26.2
+        "spin": 2065,
+        "whiff_pct": 9.3,
+        "csw_pct": 25.2
       },
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 10.8,
-        "avg_velo": 94.8,
-        "spin": 2047,
-        "whiff_pct": 23.8,
-        "csw_pct": 27.1
+        "pct": 10.7,
+        "avg_velo": 94.7,
+        "spin": 2045,
+        "whiff_pct": 21.7,
+        "csw_pct": 26.0
       }
     ],
     "Luis Castillo": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 42.4,
+        "pct": 42.8,
         "avg_velo": 95.2,
-        "spin": 2264,
-        "whiff_pct": 26.1,
-        "csw_pct": 24.9
+        "spin": 2262,
+        "whiff_pct": 23.3,
+        "csw_pct": 23.4
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
-        "pct": 24.6,
+        "pct": 24.5,
         "avg_velo": 85.6,
         "spin": 2236,
-        "whiff_pct": 26.9,
-        "csw_pct": 30.0
+        "whiff_pct": 24.3,
+        "csw_pct": 28.6
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 18.3,
-        "avg_velo": 95.4,
-        "spin": 2076,
-        "whiff_pct": 10.8,
-        "csw_pct": 25.4
+        "pct": 18.1,
+        "avg_velo": 95.3,
+        "spin": 2077,
+        "whiff_pct": 9.9,
+        "csw_pct": 24.3
       },
       {
         "pitch_type": "CH",
         "name": "Changeup",
-        "pct": 14.6,
+        "pct": 14.7,
         "avg_velo": 87.4,
-        "spin": 1968,
-        "whiff_pct": 25.3,
-        "csw_pct": 19.4
+        "spin": 1967,
+        "whiff_pct": 22.7,
+        "csw_pct": 18.3
       }
     ],
     "Michael Rucker": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 33.0,
-        "avg_velo": 96.2,
-        "spin": 2337,
-        "whiff_pct": 22.5,
-        "csw_pct": 24.8
+        "pct": 33.2,
+        "avg_velo": 96.1,
+        "spin": 2336,
+        "whiff_pct": 20.9,
+        "csw_pct": 23.8
       },
       {
         "pitch_type": "CU",
         "name": "Curve",
-        "pct": 31.2,
+        "pct": 30.8,
         "avg_velo": 82.3,
-        "spin": 2787,
-        "whiff_pct": 36.8,
-        "csw_pct": 34.3
+        "spin": 2788,
+        "whiff_pct": 35.3,
+        "csw_pct": 33.6
       },
       {
         "pitch_type": "FC",
         "name": "Cutter",
-        "pct": 21.7,
+        "pct": 21.9,
         "avg_velo": 89.6,
         "spin": 2562,
-        "whiff_pct": 18.1,
-        "csw_pct": 25.0
+        "whiff_pct": 16.5,
+        "csw_pct": 24.0
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
         "pct": 12.3,
         "avg_velo": 95.8,
-        "spin": 2275,
-        "whiff_pct": 15.6,
-        "csw_pct": 41.9
+        "spin": 2277,
+        "whiff_pct": 14.3,
+        "csw_pct": 40.6
       }
     ],
     "Alex Hoppe": [
       {
         "pitch_type": "FF",
         "name": "4-Seam",
-        "pct": 37.9,
+        "pct": 38.5,
         "avg_velo": 98.4,
-        "spin": 2288,
-        "whiff_pct": 17.8,
-        "csw_pct": 23.4
+        "spin": 2289,
+        "whiff_pct": 16.0,
+        "csw_pct": 22.2
       },
       {
         "pitch_type": "SL",
         "name": "Slider",
         "pct": 36.7,
-        "avg_velo": 88.7,
-        "spin": 2351,
-        "whiff_pct": 41.0,
-        "csw_pct": 29.7
+        "avg_velo": 88.6,
+        "spin": 2352,
+        "whiff_pct": 37.8,
+        "csw_pct": 28.7
       },
       {
         "pitch_type": "SI",
         "name": "Sinker",
-        "pct": 24.3,
+        "pct": 23.8,
         "avg_velo": 98.4,
-        "spin": 2142,
-        "whiff_pct": 18.6,
-        "csw_pct": 28.1
+        "spin": 2141,
+        "whiff_pct": 18.0,
+        "csw_pct": 27.6
       }
     ]
   },
